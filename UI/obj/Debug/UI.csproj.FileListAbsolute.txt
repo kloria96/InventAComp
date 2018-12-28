@@ -1,1 +1,15 @@
 C:\Users\Juan\Source\Repos\InventAcomp\UI\bin\Debug\UI.exe.config
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\UI.exe.config
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\UI.exe
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\UI.pdb
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\BL.dll
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\BL.pdb
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.exe
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.pdb
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.Articulos.resources
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.Principal.resources

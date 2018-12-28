@@ -1,0 +1,9 @@
+C:\Users\Mel\source\repos\InventarioTCU\DAO\bin\Debug\DAO.dll
+C:\Users\Mel\source\repos\InventarioTCU\DAO\bin\Debug\DAO.pdb
+C:\Users\Mel\source\repos\InventarioTCU\DAO\bin\Debug\TO.dll
+C:\Users\Mel\source\repos\InventarioTCU\DAO\bin\Debug\TO.pdb
+C:\Users\Mel\source\repos\InventarioTCU\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Mel\source\repos\InventarioTCU\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Mel\source\repos\InventarioTCU\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Mel\source\repos\InventarioTCU\DAO\obj\Debug\DAO.dll
+C:\Users\Mel\source\repos\InventarioTCU\DAO\obj\Debug\DAO.pdb
