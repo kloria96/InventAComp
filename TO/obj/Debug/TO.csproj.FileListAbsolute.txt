@@ -3,3 +3,4 @@ C:\Users\Mel\source\repos\InventarioTCU\TO\bin\Debug\TO.pdb
 C:\Users\Mel\source\repos\InventarioTCU\TO\obj\Debug\TO.csproj.CoreCompileInputs.cache
 C:\Users\Mel\source\repos\InventarioTCU\TO\obj\Debug\TO.dll
 C:\Users\Mel\source\repos\InventarioTCU\TO\obj\Debug\TO.pdb
+C:\Users\Mel\source\repos\InventarioTCU\TO\obj\Debug\TO.csprojAssemblyReference.cache

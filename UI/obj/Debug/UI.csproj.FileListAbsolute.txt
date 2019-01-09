@@ -13,3 +13,11 @@ C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.exe
 C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.pdb
 C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.Articulos.resources
 C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.Principal.resources
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\DAO.dll
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\TO.dll
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\MySql.Data.dll
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\Google.Protobuf.dll
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\DAO.pdb
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\TO.pdb
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\MySql.Data.xml
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.Categorias.resources

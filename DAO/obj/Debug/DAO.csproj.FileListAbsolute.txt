@@ -7,3 +7,6 @@ C:\Users\Mel\source\repos\InventarioTCU\DAO\obj\Debug\DAO.csproj.CoreCompileInpu
 C:\Users\Mel\source\repos\InventarioTCU\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\Mel\source\repos\InventarioTCU\DAO\obj\Debug\DAO.dll
 C:\Users\Mel\source\repos\InventarioTCU\DAO\obj\Debug\DAO.pdb
+C:\Users\Mel\source\repos\InventarioTCU\DAO\bin\Debug\MySql.Data.dll
+C:\Users\Mel\source\repos\InventarioTCU\DAO\bin\Debug\Google.Protobuf.dll
+C:\Users\Mel\source\repos\InventarioTCU\DAO\bin\Debug\MySql.Data.xml

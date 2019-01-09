@@ -26,7 +26,9 @@ namespace UI
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-
+            Categorias cat = new Categorias();
+            cat.MdiParent = this.MdiParent;
+            cat.Show();
         }
     }
 }
