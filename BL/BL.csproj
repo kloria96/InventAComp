@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BLArticulo.cs" />
     <Compile Include="BLCategoria.cs" />
+    <Compile Include="ManejadorArticulo.cs" />
     <Compile Include="ManejadorCategoria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

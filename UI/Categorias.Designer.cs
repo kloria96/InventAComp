@@ -31,6 +31,7 @@
             this.lblCategorias = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtNuevaCategoria = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,26 +47,35 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(184, 119);
+            this.dataGridView1.Location = new System.Drawing.Point(225, 116);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(328, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(241, 150);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(114, 333);
+            this.btnAgregar.Location = new System.Drawing.Point(423, 349);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(121, 54);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Nueva Categoría";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // txtNuevaCategoria
+            // 
+            this.txtNuevaCategoria.Location = new System.Drawing.Point(225, 365);
+            this.txtNuevaCategoria.Name = "txtNuevaCategoria";
+            this.txtNuevaCategoria.Size = new System.Drawing.Size(154, 22);
+            this.txtNuevaCategoria.TabIndex = 3;
             // 
             // Categorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(681, 450);
+            this.Controls.Add(this.txtNuevaCategoria);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblCategorias);
@@ -82,5 +92,6 @@
         private System.Windows.Forms.Label lblCategorias;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.TextBox txtNuevaCategoria;
     }
 }

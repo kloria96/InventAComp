@@ -15,16 +15,57 @@ namespace DAO
 
         public DataTable consultarCategorias()
         {
-            
-            conex.Open();
-            MySqlCommand cmd = new MySqlCommand("Select nombre from categoria;", conex);
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+            MySqlCommand cmd = new MySqlCommand("Select nombre from categoria order by nombre;", conex);
             MySqlDataAdapter adapt = new MySqlDataAdapter();
             DataTable tableDa = new DataTable();
             adapt.SelectCommand = cmd;
             adapt.Fill(tableDa);
-            conex.Close();
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+
             return tableDa;
         }
 
+        public void insertarCategoria(String nombre)
+        {
+            String qry = "insert into categoria(nombre) values (@nomb)";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+            cmd.Parameters.AddWithValue("@nomb", nombre);
+            cmd.ExecuteNonQuery();
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+
+        }
+
+        public DataTable consultarCategoriasOrdenId()
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+            MySqlCommand cmd = new MySqlCommand("Select nombre from categoria", conex);
+            MySqlDataAdapter adapt = new MySqlDataAdapter();
+            DataTable tableDa = new DataTable();
+            adapt.SelectCommand = cmd;
+            adapt.Fill(tableDa);
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+
+            return tableDa;
+        }
     }
 }

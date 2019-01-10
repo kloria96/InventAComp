@@ -21,3 +21,4 @@ C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\DAO.pdb
 C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\TO.pdb
 C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\MySql.Data.xml
 C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.Categorias.resources
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.NuevoArticulo.resources

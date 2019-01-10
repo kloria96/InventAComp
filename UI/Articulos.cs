@@ -17,9 +17,11 @@ namespace UI
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            NuevoArticulo art = new NuevoArticulo();
+            art.MdiParent = this.MdiParent;
+            art.Show();
         }
     }
 }

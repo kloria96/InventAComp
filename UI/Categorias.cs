@@ -25,5 +25,12 @@ namespace UI
             ManejadorCategoria manej = new ManejadorCategoria();
             dataGridView1.DataSource = manej.consultarCategorias();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            ManejadorCategoria manej = new ManejadorCategoria();
+            manej.agregarCategoria(txtNuevaCategoria.Text);
+            dataGridView1.DataSource = manej.consultarCategorias();
+        }
     }
 }
