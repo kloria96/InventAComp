@@ -32,5 +32,15 @@ namespace TO
             this.idCategoria = idCategoria;
         }
 
+        public TOArticulo(String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, int idCategoria)
+        {
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.idCategoria = idCategoria;
+        }
+
     }
 }

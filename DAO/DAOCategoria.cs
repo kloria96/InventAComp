@@ -34,6 +34,10 @@ namespace DAO
 
         public void insertarCategoria(String nombre)
         {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
             String qry = "insert into categoria(nombre) values (@nomb)";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             if (conex.State != ConnectionState.Open)

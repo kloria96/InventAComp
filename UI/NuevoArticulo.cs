@@ -34,7 +34,9 @@ namespace UI
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+                ManejadorArticulo manejArt = new ManejadorArticulo();
+            BLArticulo artNuevo = new BLArticulo(txtPlaca.Text, txtNombre.Text, Convert.ToDateTime(datePickerIngreso.Text), txtDescripcion.Text, txtEstado.Text, comboCategoria.SelectedIndex + 1);
+            manejArt.agregarArticulo(artNuevo);
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAO;
 using TO;
+using System.Data;
 
 namespace BL
 {
@@ -17,12 +18,18 @@ namespace BL
             daoArt.agregarArticulo(convert(articulo));
         }
 
-        public TOArticulo convert(BLArticulo art)
+        public DataTable consultarArticulos()
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            return daoArt.consultar_Articulos();
+        }
+
+        private TOArticulo convert(BLArticulo art)
         {
             return new TOArticulo(art.numeroPlaca, art.nombArticulo, art.idArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.idCategoria);
         }
 
-        public BLArticulo convert(TOArticulo art)
+        private BLArticulo convert(TOArticulo art)
         {
             return new BLArticulo(art.numeroPlaca, art.nombArticulo, art.idArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.idCategoria);
         }

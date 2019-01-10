@@ -33,5 +33,15 @@ namespace BL
             this.estadoArticulo = estadoArticulo;
             this.idCategoria = idCategoria;
         }
+
+        public BLArticulo(String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, int idCategoria)
+        {
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.idCategoria = idCategoria;
+        }
     }
 }

@@ -36,7 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPlaca = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.datePickerIngreso = new System.Windows.Forms.DateTimePicker();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
@@ -114,12 +114,12 @@
             this.txtPlaca.Size = new System.Drawing.Size(200, 22);
             this.txtPlaca.TabIndex = 7;
             // 
-            // dateTimePicker1
+            // datePickerIngreso
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(194, 186);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 8;
+            this.datePickerIngreso.Location = new System.Drawing.Point(194, 186);
+            this.datePickerIngreso.Name = "datePickerIngreso";
+            this.datePickerIngreso.Size = new System.Drawing.Size(200, 22);
+            this.datePickerIngreso.TabIndex = 8;
             // 
             // txtDescripcion
             // 
@@ -170,7 +170,7 @@
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtDescripcion);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.datePickerIngreso);
             this.Controls.Add(this.txtPlaca);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -196,7 +196,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPlaca;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker datePickerIngreso;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtEstado;
