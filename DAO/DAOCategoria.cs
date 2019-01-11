@@ -11,25 +11,35 @@ namespace DAO
 {
     public class DAOCategoria
     {
-        MySqlConnection conex = new MySqlConnection("server=localhost;user=root;password=1234;database=inventario");
-
-        public DataTable consultarCategorias()
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ); // connectionStringJ (Juan Diego)
+                                                                                                    // connectionStringM (Melany)
+        public List<TOCategoria> consultarCategorias()
         {
             if (conex.State != ConnectionState.Open)
             {
                 conex.Open();
             }
             MySqlCommand cmd = new MySqlCommand("Select nombre from categoria order by nombre;", conex);
-            MySqlDataAdapter adapt = new MySqlDataAdapter();
-            DataTable tableDa = new DataTable();
-            adapt.SelectCommand = cmd;
-            adapt.Fill(tableDa);
-            if (conex.State != ConnectionState.Closed)
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<TOCategoria> listaCategorias = new List<TOCategoria>();
+            if (reader.HasRows)
             {
-                conex.Close();
+                while (reader.Read())
+                {
+                    listaCategorias.Add(new TOCategoria(reader.GetString(0)));
+                }
             }
 
-            return tableDa;
+            //MySqlDataAdapter adapt = new MySqlDataAdapter();
+            //DataTable tableDa = new DataTable();
+            //adapt.SelectCommand = cmd;
+            //adapt.Fill(tableDa);
+            //if (conex.State != ConnectionState.Closed)
+            //{
+            //    conex.Close();
+            //}
+
+            return listaCategorias;
         }
 
         public void insertarCategoria(String nombre)

@@ -5,15 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAO;
+using TO;
 
 namespace BL
 {
     public class ManejadorCategoria
     {
-        public DataTable consultarCategorias()
+        public List<BLCategoria> consultarCategorias()
         {
             DAOCategoria daoCateg = new DAOCategoria();
-            return daoCateg.consultarCategorias();
+            List<BLCategoria> lista = new List<BLCategoria>();
+            foreach (TOCategoria categ in daoCateg.consultarCategorias())
+            {
+                lista.Add(new BLCategoria(categ.nombreCategoria));
+            }
+            return lista;
         }
 
 
@@ -28,5 +34,6 @@ namespace BL
             DAOCategoria daoCateg = new DAOCategoria();
             daoCateg.insertarCategoria(nombre);
         }
+
     }
 }

@@ -22,5 +22,11 @@ namespace BL
             this.idCategoria = idCategoria;
             this.nombreCategoria = nombreCategoria;
         }
+
+        public BLCategoria(String nombreCategoria)
+        {
+            this.nombreCategoria = nombreCategoria;
+        }
+
     }
 }

@@ -21,5 +21,11 @@ namespace TO
             this.idCategoria = idCategoria;
             this.nombreCategoria = nombreCategoria;
         }
+
+        public TOCategoria(String nombreCategoria)
+        {
+            this.nombreCategoria = nombreCategoria;
+        }
+
     }
 }

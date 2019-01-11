@@ -33,5 +33,39 @@ namespace BL
         {
             return new BLArticulo(art.numeroPlaca, art.nombArticulo, art.idArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.idCategoria);
         }
+
+        public List<BLArticulo> obtenerArticulosNombre(string value)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            List<BLArticulo> lista = new List<BLArticulo>();
+            foreach (TOArticulo toArt in daoArt.obtenerArticulosNombre(value))
+            {
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.idCategoria));
+            }
+            return lista;
+        }
+
+        public List<BLArticulo> obtenerArticulosCategoria(string value)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            List<BLArticulo> lista = new List<BLArticulo>();
+            foreach (TOArticulo toArt in daoArt.obtenerArticulosCategoria(value))
+            {
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.idCategoria));
+            }
+            return lista;
+        }
+
+        public List<BLArticulo> obtenerArticulosFecha(string fechaInicio, string fechaFin)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            List<BLArticulo> lista = new List<BLArticulo>();
+            foreach (TOArticulo toArt in daoArt.obtenerArticulosFecha(fechaInicio, fechaFin))
+            {
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.idCategoria));
+            }
+            return lista;
+        }
+
     }
 }

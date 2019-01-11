@@ -61,6 +61,12 @@
     <Compile Include="Categorias.Designer.cs">
       <DependentUpon>Categorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="MostrarArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarArticulos.Designer.cs">
+      <DependentUpon>MostrarArticulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevoArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Categorias.resx">
       <DependentUpon>Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarArticulos.resx">
+      <DependentUpon>MostrarArticulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoArticulo.resx">
       <DependentUpon>NuevoArticulo.cs</DependentUpon>
