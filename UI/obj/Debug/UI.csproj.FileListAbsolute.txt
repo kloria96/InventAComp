@@ -43,3 +43,4 @@ C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.Principal.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.Properties.Resources.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.csproj.GenerateResource.Cache
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.MostrarArticulos.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.ModificarArticulo.resources

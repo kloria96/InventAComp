@@ -143,7 +143,7 @@
             this.dtInicio.Location = new System.Drawing.Point(243, 292);
             this.dtInicio.Margin = new System.Windows.Forms.Padding(2);
             this.dtInicio.Name = "dtInicio";
-            this.dtInicio.Size = new System.Drawing.Size(151, 20);
+            this.dtInicio.Size = new System.Drawing.Size(195, 20);
             this.dtInicio.TabIndex = 9;
             this.dtInicio.Visible = false;
             // 
@@ -152,7 +152,7 @@
             this.dtFin.Location = new System.Drawing.Point(243, 334);
             this.dtFin.Margin = new System.Windows.Forms.Padding(2);
             this.dtFin.Name = "dtFin";
-            this.dtFin.Size = new System.Drawing.Size(151, 20);
+            this.dtFin.Size = new System.Drawing.Size(195, 20);
             this.dtFin.TabIndex = 10;
             this.dtFin.Visible = false;
             // 
@@ -219,7 +219,7 @@
             this.Controls.Add(this.lblInventario);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Principal";
-            this.Text = "Form1";
+            this.Text = "Inicio";
             this.ResumeLayout(false);
             this.PerformLayout();
 

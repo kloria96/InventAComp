@@ -81,5 +81,25 @@ namespace DAO
 
             return tableDa;
         }
+
+        public string obtenerNombreCategoria(int idCategoria)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "select nombre from categoria where idCategoria = @idCat";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@idCat", idCategoria);
+            string result = (String) cmd.ExecuteScalar();
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return result;
+        }
+
     }
 }

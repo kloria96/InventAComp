@@ -67,5 +67,24 @@ namespace BL
             return lista;
         }
 
+        public bool eliminarArticulo(int idArticulo)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            return daoArt.eliminarArticulo(idArticulo);
+        }
+
+        public BLArticulo obtenerArticulo(int idArticulo)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            TOArticulo toArt = daoArt.obtenerArticulo(idArticulo);
+            return new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.idCategoria);
+        }
+
+        public bool actualizarArticulo(int idArticulo, string numeroPlaca, string nombre, string descripcion, string estado, string categoria)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            return daoArt.actualizarArticulo(idArticulo, numeroPlaca, nombre, descripcion, estado, categoria);
+        }
+
     }
 }
