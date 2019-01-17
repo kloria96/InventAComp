@@ -39,7 +39,7 @@ namespace BL
             List<BLArticulo> lista = new List<BLArticulo>();
             foreach (TOArticulo toArt in daoArt.obtenerArticulosNombre(value))
             {
-                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.idCategoria));
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.nombreCategoria));
             }
             return lista;
         }
@@ -50,7 +50,7 @@ namespace BL
             List<BLArticulo> lista = new List<BLArticulo>();
             foreach (TOArticulo toArt in daoArt.obtenerArticulosCategoria(value))
             {
-                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.idCategoria));
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.nombreCategoria));
             }
             return lista;
         }
@@ -61,7 +61,7 @@ namespace BL
             List<BLArticulo> lista = new List<BLArticulo>();
             foreach (TOArticulo toArt in daoArt.obtenerArticulosFecha(fechaInicio, fechaFin))
             {
-                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.idCategoria));
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.nombreCategoria));
             }
             return lista;
         }
@@ -84,8 +84,6 @@ namespace BL
             DAOArticulo daoArt = new DAOArticulo();
             return daoArt.actualizarArticulo(idArticulo, numeroPlaca, nombre, descripcion, estado, categoria);
         }
-
-
 
 
 

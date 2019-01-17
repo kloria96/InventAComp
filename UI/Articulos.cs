@@ -13,6 +13,8 @@ namespace UI
 {
     public partial class Articulos : Form
     {
+        public static string idArt = "";
+
         public Articulos()
         {
             InitializeComponent();
@@ -65,8 +67,63 @@ namespace UI
                 gridArticulos.Columns[6].HeaderText = "Categoría";
                 gridArticulos.Columns[6].DataPropertyName = "nombCategoria";
 
+                DataGridViewButtonColumn but = new DataGridViewButtonColumn();
+                gridArticulos.Columns.Add(but);
+
+                DataGridViewButtonColumn but2 = new DataGridViewButtonColumn();
+                gridArticulos.Columns.Add(but2);
+
                 gridArticulos.DataSource = listaBL;
             }
         }
+
+        private void gridArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 7)
+            {
+                idArt = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
+                ModificarArticulo.categoriaArticulo = gridArticulos.Rows[e.RowIndex].Cells[6].Value + "";
+                ModificarArticulo.estadoArticulo = gridArticulos.Rows[e.RowIndex].Cells[5].Value + "";
+                new ModificarArticulo().Show();
+            }
+
+            if (e.ColumnIndex == 8)
+            {
+                eliminarFila(Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value));
+            }
+        }
+
+        private void gridArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            gridArticulos.Rows[e.RowIndex].Cells[7].Value = "Modificar";
+            gridArticulos.Rows[e.RowIndex].Cells[8].Value = "Eliminar";
+        }
+
+        private void eliminarFila(int idArticulo)
+        {
+            ManejadorArticulo manejArt = new ManejadorArticulo();
+            var confirmResult = MessageBox.Show("¿Desea eliminar el artículo?", "Confirmar", MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                if (manejArt.eliminarArticulo(idArticulo))
+                {
+                    this.Dispose();
+                    if (this.GetType().ToString() == "BL.Articulos")
+                    {
+                        new MostrarArticulos().Show();
+                    }
+                    else
+                    {
+                        new Articulos().Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido eliminar el artículo");
+                }
+
+            }
+        }
+
     }
 }

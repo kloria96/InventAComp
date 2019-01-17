@@ -11,34 +11,28 @@ namespace DAO
 {
     public class DAOCategoria
     {
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);// connectionStringJ (Juan Diego)
-                                                                                                   // connectionStringM (Melany)
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        
+            // connectionStringJ (Juan Diego)
+            // connectionStringM (Melany)
+
         public List<TOCategoria> consultarCategorias()
         {
             if (conex.State != ConnectionState.Open)
             {
                 conex.Open();
             }
-            MySqlCommand cmd = new MySqlCommand("Select nombre from categoria order by nombre;", conex);
+            MySqlCommand cmd = new MySqlCommand("Select * from categoria order by nombre;", conex);
             MySqlDataReader reader = cmd.ExecuteReader();
             List<TOCategoria> listaCategorias = new List<TOCategoria>();
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    listaCategorias.Add(new TOCategoria(reader.GetString(0)));
+                    listaCategorias.Add(new TOCategoria(reader.GetInt32(0), reader.GetString(1)));
                 }
             }
-
-            //MySqlDataAdapter adapt = new MySqlDataAdapter();
-            //DataTable tableDa = new DataTable();
-            //adapt.SelectCommand = cmd;
-            //adapt.Fill(tableDa);
-            //if (conex.State != ConnectionState.Closed)
-            //{
-            //    conex.Close();
-            //}
 
             return listaCategorias;
         }
@@ -49,7 +43,7 @@ namespace DAO
             {
                 conex.Open();
             }
-            String qry = "insert into categoria(nombre) values (@nomb)";
+            String qry = "insert into categoria (nombre) values (@nomb)";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             if (conex.State != ConnectionState.Open)
             {
@@ -100,6 +94,53 @@ namespace DAO
                 conex.Close();
             }
             return result;
+        }
+
+        public List<TOCategoria> consultarCategorias(string categoriaArticulo)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "select nombre from categoria where nombre not in (@cat) order by nombre";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@cat", categoriaArticulo);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<TOCategoria> listaCategorias = new List<TOCategoria>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    listaCategorias.Add(new TOCategoria(reader.GetString(0)));
+                }
+            }
+            
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return listaCategorias;
+        }
+
+        public bool eliminarCategoria(int idCategoria)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "delete from categoria where idCategoria = @idC";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@idC", idCategoria);
+            int result = cmd.ExecuteNonQuery();
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return (result > 0 ? true : false);
         }
 
     }

@@ -17,9 +17,10 @@ namespace UI
         {
             InitializeComponent();
             llenarComboBox();
+            cargarEstados();
         }
 
-        public void llenarComboBox()
+        private void llenarComboBox()
         {
             ManejadorCategoria manejCat = new ManejadorCategoria();
             DataTable tabla = manejCat.consultarCategoriasOrdenId();
@@ -32,11 +33,41 @@ namespace UI
             }
         }
 
+        private void cargarEstados()
+        {
+            List<String> listaEstados = new List<String>();
+            listaEstados.Add("Bueno");
+            listaEstados.Add("Regular");
+            listaEstados.Add("Malo");
+            listaEstados.Add("Eliminado");
+            listaEstados.Add("Donado");
+            listaEstados.Add("Otros");
+
+            foreach (String estado in listaEstados)
+            {
+                comboEstados.Items.Add(estado);
+            }
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (comboEstados.SelectedItem != null && comboCategoria.SelectedItem != null)
+            {
                 ManejadorArticulo manejArt = new ManejadorArticulo();
-            BLArticulo artNuevo = new BLArticulo(txtPlaca.Text, txtNombre.Text, Convert.ToDateTime(datePickerIngreso.Text), txtDescripcion.Text, txtEstado.Text, comboCategoria.SelectedIndex + 1);
-            manejArt.agregarArticulo(artNuevo);
+                BLArticulo artNuevo = new BLArticulo(txtPlaca.Text, txtNombre.Text, Convert.ToDateTime(datePickerIngreso.Text), txtDescripcion.Text, comboEstados.SelectedItem.ToString(), comboCategoria.SelectedIndex + 1);
+                manejArt.agregarArticulo(artNuevo);
+            } else
+            {
+                if (comboEstados.SelectedItem == null)
+                {
+                    MessageBox.Show("Seleccione el estado del artículo");
+                }
+                if (comboCategoria.SelectedItem == null)
+                {
+                    MessageBox.Show("Seleccione una categoría");
+                }
+            }
         }
+
     }
 }

@@ -39,10 +39,12 @@
             this.datePickerIngreso = new System.Windows.Forms.DateTimePicker();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.comboCategoria = new System.Windows.Forms.ComboBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtUbicacion = new System.Windows.Forms.TextBox();
+            this.comboEstados = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblNuev
@@ -119,7 +121,7 @@
             // txtPlaca
             // 
             this.txtPlaca.Location = new System.Drawing.Point(146, 94);
-            this.txtPlaca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(151, 20);
             this.txtPlaca.TabIndex = 7;
@@ -127,7 +129,7 @@
             // datePickerIngreso
             // 
             this.datePickerIngreso.Location = new System.Drawing.Point(146, 151);
-            this.datePickerIngreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datePickerIngreso.Margin = new System.Windows.Forms.Padding(2);
             this.datePickerIngreso.Name = "datePickerIngreso";
             this.datePickerIngreso.Size = new System.Drawing.Size(151, 20);
             this.datePickerIngreso.TabIndex = 8;
@@ -135,7 +137,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(146, 218);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(151, 20);
             this.txtDescripcion.TabIndex = 9;
@@ -143,32 +145,25 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(419, 90);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(151, 20);
             this.txtNombre.TabIndex = 7;
             // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(419, 155);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(151, 20);
-            this.txtEstado.TabIndex = 10;
-            // 
             // comboCategoria
             // 
+            this.comboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCategoria.FormattingEnabled = true;
             this.comboCategoria.Location = new System.Drawing.Point(419, 219);
-            this.comboCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.comboCategoria.Name = "comboCategoria";
             this.comboCategoria.Size = new System.Drawing.Size(151, 21);
             this.comboCategoria.TabIndex = 11;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(268, 290);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Location = new System.Drawing.Point(268, 343);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(92, 31);
             this.btnGuardar.TabIndex = 12;
@@ -178,22 +173,49 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(495, 294);
+            this.btnAtras.Location = new System.Drawing.Point(495, 347);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(75, 23);
             this.btnAtras.TabIndex = 13;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(46, 280);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Ubicación";
+            // 
+            // txtUbicacion
+            // 
+            this.txtUbicacion.Location = new System.Drawing.Point(146, 277);
+            this.txtUbicacion.Name = "txtUbicacion";
+            this.txtUbicacion.Size = new System.Drawing.Size(151, 20);
+            this.txtUbicacion.TabIndex = 15;
+            // 
+            // comboEstados
+            // 
+            this.comboEstados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboEstados.FormattingEnabled = true;
+            this.comboEstados.Location = new System.Drawing.Point(419, 152);
+            this.comboEstados.Name = "comboEstados";
+            this.comboEstados.Size = new System.Drawing.Size(151, 21);
+            this.comboEstados.TabIndex = 16;
+            // 
             // NuevoArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 377);
+            this.ClientSize = new System.Drawing.Size(652, 424);
+            this.Controls.Add(this.comboEstados);
+            this.Controls.Add(this.txtUbicacion);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.comboCategoria);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.datePickerIngreso);
@@ -205,7 +227,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNuev);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NuevoArticulo";
             this.Text = "NuevoArticulo";
             this.ResumeLayout(false);
@@ -226,9 +248,11 @@
         private System.Windows.Forms.DateTimePicker datePickerIngreso;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.ComboBox comboCategoria;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtUbicacion;
+        private System.Windows.Forms.ComboBox comboEstados;
     }
 }

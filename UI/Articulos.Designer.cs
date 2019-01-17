@@ -47,19 +47,24 @@
             // 
             // gridArticulos
             // 
+            this.gridArticulos.AllowUserToAddRows = false;
+            this.gridArticulos.AllowUserToDeleteRows = false;
             this.gridArticulos.AllowUserToOrderColumns = true;
             this.gridArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridArticulos.Location = new System.Drawing.Point(30, 70);
-            this.gridArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.gridArticulos.Name = "gridArticulos";
+            this.gridArticulos.ReadOnly = true;
             this.gridArticulos.RowTemplate.Height = 24;
             this.gridArticulos.Size = new System.Drawing.Size(693, 317);
             this.gridArticulos.TabIndex = 2;
+            this.gridArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridArticulos_CellClick);
+            this.gridArticulos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridArticulos_CellFormatting);
             // 
             // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(104, 414);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(104, 49);
             this.btnAgregar.TabIndex = 3;
@@ -75,7 +80,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gridArticulos);
             this.Controls.Add(this.lblArticulo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Articulos";
             this.Text = "Articulos";
             ((System.ComponentModel.ISupportInitialize)(this.gridArticulos)).EndInit();

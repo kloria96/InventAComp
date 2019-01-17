@@ -17,7 +17,7 @@ namespace BL
             List<BLCategoria> lista = new List<BLCategoria>();
             foreach (TOCategoria categ in daoCateg.consultarCategorias())
             {
-                lista.Add(new BLCategoria(categ.nombreCategoria));
+                lista.Add(new BLCategoria(categ.idCategoria, categ.nombreCategoria));
             }
             return lista;
         }
@@ -33,6 +33,23 @@ namespace BL
         {
             DAOCategoria daoCateg = new DAOCategoria();
             daoCateg.insertarCategoria(nombre);
+        }
+
+        public List<BLCategoria> consultarCategorias(string categoriaArticulo)
+        {
+            DAOCategoria daoCateg = new DAOCategoria();
+            List<BLCategoria> lista = new List<BLCategoria>();
+            foreach (TOCategoria categ in daoCateg.consultarCategorias(categoriaArticulo))
+            {
+                lista.Add(new BLCategoria(categ.nombreCategoria));
+            }
+            return lista;
+        }
+
+        public bool eliminarCategoria(int idCategoria)
+        {
+            DAOCategoria daoCat = new DAOCategoria();
+            return daoCat.eliminarCategoria(idCategoria);
         }
 
     }

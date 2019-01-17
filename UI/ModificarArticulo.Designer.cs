@@ -30,7 +30,6 @@
         {
             this.lblModif = new System.Windows.Forms.Label();
             this.comboCategoria = new System.Windows.Forms.ComboBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.datePickerIngreso = new System.Windows.Forms.DateTimePicker();
@@ -43,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.comboEstados = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblModif
@@ -57,20 +57,13 @@
             // 
             // comboCategoria
             // 
+            this.comboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCategoria.FormattingEnabled = true;
             this.comboCategoria.Location = new System.Drawing.Point(442, 238);
             this.comboCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.comboCategoria.Name = "comboCategoria";
             this.comboCategoria.Size = new System.Drawing.Size(151, 21);
             this.comboCategoria.TabIndex = 23;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(442, 174);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(151, 20);
-            this.txtEstado.TabIndex = 22;
             // 
             // txtNombre
             // 
@@ -184,15 +177,24 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // comboEstados
+            // 
+            this.comboEstados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboEstados.FormattingEnabled = true;
+            this.comboEstados.Location = new System.Drawing.Point(442, 170);
+            this.comboEstados.Name = "comboEstados";
+            this.comboEstados.Size = new System.Drawing.Size(151, 21);
+            this.comboEstados.TabIndex = 26;
+            // 
             // ModificarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 386);
+            this.Controls.Add(this.comboEstados);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.comboCategoria);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.datePickerIngreso);
@@ -215,7 +217,6 @@
 
         private System.Windows.Forms.Label lblModif;
         private System.Windows.Forms.ComboBox comboCategoria;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.DateTimePicker datePickerIngreso;
@@ -228,5 +229,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.ComboBox comboEstados;
     }
 }
