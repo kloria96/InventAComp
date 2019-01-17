@@ -11,8 +11,9 @@ namespace DAO
 {
     public class DAOCategoria
     {
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ); // connectionStringJ (Juan Diego)
-                                                                                                    // connectionStringM (Melany)
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);// connectionStringJ (Juan Diego)
+                                                                                                   // connectionStringM (Melany)
         public List<TOCategoria> consultarCategorias()
         {
             if (conex.State != ConnectionState.Open)

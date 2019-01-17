@@ -24,3 +24,4 @@ C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Debug\MySql.Data.xml
 C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
 C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Debug\BL.dll
 C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Debug\BL.pdb
+C:\Users\Mel\source\repos\InventarioTCU\BL\bin\Debug\DAO.dll.config

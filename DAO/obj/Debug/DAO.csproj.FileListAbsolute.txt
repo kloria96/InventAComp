@@ -21,3 +21,4 @@ C:\Users\Juan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.csprojResolveAssemblyRe
 C:\Users\Juan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.dll
 C:\Users\Juan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.pdb
 C:\Users\Juan\Source\Repos\InventAcomp\DAO\bin\Debug\DAO.dll.config
+C:\Users\Mel\source\repos\InventarioTCU\DAO\bin\Debug\DAO.dll.config

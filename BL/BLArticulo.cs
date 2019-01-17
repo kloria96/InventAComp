@@ -17,6 +17,7 @@ namespace BL
         public String descripcArticulo { get; set; }
         public String estadoArticulo { get; set; }
         public int idCategoria { get; set; }
+        public String nombCategoria { set; get; }
 
         public BLArticulo()
         {
@@ -53,6 +54,17 @@ namespace BL
             this.descripcArticulo = descripcArticulo;
             this.estadoArticulo = estadoArticulo;
             this.idCategoria = idCategoria;
+        }
+
+        public BLArticulo(int idArticulo, String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String nombreCategoria)
+        {
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.idArticulo = idArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.nombCategoria = nombreCategoria;
         }
 
     }

@@ -13,25 +13,46 @@ namespace DAO
 {
     public class DAOArticulo
     {
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ); // connectionStringJ (Juan Diego)
-                                                                                                    // connectionStringM (Melany)
-        public DataTable consultar_Articulos()
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        
+            // connectionStringJ (Juan Diego)
+            // connectionStringM (Melany)
+
+        public List<TOArticulo> consultar_Articulos()
         {
             if (conex.State != ConnectionState.Open)
             {
                 conex.Open();
             }
-            MySqlCommand cmd = new MySqlCommand("select a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria;", conex);
-            MySqlDataAdapter adapt = new MySqlDataAdapter();
-            DataTable tableDa = new DataTable();
-            //tableDa.Columns.Add(new DataColumn("Categoria"));
-            adapt.SelectCommand = cmd;
-            adapt.Fill(tableDa);
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombArticulo, a.fechaIngreso, a.descripcArticulo, a.estadoArticulo, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria;";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<TOArticulo> lista = new List<TOArticulo>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    TOArticulo to = new TOArticulo();
+                    to.idArticulo = reader.GetInt32(0);
+                    to.numeroPlaca = reader.GetString(1);
+                    to.nombArticulo = reader.GetString(2);
+                    to.fechaIngreso = reader.GetDateTime(3);
+                    to.descripcArticulo = reader.GetString(4);
+                    to.estadoArticulo = reader.GetString(5);
+                    to.nombreCategoria = reader.GetString(6);
+                    lista.Add(to);
+                }
+            }
+
             if (conex.State != ConnectionState.Closed)
             {
                 conex.Close();
             }
-            return tableDa;
+            return lista;
         }
 
         public void agregarArticulo(TOArticulo nuevoArt)
@@ -40,7 +61,7 @@ namespace DAO
             {
                 conex.Open();
             }
-            String qry = "insert into articulo(numeroPlaca, nombre,fechaIngreso,descripcion,estado,idCategoria) values (@numPlac, @nomb, @fechIng, @descripc, @est, @idCateg)";
+            String qry = "insert into articulo(numeroPlaca, nombArticulo,fechaIngreso,descripcArticulo,estadoArticulo,idCategoria) values (@numPlac, @nomb, @fechIng, @descripc, @est, @idCateg)";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             
             cmd.Parameters.AddWithValue("@numPlac", nuevoArt.numeroPlaca);

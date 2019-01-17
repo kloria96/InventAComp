@@ -15,6 +15,7 @@ namespace TO
         public String descripcArticulo { get; set; }
         public String estadoArticulo { get; set; }
         public int idCategoria { get; set; }
+        public String nombreCategoria { get; set; }
 
         public TOArticulo()
         {
@@ -43,7 +44,7 @@ namespace TO
             this.idCategoria = idCategoria;
         }
 
-        public TOArticulo(String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, int idCategoria)
+        public TOArticulo(string numPlaca, string nombArticulo, DateTime fechaIngreso, string descripcArticulo, string estadoArticulo, int idCategoria)
         {
             this.numeroPlaca = numPlaca;
             this.nombArticulo = nombArticulo;
@@ -51,6 +52,17 @@ namespace TO
             this.descripcArticulo = descripcArticulo;
             this.estadoArticulo = estadoArticulo;
             this.idCategoria = idCategoria;
+        }
+
+        public TOArticulo(int idArticulo, string numPlaca, string nombArticulo, DateTime fechaIngreso, string descripcArticulo, string estadoArticulo, string nombreCategoria)
+        {
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.idArticulo = idArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.nombreCategoria = nombreCategoria;
         }
 
     }

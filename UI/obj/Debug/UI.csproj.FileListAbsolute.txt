@@ -44,3 +44,6 @@ C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.Properties.Resources.reso
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.csproj.GenerateResource.Cache
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.MostrarArticulos.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.ModificarArticulo.resources
+C:\Users\Mel\source\repos\InventarioTCU\UI\bin\Debug\DAO.dll.config
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.ModificarArticulo.resources
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.MostrarArticulos.resources

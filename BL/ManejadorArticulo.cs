@@ -18,21 +18,20 @@ namespace BL
             daoArt.agregarArticulo(convert(articulo));
         }
 
-        public DataTable consultarArticulos()
+        public List<BLArticulo> consultarArticulos()
         {
             DAOArticulo daoArt = new DAOArticulo();
-            return daoArt.consultar_Articulos();
+            List<TOArticulo> listTOArt = daoArt.consultar_Articulos();
+            List<BLArticulo> listBLArt = new List<BLArticulo>();
+            foreach (TOArticulo toArt in listTOArt)
+            {
+                //listBLArt.Add(convert2(toArt));
+                listBLArt.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.nombreCategoria));
+            }
+            return listBLArt;
         }
 
-        private TOArticulo convert(BLArticulo art)
-        {
-            return new TOArticulo(art.numeroPlaca, art.nombArticulo, art.idArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.idCategoria);
-        }
-
-        private BLArticulo convert(TOArticulo art)
-        {
-            return new BLArticulo(art.numeroPlaca, art.nombArticulo, art.idArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.idCategoria);
-        }
+     
 
         public List<BLArticulo> obtenerArticulosNombre(string value)
         {
@@ -85,6 +84,21 @@ namespace BL
             DAOArticulo daoArt = new DAOArticulo();
             return daoArt.actualizarArticulo(idArticulo, numeroPlaca, nombre, descripcion, estado, categoria);
         }
+
+
+
+
+
+        private TOArticulo convert(BLArticulo art)
+        {
+            return new TOArticulo(art.numeroPlaca, art.nombArticulo, art.idArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.idCategoria);
+        }
+
+        private BLArticulo convert(TOArticulo art)
+        {
+            return new BLArticulo(art.numeroPlaca, art.nombArticulo, art.idArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.idCategoria);
+        }
+
 
     }
 }
