@@ -16,6 +16,8 @@ namespace UI
         private string value = ""; //Nombre del articulo, departamento o fecha de inicio
         private string fechaFin = "";
         private string opcion = ""; //1: Nombre, 2: Departamento, 3: Fecha de ingreso
+        public static string idArt = "";
+        private ManejadorArticulo manejArt = new ManejadorArticulo();
 
         public MostrarArticulos()
         {
@@ -33,7 +35,6 @@ namespace UI
             opcion = Principal.opcion;
             value = Principal.value;
 
-            ManejadorArticulo manejArt = new ManejadorArticulo();
             switch (opcion)
             {
                 case "1":
@@ -43,6 +44,7 @@ namespace UI
                     mostrarArticulos(manejArt.obtenerArticulosCategoria(value));
                     break;
                 case "3":
+                    fechaFin = Principal.fechaFin;
                     mostrarArticulos(manejArt.obtenerArticulosFecha(value, fechaFin));
                     break;
             }
@@ -92,9 +94,9 @@ namespace UI
         {
             if (e.ColumnIndex == 6)
             {
+                idArt = dgvArticulos.Rows[e.RowIndex].Cells[5].Value + "";
+                new ModificarArticulo().Show();
 
-
-                //eliminarFila(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells[2].Value));
                 //lista.RemoveAt(e.RowIndex);
                 //dgv.DataSource = null;
                 //dgv.DataSource = lista;
@@ -102,7 +104,7 @@ namespace UI
 
             if (e.ColumnIndex == 7)
             {
-
+                eliminarFila(Convert.ToInt32(dgvArticulos.Rows[e.RowIndex].Cells[5].Value));
 
                 //idU = dgv.Rows[e.RowIndex].Cells[2].Value + "";
                 //ActualizarDatos ac = new ActualizarDatos();
@@ -112,8 +114,25 @@ namespace UI
 
         private void dgvArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            dgvArticulos.Rows[e.RowIndex].Cells[6].Value = "Eliminar";
-            dgvArticulos.Rows[e.RowIndex].Cells[7].Value = "Modificar";
+            dgvArticulos.Rows[e.RowIndex].Cells[6].Value = "Modificar";
+            dgvArticulos.Rows[e.RowIndex].Cells[7].Value = "Eliminar";
+        }
+
+        private void eliminarFila(int idArticulo)
+        {
+            var confirmResult = MessageBox.Show("¿Desea eliminar el artículo?", "Confirmar", MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                if (manejArt.eliminarArticulo(idArticulo)) {
+                    MostrarArticulos mosArt = new MostrarArticulos();
+                    this.Dispose();
+                    mosArt.Show();
+                } else
+                {
+                    MessageBox.Show("No se ha podido eliminar el artículo");
+                }
+                
+            }
         }
 
     }

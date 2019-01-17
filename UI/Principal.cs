@@ -124,6 +124,7 @@ namespace UI
                         MostrarArticulos mostrarA = new MostrarArticulos();
                         mostrarA.MdiParent = this.MdiParent;
                         mostrarA.Show();
+                        txtNombre.Clear();
                     }
                     else
                     {
@@ -131,7 +132,7 @@ namespace UI
                     }
                     break;
                 case "2":
-                    if (cbCategorias.SelectedItem.ToString() != "")
+                    if (cbCategorias.SelectedItem != null)
                     {
                         value = cbCategorias.SelectedItem.ToString();
                         MostrarArticulos mostrarAr = new MostrarArticulos();
@@ -140,7 +141,7 @@ namespace UI
                     }
                     else
                     {
-                        MessageBox.Show("Seleccione un departamento");
+                        MessageBox.Show("Seleccione una categoría");
                     }
                     break;
                 case "3":
