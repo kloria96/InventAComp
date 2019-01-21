@@ -20,12 +20,22 @@ namespace UI
         public Principal()
         {
             InitializeComponent();
+            //Icon icon = Icon.ExtractAssociatedIcon("~/download-ConvertImage.ico");
+            //this.Icon = new Icon(this.GetType(), "UI.download-ConvertImage.ico");
+
+            //this.Icon = icon;
+
         }
+
+    
 
         private void btnArticulo_Click(object sender, EventArgs e)
         {
             Articulos art = new Articulos();
             art.MdiParent = this.MdiParent;
+            //this.Hide(); //para ocultar ventana
+           
+            //art.WindowState = FormWindowState.Maximized;  //para mostrar la ventana modo maximizado
             art.Show();
         }
 

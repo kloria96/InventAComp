@@ -125,5 +125,16 @@ namespace UI
             }
         }
 
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            //Principal art = new Principal();
+            //art.MdiParent = this.MdiParent;
+            //art.Show();
+            //Principal frm2 = (Principal)this.ActiveMdiChild;
+            //if (frm2 != null)
+            //{
+            //    this.Close();
+            //}
+        }
     }
 }
