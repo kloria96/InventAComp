@@ -27,7 +27,7 @@ namespace UI
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void MostrarArticulos_Load(object sender, EventArgs e)
@@ -48,13 +48,18 @@ namespace UI
                     mostrarArticulos(manejArt.obtenerArticulosFecha(value, fechaFin));
                     break;
             }
+
+            if (dgvArticulos.Rows.Count == 0)
+            {
+                lblBusqueda.Visible = true;
+            }
         }
 
         private void mostrarArticulos(List<BLArticulo> listaArticulos)
         {
             if (listaArticulos.Count != 0)
             {
-                dgvArticulos.ColumnCount = 7;
+                dgvArticulos.ColumnCount = 8;
                 dgvArticulos.Columns[0].Name = "Número placa";
                 dgvArticulos.Columns[0].HeaderText = "Número placa";
                 dgvArticulos.Columns[0].DataPropertyName = "numeroPlaca"; // DataPropertyName debe coincidir con el nombre de los atributos del
@@ -75,14 +80,21 @@ namespace UI
                 dgvArticulos.Columns[4].HeaderText = "Estado";
                 dgvArticulos.Columns[4].DataPropertyName = "estadoArticulo";
 
-                dgvArticulos.Columns[5].Name = "Categoría";
-                dgvArticulos.Columns[5].HeaderText = "Categoría";
-                dgvArticulos.Columns[5].DataPropertyName = "nombCategoria";
+                dgvArticulos.Columns[5].Name = "Ubicación";
+                dgvArticulos.Columns[5].HeaderText = "Ubicación";
+                dgvArticulos.Columns[5].DataPropertyName = "ubicacionArticulo";
 
-                dgvArticulos.Columns[6].Name = "ID";
-                dgvArticulos.Columns[6].HeaderText = "ID";
-                dgvArticulos.Columns[6].DataPropertyName = "idArticulo";
-                dgvArticulos.Columns[6].Visible = false;
+                dgvArticulos.Columns[6].Name = "Categoría";
+                dgvArticulos.Columns[6].HeaderText = "Categoría";
+                dgvArticulos.Columns[6].DataPropertyName = "nombCategoria";
+
+                dgvArticulos.Columns[7].Name = "ID";
+                dgvArticulos.Columns[7].HeaderText = "ID";
+                dgvArticulos.Columns[7].DataPropertyName = "idArticulo";
+                dgvArticulos.Columns[7].Visible = false;
+
+                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                dgvArticulos.Columns.Add(button);
 
                 DataGridViewButtonColumn but = new DataGridViewButtonColumn();
                 dgvArticulos.Columns.Add(but);
@@ -96,24 +108,31 @@ namespace UI
 
         private void dgvArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 8)
             {
-                idArt = dgvArticulos.Rows[e.RowIndex].Cells[6].Value + "";
-                ModificarArticulo.categoriaArticulo = dgvArticulos.Rows[e.RowIndex].Cells[5].Value + "";
+                VerArticulo.idArticulo = dgvArticulos.Rows[e.RowIndex].Cells[7].Value + "";
+                new VerArticulo().Show();
+            }
+
+            if (e.ColumnIndex == 9)
+            {
+                idArt = dgvArticulos.Rows[e.RowIndex].Cells[7].Value + "";
+                ModificarArticulo.categoriaArticulo = dgvArticulos.Rows[e.RowIndex].Cells[6].Value + "";
                 ModificarArticulo.estadoArticulo = dgvArticulos.Rows[e.RowIndex].Cells[4].Value + "";
                 new ModificarArticulo().Show();
             }
 
-            if (e.ColumnIndex == 8)
+            if (e.ColumnIndex == 10)
             {
-                eliminarFila(Convert.ToInt32(dgvArticulos.Rows[e.RowIndex].Cells[6].Value));
+                eliminarFila(Convert.ToInt32(dgvArticulos.Rows[e.RowIndex].Cells[7].Value));
             }
         }
 
         private void dgvArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            dgvArticulos.Rows[e.RowIndex].Cells[7].Value = "Modificar";
-            dgvArticulos.Rows[e.RowIndex].Cells[8].Value = "Eliminar";
+            dgvArticulos.Rows[e.RowIndex].Cells[8].Value = "Ver";
+            dgvArticulos.Rows[e.RowIndex].Cells[9].Value = "Modificar";
+            dgvArticulos.Rows[e.RowIndex].Cells[10].Value = "Eliminar";
         }
 
         private void eliminarFila(int idArticulo)

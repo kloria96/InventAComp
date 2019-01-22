@@ -12,10 +12,10 @@ namespace BL
     public class ManejadorArticulo
     {
 
-        public void agregarArticulo(BLArticulo articulo)
+        public bool agregarArticulo(BLArticulo articulo)
         {
             DAOArticulo daoArt = new DAOArticulo();
-            daoArt.agregarArticulo(convert(articulo));
+            return daoArt.agregarArticulo(convert(articulo));
         }
 
         public List<BLArticulo> consultarArticulos()
@@ -26,7 +26,7 @@ namespace BL
             foreach (TOArticulo toArt in listTOArt)
             {
                 //listBLArt.Add(convert2(toArt));
-                listBLArt.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.nombreCategoria));
+                listBLArt.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.nombreCategoria));
             }
             return listBLArt;
         }
@@ -39,7 +39,7 @@ namespace BL
             List<BLArticulo> lista = new List<BLArticulo>();
             foreach (TOArticulo toArt in daoArt.obtenerArticulosNombre(value))
             {
-                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.nombreCategoria));
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.nombreCategoria));
             }
             return lista;
         }
@@ -50,7 +50,7 @@ namespace BL
             List<BLArticulo> lista = new List<BLArticulo>();
             foreach (TOArticulo toArt in daoArt.obtenerArticulosCategoria(value))
             {
-                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.nombreCategoria));
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.nombreCategoria));
             }
             return lista;
         }
@@ -61,7 +61,7 @@ namespace BL
             List<BLArticulo> lista = new List<BLArticulo>();
             foreach (TOArticulo toArt in daoArt.obtenerArticulosFecha(fechaInicio, fechaFin))
             {
-                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.nombreCategoria));
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.nombreCategoria));
             }
             return lista;
         }
@@ -76,25 +76,32 @@ namespace BL
         {
             DAOArticulo daoArt = new DAOArticulo();
             TOArticulo toArt = daoArt.obtenerArticulo(idArticulo);
-            return new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.idCategoria);
+            return new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.idCategoria);
         }
 
-        public bool actualizarArticulo(int idArticulo, string numeroPlaca, string nombre, string descripcion, string estado, string categoria)
+        public BLArticulo obtenerArticuloCategoria(int idArticulo)
         {
             DAOArticulo daoArt = new DAOArticulo();
-            return daoArt.actualizarArticulo(idArticulo, numeroPlaca, nombre, descripcion, estado, categoria);
+            TOArticulo toArt = daoArt.obtenerArticuloCategoria(idArticulo);
+            return new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.nombreCategoria);
+        }
+
+        public bool actualizarArticulo(int idArticulo, string numeroPlaca, string nombre, string descripcion, string estado, string ubicacion, string categoria)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            return daoArt.actualizarArticulo(idArticulo, numeroPlaca, nombre, descripcion, estado, ubicacion, categoria);
         }
 
 
 
         private TOArticulo convert(BLArticulo art)
         {
-            return new TOArticulo(art.numeroPlaca, art.nombArticulo, art.idArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.idCategoria);
+            return new TOArticulo(art.idArticulo, art.numeroPlaca, art.nombArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.ubicacionArticulo, art.idCategoria);
         }
 
         private BLArticulo convert(TOArticulo art)
         {
-            return new BLArticulo(art.numeroPlaca, art.nombArticulo, art.idArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.idCategoria);
+            return new BLArticulo(art.idArticulo, art.numeroPlaca, art.nombArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.ubicacionArticulo, art.idCategoria);
         }
 
 

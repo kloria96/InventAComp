@@ -13,8 +13,8 @@ namespace DAO
 {
     public class DAOArticulo
     {
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
         
             // connectionStringJ (Juan Diego)
             // connectionStringM (Melany)
@@ -25,8 +25,8 @@ namespace DAO
             {
                 conex.Open();
             }
-            //String qry = "select a.idArticulo, a.numeroPlaca, a.nombArticulo, a.fechaIngreso, a.descripcArticulo, a.estadoArticulo, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria;";
-            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria;";
+            
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, a.ubicacion, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria;";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
 
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -43,7 +43,8 @@ namespace DAO
                     to.fechaIngreso = reader.GetDateTime(3);
                     to.descripcArticulo = reader.GetString(4);
                     to.estadoArticulo = reader.GetString(5);
-                    to.nombreCategoria = reader.GetString(6);
+                    to.ubicacionArticulo = reader.GetString(6);
+                    to.nombreCategoria = reader.GetString(7);
                     lista.Add(to);
                 }
             }
@@ -55,13 +56,14 @@ namespace DAO
             return lista;
         }
 
-        public void agregarArticulo(TOArticulo nuevoArt)
+        public bool agregarArticulo(TOArticulo nuevoArt)
         {
             if (conex.State != ConnectionState.Open)
             {
                 conex.Open();
             }
-            String qry = "insert into articulo (numeroPlaca, nombArticulo, fechaIngreso, descripcArticulo, estadoArticulo, idCategoria) values (@numPlac, @nomb, @fechIng, @descripc, @est, @idCateg)";
+
+            String qry = "insert into articulo (numeroPlaca, nombre, fechaIngreso, descripcion, estado, ubicacion, idCategoria) values (@numPlac, @nomb, @fechIng, @descripc, @est, @ubic, @idCateg)";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             
             cmd.Parameters.AddWithValue("@numPlac", nuevoArt.numeroPlaca);
@@ -69,13 +71,15 @@ namespace DAO
             cmd.Parameters.AddWithValue("@fechIng", nuevoArt.fechaIngreso);
             cmd.Parameters.AddWithValue("@descripc", nuevoArt.descripcArticulo);
             cmd.Parameters.AddWithValue("@est", nuevoArt.estadoArticulo);
+            cmd.Parameters.AddWithValue("@ubic", nuevoArt.ubicacionArticulo);
             cmd.Parameters.AddWithValue("@idCateg", nuevoArt.idCategoria);
-            cmd.ExecuteNonQuery();
+            int result = cmd.ExecuteNonQuery();
 
             if (conex.State != ConnectionState.Closed)
             {
                 conex.Close();
             }
+            return (result > 0 ? true : false);
         }
 
         public List<TOArticulo> obtenerArticulosNombre(string value)
@@ -84,7 +88,7 @@ namespace DAO
             {
                 conex.Open();
             }
-            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria and a.nombre like @no";
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, a.ubicacion, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria and a.nombre like @no";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@no", "%" + value + "%");
             
@@ -94,7 +98,7 @@ namespace DAO
             {
                 while (reader.Read())
                 {
-                    lista.Add(new TOArticulo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6)));
+                    lista.Add(new TOArticulo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7)));
                 }
             }
 
@@ -111,7 +115,7 @@ namespace DAO
             {
                 conex.Open();
             }
-            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria and c.nombre = @no";
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, a.ubicacion, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria and c.nombre = @no";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@no", value);
 
@@ -121,7 +125,7 @@ namespace DAO
             {
                 while (reader.Read())
                 {
-                    lista.Add(new TOArticulo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6)));
+                    lista.Add(new TOArticulo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7)));
                 }
             }
 
@@ -139,7 +143,7 @@ namespace DAO
                 conex.Open();
             }
 
-            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, c.nombre from inventario.articulo as a, inventario.categoria as c where a.fechaIngreso between '" + fechaInicio + "' and '" + fechaFin + "'";
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, a.ubicacion, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria and a.fechaIngreso between '" + fechaInicio + "' and '" + fechaFin + "'";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -148,7 +152,7 @@ namespace DAO
             {
                 while (reader.Read())
                 {
-                    lista.Add(new TOArticulo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6)));
+                    lista.Add(new TOArticulo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7)));
                 }
             }
 
@@ -184,7 +188,36 @@ namespace DAO
             {
                 conex.Open();
             }
+
             String qry = "select * from articulo where idArticulo = @idA";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@idA", idArticulo);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            TOArticulo toArticulo = new TOArticulo();
+            
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    toArticulo = new TOArticulo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7));
+                }
+            }
+            
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return toArticulo;
+        }
+
+        public TOArticulo obtenerArticuloCategoria(int idArticulo)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, a.ubicacion, c.nombre from inventario.articulo as a, inventario.categoria as c where a.idArticulo = @idA and c.idCategoria = a.idCategoria";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@idA", idArticulo);
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -193,7 +226,7 @@ namespace DAO
             {
                 while (reader.Read())
                 {
-                    toArticulo = new TOArticulo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetInt32(6));
+                    toArticulo = new TOArticulo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7));
                 }
             }
 
@@ -204,19 +237,20 @@ namespace DAO
             return toArticulo;
         }
 
-        public bool actualizarArticulo(int idArticulo, string numeroPlaca, string nombre, string descripcion, string estado, string categoria)
+        public bool actualizarArticulo(int idArticulo, string numeroPlaca, string nombre, string descripcion, string estado, string ubicacion, string categoria)
         {
             if (conex.State != ConnectionState.Open)
             {
                 conex.Open();
             }
 
-            String qry = "update articulo set numeroPlaca = @num, nombre = @nom, descripcion = @des, estado = @est, idCategoria = (select idCategoria from categoria where nombre = @nomCat) where idArticulo = @idArt";
+            String qry = "update articulo set numeroPlaca = @num, nombre = @nom, descripcion = @des, estado = @est, ubicacion = @ubic, idCategoria = (select idCategoria from categoria where nombre = @nomCat) where idArticulo = @idArt";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@num", numeroPlaca);
             cmd.Parameters.AddWithValue("@nom", nombre);
             cmd.Parameters.AddWithValue("@des", descripcion);
             cmd.Parameters.AddWithValue("@est", estado);
+            cmd.Parameters.AddWithValue("@ubic", ubicacion);
             cmd.Parameters.AddWithValue("@nomCat", categoria);
             cmd.Parameters.AddWithValue("@idArt", idArticulo);
             int result = cmd.ExecuteNonQuery();

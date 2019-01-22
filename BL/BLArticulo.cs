@@ -10,12 +10,13 @@ namespace BL
 {
     public class BLArticulo
     {
-         public String numeroPlaca { get; set; }
-         public String nombArticulo { get; set; }
-         public int idArticulo { get; set; }
+        public String numeroPlaca { get; set; }
+        public String nombArticulo { get; set; }
+        public int idArticulo { get; set; }
         public DateTime fechaIngreso { get; set; }
         public String descripcArticulo { get; set; }
         public String estadoArticulo { get; set; }
+        public String ubicacionArticulo { get; set; }
         public int idCategoria { get; set; }
         public String nombCategoria { set; get; }
 
@@ -64,6 +65,41 @@ namespace BL
             this.fechaIngreso = fechaIngreso;
             this.descripcArticulo = descripcArticulo;
             this.estadoArticulo = estadoArticulo;
+            this.nombCategoria = nombreCategoria;
+        }
+
+        public BLArticulo(int idArticulo, String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, int idCategoria)
+        {
+            this.idArticulo = idArticulo;
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.ubicacionArticulo = ubicacionArticulo;
+            this.idCategoria = idCategoria;
+        }
+
+        public BLArticulo(String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, int idCategoria)
+        {
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.ubicacionArticulo = ubicacionArticulo;
+            this.idCategoria = idCategoria;
+        }
+
+        public BLArticulo(int idArticulo, String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, String nombreCategoria)
+        {
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.idArticulo = idArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.ubicacionArticulo = ubicacionArticulo;
             this.nombCategoria = nombreCategoria;
         }
 

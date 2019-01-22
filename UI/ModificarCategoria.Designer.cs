@@ -35,6 +35,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnGuardar.Location = new System.Drawing.Point(203, 35);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
@@ -57,6 +58,7 @@
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // ModificarCategoria
             // 

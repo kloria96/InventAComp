@@ -54,8 +54,17 @@ namespace UI
             if (comboEstados.SelectedItem != null && comboCategoria.SelectedItem != null)
             {
                 ManejadorArticulo manejArt = new ManejadorArticulo();
-                BLArticulo artNuevo = new BLArticulo(txtPlaca.Text, txtNombre.Text, Convert.ToDateTime(datePickerIngreso.Text), txtDescripcion.Text, comboEstados.SelectedItem.ToString(), comboCategoria.SelectedIndex + 1);
-                manejArt.agregarArticulo(artNuevo);
+                BLArticulo artNuevo = new BLArticulo(txtPlaca.Text, txtNombre.Text, Convert.ToDateTime(datePickerIngreso.Text), txtDescripcion.Text, comboEstados.SelectedItem.ToString(), txtUbicacion.Text, comboCategoria.SelectedIndex + 1);
+                
+                if (manejArt.agregarArticulo(artNuevo))
+                {
+                    this.Dispose();
+                    MessageBox.Show("Se ha agregado el artículo");
+                    new Articulos().Show();
+                } else
+                {
+                    MessageBox.Show("No se ha podido ingresar el artículo");
+                }
             } else
             {
                 if (comboEstados.SelectedItem == null)
@@ -67,6 +76,11 @@ namespace UI
                     MessageBox.Show("Seleccione una categoría");
                 }
             }
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
     }

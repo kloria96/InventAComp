@@ -43,6 +43,8 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.comboEstados = new System.Windows.Forms.ComboBox();
+            this.lblUbicacion = new System.Windows.Forms.Label();
+            this.txtUbicacion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblModif
@@ -159,16 +161,17 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(495, 294);
+            this.btnAtras.Location = new System.Drawing.Point(495, 349);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(75, 23);
             this.btnAtras.TabIndex = 25;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(268, 290);
+            this.btnGuardar.Location = new System.Drawing.Point(268, 345);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(92, 31);
@@ -186,11 +189,29 @@
             this.comboEstados.Size = new System.Drawing.Size(151, 21);
             this.comboEstados.TabIndex = 26;
             // 
+            // lblUbicacion
+            // 
+            this.lblUbicacion.AutoSize = true;
+            this.lblUbicacion.Location = new System.Drawing.Point(69, 300);
+            this.lblUbicacion.Name = "lblUbicacion";
+            this.lblUbicacion.Size = new System.Drawing.Size(55, 13);
+            this.lblUbicacion.TabIndex = 27;
+            this.lblUbicacion.Text = "Ubicación";
+            // 
+            // txtUbicacion
+            // 
+            this.txtUbicacion.Location = new System.Drawing.Point(169, 297);
+            this.txtUbicacion.Name = "txtUbicacion";
+            this.txtUbicacion.Size = new System.Drawing.Size(151, 20);
+            this.txtUbicacion.TabIndex = 28;
+            // 
             // ModificarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 386);
+            this.ClientSize = new System.Drawing.Size(663, 409);
+            this.Controls.Add(this.txtUbicacion);
+            this.Controls.Add(this.lblUbicacion);
             this.Controls.Add(this.comboEstados);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnGuardar);
@@ -230,5 +251,7 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ComboBox comboEstados;
+        private System.Windows.Forms.Label lblUbicacion;
+        private System.Windows.Forms.TextBox txtUbicacion;
     }
 }

@@ -11,8 +11,8 @@ namespace DAO
 {
     public class DAOCategoria
     {
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
         
             // connectionStringJ (Juan Diego)
             // connectionStringM (Melany)
@@ -134,6 +134,26 @@ namespace DAO
             String qry = "delete from categoria where idCategoria = @idC";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@idC", idCategoria);
+            int result = cmd.ExecuteNonQuery();
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return (result > 0 ? true : false);
+        }
+
+        public bool actualizarCategoria(int idCategoria, string nombre)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "update categoria set nombre = @nom where idCategoria = @idCat";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@nom", nombre);
+            cmd.Parameters.AddWithValue("@idCat", idCategoria);
             int result = cmd.ExecuteNonQuery();
 
             if (conex.State != ConnectionState.Closed)

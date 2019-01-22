@@ -52,5 +52,11 @@ namespace BL
             return daoCat.eliminarCategoria(idCategoria);
         }
 
+        public bool actualizarCategoria(int idCategoria, string nombre)
+        {
+            DAOCategoria daoCat = new DAOCategoria();
+            return daoCat.actualizarCategoria(idCategoria, nombre);
+        }
+
     }
 }

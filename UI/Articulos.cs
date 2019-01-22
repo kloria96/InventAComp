@@ -36,7 +36,7 @@ namespace UI
             listaBL = manej.consultarArticulos();
             if(listaBL.Count != 0)
             {
-                gridArticulos.ColumnCount = 7;
+                gridArticulos.ColumnCount = 8;
 
                 gridArticulos.Columns[0].Name = "ID";
                 gridArticulos.Columns[0].HeaderText = "ID";
@@ -63,9 +63,16 @@ namespace UI
                 gridArticulos.Columns[5].HeaderText = "Estado";
                 gridArticulos.Columns[5].DataPropertyName = "estadoArticulo";
 
-                gridArticulos.Columns[6].Name = "Categoría";
-                gridArticulos.Columns[6].HeaderText = "Categoría";
-                gridArticulos.Columns[6].DataPropertyName = "nombCategoria";
+                gridArticulos.Columns[6].Name = "Ubicación";
+                gridArticulos.Columns[6].HeaderText = "Ubicación";
+                gridArticulos.Columns[6].DataPropertyName = "ubicacionArticulo";
+
+                gridArticulos.Columns[7].Name = "Categoría";
+                gridArticulos.Columns[7].HeaderText = "Categoría";
+                gridArticulos.Columns[7].DataPropertyName = "nombCategoria";
+
+                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                gridArticulos.Columns.Add(button);
 
                 DataGridViewButtonColumn but = new DataGridViewButtonColumn();
                 gridArticulos.Columns.Add(but);
@@ -79,15 +86,21 @@ namespace UI
 
         private void gridArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 8)
+            {
+                VerArticulo.idArticulo = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
+                new VerArticulo().Show();
+            }
+
+            if (e.ColumnIndex == 9)
             {
                 idArt = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
-                ModificarArticulo.categoriaArticulo = gridArticulos.Rows[e.RowIndex].Cells[6].Value + "";
+                ModificarArticulo.categoriaArticulo = gridArticulos.Rows[e.RowIndex].Cells[7].Value + "";
                 ModificarArticulo.estadoArticulo = gridArticulos.Rows[e.RowIndex].Cells[5].Value + "";
                 new ModificarArticulo().Show();
             }
 
-            if (e.ColumnIndex == 8)
+            if (e.ColumnIndex == 10)
             {
                 eliminarFila(Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value));
             }
@@ -95,8 +108,9 @@ namespace UI
 
         private void gridArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            gridArticulos.Rows[e.RowIndex].Cells[7].Value = "Modificar";
-            gridArticulos.Rows[e.RowIndex].Cells[8].Value = "Eliminar";
+            gridArticulos.Rows[e.RowIndex].Cells[8].Value = "Ver";
+            gridArticulos.Rows[e.RowIndex].Cells[9].Value = "Modificar";
+            gridArticulos.Rows[e.RowIndex].Cells[10].Value = "Eliminar";
         }
 
         private void eliminarFila(int idArticulo)
@@ -127,6 +141,9 @@ namespace UI
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
+            this.Dispose();
+            //new Principal().Show();
+
             //Principal art = new Principal();
             //art.MdiParent = this.MdiParent;
             //art.Show();
@@ -136,5 +153,6 @@ namespace UI
             //    this.Close();
             //}
         }
+
     }
 }

@@ -33,13 +33,17 @@ namespace UI
             string numeroPlaca = txtPlaca.Text;
             string descripcion = txtDescripcion.Text;
             string estado = comboEstados.SelectedItem.ToString();
+            string ubicacion = txtUbicacion.Text;
             string categoria = comboCategoria.SelectedItem.ToString();
-            if (manejArt.actualizarArticulo(idA, numeroPlaca, nombre, descripcion, estado, categoria))
+            if (manejArt.actualizarArticulo(idA, numeroPlaca, nombre, descripcion, estado, ubicacion, categoria))
             {
                 MessageBox.Show("Se han actualizado los datos del artículo");
+                this.Dispose();
+                new Articulos().Show();
             } else
             {
                 MessageBox.Show("No se ha podido actualizar el artículo");
+                this.Dispose();
             }
         }
 
@@ -61,6 +65,7 @@ namespace UI
             txtPlaca.Text = articulo.numeroPlaca;
             txtNombre.Text = articulo.nombArticulo;
             txtDescripcion.Text = articulo.descripcArticulo;
+            txtUbicacion.Text = articulo.ubicacionArticulo;
             //txtEstado.Text = articulo.estadoArticulo;
 
         }
@@ -95,6 +100,11 @@ namespace UI
                 }
             }
             comboEstados.SelectedIndex = 0;
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
 
     }

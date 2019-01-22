@@ -14,6 +14,7 @@ namespace TO
         public DateTime fechaIngreso { get; set; }
         public String descripcArticulo { get; set; }
         public String estadoArticulo { get; set; }
+        public String ubicacionArticulo { get; set; }
         public int idCategoria { get; set; }
         public String nombreCategoria { get; set; }
 
@@ -62,6 +63,41 @@ namespace TO
             this.fechaIngreso = fechaIngreso;
             this.descripcArticulo = descripcArticulo;
             this.estadoArticulo = estadoArticulo;
+            this.nombreCategoria = nombreCategoria;
+        }
+
+        public TOArticulo(int idArticulo, String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, int idCategoria)
+        {
+            this.idArticulo = idArticulo;
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.ubicacionArticulo = ubicacionArticulo;
+            this.idCategoria = idCategoria;
+        }
+
+        public TOArticulo(String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, int idCategoria)
+        {
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.ubicacionArticulo = ubicacionArticulo;
+            this.idCategoria = idCategoria;
+        }
+
+        public TOArticulo(int idArticulo, String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, String nombreCategoria)
+        {
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.idArticulo = idArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.ubicacionArticulo = ubicacionArticulo;
             this.nombreCategoria = nombreCategoria;
         }
 

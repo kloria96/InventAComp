@@ -71,9 +71,14 @@ namespace UI
             {
                 idCat = gridCategorias.Rows[e.RowIndex].Cells[1].Value + "";
                 nombreCat = gridCategorias.Rows[e.RowIndex].Cells[0].Value + "";
-                ShowMyDialogBox();
-                //new ModificarArticulo().Show();
-                //Definir si se puede modificar una categoría (y cómo hacerlo)
+                if (actualizarFila(Convert.ToInt32(idCat))) {
+                    ManejadorCategoria manej = new ManejadorCategoria();
+                    gridCategorias.DataSource = manej.consultarCategorias();
+                    MessageBox.Show("Se ha actualizado la categoría");
+                } else
+                {
+                    MessageBox.Show("No se ha podido actualizar la categoría");
+                }
             }
 
             if (e.ColumnIndex == 3)
@@ -100,8 +105,7 @@ namespace UI
             }
         }
 
-        //En proceso. Para modificar el nombre de la categoría mediante un ventana de diálogo
-        public void ShowMyDialogBox()
+        public bool actualizarFila(int idCat)
         {
             ModificarCategoria testDialog = new ModificarCategoria();
             testDialog.txtNombre.Text = nombreCat;
@@ -110,12 +114,21 @@ namespace UI
             {
                 // Read the contents of testDialog's TextBox.
                 this.nombreCat = testDialog.txtNombre.Text;
+                ManejadorCategoria manejCat = new ManejadorCategoria();
+                testDialog.Dispose();
+                return manejCat.actualizarCategoria(idCat, nombreCat);
             }
             else
             {
-                nombreCat = "Cancelled";
+                testDialog.Dispose();
+                return false;
             }
-            testDialog.Dispose();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            //new Principal().Show();
         }
 
     }
