@@ -29,6 +29,12 @@ namespace BL
             return daoCateg.consultarCategoriasOrdenId();
         }
 
+        public bool verificarCategoria(string nombre)
+        {
+            DAOCategoria daoCateg = new DAOCategoria();
+            return daoCateg.verificarCategoria(nombre);
+        }
+
         public void agregarCategoria(String nombre)
         {
             DAOCategoria daoCateg = new DAOCategoria();

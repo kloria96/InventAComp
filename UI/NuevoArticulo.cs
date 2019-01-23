@@ -58,6 +58,7 @@ namespace UI
                 
                 if (manejArt.agregarArticulo(artNuevo))
                 {
+                    this.Owner.Dispose();
                     this.Dispose();
                     MessageBox.Show("Se ha agregado el artículo");
                     new Articulos().Show();

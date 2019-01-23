@@ -37,6 +37,23 @@ namespace DAO
             return listaCategorias;
         }
 
+        public bool verificarCategoria(string nombre)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+            String qry = "select count(*) from categoria where nombre = @nom";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@nom", nombre);
+            int result = Convert.ToInt32(cmd.ExecuteScalar());
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return (result == 0 ? true : false);
+        }
+
         public void insertarCategoria(String nombre)
         {
             if (conex.State != ConnectionState.Open)
@@ -45,17 +62,12 @@ namespace DAO
             }
             String qry = "insert into categoria (nombre) values (@nomb)";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
-            if (conex.State != ConnectionState.Open)
-            {
-                conex.Open();
-            }
             cmd.Parameters.AddWithValue("@nomb", nombre);
             cmd.ExecuteNonQuery();
             if (conex.State != ConnectionState.Closed)
             {
                 conex.Close();
             }
-
         }
 
         public DataTable consultarCategoriasOrdenId()

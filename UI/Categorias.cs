@@ -54,9 +54,23 @@ namespace UI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            ManejadorCategoria manej = new ManejadorCategoria();
-            manej.agregarCategoria(txtNuevaCategoria.Text);
-            gridCategorias.DataSource = manej.consultarCategorias();
+            if (txtNuevaCategoria.Text != "")
+            {
+                ManejadorCategoria manej = new ManejadorCategoria();
+                if (manej.verificarCategoria(txtNuevaCategoria.Text))
+                {
+                    manej.agregarCategoria(txtNuevaCategoria.Text);
+                    txtNuevaCategoria.Clear();
+                    MessageBox.Show("Se ha agregado la categoría");
+                    gridCategorias.DataSource = manej.consultarCategorias();
+                } else
+                {
+                    MessageBox.Show("Ya existe la categoría", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            } else
+            {
+                MessageBox.Show("Ingrese el nombre de la nueva categoría");
+            }
          }
 
         private void gridCategorias_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -90,7 +104,7 @@ namespace UI
         private void eliminarFila(int idCategoria)
         {
             ManejadorCategoria manejCat = new ManejadorCategoria();
-            var confirmResult = MessageBox.Show("¿Desea eliminar la categoría?\nLos artículos dentro de esta categoría serán eliminados.", "Confirmar", MessageBoxButtons.YesNo);
+            var confirmResult = MessageBox.Show("¿Desea eliminar la categoría?\nLos artículos dentro de esta categoría serán eliminados.", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (confirmResult == DialogResult.Yes)
             {
                 if (manejCat.eliminarCategoria(idCategoria))
@@ -109,10 +123,10 @@ namespace UI
         {
             ModificarCategoria testDialog = new ModificarCategoria();
             testDialog.txtNombre.Text = nombreCat;
-            // Show testDialog as a modal dialog and determine if DialogResult = OK.
+            // Mostrar testDialog como modal y determinar si DialogResult = OK.
             if (testDialog.ShowDialog(this) == DialogResult.OK)
             {
-                // Read the contents of testDialog's TextBox.
+                // Leer el contenido del TextBox de testDialog.
                 this.nombreCat = testDialog.txtNombre.Text;
                 ManejadorCategoria manejCat = new ManejadorCategoria();
                 testDialog.Dispose();

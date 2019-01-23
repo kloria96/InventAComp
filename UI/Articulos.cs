@@ -25,8 +25,9 @@ namespace UI
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             NuevoArticulo art = new NuevoArticulo();
+            art.Owner = this;
             art.MdiParent = this.MdiParent;
-            art.Show();
+            art.ShowDialog();
         }
 
         public void cargarGrid()
@@ -97,7 +98,10 @@ namespace UI
                 idArt = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
                 ModificarArticulo.categoriaArticulo = gridArticulos.Rows[e.RowIndex].Cells[7].Value + "";
                 ModificarArticulo.estadoArticulo = gridArticulos.Rows[e.RowIndex].Cells[5].Value + "";
-                new ModificarArticulo().Show();
+
+                ModificarArticulo modArt = new ModificarArticulo();
+                modArt.Owner = this;
+                modArt.ShowDialog();
             }
 
             if (e.ColumnIndex == 10)

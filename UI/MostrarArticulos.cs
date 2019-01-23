@@ -119,12 +119,16 @@ namespace UI
                 idArt = dgvArticulos.Rows[e.RowIndex].Cells[7].Value + "";
                 ModificarArticulo.categoriaArticulo = dgvArticulos.Rows[e.RowIndex].Cells[6].Value + "";
                 ModificarArticulo.estadoArticulo = dgvArticulos.Rows[e.RowIndex].Cells[4].Value + "";
-                new ModificarArticulo().Show();
+
+                ModificarArticulo modArt = new ModificarArticulo();
+                modArt.Owner = this;
+                modArt.ShowDialog();
             }
 
             if (e.ColumnIndex == 10)
             {
                 eliminarFila(Convert.ToInt32(dgvArticulos.Rows[e.RowIndex].Cells[7].Value));
+                this.Dispose();
             }
         }
 

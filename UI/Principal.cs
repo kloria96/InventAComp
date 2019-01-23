@@ -138,7 +138,7 @@ namespace UI
                     }
                     else
                     {
-                        MessageBox.Show("Ingrese el nombre del artículo a buscar");
+                        MessageBox.Show("Ingrese el nombre del artículo a buscar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     break;
                 case "2":

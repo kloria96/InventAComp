@@ -37,8 +37,9 @@ namespace UI
             string categoria = comboCategoria.SelectedItem.ToString();
             if (manejArt.actualizarArticulo(idA, numeroPlaca, nombre, descripcion, estado, ubicacion, categoria))
             {
-                MessageBox.Show("Se han actualizado los datos del artículo");
+                this.Owner.Dispose();
                 this.Dispose();
+                MessageBox.Show("Se han actualizado los datos del artículo");
                 new Articulos().Show();
             } else
             {
@@ -64,10 +65,10 @@ namespace UI
 
             txtPlaca.Text = articulo.numeroPlaca;
             txtNombre.Text = articulo.nombArticulo;
+            txtIngreso.Text = articulo.fechaIngreso.ToString("dd/MM/yyyy");
             txtDescripcion.Text = articulo.descripcArticulo;
             txtUbicacion.Text = articulo.ubicacionArticulo;
-            //txtEstado.Text = articulo.estadoArticulo;
-
+            
         }
 
         private void cargarCategorias()
