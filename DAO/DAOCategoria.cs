@@ -11,8 +11,8 @@ namespace DAO
 {
     public class DAOCategoria
     {
-        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
         
             // connectionStringJ (Juan Diego)
             // connectionStringM (Melany)

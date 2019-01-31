@@ -20,6 +20,7 @@ namespace UI
         public Principal()
         {
             InitializeComponent();
+            //this.WindowState = FormWindowState.Maximized;
             //Icon icon = Icon.ExtractAssociatedIcon("~/download-ConvertImage.ico");
             //this.Icon = new Icon(this.GetType(), "UI.download-ConvertImage.ico");
 
@@ -35,7 +36,7 @@ namespace UI
             art.MdiParent = this.MdiParent;
             //this.Hide(); //para ocultar ventana
            
-            //art.WindowState = FormWindowState.Maximized;  //para mostrar la ventana modo maximizado
+            //this.WindowState = FormWindowState.Maximized;  //para mostrar la ventana modo maximizado
             art.Show();
         }
 
@@ -164,5 +165,14 @@ namespace UI
             }
         }
 
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblInventario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

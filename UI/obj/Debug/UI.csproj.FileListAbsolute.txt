@@ -50,3 +50,4 @@ C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.MostrarArticulos.resourc
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.ModificarCategoria.resources
 C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.ModificarCategoria.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.VerArticulo.resources
+C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.VerArticulo.resources

@@ -43,6 +43,10 @@
             this.lblFechaFin = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
+            this.MenuVertical = new System.Windows.Forms.Panel();
+            this.PanelTitulo = new System.Windows.Forms.Panel();
+            this.MenuVertical.SuspendLayout();
+            this.PanelTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblInventario
@@ -50,37 +54,43 @@
             this.lblInventario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblInventario.AutoSize = true;
             this.lblInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventario.Location = new System.Drawing.Point(389, 58);
-            this.lblInventario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInventario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblInventario.Location = new System.Drawing.Point(206, 33);
             this.lblInventario.Name = "lblInventario";
-            this.lblInventario.Size = new System.Drawing.Size(117, 29);
+            this.lblInventario.Size = new System.Drawing.Size(490, 36);
             this.lblInventario.TabIndex = 0;
-            this.lblInventario.Text = "Inventario";
+            this.lblInventario.Text = "Inventario Asociación Acompáñame";
+            this.lblInventario.Click += new System.EventHandler(this.lblInventario_Click);
             // 
             // btnArticulo
             // 
             this.btnArticulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnArticulo.BackColor = System.Drawing.Color.Teal;
             this.btnArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArticulo.Location = new System.Drawing.Point(246, 134);
-            this.btnArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnArticulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnArticulo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnArticulo.Location = new System.Drawing.Point(58, 218);
+            this.btnArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnArticulo.Name = "btnArticulo";
-            this.btnArticulo.Size = new System.Drawing.Size(175, 77);
+            this.btnArticulo.Size = new System.Drawing.Size(227, 104);
             this.btnArticulo.TabIndex = 1;
             this.btnArticulo.Text = "Administrar Artículos";
-            this.btnArticulo.UseVisualStyleBackColor = true;
+            this.btnArticulo.UseVisualStyleBackColor = false;
             this.btnArticulo.Click += new System.EventHandler(this.btnArticulo_Click);
             // 
             // btnCategoria
             // 
             this.btnCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCategoria.BackColor = System.Drawing.Color.Teal;
             this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategoria.Location = new System.Drawing.Point(472, 134);
-            this.btnCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCategoria.Location = new System.Drawing.Point(58, 413);
+            this.btnCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(175, 77);
+            this.btnCategoria.Size = new System.Drawing.Size(233, 95);
             this.btnCategoria.TabIndex = 2;
             this.btnCategoria.Text = "Administrar Categorías";
-            this.btnCategoria.UseVisualStyleBackColor = true;
+            this.btnCategoria.UseVisualStyleBackColor = false;
             this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
             // lblFil
@@ -88,10 +98,9 @@
             this.lblFil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFil.AutoSize = true;
             this.lblFil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFil.Location = new System.Drawing.Point(261, 296);
-            this.lblFil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFil.Location = new System.Drawing.Point(531, 245);
             this.lblFil.Name = "lblFil";
-            this.lblFil.Size = new System.Drawing.Size(75, 18);
+            this.lblFil.Size = new System.Drawing.Size(94, 24);
             this.lblFil.TabIndex = 3;
             this.lblFil.Text = "Filtrar por:";
             // 
@@ -105,35 +114,37 @@
             "Nombre",
             "Categoría",
             "Fecha de ingreso"});
-            this.cbFiltros.Location = new System.Drawing.Point(349, 295);
-            this.cbFiltros.Margin = new System.Windows.Forms.Padding(2);
+            this.cbFiltros.Location = new System.Drawing.Point(694, 245);
+            this.cbFiltros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFiltros.Name = "cbFiltros";
-            this.cbFiltros.Size = new System.Drawing.Size(136, 24);
+            this.cbFiltros.Size = new System.Drawing.Size(180, 28);
             this.cbFiltros.TabIndex = 4;
             this.cbFiltros.SelectedIndexChanged += new System.EventHandler(this.cbFiltros_SelectedIndexChanged);
             // 
             // btnBuscar
             // 
             this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.BackColor = System.Drawing.Color.Teal;
             this.btnBuscar.Enabled = false;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(509, 287);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscar.Location = new System.Drawing.Point(929, 229);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(119, 39);
+            this.btnBuscar.Size = new System.Drawing.Size(189, 55);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar Artículos";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(383, 370);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombre.Location = new System.Drawing.Point(694, 336);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(179, 22);
+            this.txtNombre.Size = new System.Drawing.Size(237, 26);
             this.txtNombre.TabIndex = 6;
             this.txtNombre.Visible = false;
             // 
@@ -143,10 +154,10 @@
             this.cbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategorias.FormattingEnabled = true;
-            this.cbCategorias.Location = new System.Drawing.Point(383, 370);
-            this.cbCategorias.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCategorias.Location = new System.Drawing.Point(694, 336);
+            this.cbCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategorias.Name = "cbCategorias";
-            this.cbCategorias.Size = new System.Drawing.Size(179, 24);
+            this.cbCategorias.Size = new System.Drawing.Size(237, 28);
             this.cbCategorias.TabIndex = 7;
             this.cbCategorias.Visible = false;
             this.cbCategorias.SelectedIndexChanged += new System.EventHandler(this.cbCategorias_SelectedIndexChanged);
@@ -155,10 +166,10 @@
             // 
             this.dtInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtInicio.Location = new System.Drawing.Point(383, 370);
-            this.dtInicio.Margin = new System.Windows.Forms.Padding(2);
+            this.dtInicio.Location = new System.Drawing.Point(694, 336);
+            this.dtInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtInicio.Name = "dtInicio";
-            this.dtInicio.Size = new System.Drawing.Size(245, 21);
+            this.dtInicio.Size = new System.Drawing.Size(325, 24);
             this.dtInicio.TabIndex = 9;
             this.dtInicio.Visible = false;
             // 
@@ -166,10 +177,10 @@
             // 
             this.dtFin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFin.Location = new System.Drawing.Point(383, 412);
-            this.dtFin.Margin = new System.Windows.Forms.Padding(2);
+            this.dtFin.Location = new System.Drawing.Point(694, 388);
+            this.dtFin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtFin.Name = "dtFin";
-            this.dtFin.Size = new System.Drawing.Size(245, 21);
+            this.dtFin.Size = new System.Drawing.Size(325, 24);
             this.dtFin.TabIndex = 10;
             this.dtFin.Visible = false;
             // 
@@ -178,10 +189,9 @@
             this.lblFechaIni.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaIni.AutoSize = true;
             this.lblFechaIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaIni.Location = new System.Drawing.Point(283, 373);
-            this.lblFechaIni.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFechaIni.Location = new System.Drawing.Point(560, 340);
             this.lblFechaIni.Name = "lblFechaIni";
-            this.lblFechaIni.Size = new System.Drawing.Size(87, 18);
+            this.lblFechaIni.Size = new System.Drawing.Size(113, 24);
             this.lblFechaIni.TabIndex = 11;
             this.lblFechaIni.Text = "Fecha Inicio";
             this.lblFechaIni.Visible = false;
@@ -191,10 +201,9 @@
             this.lblFechaFin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaFin.AutoSize = true;
             this.lblFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaFin.Location = new System.Drawing.Point(283, 412);
-            this.lblFechaFin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFechaFin.Location = new System.Drawing.Point(560, 388);
             this.lblFechaFin.Name = "lblFechaFin";
-            this.lblFechaFin.Size = new System.Drawing.Size(73, 18);
+            this.lblFechaFin.Size = new System.Drawing.Size(96, 24);
             this.lblFechaFin.TabIndex = 12;
             this.lblFechaFin.Text = "Fecha Fin";
             this.lblFechaFin.Visible = false;
@@ -204,9 +213,10 @@
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(294, 373);
+            this.lblNombre.Location = new System.Drawing.Point(575, 340);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(62, 18);
+            this.lblNombre.Size = new System.Drawing.Size(79, 24);
             this.lblNombre.TabIndex = 13;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.Visible = false;
@@ -216,18 +226,41 @@
             this.lblCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(294, 374);
+            this.lblCategoria.Location = new System.Drawing.Point(575, 341);
+            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(72, 18);
+            this.lblCategoria.Size = new System.Drawing.Size(90, 24);
             this.lblCategoria.TabIndex = 14;
             this.lblCategoria.Text = "Categoría";
             this.lblCategoria.Visible = false;
             // 
+            // MenuVertical
+            // 
+            this.MenuVertical.BackColor = System.Drawing.Color.LightBlue;
+            this.MenuVertical.Controls.Add(this.btnArticulo);
+            this.MenuVertical.Controls.Add(this.btnCategoria);
+            this.MenuVertical.Location = new System.Drawing.Point(-7, -1);
+            this.MenuVertical.Name = "MenuVertical";
+            this.MenuVertical.Size = new System.Drawing.Size(330, 668);
+            this.MenuVertical.TabIndex = 15;
+            // 
+            // PanelTitulo
+            // 
+            this.PanelTitulo.BackColor = System.Drawing.Color.LightBlue;
+            this.PanelTitulo.Controls.Add(this.lblInventario);
+            this.PanelTitulo.Location = new System.Drawing.Point(323, -1);
+            this.PanelTitulo.Name = "PanelTitulo";
+            this.PanelTitulo.Size = new System.Drawing.Size(1050, 87);
+            this.PanelTitulo.TabIndex = 16;
+            // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 538);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(1239, 662);
+            this.Controls.Add(this.PanelTitulo);
+            this.Controls.Add(this.MenuVertical);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblFechaFin);
@@ -239,14 +272,17 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cbFiltros);
             this.Controls.Add(this.lblFil);
-            this.Controls.Add(this.btnCategoria);
-            this.Controls.Add(this.btnArticulo);
-            this.Controls.Add(this.lblInventario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio del sistema";
+            this.Load += new System.EventHandler(this.Principal_Load);
+            this.MenuVertical.ResumeLayout(false);
+            this.PanelTitulo.ResumeLayout(false);
+            this.PanelTitulo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,6 +304,8 @@
         private System.Windows.Forms.Label lblFechaFin;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Panel MenuVertical;
+        private System.Windows.Forms.Panel PanelTitulo;
     }
 }
 

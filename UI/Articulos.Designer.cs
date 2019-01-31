@@ -34,7 +34,9 @@
             this.gridArticulos = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gridArticulos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblArticulo
@@ -42,10 +44,9 @@
             this.lblArticulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblArticulo.AutoSize = true;
             this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArticulo.Location = new System.Drawing.Point(390, 22);
-            this.lblArticulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblArticulo.Location = new System.Drawing.Point(563, 31);
             this.lblArticulo.Name = "lblArticulo";
-            this.lblArticulo.Size = new System.Drawing.Size(96, 25);
+            this.lblArticulo.Size = new System.Drawing.Size(120, 29);
             this.lblArticulo.TabIndex = 0;
             this.lblArticulo.Text = "Artículos";
             // 
@@ -65,12 +66,12 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridArticulos.Location = new System.Drawing.Point(30, 70);
-            this.gridArticulos.Margin = new System.Windows.Forms.Padding(2);
+            this.gridArticulos.Location = new System.Drawing.Point(68, 111);
+            this.gridArticulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridArticulos.Name = "gridArticulos";
             this.gridArticulos.ReadOnly = true;
             this.gridArticulos.RowTemplate.Height = 24;
-            this.gridArticulos.Size = new System.Drawing.Size(824, 362);
+            this.gridArticulos.Size = new System.Drawing.Size(1099, 446);
             this.gridArticulos.TabIndex = 2;
             this.gridArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridArticulos_CellClick);
             this.gridArticulos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridArticulos_CellFormatting);
@@ -78,46 +79,69 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(180, 468);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.BackColor = System.Drawing.Color.Teal;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.Location = new System.Drawing.Point(170, 592);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(135, 44);
+            this.btnAgregar.Size = new System.Drawing.Size(239, 54);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar Artículo";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnAtras
             // 
             this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(649, 472);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAtras.BackColor = System.Drawing.Color.Teal;
+            this.btnAtras.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
+            this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtras.Location = new System.Drawing.Point(937, 588);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(95, 37);
+            this.btnAtras.Size = new System.Drawing.Size(156, 63);
             this.btnAtras.TabIndex = 4;
             this.btnAtras.Text = "Atrás";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.Controls.Add(this.lblArticulo);
+            this.panel1.Location = new System.Drawing.Point(-3, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1241, 87);
+            this.panel1.TabIndex = 5;
             // 
             // Articulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 538);
+            this.ClientSize = new System.Drawing.Size(1239, 662);
+            this.Controls.Add(this.gridArticulos);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.gridArticulos);
-            this.Controls.Add(this.lblArticulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Articulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artículos";
             ((System.ComponentModel.ISupportInitialize)(this.gridArticulos)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -127,5 +151,6 @@
         private System.Windows.Forms.DataGridView gridArticulos;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Panel panel1;
     }
 }

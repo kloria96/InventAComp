@@ -34,7 +34,9 @@
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.btnAtras = new System.Windows.Forms.Button();
             this.lblBusqueda = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblArticulos
@@ -42,9 +44,10 @@
             this.lblArticulos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblArticulos.AutoSize = true;
             this.lblArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArticulos.Location = new System.Drawing.Point(397, 23);
+            this.lblArticulos.Location = new System.Drawing.Point(547, 25);
+            this.lblArticulos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArticulos.Name = "lblArticulos";
-            this.lblArticulos.Size = new System.Drawing.Size(104, 25);
+            this.lblArticulos.Size = new System.Drawing.Size(128, 31);
             this.lblArticulos.TabIndex = 0;
             this.lblArticulos.Text = "Artículos";
             // 
@@ -63,10 +66,11 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(31, 70);
+            this.dgvArticulos.Location = new System.Drawing.Point(67, 109);
+            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.ReadOnly = true;
-            this.dgvArticulos.Size = new System.Drawing.Size(823, 309);
+            this.dgvArticulos.Size = new System.Drawing.Size(1097, 380);
             this.dgvArticulos.TabIndex = 1;
             this.dgvArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellClick);
             this.dgvArticulos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvArticulos_CellFormatting);
@@ -74,42 +78,64 @@
             // btnAtras
             // 
             this.btnAtras.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(717, 449);
+            this.btnAtras.BackColor = System.Drawing.Color.Teal;
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
+            this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtras.Location = new System.Drawing.Point(981, 532);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(89, 27);
+            this.btnAtras.Size = new System.Drawing.Size(156, 63);
             this.btnAtras.TabIndex = 2;
             this.btnAtras.Text = "Atrás";
-            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // lblBusqueda
             // 
             this.lblBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBusqueda.AutoSize = true;
-            this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqueda.Location = new System.Drawing.Point(333, 454);
+            this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusqueda.ForeColor = System.Drawing.Color.Red;
+            this.lblBusqueda.Location = new System.Drawing.Point(434, 555);
+            this.lblBusqueda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(259, 16);
+            this.lblBusqueda.Size = new System.Drawing.Size(388, 25);
             this.lblBusqueda.TabIndex = 3;
             this.lblBusqueda.Text = "NO SE HAN ENCONTRADO ARTÍCULOS";
             this.lblBusqueda.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.Controls.Add(this.lblArticulos);
+            this.panel1.Location = new System.Drawing.Point(1, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1238, 81);
+            this.panel1.TabIndex = 4;
+            // 
             // MostrarArticulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 538);
+            this.ClientSize = new System.Drawing.Size(1239, 662);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblBusqueda);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.dgvArticulos);
-            this.Controls.Add(this.lblArticulos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MostrarArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resultados de búsqueda";
             this.Load += new System.EventHandler(this.MostrarArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +147,6 @@
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Label lblBusqueda;
+        private System.Windows.Forms.Panel panel1;
     }
 }
