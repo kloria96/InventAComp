@@ -45,9 +45,10 @@
             this.lblCategorias.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCategorias.AutoSize = true;
             this.lblCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategorias.Location = new System.Drawing.Point(540, 36);
+            this.lblCategorias.Location = new System.Drawing.Point(405, 29);
+            this.lblCategorias.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategorias.Name = "lblCategorias";
-            this.lblCategorias.Size = new System.Drawing.Size(145, 29);
+            this.lblCategorias.Size = new System.Drawing.Size(117, 25);
             this.lblCategorias.TabIndex = 0;
             this.lblCategorias.Text = "Categorías";
             // 
@@ -66,12 +67,12 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridCategorias.Location = new System.Drawing.Point(353, 154);
-            this.gridCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gridCategorias.Location = new System.Drawing.Point(265, 125);
+            this.gridCategorias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridCategorias.Name = "gridCategorias";
             this.gridCategorias.ReadOnly = true;
             this.gridCategorias.RowTemplate.Height = 24;
-            this.gridCategorias.Size = new System.Drawing.Size(555, 209);
+            this.gridCategorias.Size = new System.Drawing.Size(416, 170);
             this.gridCategorias.TabIndex = 1;
             this.gridCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCategorias_CellClick);
             this.gridCategorias.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridCategorias_CellFormatting);
@@ -84,10 +85,10 @@
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(706, 421);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(484, 342);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(258, 54);
+            this.btnAgregar.Size = new System.Drawing.Size(185, 47);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Nueva Categoría";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -98,10 +99,10 @@
             // 
             this.txtNuevaCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNuevaCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNuevaCategoria.Location = new System.Drawing.Point(420, 437);
-            this.txtNuevaCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNuevaCategoria.Location = new System.Drawing.Point(279, 355);
+            this.txtNuevaCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNuevaCategoria.Name = "txtNuevaCategoria";
-            this.txtNuevaCategoria.Size = new System.Drawing.Size(239, 26);
+            this.txtNuevaCategoria.Size = new System.Drawing.Size(180, 22);
             this.txtNuevaCategoria.TabIndex = 3;
             // 
             // btnAtras
@@ -112,10 +113,9 @@
             this.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(926, 543);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAtras.Location = new System.Drawing.Point(745, 441);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(134, 47);
+            this.btnAtras.Size = new System.Drawing.Size(107, 46);
             this.btnAtras.TabIndex = 4;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -127,22 +127,23 @@
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
             this.panel1.Controls.Add(this.lblCategorias);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1241, 87);
+            this.panel1.Size = new System.Drawing.Size(931, 71);
             this.panel1.TabIndex = 6;
             // 
             // Categorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1239, 662);
+            this.ClientSize = new System.Drawing.Size(929, 538);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.txtNuevaCategoria);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gridCategorias);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Categorias";

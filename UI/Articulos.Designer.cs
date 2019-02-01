@@ -44,9 +44,10 @@
             this.lblArticulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblArticulo.AutoSize = true;
             this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArticulo.Location = new System.Drawing.Point(563, 31);
+            this.lblArticulo.Location = new System.Drawing.Point(422, 25);
+            this.lblArticulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArticulo.Name = "lblArticulo";
-            this.lblArticulo.Size = new System.Drawing.Size(120, 29);
+            this.lblArticulo.Size = new System.Drawing.Size(96, 25);
             this.lblArticulo.TabIndex = 0;
             this.lblArticulo.Text = "Artículos";
             // 
@@ -66,12 +67,12 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridArticulos.Location = new System.Drawing.Point(68, 111);
-            this.gridArticulos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gridArticulos.Location = new System.Drawing.Point(51, 90);
+            this.gridArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridArticulos.Name = "gridArticulos";
             this.gridArticulos.ReadOnly = true;
             this.gridArticulos.RowTemplate.Height = 24;
-            this.gridArticulos.Size = new System.Drawing.Size(1099, 446);
+            this.gridArticulos.Size = new System.Drawing.Size(824, 362);
             this.gridArticulos.TabIndex = 2;
             this.gridArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridArticulos_CellClick);
             this.gridArticulos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridArticulos_CellFormatting);
@@ -84,10 +85,10 @@
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(170, 592);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(128, 478);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(239, 54);
+            this.btnAgregar.Size = new System.Drawing.Size(179, 47);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar Artículo";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -103,10 +104,10 @@
             this.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(937, 588);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAtras.Location = new System.Drawing.Point(695, 478);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(156, 63);
+            this.btnAtras.Size = new System.Drawing.Size(107, 46);
             this.btnAtras.TabIndex = 4;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -117,22 +118,23 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
             this.panel1.Controls.Add(this.lblArticulo);
-            this.panel1.Location = new System.Drawing.Point(-3, 0);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1241, 87);
+            this.panel1.Size = new System.Drawing.Size(931, 71);
             this.panel1.TabIndex = 5;
             // 
             // Articulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1239, 662);
+            this.ClientSize = new System.Drawing.Size(929, 538);
             this.Controls.Add(this.gridArticulos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnAgregar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Articulos";

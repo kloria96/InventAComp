@@ -45,8 +45,10 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.PanelTitulo = new System.Windows.Forms.Panel();
+            this.picBox = new System.Windows.Forms.PictureBox();
             this.MenuVertical.SuspendLayout();
             this.PanelTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInventario
@@ -55,9 +57,10 @@
             this.lblInventario.AutoSize = true;
             this.lblInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInventario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInventario.Location = new System.Drawing.Point(206, 33);
+            this.lblInventario.Location = new System.Drawing.Point(154, 27);
+            this.lblInventario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInventario.Name = "lblInventario";
-            this.lblInventario.Size = new System.Drawing.Size(490, 36);
+            this.lblInventario.Size = new System.Drawing.Size(394, 29);
             this.lblInventario.TabIndex = 0;
             this.lblInventario.Text = "Inventario Asociación Acompáñame";
             this.lblInventario.Click += new System.EventHandler(this.lblInventario_Click);
@@ -69,10 +72,10 @@
             this.btnArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnArticulo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnArticulo.Location = new System.Drawing.Point(58, 218);
-            this.btnArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnArticulo.Location = new System.Drawing.Point(44, 249);
+            this.btnArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnArticulo.Name = "btnArticulo";
-            this.btnArticulo.Size = new System.Drawing.Size(227, 104);
+            this.btnArticulo.Size = new System.Drawing.Size(170, 84);
             this.btnArticulo.TabIndex = 1;
             this.btnArticulo.Text = "Administrar Artículos";
             this.btnArticulo.UseVisualStyleBackColor = false;
@@ -84,10 +87,10 @@
             this.btnCategoria.BackColor = System.Drawing.Color.Teal;
             this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCategoria.Location = new System.Drawing.Point(58, 413);
-            this.btnCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCategoria.Location = new System.Drawing.Point(44, 370);
+            this.btnCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(233, 95);
+            this.btnCategoria.Size = new System.Drawing.Size(170, 84);
             this.btnCategoria.TabIndex = 2;
             this.btnCategoria.Text = "Administrar Categorías";
             this.btnCategoria.UseVisualStyleBackColor = false;
@@ -98,9 +101,10 @@
             this.lblFil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFil.AutoSize = true;
             this.lblFil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFil.Location = new System.Drawing.Point(531, 245);
+            this.lblFil.Location = new System.Drawing.Point(398, 202);
+            this.lblFil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFil.Name = "lblFil";
-            this.lblFil.Size = new System.Drawing.Size(94, 24);
+            this.lblFil.Size = new System.Drawing.Size(75, 18);
             this.lblFil.TabIndex = 3;
             this.lblFil.Text = "Filtrar por:";
             // 
@@ -108,16 +112,16 @@
             // 
             this.cbFiltros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbFiltros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFiltros.FormattingEnabled = true;
             this.cbFiltros.Items.AddRange(new object[] {
             "Nombre",
             "Categoría",
             "Fecha de ingreso"});
-            this.cbFiltros.Location = new System.Drawing.Point(694, 245);
-            this.cbFiltros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbFiltros.Location = new System.Drawing.Point(504, 199);
+            this.cbFiltros.Margin = new System.Windows.Forms.Padding(2);
             this.cbFiltros.Name = "cbFiltros";
-            this.cbFiltros.Size = new System.Drawing.Size(180, 28);
+            this.cbFiltros.Size = new System.Drawing.Size(152, 26);
             this.cbFiltros.TabIndex = 4;
             this.cbFiltros.SelectedIndexChanged += new System.EventHandler(this.cbFiltros_SelectedIndexChanged);
             // 
@@ -128,10 +132,10 @@
             this.btnBuscar.Enabled = false;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscar.Location = new System.Drawing.Point(929, 229);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(697, 186);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(189, 55);
+            this.btnBuscar.Size = new System.Drawing.Size(142, 45);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar Artículos";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -141,10 +145,10 @@
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(694, 336);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre.Location = new System.Drawing.Point(545, 272);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(237, 26);
+            this.txtNombre.Size = new System.Drawing.Size(179, 22);
             this.txtNombre.TabIndex = 6;
             this.txtNombre.Visible = false;
             // 
@@ -154,10 +158,10 @@
             this.cbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategorias.FormattingEnabled = true;
-            this.cbCategorias.Location = new System.Drawing.Point(694, 336);
-            this.cbCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbCategorias.Location = new System.Drawing.Point(545, 272);
+            this.cbCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategorias.Name = "cbCategorias";
-            this.cbCategorias.Size = new System.Drawing.Size(237, 28);
+            this.cbCategorias.Size = new System.Drawing.Size(179, 24);
             this.cbCategorias.TabIndex = 7;
             this.cbCategorias.Visible = false;
             this.cbCategorias.SelectedIndexChanged += new System.EventHandler(this.cbCategorias_SelectedIndexChanged);
@@ -166,10 +170,10 @@
             // 
             this.dtInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtInicio.Location = new System.Drawing.Point(694, 336);
-            this.dtInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtInicio.Location = new System.Drawing.Point(545, 272);
+            this.dtInicio.Margin = new System.Windows.Forms.Padding(2);
             this.dtInicio.Name = "dtInicio";
-            this.dtInicio.Size = new System.Drawing.Size(325, 24);
+            this.dtInicio.Size = new System.Drawing.Size(245, 21);
             this.dtInicio.TabIndex = 9;
             this.dtInicio.Visible = false;
             // 
@@ -177,10 +181,10 @@
             // 
             this.dtFin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFin.Location = new System.Drawing.Point(694, 388);
-            this.dtFin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtFin.Location = new System.Drawing.Point(545, 314);
+            this.dtFin.Margin = new System.Windows.Forms.Padding(2);
             this.dtFin.Name = "dtFin";
-            this.dtFin.Size = new System.Drawing.Size(325, 24);
+            this.dtFin.Size = new System.Drawing.Size(245, 21);
             this.dtFin.TabIndex = 10;
             this.dtFin.Visible = false;
             // 
@@ -189,9 +193,10 @@
             this.lblFechaIni.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaIni.AutoSize = true;
             this.lblFechaIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaIni.Location = new System.Drawing.Point(560, 340);
+            this.lblFechaIni.Location = new System.Drawing.Point(445, 275);
+            this.lblFechaIni.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaIni.Name = "lblFechaIni";
-            this.lblFechaIni.Size = new System.Drawing.Size(113, 24);
+            this.lblFechaIni.Size = new System.Drawing.Size(87, 18);
             this.lblFechaIni.TabIndex = 11;
             this.lblFechaIni.Text = "Fecha Inicio";
             this.lblFechaIni.Visible = false;
@@ -201,9 +206,10 @@
             this.lblFechaFin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaFin.AutoSize = true;
             this.lblFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaFin.Location = new System.Drawing.Point(560, 388);
+            this.lblFechaFin.Location = new System.Drawing.Point(445, 314);
+            this.lblFechaFin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaFin.Name = "lblFechaFin";
-            this.lblFechaFin.Size = new System.Drawing.Size(96, 24);
+            this.lblFechaFin.Size = new System.Drawing.Size(73, 18);
             this.lblFechaFin.TabIndex = 12;
             this.lblFechaFin.Text = "Fecha Fin";
             this.lblFechaFin.Visible = false;
@@ -213,10 +219,9 @@
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(575, 340);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(456, 275);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(79, 24);
+            this.lblNombre.Size = new System.Drawing.Size(62, 18);
             this.lblNombre.TabIndex = 13;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.Visible = false;
@@ -226,10 +231,9 @@
             this.lblCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(575, 341);
-            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategoria.Location = new System.Drawing.Point(456, 276);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(90, 24);
+            this.lblCategoria.Size = new System.Drawing.Size(72, 18);
             this.lblCategoria.TabIndex = 14;
             this.lblCategoria.Text = "Categoría";
             this.lblCategoria.Visible = false;
@@ -237,28 +241,41 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.LightBlue;
+            this.MenuVertical.Controls.Add(this.picBox);
             this.MenuVertical.Controls.Add(this.btnArticulo);
             this.MenuVertical.Controls.Add(this.btnCategoria);
-            this.MenuVertical.Location = new System.Drawing.Point(-7, -1);
+            this.MenuVertical.Location = new System.Drawing.Point(-5, -1);
+            this.MenuVertical.Margin = new System.Windows.Forms.Padding(2);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(330, 668);
+            this.MenuVertical.Size = new System.Drawing.Size(248, 543);
             this.MenuVertical.TabIndex = 15;
             // 
             // PanelTitulo
             // 
             this.PanelTitulo.BackColor = System.Drawing.Color.LightBlue;
             this.PanelTitulo.Controls.Add(this.lblInventario);
-            this.PanelTitulo.Location = new System.Drawing.Point(323, -1);
+            this.PanelTitulo.Location = new System.Drawing.Point(242, -1);
+            this.PanelTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.PanelTitulo.Name = "PanelTitulo";
-            this.PanelTitulo.Size = new System.Drawing.Size(1050, 87);
+            this.PanelTitulo.Size = new System.Drawing.Size(788, 71);
             this.PanelTitulo.TabIndex = 16;
+            // 
+            // picBox
+            // 
+            this.picBox.Image = global::UI.Properties.Resources.asoc;
+            this.picBox.Location = new System.Drawing.Point(27, 27);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(201, 179);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox.TabIndex = 3;
+            this.picBox.TabStop = false;
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1239, 662);
+            this.ClientSize = new System.Drawing.Size(929, 538);
             this.Controls.Add(this.PanelTitulo);
             this.Controls.Add(this.MenuVertical);
             this.Controls.Add(this.lblCategoria);
@@ -273,7 +290,7 @@
             this.Controls.Add(this.cbFiltros);
             this.Controls.Add(this.lblFil);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Principal";
@@ -283,6 +300,7 @@
             this.MenuVertical.ResumeLayout(false);
             this.PanelTitulo.ResumeLayout(false);
             this.PanelTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,6 +324,7 @@
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Panel PanelTitulo;
+        private System.Windows.Forms.PictureBox picBox;
     }
 }
 
