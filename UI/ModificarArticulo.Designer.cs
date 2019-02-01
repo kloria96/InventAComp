@@ -180,7 +180,7 @@
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtras.Location = new System.Drawing.Point(896, 497);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(148, 60);
             this.btnAtras.TabIndex = 25;
@@ -200,7 +200,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(547, 497);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(166, 60);
+            this.btnGuardar.Size = new System.Drawing.Size(156, 60);
             this.btnGuardar.TabIndex = 24;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -214,7 +214,7 @@
             this.comboEstados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboEstados.FormattingEnabled = true;
             this.comboEstados.Location = new System.Drawing.Point(804, 213);
-            this.comboEstados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboEstados.Margin = new System.Windows.Forms.Padding(4);
             this.comboEstados.Name = "comboEstados";
             this.comboEstados.Size = new System.Drawing.Size(240, 28);
             this.comboEstados.TabIndex = 26;
@@ -236,7 +236,7 @@
             this.txtUbicacion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUbicacion.Location = new System.Drawing.Point(380, 400);
-            this.txtUbicacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbicacion.Margin = new System.Windows.Forms.Padding(4);
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.Size = new System.Drawing.Size(244, 26);
             this.txtUbicacion.TabIndex = 28;
@@ -246,7 +246,7 @@
             this.txtIngreso.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIngreso.Location = new System.Drawing.Point(380, 212);
-            this.txtIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.txtIngreso.Name = "txtIngreso";
             this.txtIngreso.ReadOnly = true;
             this.txtIngreso.Size = new System.Drawing.Size(244, 26);
@@ -284,7 +284,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ModificarArticulo";
