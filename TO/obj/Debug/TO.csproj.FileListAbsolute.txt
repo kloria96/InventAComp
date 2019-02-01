@@ -8,3 +8,4 @@ C:\Users\Juan\Source\Repos\InventAcomp\TO\bin\Debug\TO.dll
 C:\Users\Juan\Source\Repos\InventAcomp\TO\bin\Debug\TO.pdb
 C:\Users\Juan\Source\Repos\InventAcomp\TO\obj\Debug\TO.dll
 C:\Users\Juan\Source\Repos\InventAcomp\TO\obj\Debug\TO.pdb
+C:\Users\Juan\Source\Repos\InventAcomp\TO\obj\Debug\TO.csprojResolveAssemblyReference.cache
