@@ -1,0 +1,12 @@
+C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\BL.dll
+C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\BL.pdb
+C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\DAO.dll
+C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\TO.dll
+C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\MySql.Data.dll
+C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\Google.Protobuf.dll
+C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\DAO.pdb
+C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\TO.pdb
+C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\MySql.Data.xml
+C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Release\BL.dll
+C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Release\BL.pdb
