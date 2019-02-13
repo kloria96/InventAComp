@@ -62,6 +62,18 @@
     <Compile Include="Categorias.Designer.cs">
       <DependentUpon>Categorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="CuotasDonacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CuotasDonacion.Designer.cs">
+      <DependentUpon>CuotasDonacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioPrestamo.Designer.cs">
+      <DependentUpon>FormularioPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     <Compile Include="NuevoArticulo.Designer.cs">
       <DependentUpon>NuevoArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrestamoEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrestamoEquipo.Designer.cs">
+      <DependentUpon>PrestamoEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +125,12 @@
     <EmbeddedResource Include="Categorias.resx">
       <DependentUpon>Categorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CuotasDonacion.resx">
+      <DependentUpon>CuotasDonacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioPrestamo.resx">
+      <DependentUpon>FormularioPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModificarArticulo.resx">
       <DependentUpon>ModificarArticulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoArticulo.resx">
       <DependentUpon>NuevoArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrestamoEquipo.resx">
+      <DependentUpon>PrestamoEquipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

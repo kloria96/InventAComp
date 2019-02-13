@@ -44,11 +44,12 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.MenuVertical = new System.Windows.Forms.Panel();
-            this.PanelTitulo = new System.Windows.Forms.Panel();
             this.picBox = new System.Windows.Forms.PictureBox();
+            this.PanelTitulo = new System.Windows.Forms.Panel();
+            this.btnPrestamo = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
-            this.PanelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
+            this.PanelTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblInventario
@@ -63,7 +64,6 @@
             this.lblInventario.Size = new System.Drawing.Size(394, 29);
             this.lblInventario.TabIndex = 0;
             this.lblInventario.Text = "Inventario Asociación Acompáñame";
-            this.lblInventario.Click += new System.EventHandler(this.lblInventario_Click);
             // 
             // btnArticulo
             // 
@@ -72,7 +72,7 @@
             this.btnArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnArticulo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnArticulo.Location = new System.Drawing.Point(44, 249);
+            this.btnArticulo.Location = new System.Drawing.Point(44, 227);
             this.btnArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnArticulo.Name = "btnArticulo";
             this.btnArticulo.Size = new System.Drawing.Size(170, 84);
@@ -87,7 +87,7 @@
             this.btnCategoria.BackColor = System.Drawing.Color.Teal;
             this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCategoria.Location = new System.Drawing.Point(44, 370);
+            this.btnCategoria.Location = new System.Drawing.Point(44, 338);
             this.btnCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Size = new System.Drawing.Size(170, 84);
@@ -241,6 +241,7 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.LightBlue;
+            this.MenuVertical.Controls.Add(this.btnPrestamo);
             this.MenuVertical.Controls.Add(this.picBox);
             this.MenuVertical.Controls.Add(this.btnArticulo);
             this.MenuVertical.Controls.Add(this.btnCategoria);
@@ -249,6 +250,16 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(248, 543);
             this.MenuVertical.TabIndex = 15;
+            // 
+            // picBox
+            // 
+            this.picBox.Image = global::UI.Properties.Resources.asoc;
+            this.picBox.Location = new System.Drawing.Point(27, 27);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(201, 179);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox.TabIndex = 3;
+            this.picBox.TabStop = false;
             // 
             // PanelTitulo
             // 
@@ -260,15 +271,21 @@
             this.PanelTitulo.Size = new System.Drawing.Size(788, 71);
             this.PanelTitulo.TabIndex = 16;
             // 
-            // picBox
+            // btnPrestamo
             // 
-            this.picBox.Image = global::UI.Properties.Resources.asoc;
-            this.picBox.Location = new System.Drawing.Point(27, 27);
-            this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(201, 179);
-            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBox.TabIndex = 3;
-            this.picBox.TabStop = false;
+            this.btnPrestamo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPrestamo.BackColor = System.Drawing.Color.Teal;
+            this.btnPrestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrestamo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPrestamo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnPrestamo.Location = new System.Drawing.Point(44, 444);
+            this.btnPrestamo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrestamo.Name = "btnPrestamo";
+            this.btnPrestamo.Size = new System.Drawing.Size(170, 84);
+            this.btnPrestamo.TabIndex = 17;
+            this.btnPrestamo.Text = "Préstamo de Equipo";
+            this.btnPrestamo.UseVisualStyleBackColor = false;
+            this.btnPrestamo.Click += new System.EventHandler(this.btnPrestamo_Click);
             // 
             // Principal
             // 
@@ -296,11 +313,10 @@
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio del sistema";
-            this.Load += new System.EventHandler(this.Principal_Load);
             this.MenuVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.PanelTitulo.ResumeLayout(false);
             this.PanelTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,6 +341,7 @@
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Panel PanelTitulo;
         private System.Windows.Forms.PictureBox picBox;
+        private System.Windows.Forms.Button btnPrestamo;
     }
 }
 

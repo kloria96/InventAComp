@@ -47,6 +47,7 @@
             this.txtUbicacion = new System.Windows.Forms.TextBox();
             this.comboEstados = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chb_jps = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,7 +140,7 @@
             this.txtPlaca.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlaca.Location = new System.Drawing.Point(282, 113);
-            this.txtPlaca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(169, 22);
             this.txtPlaca.TabIndex = 7;
@@ -150,7 +151,7 @@
             this.datePickerIngreso.Enabled = false;
             this.datePickerIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerIngreso.Location = new System.Drawing.Point(282, 170);
-            this.datePickerIngreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datePickerIngreso.Margin = new System.Windows.Forms.Padding(2);
             this.datePickerIngreso.Name = "datePickerIngreso";
             this.datePickerIngreso.Size = new System.Drawing.Size(169, 22);
             this.datePickerIngreso.TabIndex = 8;
@@ -160,7 +161,7 @@
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(282, 220);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(169, 81);
@@ -171,7 +172,7 @@
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(596, 113);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(168, 22);
             this.txtNombre.TabIndex = 7;
@@ -183,7 +184,7 @@
             this.comboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboCategoria.FormattingEnabled = true;
             this.comboCategoria.Location = new System.Drawing.Point(596, 242);
-            this.comboCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.comboCategoria.Name = "comboCategoria";
             this.comboCategoria.Size = new System.Drawing.Size(168, 24);
             this.comboCategoria.TabIndex = 11;
@@ -197,7 +198,7 @@
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(413, 401);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(121, 50);
             this.btnGuardar.TabIndex = 12;
@@ -259,16 +260,28 @@
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
             this.panel1.Controls.Add(this.lblNuev);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(932, 76);
             this.panel1.TabIndex = 17;
+            // 
+            // chb_jps
+            // 
+            this.chb_jps.AutoSize = true;
+            this.chb_jps.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chb_jps.Location = new System.Drawing.Point(516, 299);
+            this.chb_jps.Name = "chb_jps";
+            this.chb_jps.Size = new System.Drawing.Size(126, 22);
+            this.chb_jps.TabIndex = 18;
+            this.chb_jps.Text = "Propiedad JPS";
+            this.chb_jps.UseVisualStyleBackColor = true;
             // 
             // NuevoArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 538);
+            this.Controls.Add(this.chb_jps);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboEstados);
             this.Controls.Add(this.txtUbicacion);
@@ -287,7 +300,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "NuevoArticulo";
@@ -320,5 +333,6 @@
         private System.Windows.Forms.TextBox txtUbicacion;
         private System.Windows.Forms.ComboBox comboEstados;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox chb_jps;
     }
 }

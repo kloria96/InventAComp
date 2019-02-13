@@ -34,8 +34,9 @@ namespace UI
             string descripcion = txtDescripcion.Text;
             string estado = comboEstados.SelectedItem.ToString();
             string ubicacion = txtUbicacion.Text;
+            bool propiedad_jps = chb_jps.Checked;
             string categoria = comboCategoria.SelectedItem.ToString();
-            if (manejArt.actualizarArticulo(idA, numeroPlaca, nombre, descripcion, estado, ubicacion, categoria))
+            if (manejArt.actualizarArticulo(idA, numeroPlaca, nombre, descripcion, estado, ubicacion, propiedad_jps, categoria))
             {
                 this.Owner.Dispose();
                 this.Dispose();
@@ -68,6 +69,7 @@ namespace UI
             txtIngreso.Text = articulo.fechaIngreso.ToString("dd/MM/yyyy");
             txtDescripcion.Text = articulo.descripcArticulo;
             txtUbicacion.Text = articulo.ubicacionArticulo;
+            chb_jps.Checked = articulo.propiedad_JPS;
             
         }
 

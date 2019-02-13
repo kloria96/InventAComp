@@ -30,7 +30,7 @@ namespace UI
             art.ShowDialog();
         }
 
-        public void cargarGrid()
+        private void cargarGrid()
         {
             ManejadorArticulo manej = new ManejadorArticulo();
             List<BLArticulo> listaBL = new List<BLArticulo>();
@@ -55,10 +55,12 @@ namespace UI
                 gridArticulos.Columns[3].Name = "Fecha ingreso";
                 gridArticulos.Columns[3].HeaderText = "Fecha ingreso";
                 gridArticulos.Columns[3].DataPropertyName = "fechaIngreso";
+                gridArticulos.Columns[3].Visible = false;
 
                 gridArticulos.Columns[4].Name = "Descripción";
                 gridArticulos.Columns[4].HeaderText = "Descripción";
                 gridArticulos.Columns[4].DataPropertyName = "descripcArticulo";
+                gridArticulos.Columns[4].Visible = false;
 
                 gridArticulos.Columns[5].Name = "Estado";
                 gridArticulos.Columns[5].HeaderText = "Estado";

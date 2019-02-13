@@ -15,6 +15,7 @@ namespace TO
         public String descripcArticulo { get; set; }
         public String estadoArticulo { get; set; }
         public String ubicacionArticulo { get; set; }
+        public Boolean propiedad_JPS { get; set; }
         public int idCategoria { get; set; }
         public String nombreCategoria { get; set; }
 
@@ -98,6 +99,44 @@ namespace TO
             this.descripcArticulo = descripcArticulo;
             this.estadoArticulo = estadoArticulo;
             this.ubicacionArticulo = ubicacionArticulo;
+            this.nombreCategoria = nombreCategoria;
+        }
+
+        public TOArticulo(String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, Boolean propiedad_JPS, int idCategoria)
+        {
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.ubicacionArticulo = ubicacionArticulo;
+            this.propiedad_JPS = propiedad_JPS;
+            this.idCategoria = idCategoria;
+        }
+
+        public TOArticulo(int idArticulo, String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, Boolean propiedad_JPS, int idCategoria)
+        {
+            this.idArticulo = idArticulo;
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.ubicacionArticulo = ubicacionArticulo;
+            this.propiedad_JPS = propiedad_JPS;
+            this.idCategoria = idCategoria;
+        }
+
+        public TOArticulo(int idArticulo, String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, Boolean propiedad_JPS, String nombreCategoria)
+        {
+            this.numeroPlaca = numPlaca;
+            this.nombArticulo = nombArticulo;
+            this.idArticulo = idArticulo;
+            this.fechaIngreso = fechaIngreso;
+            this.descripcArticulo = descripcArticulo;
+            this.estadoArticulo = estadoArticulo;
+            this.ubicacionArticulo = ubicacionArticulo;
+            this.propiedad_JPS = propiedad_JPS;
             this.nombreCategoria = nombreCategoria;
         }
 

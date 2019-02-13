@@ -71,10 +71,12 @@ namespace UI
                 dgvArticulos.Columns[2].Name = "Fecha ingreso";
                 dgvArticulos.Columns[2].HeaderText = "Fecha ingreso";
                 dgvArticulos.Columns[2].DataPropertyName = "fechaIngreso";
+                dgvArticulos.Columns[2].Visible = false;
 
                 dgvArticulos.Columns[3].Name = "Descripción";
                 dgvArticulos.Columns[3].HeaderText = "Descripción";
                 dgvArticulos.Columns[3].DataPropertyName = "descripcArticulo";
+                dgvArticulos.Columns[3].Visible = false;
 
                 dgvArticulos.Columns[4].Name = "Estado";
                 dgvArticulos.Columns[4].HeaderText = "Estado";

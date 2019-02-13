@@ -44,6 +44,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TOArticulo.cs" />
     <Compile Include="TOCategoria.cs" />
+    <Compile Include="TOContribucion.cs" />
+    <Compile Include="TOPrestamo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

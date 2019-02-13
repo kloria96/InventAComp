@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using TO;
 using System.Data;
-using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 
 
@@ -63,7 +62,7 @@ namespace DAO
                 conex.Open();
             }
 
-            String qry = "insert into articulo (numeroPlaca, nombre, fechaIngreso, descripcion, estado, ubicacion, idCategoria) values (@numPlac, @nomb, @fechIng, @descripc, @est, @ubic, @idCateg)";
+            String qry = "insert into articulo (numeroPlaca, nombre, fechaIngreso, descripcion, estado, ubicacion, propiedad_jps, idCategoria) values (@numPlac, @nomb, @fechIng, @descripc, @est, @ubic, @pro, @idCateg)";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             
             cmd.Parameters.AddWithValue("@numPlac", nuevoArt.numeroPlaca);
@@ -72,6 +71,7 @@ namespace DAO
             cmd.Parameters.AddWithValue("@descripc", nuevoArt.descripcArticulo);
             cmd.Parameters.AddWithValue("@est", nuevoArt.estadoArticulo);
             cmd.Parameters.AddWithValue("@ubic", nuevoArt.ubicacionArticulo);
+            cmd.Parameters.AddWithValue("@pro", nuevoArt.propiedad_JPS);
             cmd.Parameters.AddWithValue("@idCateg", nuevoArt.idCategoria);
             int result = cmd.ExecuteNonQuery();
 
@@ -217,7 +217,7 @@ namespace DAO
                 conex.Open();
             }
 
-            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, a.ubicacion, c.nombre from inventario.articulo as a, inventario.categoria as c where a.idArticulo = @idA and c.idCategoria = a.idCategoria";
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, a.ubicacion, a.propiedad_jps, c.nombre from inventario.articulo as a, inventario.categoria as c where a.idArticulo = @idA and c.idCategoria = a.idCategoria";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@idA", idArticulo);
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -226,7 +226,7 @@ namespace DAO
             {
                 while (reader.Read())
                 {
-                    toArticulo = new TOArticulo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7));
+                    toArticulo = new TOArticulo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetBoolean(7), reader.GetString(8));
                 }
             }
 
@@ -237,14 +237,14 @@ namespace DAO
             return toArticulo;
         }
 
-        public bool actualizarArticulo(int idArticulo, string numeroPlaca, string nombre, string descripcion, string estado, string ubicacion, string categoria)
+        public bool actualizarArticulo(int idArticulo, string numeroPlaca, string nombre, string descripcion, string estado, string ubicacion, bool propiedad_jps, string categoria)
         {
             if (conex.State != ConnectionState.Open)
             {
                 conex.Open();
             }
 
-            String qry = "update articulo set numeroPlaca = @num, nombre = @nom, descripcion = @des, estado = @est, ubicacion = @ubic, idCategoria = (select idCategoria from categoria where nombre = @nomCat) where idArticulo = @idArt";
+            String qry = "update articulo set numeroPlaca = @num, nombre = @nom, descripcion = @des, estado = @est, ubicacion = @ubic, propiedad_jps = @pro, idCategoria = (select idCategoria from categoria where nombre = @nomCat) where idArticulo = @idArt";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@num", numeroPlaca);
             cmd.Parameters.AddWithValue("@nom", nombre);
@@ -252,6 +252,7 @@ namespace DAO
             cmd.Parameters.AddWithValue("@est", estado);
             cmd.Parameters.AddWithValue("@ubic", ubicacion);
             cmd.Parameters.AddWithValue("@nomCat", categoria);
+            cmd.Parameters.AddWithValue("@pro", propiedad_jps);
             cmd.Parameters.AddWithValue("@idArt", idArticulo);
             int result = cmd.ExecuteNonQuery();
 

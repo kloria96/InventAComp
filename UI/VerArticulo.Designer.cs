@@ -46,6 +46,7 @@
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chb_jps = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -230,16 +231,29 @@
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Location = new System.Drawing.Point(-1, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(932, 72);
             this.panel1.TabIndex = 16;
+            // 
+            // chb_jps
+            // 
+            this.chb_jps.AutoCheck = false;
+            this.chb_jps.AutoSize = true;
+            this.chb_jps.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chb_jps.Location = new System.Drawing.Point(529, 294);
+            this.chb_jps.Name = "chb_jps";
+            this.chb_jps.Size = new System.Drawing.Size(126, 22);
+            this.chb_jps.TabIndex = 17;
+            this.chb_jps.Text = "Propiedad JPS";
+            this.chb_jps.UseVisualStyleBackColor = true;
             // 
             // VerArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 538);
+            this.Controls.Add(this.chb_jps);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtCategoria);
@@ -289,5 +303,6 @@
         private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox chb_jps;
     }
 }

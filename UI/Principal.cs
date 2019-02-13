@@ -165,14 +165,9 @@ namespace UI
             }
         }
 
-        private void Principal_Load(object sender, EventArgs e)
+        private void btnPrestamo_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void lblInventario_Click(object sender, EventArgs e)
-        {
-
+            new PrestamoEquipo().Show();
         }
     }
 }
