@@ -33,6 +33,26 @@ namespace BL
             return daoPrestamo.eliminarPrestamo(idPrestamo);
         }
 
+        public List<BLPrestamo> obtenerArticulosPrestamo()
+        {
+            List<BLPrestamo> lista = new List<BLPrestamo>();
+            foreach (TOPrestamo toPrest in daoPrestamo.obtenerArticulosPrestamo())
+            {
+                lista.Add(new BLPrestamo(toPrest.idPrestamo, toPrest.numeroContrato, toPrest.paciente, toPrest.nombreArticulo, toPrest.numeroPlacaArticulo));
+            }
+            return lista;
+        }
+
+        public List<BLArticulo> consultarArticulosDisponibles()
+        {
+            List<BLArticulo> lista = new List<BLArticulo>();
+            foreach (TOArticulo toArt in daoPrestamo.consultarArticulosDisponibles())
+            {
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.nombreCategoria));
+            }
+            return lista;
+        }
+
         private TOPrestamo convert(BLPrestamo prestamo)
         {
             return new TOPrestamo(prestamo.numeroContrato, prestamo.paciente, prestamo.responsable, prestamo.fechaPrestamo, prestamo.fechaEntrega, prestamo.idArticulo);

@@ -97,7 +97,13 @@ namespace UI
 
             if (e.ColumnIndex == 3)
             {
-                eliminarFila(Convert.ToInt32(gridCategorias.Rows[e.RowIndex].Cells[1].Value));
+                if (Convert.ToString(gridCategorias.Rows[e.RowIndex].Cells[0].Value) == "Préstamo")
+                {
+                    MessageBox.Show("No se puede eliminar esta categoría");
+                } else
+                {
+                    eliminarFila(Convert.ToInt32(gridCategorias.Rows[e.RowIndex].Cells[1].Value));
+                }
             }
         }
 

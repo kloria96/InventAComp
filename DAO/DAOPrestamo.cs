@@ -24,7 +24,7 @@ namespace DAO
                 conex.Open();
             }
 
-            String qry = "insert into prestamo (numerocontrato, paciente, responsable, fechaprestamo, fechaentrega, idarticulo) values (@con, @pac, @res, @fecPr, @fecEn, @idArt);";
+            String qry = "insert into prestamo (numeroContrato, paciente, responsable, fechaPrestamo, fechaEntrega, idArticulo) values (@con, @pac, @res, @fecPr, @fecEn, @idArt);";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
 
             cmd.Parameters.AddWithValue("@con", nuevoPrest.numeroContrato);
@@ -35,11 +35,31 @@ namespace DAO
             cmd.Parameters.AddWithValue("@idArt", nuevoPrest.idArticulo);
             int result = cmd.ExecuteNonQuery();
 
+            bool modificoCategoria = modificarCategoriaPrestamo(nuevoPrest.idArticulo);
+
             if (conex.State != ConnectionState.Closed)
             {
                 conex.Close();
             }
-            return (result > 0 ? true : false);
+
+            if (modificoCategoria && result > 0)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
+
+        private bool modificarCategoriaPrestamo(int idArticulo)
+        {
+            String qry = "update articulo set idCategoria = (select idCategoria from categoria where nombre = 'Préstamo') where idArticulo = @idArt";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+
+            cmd.Parameters.AddWithValue("@idArt", idArticulo);
+
+            int res = cmd.ExecuteNonQuery();
+            return (res > 0 ? true : false);
         }
 
         public List<TOPrestamo> obtenerPrestamosArticulo(int idArticulo)
@@ -90,6 +110,69 @@ namespace DAO
                 conex.Close();
             }
             return (result > 0 ? true : false);
+        }
+
+        public List<TOPrestamo> obtenerArticulosPrestamo()
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+            String qry = "select p.idPrestamo, p.numeroContrato, p.paciente, a.numeroPlaca, a.nombre from prestamo p join articulo a on p.idArticulo = a.idArticulo where a.idCategoria = (select idCategoria from categoria where nombre = 'Préstamo');";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<TOPrestamo> lista = new List<TOPrestamo>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    lista.Add(new TOPrestamo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4)));
+                }
+            }
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return lista;
+        }
+
+        public List<TOArticulo> consultarArticulosDisponibles()
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, a.ubicacion, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria and c.nombre != 'Préstamo';";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<TOArticulo> lista = new List<TOArticulo>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    TOArticulo to = new TOArticulo();
+                    to.idArticulo = reader.GetInt32(0);
+                    to.numeroPlaca = reader.GetString(1);
+                    to.nombArticulo = reader.GetString(2);
+                    to.fechaIngreso = reader.GetDateTime(3);
+                    to.descripcArticulo = reader.GetString(4);
+                    to.estadoArticulo = reader.GetString(5);
+                    to.ubicacionArticulo = reader.GetString(6);
+                    to.nombreCategoria = reader.GetString(7);
+                    lista.Add(to);
+                }
+            }
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return lista;
         }
 
     }

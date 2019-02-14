@@ -13,8 +13,7 @@ namespace UI
 {
     public partial class PrestamoEquipo : Form
     {
-        public static string idArt = "";
-
+        
         public PrestamoEquipo()
         {
             InitializeComponent();
@@ -29,9 +28,9 @@ namespace UI
 
         private void cargarGrid()
         {
-            ManejadorArticulo manej = new ManejadorArticulo();
+            ManejadorPrestamo manej = new ManejadorPrestamo();
             List<BLArticulo> listaBL = new List<BLArticulo>();
-            listaBL = manej.consultarArticulos();
+            listaBL = manej.consultarArticulosDisponibles();
             if (listaBL.Count != 0)
             {
                 gridArticulos.ColumnCount = 8;
@@ -52,12 +51,10 @@ namespace UI
                 gridArticulos.Columns[3].Name = "Fecha ingreso";
                 gridArticulos.Columns[3].HeaderText = "Fecha ingreso";
                 gridArticulos.Columns[3].DataPropertyName = "fechaIngreso";
-                //gridArticulos.Columns[3].Visible = false;
 
                 gridArticulos.Columns[4].Name = "Descripción";
                 gridArticulos.Columns[4].HeaderText = "Descripción";
                 gridArticulos.Columns[4].DataPropertyName = "descripcArticulo";
-                //gridArticulos.Columns[4].Visible = false;
 
                 gridArticulos.Columns[5].Name = "Estado";
                 gridArticulos.Columns[5].HeaderText = "Estado";
@@ -74,9 +71,6 @@ namespace UI
                 DataGridViewButtonColumn button = new DataGridViewButtonColumn();
                 gridArticulos.Columns.Add(button);
 
-                DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
-                gridArticulos.Columns.Add(btn2);
-
                 gridArticulos.DataSource = listaBL;
             }
         }
@@ -87,21 +81,20 @@ namespace UI
             {
                 FormularioPrestamo.idArticulo = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
                 FormularioPrestamo.nombreArticulo = gridArticulos.Rows[e.RowIndex].Cells[2].Value + "";
-                new FormularioPrestamo().Show();
-            }
-
-            if (e.ColumnIndex == 9)
-            {
-                //Mostrar las cuotas de donación en una pantalla (forma de tabla por ej.), y poder añadir una nueva cuota
+                FormularioPrestamo formPrest = new FormularioPrestamo();
+                formPrest.Owner = this;
+                formPrest.ShowDialog();
             }
         }
 
         private void gridArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             gridArticulos.Rows[e.RowIndex].Cells[8].Value = "Prestar";
-            gridArticulos.Rows[e.RowIndex].Cells[9].Value = "Cuotas";
         }
 
-
+        private void btnPrestamos_Click(object sender, EventArgs e)
+        {
+            new Prestamos().Show();
+        }
     }
 }

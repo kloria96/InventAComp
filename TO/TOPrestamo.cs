@@ -16,6 +16,9 @@ namespace TO
         public DateTime fechaEntrega { get; set; }
         public int idArticulo { get; set; }
 
+        public string nombreArticulo { get; set; }
+        public string numeroPlacaArticulo { get; set; }
+
         public TOPrestamo() { }
 
         public TOPrestamo(int idPrestamo, string numeroContrato, string paciente, string responsable, DateTime fechaPrestamo, DateTime fechaEntrega, int idArticulo)
@@ -37,6 +40,15 @@ namespace TO
             this.fechaPrestamo = fechaPrestamo;
             this.fechaEntrega = fechaEntrega;
             this.idArticulo = idArticulo;
+        }
+
+        public TOPrestamo(int idPrestamo, string numeroContrato, string paciente, string numeroPlacaArticulo, string nombreArticulo)
+        {
+            this.idPrestamo = idPrestamo;
+            this.numeroContrato = numeroContrato;
+            this.paciente = paciente;
+            this.numeroPlacaArticulo = numeroPlacaArticulo;
+            this.nombreArticulo = nombreArticulo;
         }
 
     }

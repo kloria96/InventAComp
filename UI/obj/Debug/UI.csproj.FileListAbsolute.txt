@@ -54,3 +54,5 @@ C:\Users\Mel\source\repos\InventarioTCU\UI\obj\Debug\UI.VerArticulo.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.CuotasDonacion.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.FormularioPrestamo.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.PrestamoEquipo.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.Prestamos.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.FormularioContribucion.resources
