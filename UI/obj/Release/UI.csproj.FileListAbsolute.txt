@@ -23,3 +23,8 @@ C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.VerArticulo.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.csproj.GenerateResource.Cache
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.exe
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.pdb
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.CuotasDonacion.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.FormularioContribucion.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.FormularioPrestamo.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.PrestamoEquipo.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.Prestamos.resources
