@@ -38,7 +38,7 @@ namespace BL
             List<BLPrestamo> lista = new List<BLPrestamo>();
             foreach (TOPrestamo toPrest in daoPrestamo.obtenerArticulosPrestamo())
             {
-                lista.Add(new BLPrestamo(toPrest.idPrestamo, toPrest.numeroContrato, toPrest.paciente, toPrest.nombreArticulo, toPrest.numeroPlacaArticulo));
+                lista.Add(new BLPrestamo(toPrest.idPrestamo, toPrest.numeroContrato, toPrest.paciente, toPrest.numeroPlacaArticulo, toPrest.nombreArticulo));
             }
             return lista;
         }

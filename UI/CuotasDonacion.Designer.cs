@@ -90,9 +90,9 @@
             this.btnAgregar.Location = new System.Drawing.Point(58, 440);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(166, 43);
+            this.btnAgregar.Size = new System.Drawing.Size(211, 43);
             this.btnAgregar.TabIndex = 15;
-            this.btnAgregar.Text = "Agregar Cuota";
+            this.btnAgregar.Text = "Agregar Contribución";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);

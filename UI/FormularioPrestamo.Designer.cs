@@ -49,7 +49,7 @@
             // 
             this.lblPrestar.AutoSize = true;
             this.lblPrestar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrestar.Location = new System.Drawing.Point(71, 60);
+            this.lblPrestar.Location = new System.Drawing.Point(123, 59);
             this.lblPrestar.Name = "lblPrestar";
             this.lblPrestar.Size = new System.Drawing.Size(138, 20);
             this.lblPrestar.TabIndex = 0;
@@ -59,7 +59,7 @@
             // 
             this.lblArticulo.AutoSize = true;
             this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArticulo.Location = new System.Drawing.Point(219, 60);
+            this.lblArticulo.Location = new System.Drawing.Point(271, 59);
             this.lblArticulo.Name = "lblArticulo";
             this.lblArticulo.Size = new System.Drawing.Size(0, 20);
             this.lblArticulo.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.txtContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrato.Location = new System.Drawing.Point(224, 133);
             this.txtContrato.Name = "txtContrato";
-            this.txtContrato.Size = new System.Drawing.Size(181, 24);
+            this.txtContrato.Size = new System.Drawing.Size(213, 24);
             this.txtContrato.TabIndex = 3;
             // 
             // txtPaciente
@@ -87,7 +87,7 @@
             this.txtPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPaciente.Location = new System.Drawing.Point(224, 189);
             this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.Size = new System.Drawing.Size(181, 24);
+            this.txtPaciente.Size = new System.Drawing.Size(213, 24);
             this.txtPaciente.TabIndex = 5;
             // 
             // lblFecha
@@ -146,7 +146,7 @@
             this.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(319, 441);
+            this.btnAtras.Location = new System.Drawing.Point(331, 441);
             this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(102, 40);
@@ -163,7 +163,7 @@
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(115, 441);
+            this.btnGuardar.Location = new System.Drawing.Point(127, 441);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(118, 40);
@@ -188,7 +188,7 @@
             this.txtResponsable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtResponsable.Location = new System.Drawing.Point(224, 244);
             this.txtResponsable.Name = "txtResponsable";
-            this.txtResponsable.Size = new System.Drawing.Size(181, 24);
+            this.txtResponsable.Size = new System.Drawing.Size(213, 24);
             this.txtResponsable.TabIndex = 14;
             // 
             // FormularioPrestamo

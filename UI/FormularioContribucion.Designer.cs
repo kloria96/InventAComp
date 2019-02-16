@@ -36,9 +36,10 @@
             this.txtRecibo = new System.Windows.Forms.TextBox();
             this.lblRecibo = new System.Windows.Forms.Label();
             this.lblContrato = new System.Windows.Forms.Label();
-            this.lblPrestar = new System.Windows.Forms.Label();
+            this.lblAgregar = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.lblPrestamo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCuota
@@ -100,20 +101,20 @@
             // 
             this.lblContrato.AutoSize = true;
             this.lblContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContrato.Location = new System.Drawing.Point(329, 65);
+            this.lblContrato.Location = new System.Drawing.Point(306, 80);
             this.lblContrato.Name = "lblContrato";
             this.lblContrato.Size = new System.Drawing.Size(0, 20);
             this.lblContrato.TabIndex = 17;
             // 
-            // lblPrestar
+            // lblAgregar
             // 
-            this.lblPrestar.AutoSize = true;
-            this.lblPrestar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrestar.Location = new System.Drawing.Point(65, 65);
-            this.lblPrestar.Name = "lblPrestar";
-            this.lblPrestar.Size = new System.Drawing.Size(258, 20);
-            this.lblPrestar.TabIndex = 16;
-            this.lblPrestar.Text = "Añadir Contribución. Préstamo:";
+            this.lblAgregar.AutoSize = true;
+            this.lblAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgregar.Location = new System.Drawing.Point(209, 35);
+            this.lblAgregar.Name = "lblAgregar";
+            this.lblAgregar.Size = new System.Drawing.Size(179, 20);
+            this.lblAgregar.TabIndex = 16;
+            this.lblAgregar.Text = "Agregar Contribución";
             // 
             // btnGuardar
             // 
@@ -150,11 +151,22 @@
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // lblPrestamo
+            // 
+            this.lblPrestamo.AutoSize = true;
+            this.lblPrestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrestamo.Location = new System.Drawing.Point(195, 80);
+            this.lblPrestamo.Name = "lblPrestamo";
+            this.lblPrestamo.Size = new System.Drawing.Size(90, 20);
+            this.lblPrestamo.TabIndex = 28;
+            this.lblPrestamo.Text = "Préstamo:";
+            // 
             // FormularioContribucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 418);
+            this.Controls.Add(this.lblPrestamo);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.lblCuota);
@@ -164,7 +176,7 @@
             this.Controls.Add(this.txtRecibo);
             this.Controls.Add(this.lblRecibo);
             this.Controls.Add(this.lblContrato);
-            this.Controls.Add(this.lblPrestar);
+            this.Controls.Add(this.lblAgregar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -186,6 +198,7 @@
         private System.Windows.Forms.TextBox txtRecibo;
         private System.Windows.Forms.Label lblRecibo;
         private System.Windows.Forms.Label lblContrato;
-        private System.Windows.Forms.Label lblPrestar;
+        private System.Windows.Forms.Label lblAgregar;
+        private System.Windows.Forms.Label lblPrestamo;
     }
 }

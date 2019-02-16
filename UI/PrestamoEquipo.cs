@@ -95,6 +95,7 @@ namespace UI
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
             new Prestamos().Show();
+            this.Dispose();
         }
     }
 }

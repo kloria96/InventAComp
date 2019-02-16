@@ -76,7 +76,7 @@ namespace UI
 
         private void gridArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            gridArticulos.Rows[e.RowIndex].Cells[5].Value = "Ver Cuotas";
+            gridArticulos.Rows[e.RowIndex].Cells[5].Value = "Ver Contribuciones";
         }
 
     }
