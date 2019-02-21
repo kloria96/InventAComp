@@ -35,7 +35,6 @@ C:\Users\Juan\Source\Repos\InventAcomp\UI\bin\Debug\BL.pdb
 C:\Users\Juan\Source\Repos\InventAcomp\UI\bin\Debug\DAO.pdb
 C:\Users\Juan\Source\Repos\InventAcomp\UI\bin\Debug\TO.pdb
 C:\Users\Juan\Source\Repos\InventAcomp\UI\bin\Debug\MySql.Data.xml
-C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.Articulos.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.Categorias.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.NuevoArticulo.resources
@@ -56,3 +55,8 @@ C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.FormularioPrestamo.resour
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.PrestamoEquipo.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.Prestamos.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.FormularioContribucion.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\bin\Debug\DAO.dll.config
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.VerPrestamo.resources

@@ -143,7 +143,7 @@
             this.txtPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(169, 22);
-            this.txtPlaca.TabIndex = 7;
+            this.txtPlaca.TabIndex = 0;
             // 
             // datePickerIngreso
             // 
@@ -165,7 +165,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(169, 81);
-            this.txtDescripcion.TabIndex = 9;
+            this.txtDescripcion.TabIndex = 3;
             // 
             // txtNombre
             // 
@@ -175,7 +175,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(168, 22);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             // 
             // comboCategoria
             // 
@@ -187,7 +187,7 @@
             this.comboCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.comboCategoria.Name = "comboCategoria";
             this.comboCategoria.Size = new System.Drawing.Size(168, 24);
-            this.comboCategoria.TabIndex = 11;
+            this.comboCategoria.TabIndex = 4;
             // 
             // btnGuardar
             // 
@@ -242,7 +242,7 @@
             this.txtUbicacion.Location = new System.Drawing.Point(282, 320);
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.Size = new System.Drawing.Size(169, 22);
-            this.txtUbicacion.TabIndex = 15;
+            this.txtUbicacion.TabIndex = 5;
             // 
             // comboEstados
             // 
@@ -253,7 +253,7 @@
             this.comboEstados.Location = new System.Drawing.Point(596, 175);
             this.comboEstados.Name = "comboEstados";
             this.comboEstados.Size = new System.Drawing.Size(168, 24);
-            this.comboEstados.TabIndex = 16;
+            this.comboEstados.TabIndex = 2;
             // 
             // panel1
             // 

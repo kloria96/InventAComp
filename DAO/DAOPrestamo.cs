@@ -175,5 +175,39 @@ namespace DAO
             return lista;
         }
 
+        public TOPrestamo obtenerPrestamo(int idPrestamo)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "select numeroContrato, paciente, responsable, fechaPrestamo, fechaEntrega, idArticulo from prestamo where idPrestamo = @idPrest;";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@idPrest", idPrestamo);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            TOPrestamo prestamo = new TOPrestamo();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    prestamo.numeroContrato = reader.GetString(0);
+                    prestamo.paciente = reader.GetString(1);
+                    prestamo.responsable = reader.GetString(2);
+                    prestamo.fechaPrestamo = reader.GetDateTime(3);
+                    prestamo.fechaEntrega = reader.GetDateTime(4);
+                    prestamo.idArticulo = reader.GetInt32(5);
+                }
+            }
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return prestamo;
+        }
+
     }
 }

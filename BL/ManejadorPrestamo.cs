@@ -53,6 +53,19 @@ namespace BL
             return lista;
         }
 
+        public BLPrestamo obtenerPrestamo(int idPrestamo)
+        {
+            TOPrestamo toPrest = daoPrestamo.obtenerPrestamo(idPrestamo);
+            BLPrestamo prest = new BLPrestamo();
+            prest.numeroContrato = toPrest.numeroContrato;
+            prest.paciente = toPrest.paciente;
+            prest.responsable = toPrest.responsable;
+            prest.fechaPrestamo = toPrest.fechaPrestamo;
+            prest.fechaEntrega = toPrest.fechaEntrega;
+            prest.idArticulo = toPrest.idArticulo;
+            return prest;
+        }
+
         private TOPrestamo convert(BLPrestamo prestamo)
         {
             return new TOPrestamo(prestamo.numeroContrato, prestamo.paciente, prestamo.responsable, prestamo.fechaPrestamo, prestamo.fechaEntrega, prestamo.idArticulo);

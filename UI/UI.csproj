@@ -131,6 +131,12 @@
     <Compile Include="VerArticulo.Designer.cs">
       <DependentUpon>VerArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerPrestamo.Designer.cs">
+      <DependentUpon>VerPrestamo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Articulos.resx">
       <DependentUpon>Articulos.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VerArticulo.resx">
       <DependentUpon>VerArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerPrestamo.resx">
+      <DependentUpon>VerPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -20,11 +20,6 @@ namespace UI
         public Principal()
         {
             InitializeComponent();
-            //this.WindowState = FormWindowState.Maximized;
-            //Icon icon = Icon.ExtractAssociatedIcon("~/download-ConvertImage.ico");
-            //this.Icon = new Icon(this.GetType(), "UI.download-ConvertImage.ico");
-
-            //this.Icon = icon;
 
         }
 
@@ -168,6 +163,11 @@ namespace UI
         private void btnPrestamo_Click(object sender, EventArgs e)
         {
             new PrestamoEquipo().Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

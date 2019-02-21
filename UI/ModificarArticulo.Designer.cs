@@ -72,7 +72,8 @@
             this.comboCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.comboCategoria.Name = "comboCategoria";
             this.comboCategoria.Size = new System.Drawing.Size(181, 24);
-            this.comboCategoria.TabIndex = 23;
+            this.comboCategoria.TabIndex = 4;
+            this.comboCategoria.TabStop = false;
             // 
             // txtNombre
             // 
@@ -82,7 +83,8 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(181, 22);
-            this.txtNombre.TabIndex = 18;
+            this.txtNombre.TabIndex = 1;
+            this.txtNombre.TabStop = false;
             // 
             // txtDescripcion
             // 
@@ -93,7 +95,8 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(184, 93);
-            this.txtDescripcion.TabIndex = 21;
+            this.txtDescripcion.TabIndex = 3;
+            this.txtDescripcion.TabStop = false;
             // 
             // txtPlaca
             // 
@@ -103,7 +106,8 @@
             this.txtPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(184, 22);
-            this.txtPlaca.TabIndex = 19;
+            this.txtPlaca.TabIndex = 0;
+            this.txtPlaca.TabStop = false;
             // 
             // label6
             // 
@@ -188,7 +192,8 @@
             this.btnAtras.Location = new System.Drawing.Point(673, 404);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(111, 49);
-            this.btnAtras.TabIndex = 25;
+            this.btnAtras.TabIndex = 9;
+            this.btnAtras.TabStop = false;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -206,7 +211,8 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(117, 49);
-            this.btnGuardar.TabIndex = 24;
+            this.btnGuardar.TabIndex = 8;
+            this.btnGuardar.TabStop = false;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -221,7 +227,8 @@
             this.comboEstados.Location = new System.Drawing.Point(603, 173);
             this.comboEstados.Name = "comboEstados";
             this.comboEstados.Size = new System.Drawing.Size(181, 24);
-            this.comboEstados.TabIndex = 26;
+            this.comboEstados.TabIndex = 2;
+            this.comboEstados.TabStop = false;
             // 
             // lblUbicacion
             // 
@@ -241,7 +248,8 @@
             this.txtUbicacion.Location = new System.Drawing.Point(285, 325);
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.Size = new System.Drawing.Size(184, 22);
-            this.txtUbicacion.TabIndex = 28;
+            this.txtUbicacion.TabIndex = 5;
+            this.txtUbicacion.TabStop = false;
             // 
             // txtIngreso
             // 
@@ -251,7 +259,8 @@
             this.txtIngreso.Name = "txtIngreso";
             this.txtIngreso.ReadOnly = true;
             this.txtIngreso.Size = new System.Drawing.Size(184, 22);
-            this.txtIngreso.TabIndex = 29;
+            this.txtIngreso.TabIndex = 10;
+            this.txtIngreso.TabStop = false;
             // 
             // panel1
             // 
@@ -270,7 +279,8 @@
             this.chb_jps.Location = new System.Drawing.Point(528, 306);
             this.chb_jps.Name = "chb_jps";
             this.chb_jps.Size = new System.Drawing.Size(126, 22);
-            this.chb_jps.TabIndex = 31;
+            this.chb_jps.TabIndex = 7;
+            this.chb_jps.TabStop = false;
             this.chb_jps.Text = "Propiedad JPS";
             this.chb_jps.UseVisualStyleBackColor = true;
             // 

@@ -215,7 +215,7 @@
             this.MinimizeBox = false;
             this.Name = "FormularioPrestamo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Prestar Equipo";
+            this.Text = "Agregar Préstamo";
             this.ResumeLayout(false);
             this.PerformLayout();
 

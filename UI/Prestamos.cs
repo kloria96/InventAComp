@@ -58,6 +58,9 @@ namespace UI
                 DataGridViewButtonColumn button = new DataGridViewButtonColumn();
                 gridArticulos.Columns.Add(button);
 
+                DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
+                gridArticulos.Columns.Add(btn2);
+
                 gridArticulos.DataSource = listaBL;
             }
         }
@@ -65,6 +68,12 @@ namespace UI
         private void gridArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 5)
+            {
+                VerPrestamo.idPrestamo = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
+                new VerPrestamo().ShowDialog();
+            }
+
+            if (e.ColumnIndex == 6)
             {
                 CuotasDonacion.idPrestamo = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
                 CuotasDonacion.contratoPrestamo = gridArticulos.Rows[e.RowIndex].Cells[1].Value + "";
@@ -76,7 +85,8 @@ namespace UI
 
         private void gridArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            gridArticulos.Rows[e.RowIndex].Cells[5].Value = "Ver Contribuciones";
+            gridArticulos.Rows[e.RowIndex].Cells[5].Value = "Ver Préstamo";
+            gridArticulos.Rows[e.RowIndex].Cells[6].Value = "Ver Contribuciones";
         }
 
     }

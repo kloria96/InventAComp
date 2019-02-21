@@ -7,6 +7,9 @@ C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\Google.Protobuf.dll
 C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\DAO.pdb
 C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\TO.pdb
 C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\MySql.Data.xml
-C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
 C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Release\BL.dll
 C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Release\BL.pdb
+C:\Users\Juan\Source\Repos\InventAcomp\BL\bin\Release\DAO.dll.config
+C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Release\BL.csprojAssemblyReference.cache
+C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Release\BL.csproj.CoreCompileInputs.cache
+C:\Users\Juan\Source\Repos\InventAcomp\BL\obj\Release\BL.csproj.CopyComplete

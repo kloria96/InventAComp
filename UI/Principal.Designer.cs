@@ -44,9 +44,10 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.btnPrestamo = new System.Windows.Forms.Button();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.PanelTitulo = new System.Windows.Forms.Panel();
-            this.btnPrestamo = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.PanelTitulo.SuspendLayout();
@@ -251,6 +252,22 @@
             this.MenuVertical.Size = new System.Drawing.Size(248, 543);
             this.MenuVertical.TabIndex = 15;
             // 
+            // btnPrestamo
+            // 
+            this.btnPrestamo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPrestamo.BackColor = System.Drawing.Color.Teal;
+            this.btnPrestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrestamo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPrestamo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnPrestamo.Location = new System.Drawing.Point(44, 444);
+            this.btnPrestamo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrestamo.Name = "btnPrestamo";
+            this.btnPrestamo.Size = new System.Drawing.Size(170, 84);
+            this.btnPrestamo.TabIndex = 17;
+            this.btnPrestamo.Text = "Préstamo de Equipo";
+            this.btnPrestamo.UseVisualStyleBackColor = false;
+            this.btnPrestamo.Click += new System.EventHandler(this.btnPrestamo_Click);
+            // 
             // picBox
             // 
             this.picBox.Image = global::UI.Properties.Resources.asoc;
@@ -271,21 +288,17 @@
             this.PanelTitulo.Size = new System.Drawing.Size(788, 71);
             this.PanelTitulo.TabIndex = 16;
             // 
-            // btnPrestamo
+            // btnSalir
             // 
-            this.btnPrestamo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPrestamo.BackColor = System.Drawing.Color.Teal;
-            this.btnPrestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrestamo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPrestamo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnPrestamo.Location = new System.Drawing.Point(44, 444);
-            this.btnPrestamo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPrestamo.Name = "btnPrestamo";
-            this.btnPrestamo.Size = new System.Drawing.Size(170, 84);
-            this.btnPrestamo.TabIndex = 17;
-            this.btnPrestamo.Text = "Préstamo de Equipo";
-            this.btnPrestamo.UseVisualStyleBackColor = false;
-            this.btnPrestamo.Click += new System.EventHandler(this.btnPrestamo_Click);
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(523, 463);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(122, 28);
+            this.btnSalir.TabIndex = 17;
+            this.btnSalir.Text = "Salir del sistema";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Principal
             // 
@@ -293,6 +306,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(929, 538);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.PanelTitulo);
             this.Controls.Add(this.MenuVertical);
             this.Controls.Add(this.lblCategoria);
@@ -342,6 +356,7 @@
         private System.Windows.Forms.Panel PanelTitulo;
         private System.Windows.Forms.PictureBox picBox;
         private System.Windows.Forms.Button btnPrestamo;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

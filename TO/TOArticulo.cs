@@ -24,63 +24,9 @@ namespace TO
 
         }
 
-        public TOArticulo(String numPlaca, String nombArticulo, int idArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, int idCategoria)
-        {
-            this.numeroPlaca = numPlaca;
-            this.nombArticulo = nombArticulo;
-            this.idArticulo = idArticulo;
-            this.fechaIngreso = fechaIngreso;
-            this.descripcArticulo = descripcArticulo;
-            this.estadoArticulo = estadoArticulo;
-            this.idCategoria = idCategoria;
-        }
-
-        public TOArticulo(int idArticulo, String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, int idCategoria)
-        {
-            this.idArticulo = idArticulo;
-            this.numeroPlaca = numPlaca;
-            this.nombArticulo = nombArticulo;
-            this.fechaIngreso = fechaIngreso;
-            this.descripcArticulo = descripcArticulo;
-            this.estadoArticulo = estadoArticulo;
-            this.idCategoria = idCategoria;
-        }
-
-        public TOArticulo(string numPlaca, string nombArticulo, DateTime fechaIngreso, string descripcArticulo, string estadoArticulo, int idCategoria)
-        {
-            this.numeroPlaca = numPlaca;
-            this.nombArticulo = nombArticulo;
-            this.fechaIngreso = fechaIngreso;
-            this.descripcArticulo = descripcArticulo;
-            this.estadoArticulo = estadoArticulo;
-            this.idCategoria = idCategoria;
-        }
-
-        public TOArticulo(int idArticulo, string numPlaca, string nombArticulo, DateTime fechaIngreso, string descripcArticulo, string estadoArticulo, string nombreCategoria)
-        {
-            this.numeroPlaca = numPlaca;
-            this.nombArticulo = nombArticulo;
-            this.idArticulo = idArticulo;
-            this.fechaIngreso = fechaIngreso;
-            this.descripcArticulo = descripcArticulo;
-            this.estadoArticulo = estadoArticulo;
-            this.nombreCategoria = nombreCategoria;
-        }
-
         public TOArticulo(int idArticulo, String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, int idCategoria)
         {
             this.idArticulo = idArticulo;
-            this.numeroPlaca = numPlaca;
-            this.nombArticulo = nombArticulo;
-            this.fechaIngreso = fechaIngreso;
-            this.descripcArticulo = descripcArticulo;
-            this.estadoArticulo = estadoArticulo;
-            this.ubicacionArticulo = ubicacionArticulo;
-            this.idCategoria = idCategoria;
-        }
-
-        public TOArticulo(String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, int idCategoria)
-        {
             this.numeroPlaca = numPlaca;
             this.nombArticulo = nombArticulo;
             this.fechaIngreso = fechaIngreso;
@@ -100,18 +46,6 @@ namespace TO
             this.estadoArticulo = estadoArticulo;
             this.ubicacionArticulo = ubicacionArticulo;
             this.nombreCategoria = nombreCategoria;
-        }
-
-        public TOArticulo(String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, Boolean propiedad_JPS, int idCategoria)
-        {
-            this.numeroPlaca = numPlaca;
-            this.nombArticulo = nombArticulo;
-            this.fechaIngreso = fechaIngreso;
-            this.descripcArticulo = descripcArticulo;
-            this.estadoArticulo = estadoArticulo;
-            this.ubicacionArticulo = ubicacionArticulo;
-            this.propiedad_JPS = propiedad_JPS;
-            this.idCategoria = idCategoria;
         }
 
         public TOArticulo(int idArticulo, String numPlaca, String nombArticulo, DateTime fechaIngreso, String descripcArticulo, String estadoArticulo, String ubicacionArticulo, Boolean propiedad_JPS, int idCategoria)
