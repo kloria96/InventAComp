@@ -11,11 +11,13 @@ namespace DAO
 {
     public class DAOContribucion
     {
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
         //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
 
-        // connectionStringJ (Juan Diego)
-        // connectionStringM (Melany)
+            // connectionStringJ (Juan Diego)
+            // connectionStringM (Melany)
+            // connectionString (Asoc. Acompañame)
 
         public bool agregarContribucion(TOContribucion nuevaCont)
         {
