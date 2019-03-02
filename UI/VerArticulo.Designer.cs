@@ -150,6 +150,7 @@
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(107, 46);
             this.btnAtras.TabIndex = 8;
+            this.btnAtras.TabStop = false;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -164,6 +165,7 @@
             this.txtPlaca.ReadOnly = true;
             this.txtPlaca.Size = new System.Drawing.Size(164, 22);
             this.txtPlaca.TabIndex = 9;
+            this.txtPlaca.TabStop = false;
             // 
             // txtNombre
             // 
@@ -174,6 +176,7 @@
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(164, 22);
             this.txtNombre.TabIndex = 10;
+            this.txtNombre.TabStop = false;
             // 
             // txtIngreso
             // 
@@ -184,6 +187,7 @@
             this.txtIngreso.ReadOnly = true;
             this.txtIngreso.Size = new System.Drawing.Size(164, 22);
             this.txtIngreso.TabIndex = 11;
+            this.txtIngreso.TabStop = false;
             // 
             // txtEstado
             // 
@@ -194,6 +198,7 @@
             this.txtEstado.ReadOnly = true;
             this.txtEstado.Size = new System.Drawing.Size(164, 22);
             this.txtEstado.TabIndex = 12;
+            this.txtEstado.TabStop = false;
             // 
             // txtUbicacion
             // 
@@ -204,6 +209,7 @@
             this.txtUbicacion.ReadOnly = true;
             this.txtUbicacion.Size = new System.Drawing.Size(164, 22);
             this.txtUbicacion.TabIndex = 13;
+            this.txtUbicacion.TabStop = false;
             // 
             // txtCategoria
             // 
@@ -214,6 +220,7 @@
             this.txtCategoria.ReadOnly = true;
             this.txtCategoria.Size = new System.Drawing.Size(164, 22);
             this.txtCategoria.TabIndex = 14;
+            this.txtCategoria.TabStop = false;
             // 
             // txtDescripcion
             // 
@@ -225,6 +232,7 @@
             this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(164, 97);
             this.txtDescripcion.TabIndex = 15;
+            this.txtDescripcion.TabStop = false;
             // 
             // panel1
             // 
@@ -245,6 +253,7 @@
             this.chb_jps.Name = "chb_jps";
             this.chb_jps.Size = new System.Drawing.Size(126, 22);
             this.chb_jps.TabIndex = 17;
+            this.chb_jps.TabStop = false;
             this.chb_jps.Text = "Propiedad JPS";
             this.chb_jps.UseVisualStyleBackColor = true;
             // 

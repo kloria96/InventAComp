@@ -74,6 +74,7 @@
             this.txtFechaEntrega.ReadOnly = true;
             this.txtFechaEntrega.Size = new System.Drawing.Size(164, 22);
             this.txtFechaEntrega.TabIndex = 25;
+            this.txtFechaEntrega.TabStop = false;
             // 
             // txtPaciente
             // 
@@ -82,7 +83,8 @@
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.ReadOnly = true;
             this.txtPaciente.Size = new System.Drawing.Size(203, 22);
-            this.txtPaciente.TabIndex = 24;
+            this.txtPaciente.TabIndex = 4;
+            this.txtPaciente.TabStop = false;
             // 
             // txtFecha
             // 
@@ -91,7 +93,8 @@
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.ReadOnly = true;
             this.txtFecha.Size = new System.Drawing.Size(164, 22);
-            this.txtFecha.TabIndex = 23;
+            this.txtFecha.TabIndex = 3;
+            this.txtFecha.TabStop = false;
             // 
             // txtContrato
             // 
@@ -100,7 +103,8 @@
             this.txtContrato.Name = "txtContrato";
             this.txtContrato.ReadOnly = true;
             this.txtContrato.Size = new System.Drawing.Size(203, 22);
-            this.txtContrato.TabIndex = 22;
+            this.txtContrato.TabIndex = 2;
+            this.txtContrato.TabStop = false;
             // 
             // lblFechaEntrega
             // 
@@ -149,7 +153,8 @@
             this.txtResponsable.Name = "txtResponsable";
             this.txtResponsable.ReadOnly = true;
             this.txtResponsable.Size = new System.Drawing.Size(203, 22);
-            this.txtResponsable.TabIndex = 27;
+            this.txtResponsable.TabIndex = 6;
+            this.txtResponsable.TabStop = false;
             // 
             // lblResponsable
             // 
@@ -172,6 +177,7 @@
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(107, 46);
             this.btnAtras.TabIndex = 28;
+            this.btnAtras.TabStop = false;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;
