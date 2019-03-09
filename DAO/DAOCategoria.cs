@@ -11,9 +11,9 @@ namespace DAO
 {
     public class DAOCategoria
     {
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
         //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
 
             // connectionStringJ (Juan Diego)
             // connectionStringM (Melany)
@@ -175,6 +175,25 @@ namespace DAO
                 conex.Close();
             }
             return (result > 0 ? true : false);
+        }
+
+        public int obtenerIDCategoria(string nombre)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "select idCategoria from categoria where nombre = @nom";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@nom", nombre);
+            int result = Convert.ToInt32(cmd.ExecuteScalar());
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return result;
         }
 
     }

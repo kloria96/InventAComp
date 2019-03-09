@@ -54,7 +54,9 @@ namespace UI
             if (comboEstados.SelectedItem != null && comboCategoria.SelectedItem != null)
             {
                 ManejadorArticulo manejArt = new ManejadorArticulo();
-                BLArticulo artNuevo = new BLArticulo(txtPlaca.Text, txtNombre.Text, Convert.ToDateTime(datePickerIngreso.Text), txtDescripcion.Text, comboEstados.SelectedItem.ToString(), txtUbicacion.Text, chb_jps.Checked, comboCategoria.SelectedIndex + 1);
+                ManejadorCategoria manejCat = new ManejadorCategoria();
+                int idCateg = manejCat.obtenerIDCategoria(comboCategoria.SelectedItem.ToString());
+                BLArticulo artNuevo = new BLArticulo(txtPlaca.Text, txtNombre.Text, Convert.ToDateTime(datePickerIngreso.Text), txtDescripcion.Text, comboEstados.SelectedItem.ToString(), txtUbicacion.Text, chb_jps.Checked, idCateg);
                 
                 if (manejArt.agregarArticulo(artNuevo))
                 {

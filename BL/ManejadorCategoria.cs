@@ -64,5 +64,11 @@ namespace BL
             return daoCat.actualizarCategoria(idCategoria, nombre);
         }
 
+        public int obtenerIDCategoria(string nombre)
+        {
+            DAOCategoria daoCateg = new DAOCategoria();
+            return daoCateg.obtenerIDCategoria(nombre);
+        }
+
     }
 }

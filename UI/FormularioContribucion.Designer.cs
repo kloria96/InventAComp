@@ -75,9 +75,9 @@
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.Location = new System.Drawing.Point(102, 255);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(136, 18);
+            this.lblFecha.Size = new System.Drawing.Size(49, 18);
             this.lblFecha.TabIndex = 20;
-            this.lblFecha.Text = "Fecha de préstamo";
+            this.lblFecha.Text = "Fecha";
             // 
             // txtRecibo
             // 
