@@ -45,6 +45,7 @@
     <Compile Include="TOArticulo.cs" />
     <Compile Include="TOCategoria.cs" />
     <Compile Include="TOContribucion.cs" />
+    <Compile Include="TOCuenta.cs" />
     <Compile Include="TOPrestamo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

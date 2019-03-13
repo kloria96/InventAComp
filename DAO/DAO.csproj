@@ -45,6 +45,7 @@
     <Compile Include="DAOArticulo.cs" />
     <Compile Include="DAOCategoria.cs" />
     <Compile Include="DAOContribucion.cs" />
+    <Compile Include="DAOCuenta.cs" />
     <Compile Include="DAOPrestamo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

@@ -44,10 +44,12 @@
     <Compile Include="BLArticulo.cs" />
     <Compile Include="BLCategoria.cs" />
     <Compile Include="BLContribucion.cs" />
+    <Compile Include="BLCuenta.cs" />
     <Compile Include="BLPrestamo.cs" />
     <Compile Include="ManejadorArticulo.cs" />
     <Compile Include="ManejadorCategoria.cs" />
     <Compile Include="ManejadorContribucion.cs" />
+    <Compile Include="ManejadorCuenta.cs" />
     <Compile Include="ManejadorPrestamo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
