@@ -46,6 +46,7 @@
     <Compile Include="BLContribucion.cs" />
     <Compile Include="BLCuenta.cs" />
     <Compile Include="BLPrestamo.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="ManejadorArticulo.cs" />
     <Compile Include="ManejadorCategoria.cs" />
     <Compile Include="ManejadorContribucion.cs" />

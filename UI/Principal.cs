@@ -20,17 +20,25 @@ namespace UI
         public Principal()
         {
             InitializeComponent();
-
+            revisarLogin();
         }
 
-    
+        public void revisarLogin()
+        {
+            string privilegio = Manager.getManager().rol;
+
+            if (privilegio.Equals("Nutricion"))
+            {
+                MessageBox.Show("El usuario tiene privilegio de nutrición");
+            }
+        }
 
         private void btnArticulo_Click(object sender, EventArgs e)
         {
             Articulos art = new Articulos();
             art.MdiParent = this.MdiParent;
             //this.Hide(); //para ocultar ventana
-           
+
             //this.WindowState = FormWindowState.Maximized;  //para mostrar la ventana modo maximizado
             art.Show();
         }
@@ -111,7 +119,7 @@ namespace UI
             {
                 cbCategorias.Items.Add(categoria.nombreCategoria);
             }
-            
+
         }
 
         private void cbCategorias_SelectedIndexChanged(object sender, EventArgs e)

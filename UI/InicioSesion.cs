@@ -42,9 +42,10 @@ namespace UI
                     }
                     else
                     {
+                        Manager.getManager().rol = cuenta.privilegio;
+                        this.Hide();
                         Principal princ = new Principal();
                         princ.Show();
-                        this.Hide();
                     }
                 }
                 else
