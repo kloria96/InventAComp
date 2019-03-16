@@ -8,7 +8,8 @@ namespace TO
 {
     public class TOCuenta
     {
-        public string nombreUsuario { get; set; }
+        public string idUsuario { get; set; }
+        public string nombreEmpleado { get;set; }
         public string contrasenna { get; set; }
         public string privilegio { get; set; }
         public Boolean estado { get; set; }
@@ -18,9 +19,10 @@ namespace TO
 
         }
 
-        public TOCuenta(string nombreUsuario, string contrasenna, string privilegio, Boolean estado)
+        public TOCuenta(string idUsuario, string nombreEmpleado, string contrasenna, string privilegio, Boolean estado)
         {
-            this.nombreUsuario = nombreUsuario;
+            this.idUsuario = idUsuario;
+            this.nombreEmpleado = nombreEmpleado;
             this.contrasenna = contrasenna;
             this.privilegio = privilegio;
             this.estado = estado;

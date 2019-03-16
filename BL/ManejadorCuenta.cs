@@ -16,14 +16,21 @@ namespace BL
             return convert(dao.buscarCuenta(nombre, contra));
         }
 
+        public void insertarActualizar(BLCuenta cuenta)
+        {
+            DAOCuenta dao = new DAOCuenta();
+            dao.actualizarInsertarCuenta(convert(cuenta));
+        }
+
+
         private TOCuenta convert(BLCuenta cuenta)
         {
-            return new TOCuenta(cuenta.nombreUsuario, cuenta.contrasenna, cuenta.privilegio, cuenta.estado);
+            return new TOCuenta(cuenta.idUsuario, cuenta.contrasenna, cuenta.nombreEmpleado, cuenta.privilegio, cuenta.estado);
         }
 
         private BLCuenta convert(TOCuenta cuenta)
         {
-            return new BLCuenta(cuenta.nombreUsuario, cuenta.contrasenna, cuenta.privilegio, cuenta.estado);
+            return new BLCuenta(cuenta.idUsuario, cuenta.contrasenna, cuenta.nombreEmpleado, cuenta.privilegio, cuenta.estado);
         }
     }
 }

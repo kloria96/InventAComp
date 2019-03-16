@@ -13,11 +13,11 @@ namespace DAO
     {
         MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
 
-        public TOCuenta buscarCuenta(string nombre, string contra)
+        public TOCuenta buscarCuenta(string id, string contra)
         {
             TOCuenta cuenta = new TOCuenta();
-            MySqlCommand buscar = new MySqlCommand("SELECT * FROM cuenta WHERE nombreUsuario = @nombre and contrasenna = @contra", conex);
-            buscar.Parameters.AddWithValue("@nombre", nombre);
+            MySqlCommand buscar = new MySqlCommand("SELECT * FROM cuenta WHERE idUsuario = @id and contrasenna = @contra", conex);
+            buscar.Parameters.AddWithValue("@id", id);
             buscar.Parameters.AddWithValue("@contra", contra);
 
             if (conex.State != ConnectionState.Open)
@@ -30,10 +30,11 @@ namespace DAO
             {
                 while (reader.Read())
                 {
-                    cuenta.nombreUsuario = reader.GetString(0);
-                    cuenta.contrasenna = reader.GetString(1);
-                    cuenta.privilegio = reader.GetString(2);
-                    cuenta.estado = reader.GetBoolean(3);
+                    cuenta.idUsuario = reader.GetString(0);
+                    cuenta.nombreEmpleado = reader.GetString(1);
+                    cuenta.contrasenna = reader.GetString(2);
+                    cuenta.privilegio = reader.GetString(3);
+                    cuenta.estado = reader.GetBoolean(4);
                 }
             }
 
@@ -42,6 +43,29 @@ namespace DAO
                 conex.Close();
             }
             return cuenta;
+
+        }
+
+
+        public void actualizarInsertarCuenta(TOCuenta cuenta)
+        {
+            String query = "begin tran if exists(select * from cuenta with (updlock, serializable) where idUsuario = @id) begin update cuenta set contrasenna = @contra, nombreEmpleado = @nombre, privilegio = @priv, estado = @estado where idUsuario = @id; end else begin insert into cuenta(idUsuario, nombreEmpleado, contrasenna, privilegio, estado) values(@id, @contra, @nombre, @priv, @estado); end commit tran;";
+            MySqlCommand sentencia = new MySqlCommand(query, conex);
+            sentencia.Parameters.AddWithValue("@id", cuenta.idUsuario);
+            sentencia.Parameters.AddWithValue("@contra", cuenta.contrasenna);
+            sentencia.Parameters.AddWithValue("@nombre", cuenta.nombreEmpleado);
+            sentencia.Parameters.AddWithValue("@priv", cuenta.privilegio);
+            sentencia.Parameters.AddWithValue("@estado", cuenta.estado);
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+            sentencia.ExecuteNonQuery();
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
 
         }
     }

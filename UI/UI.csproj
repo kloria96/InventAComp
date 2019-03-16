@@ -149,6 +149,9 @@
     <Compile Include="VerPrestamo.Designer.cs">
       <DependentUpon>VerPrestamo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administrador.resx">
+      <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Articulos.resx">
       <DependentUpon>Articulos.cs</DependentUpon>
     </EmbeddedResource>

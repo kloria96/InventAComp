@@ -30,7 +30,7 @@ namespace UI
             ManejadorCuenta manejCuenta = new ManejadorCuenta();
             BLCuenta cuenta = manejCuenta.buscarCuenta(nombre, contra);
 
-            if (cuenta.nombreUsuario != null && !cuenta.nombreUsuario.Equals(""))
+            if (cuenta.idUsuario != null && !cuenta.idUsuario.Equals(""))
             {
                 if (cuenta.estado == true)
                 {
