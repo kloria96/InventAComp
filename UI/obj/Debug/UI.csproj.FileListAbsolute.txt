@@ -95,3 +95,4 @@ C:\Users\melan\Source\Repos\InventAcomp\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\melan\Source\Repos\InventAcomp\UI\obj\Debug\UI.exe
 C:\Users\melan\Source\Repos\InventAcomp\UI\obj\Debug\UI.pdb
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.Administrador.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.Administrador.resources

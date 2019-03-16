@@ -80,7 +80,7 @@
             this.txtContrato.Location = new System.Drawing.Point(224, 133);
             this.txtContrato.Name = "txtContrato";
             this.txtContrato.Size = new System.Drawing.Size(213, 24);
-            this.txtContrato.TabIndex = 3;
+            this.txtContrato.TabIndex = 2;
             // 
             // txtPaciente
             // 
@@ -88,7 +88,7 @@
             this.txtPaciente.Location = new System.Drawing.Point(224, 189);
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Size = new System.Drawing.Size(213, 24);
-            this.txtPaciente.TabIndex = 5;
+            this.txtPaciente.TabIndex = 3;
             // 
             // lblFecha
             // 
@@ -107,7 +107,7 @@
             this.dtPrestamo.Location = new System.Drawing.Point(224, 303);
             this.dtPrestamo.Name = "dtPrestamo";
             this.dtPrestamo.Size = new System.Drawing.Size(288, 24);
-            this.dtPrestamo.TabIndex = 6;
+            this.dtPrestamo.TabIndex = 5;
             // 
             // lblEntrega
             // 
@@ -126,7 +126,7 @@
             this.dtEntrega.Location = new System.Drawing.Point(224, 360);
             this.dtEntrega.Name = "dtEntrega";
             this.dtEntrega.Size = new System.Drawing.Size(288, 24);
-            this.dtEntrega.TabIndex = 8;
+            this.dtEntrega.TabIndex = 6;
             // 
             // lblPaciente
             // 
@@ -150,7 +150,7 @@
             this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(102, 40);
-            this.btnAtras.TabIndex = 10;
+            this.btnAtras.TabIndex = 8;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -167,7 +167,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(118, 40);
-            this.btnGuardar.TabIndex = 13;
+            this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -189,7 +189,7 @@
             this.txtResponsable.Location = new System.Drawing.Point(224, 244);
             this.txtResponsable.Name = "txtResponsable";
             this.txtResponsable.Size = new System.Drawing.Size(213, 24);
-            this.txtResponsable.TabIndex = 14;
+            this.txtResponsable.TabIndex = 4;
             // 
             // FormularioPrestamo
             // 

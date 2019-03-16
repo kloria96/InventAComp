@@ -66,6 +66,18 @@ namespace BL
             return prest;
         }
 
+        //Desactiva el préstamo (estado = 0), no lo elimina de la BD. Ademas, establece el estado del artículo como 0
+        public bool terminarPrestamo(int idPrestamo)
+        {
+            return daoPrestamo.terminarPrestamo(idPrestamo);
+        }
+
+        //Retorna el id del artículo en préstamo. Para ver los datos del artículo desde VerPrestamo
+        public Int32 articuloEnPrestamo(int idPrestamo)
+        {
+            return daoPrestamo.articuloEnPrestamo(idPrestamo);
+        }
+
         private TOPrestamo convert(BLPrestamo prestamo)
         {
             return new TOPrestamo(prestamo.numeroContrato, prestamo.paciente, prestamo.responsable, prestamo.fechaPrestamo, prestamo.fechaEntrega, prestamo.idArticulo);

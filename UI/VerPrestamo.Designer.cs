@@ -42,6 +42,7 @@
             this.txtResponsable = new System.Windows.Forms.TextBox();
             this.lblResponsable = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.btnVerArticulo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,7 +174,7 @@
             this.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(662, 310);
+            this.btnAtras.Location = new System.Drawing.Point(403, 319);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(107, 46);
             this.btnAtras.TabIndex = 28;
@@ -183,11 +184,24 @@
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // btnVerArticulo
+            // 
+            this.btnVerArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerArticulo.Location = new System.Drawing.Point(603, 242);
+            this.btnVerArticulo.Name = "btnVerArticulo";
+            this.btnVerArticulo.Size = new System.Drawing.Size(106, 26);
+            this.btnVerArticulo.TabIndex = 29;
+            this.btnVerArticulo.TabStop = false;
+            this.btnVerArticulo.Text = "Ver Artículo";
+            this.btnVerArticulo.UseVisualStyleBackColor = true;
+            this.btnVerArticulo.Click += new System.EventHandler(this.btnVerArticulo_Click);
+            // 
             // VerPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(891, 401);
+            this.Controls.Add(this.btnVerArticulo);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.txtResponsable);
             this.Controls.Add(this.lblResponsable);
@@ -229,5 +243,6 @@
         private System.Windows.Forms.TextBox txtResponsable;
         private System.Windows.Forms.Label lblResponsable;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnVerArticulo;
     }
 }

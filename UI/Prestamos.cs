@@ -61,6 +61,9 @@ namespace UI
                 DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
                 gridArticulos.Columns.Add(btn2);
 
+                DataGridViewButtonColumn btn3 = new DataGridViewButtonColumn();
+                gridArticulos.Columns.Add(btn3);
+
                 gridArticulos.DataSource = listaBL;
             }
         }
@@ -81,12 +84,32 @@ namespace UI
                 cuotas.Owner = this;
                 cuotas.Show();
             }
+            if (e.ColumnIndex == 7)
+            {
+                int idPrest = Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value);
+                ManejadorPrestamo manejPrest = new ManejadorPrestamo();
+                var confirmResult = MessageBox.Show("¿Desea terminar el préstamo?", "Confirmar", MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    if (manejPrest.terminarPrestamo(idPrest))
+                    {
+                        this.Dispose();
+                        new Prestamos().Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido eliminar el artículo");
+                    }
+
+                }
+            }
         }
 
         private void gridArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             gridArticulos.Rows[e.RowIndex].Cells[5].Value = "Ver Préstamo";
             gridArticulos.Rows[e.RowIndex].Cells[6].Value = "Ver Contribuciones";
+            gridArticulos.Rows[e.RowIndex].Cells[7].Value = "Terminar";
         }
 
     }

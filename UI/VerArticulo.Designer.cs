@@ -47,6 +47,7 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chb_jps = new System.Windows.Forms.CheckBox();
+            this.cbPrestamo = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,7 +147,7 @@
             this.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(731, 420);
+            this.btnAtras.Location = new System.Drawing.Point(426, 404);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(107, 46);
             this.btnAtras.TabIndex = 8;
@@ -249,7 +250,7 @@
             this.chb_jps.AutoCheck = false;
             this.chb_jps.AutoSize = true;
             this.chb_jps.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chb_jps.Location = new System.Drawing.Point(529, 294);
+            this.chb_jps.Location = new System.Drawing.Point(529, 279);
             this.chb_jps.Name = "chb_jps";
             this.chb_jps.Size = new System.Drawing.Size(126, 22);
             this.chb_jps.TabIndex = 17;
@@ -257,11 +258,25 @@
             this.chb_jps.Text = "Propiedad JPS";
             this.chb_jps.UseVisualStyleBackColor = true;
             // 
+            // cbPrestamo
+            // 
+            this.cbPrestamo.AutoCheck = false;
+            this.cbPrestamo.AutoSize = true;
+            this.cbPrestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPrestamo.Location = new System.Drawing.Point(529, 320);
+            this.cbPrestamo.Name = "cbPrestamo";
+            this.cbPrestamo.Size = new System.Drawing.Size(114, 22);
+            this.cbPrestamo.TabIndex = 18;
+            this.cbPrestamo.TabStop = false;
+            this.cbPrestamo.Text = "En Préstamo";
+            this.cbPrestamo.UseVisualStyleBackColor = true;
+            // 
             // VerArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 538);
+            this.Controls.Add(this.cbPrestamo);
             this.Controls.Add(this.chb_jps);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtDescripcion);
@@ -313,5 +328,6 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox chb_jps;
+        private System.Windows.Forms.CheckBox cbPrestamo;
     }
 }

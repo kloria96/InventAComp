@@ -12,8 +12,8 @@ namespace DAO
     public class DAOPrestamo
     {
         //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
 
             // connectionStringJ (Juan Diego)
             // connectionStringM (Melany)
@@ -26,7 +26,7 @@ namespace DAO
                 conex.Open();
             }
 
-            String qry = "insert into prestamo (numeroContrato, paciente, responsable, fechaPrestamo, fechaEntrega, idArticulo) values (@con, @pac, @res, @fecPr, @fecEn, @idArt);";
+            String qry = "insert into prestamo (numeroContrato, paciente, responsable, fechaPrestamo, fechaEntrega, estado, idArticulo) values (@con, @pac, @res, @fecPr, @fecEn, 1, @idArt);";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
 
             cmd.Parameters.AddWithValue("@con", nuevoPrest.numeroContrato);
@@ -37,20 +37,31 @@ namespace DAO
             cmd.Parameters.AddWithValue("@idArt", nuevoPrest.idArticulo);
             int result = cmd.ExecuteNonQuery();
 
-            bool modificoCategoria = modificarCategoriaPrestamo(nuevoPrest.idArticulo);
+            bool prestado = articuloPrestado(nuevoPrest.idArticulo);
 
             if (conex.State != ConnectionState.Closed)
             {
                 conex.Close();
             }
 
-            if (modificoCategoria && result > 0)
+            if (prestado && result > 0)
             {
                 return true;
             } else
             {
                 return false;
             }
+        }
+
+        private bool articuloPrestado(int idArticulo)
+        {
+            String qry = "update articulo set prestado = 1 where idArticulo = @idArt";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+
+            cmd.Parameters.AddWithValue("@idArt", idArticulo);
+
+            int res = cmd.ExecuteNonQuery();
+            return (res > 0 ? true : false);
         }
 
         private bool modificarCategoriaPrestamo(int idArticulo)
@@ -120,7 +131,7 @@ namespace DAO
             {
                 conex.Open();
             }
-            String qry = "select p.idPrestamo, p.numeroContrato, p.paciente, a.numeroPlaca, a.nombre from prestamo p join articulo a on p.idArticulo = a.idArticulo where a.idCategoria = (select idCategoria from categoria where nombre = 'Préstamo');";
+            String qry = "select p.idPrestamo, p.numeroContrato, p.paciente, a.numeroPlaca, a.nombre from prestamo p join articulo a on p.idArticulo = a.idArticulo where p.estado = 1;";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
 
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -175,6 +186,53 @@ namespace DAO
                 conex.Close();
             }
             return lista;
+        }
+
+        //Desactiva el préstamo (estado = 0), no lo elimina de la BD. Ademas, establece el estado del artículo como 0
+        public bool terminarPrestamo(int idPrestamo)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            string query1 = "select idArticulo from prestamo where idPrestamo = @idPr";
+            MySqlCommand cmd1 = new MySqlCommand(query1, conex);
+            cmd1.Parameters.AddWithValue("@idPr", idPrestamo);
+            int idArticuloPrestamo = Convert.ToInt32(cmd1.ExecuteScalar());
+
+            string query2 = "update prestamo set estado = 0 where idPrestamo = @idPre;" +
+                "update articulo set prestado = 0 where idArticulo = @idArt";
+            MySqlCommand cmd2 = new MySqlCommand(query2, conex);
+            cmd2.Parameters.AddWithValue("@idPre", idPrestamo);
+            cmd2.Parameters.AddWithValue("@idArt", idArticuloPrestamo);
+            int result = cmd2.ExecuteNonQuery();
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return (result > 0 ? true : false);
+        }
+
+        //Retorna el id del artículo en préstamo. Para ver los datos del artículo desde VerPrestamo
+        public Int32 articuloEnPrestamo(int idPrestamo)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            string query = "select idArticulo from prestamo where idPrestamo = @idPr";
+            MySqlCommand cmd = new MySqlCommand(query, conex);
+            cmd.Parameters.AddWithValue("@idPr", idPrestamo);
+            int idArticuloPrestamo = Convert.ToInt32(cmd.ExecuteScalar());
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return idArticuloPrestamo;
         }
 
         public TOPrestamo obtenerPrestamo(int idPrestamo)

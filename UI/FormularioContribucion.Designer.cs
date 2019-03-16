@@ -59,7 +59,7 @@
             this.dtFecha.Location = new System.Drawing.Point(258, 255);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(288, 24);
-            this.dtFecha.TabIndex = 22;
+            this.dtFecha.TabIndex = 3;
             // 
             // txtCuota
             // 
@@ -67,7 +67,7 @@
             this.txtCuota.Location = new System.Drawing.Point(258, 192);
             this.txtCuota.Name = "txtCuota";
             this.txtCuota.Size = new System.Drawing.Size(181, 24);
-            this.txtCuota.TabIndex = 21;
+            this.txtCuota.TabIndex = 2;
             // 
             // lblFecha
             // 
@@ -85,7 +85,7 @@
             this.txtRecibo.Location = new System.Drawing.Point(258, 136);
             this.txtRecibo.Name = "txtRecibo";
             this.txtRecibo.Size = new System.Drawing.Size(181, 24);
-            this.txtRecibo.TabIndex = 19;
+            this.txtRecibo.TabIndex = 1;
             // 
             // lblRecibo
             // 
@@ -127,7 +127,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(118, 40);
-            this.btnGuardar.TabIndex = 27;
+            this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -145,7 +145,7 @@
             this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(102, 40);
-            this.btnAtras.TabIndex = 26;
+            this.btnAtras.TabIndex = 5;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;

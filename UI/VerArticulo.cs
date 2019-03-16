@@ -33,6 +33,7 @@ namespace UI
             txtCategoria.Text = articulo.nombCategoria;
             txtUbicacion.Text = articulo.ubicacionArticulo;
             chb_jps.Checked = articulo.propiedad_JPS;
+            cbPrestamo.Checked = articulo.prestado;
         }
 
         private void btnAtras_Click(object sender, EventArgs e)

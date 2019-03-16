@@ -35,5 +35,13 @@ namespace UI
             txtFecha.Text = prestamo.fechaPrestamo.ToString("dd/MM/yyyy");
             txtFechaEntrega.Text = prestamo.fechaEntrega.ToString("dd/MM/yyyy");
         }
+
+        private void btnVerArticulo_Click(object sender, EventArgs e)
+        {
+            ManejadorPrestamo manejPrest = new ManejadorPrestamo();
+            VerArticulo.idArticulo = manejPrest.articuloEnPrestamo(Convert.ToInt32(idPrestamo)) + "";
+            new VerArticulo().ShowDialog();
+        }
+
     }
 }
