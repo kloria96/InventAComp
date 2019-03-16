@@ -31,7 +31,7 @@ namespace UI
         private void button1_Click(object sender, EventArgs e)
         {
             BLCuenta cuenta = new BLCuenta();
-            MessageBox.Show(comboBoxRol.SelectedValue.ToString());
+            MessageBox.Show(comboBoxRol.SelectedItem.ToString());
 
             cuenta.idUsuario = txtId.Text.Trim();
             cuenta.contrasenna = txtContra.Text.Trim();
