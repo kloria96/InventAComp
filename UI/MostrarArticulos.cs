@@ -52,6 +52,7 @@ namespace UI
             if (dgvArticulos.Rows.Count == 0)
             {
                 lblBusqueda.Visible = true;
+                btnReporte.Visible = false;
             }
         }
 
@@ -156,6 +157,53 @@ namespace UI
                 }
                 
             }
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            ReporteArticulos reporte = new ReporteArticulos();
+
+            for (int i = 0; i < dgvArticulos.Rows.Count; i++)
+            {
+                BLArticulo articulo = new BLArticulo();
+                articulo.numeroPlaca = (string)dgvArticulos.Rows[i].Cells[0].Value;
+                articulo.nombArticulo = (string)dgvArticulos.Rows[i].Cells[1].Value;
+                articulo.estadoArticulo = (string)dgvArticulos.Rows[i].Cells[4].Value;
+                articulo.ubicacionArticulo = (string)dgvArticulos.Rows[i].Cells[5].Value;
+                articulo.nombCategoria = (string)dgvArticulos.Rows[i].Cells[6].Value;
+                reporte.listaReporte.Add(articulo);
+            }
+            reporte.ShowDialog();
+        }
+
+        private void mostrarReporteEjemplo()
+        {
+            ReporteArticulos reporte = new ReporteArticulos();
+            BLArticulo art1 = new BLArticulo();
+            art1.numeroPlaca = "H81273";
+            art1.nombArticulo = "Manual de conductor";
+            art1.estadoArticulo = "Bueno";
+            art1.ubicacionArticulo = "Departamento";
+            art1.nombCategoria = "General";
+            reporte.listaReporte.Add(art1);
+
+            BLArticulo art2 = new BLArticulo();
+            art2.numeroPlaca = "881205";
+            art2.nombArticulo = "Borrador";
+            art2.estadoArticulo = "Malo";
+            art2.ubicacionArticulo = "Bodegas";
+            art2.nombCategoria = "Nutrición";
+            reporte.listaReporte.Add(art2);
+
+            BLArticulo art3 = new BLArticulo();
+            art3.numeroPlaca = "94014";
+            art3.nombArticulo = "Sacapuntas";
+            art3.estadoArticulo = "Bueno";
+            art3.ubicacionArticulo = "Departamento";
+            art3.nombCategoria = "Administración";
+            reporte.listaReporte.Add(art3);
+
+            reporte.ShowDialog();
         }
 
     }

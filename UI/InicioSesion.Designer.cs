@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSesion));
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -59,7 +60,7 @@
             this.txtContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContra.Location = new System.Drawing.Point(454, 277);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(314, 30);
+            this.txtContra.Size = new System.Drawing.Size(314, 26);
             this.txtContra.TabIndex = 6;
             this.txtContra.UseSystemPasswordChar = true;
             // 
@@ -68,7 +69,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(454, 176);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(314, 30);
+            this.txtNombre.Size = new System.Drawing.Size(314, 26);
             this.txtNombre.TabIndex = 5;
             // 
             // btnSalir
@@ -103,7 +104,7 @@
             this.lblContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContra.Location = new System.Drawing.Point(198, 275);
             this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(120, 25);
+            this.lblContra.Size = new System.Drawing.Size(96, 20);
             this.lblContra.TabIndex = 2;
             this.lblContra.Text = "Contraseña:";
             // 
@@ -113,7 +114,7 @@
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(198, 173);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(183, 25);
+            this.lblNombre.Size = new System.Drawing.Size(147, 20);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre de usuario:";
             // 
@@ -123,7 +124,7 @@
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(414, 47);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(259, 39);
+            this.lblTitulo.Size = new System.Drawing.Size(205, 31);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Inicio de Sesión";
             // 
@@ -131,9 +132,11 @@
             // 
             this.ClientSize = new System.Drawing.Size(1061, 547);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "InicioSesion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
