@@ -53,9 +53,13 @@ namespace DAO
         }
 
 
-        public void actualizarInsertarCuenta(TOCuenta cuenta)
+        public void insertarCuenta(TOCuenta cuenta)
         {
-            String query = "begin tran if exists(select * from cuenta with (updlock, serializable) where idUsuario = @id) begin update cuenta set contrasenna = @contra, nombreEmpleado = @nombre, privilegio = @priv, estado = @estado where idUsuario = @id; end else begin insert into cuenta(idUsuario, nombreEmpleado, contrasenna, privilegio, estado) values(@id, @contra, @nombre, @priv, @estado); end commit tran;";
+            //String query = "begin tran if exists(select * from cuenta with (updlock, serializable) where idUsuario = @id) " +
+            //    "begin update cuenta set nombreEmpleado = @nombre, contrasenna = @contra,  privilegio = @priv, estado = @estado where " +
+            //    "idUsuario = @id; end else begin insert into cuenta(idUsuario, nombreEmpleado, contrasenna, privilegio, estado) " +
+            //    "values (@id, @nombre, @contra, @priv, @estado); end commit tran;";
+            String query = "insert into cuenta(idUsuario, nombreEmpleado, contrasenna, privilegio, estado) values (@id, @nombre, @contra, @priv, @estado);";
             MySqlCommand sentencia = new MySqlCommand(query, conex);
             sentencia.Parameters.AddWithValue("@id", cuenta.idUsuario);
             sentencia.Parameters.AddWithValue("@contra", cuenta.contrasenna);
@@ -66,13 +70,48 @@ namespace DAO
             {
                 conex.Open();
             }
-            sentencia.ExecuteNonQuery();
+              sentencia.ExecuteNonQuery();
 
             if (conex.State != ConnectionState.Closed)
             {
                 conex.Close();
             }
 
+        }
+
+        public List<TOCuenta> listaCuentas()
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "select * from cuenta;";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<TOCuenta> lista = new List<TOCuenta>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    TOCuenta to = new TOCuenta();
+                    to.idUsuario = reader.GetString(0);
+                    to.nombreEmpleado = reader.GetString(1);
+                    to.contrasenna = reader.GetString(2);
+                    to.privilegio = reader.GetString(3);
+                    to.estado = reader.GetBoolean(4);
+                    
+                    lista.Add(to);
+                }
+            }
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return lista;
         }
     }
 }

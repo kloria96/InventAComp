@@ -16,7 +16,60 @@ namespace UI
         public Administrador()
         {
             InitializeComponent();
+            gridEmpleados.AutoGenerateColumns = false;
+            llenarGrid();
             llenarComboBox();
+        }
+
+        private void llenarGrid()
+        {
+            ManejadorCuenta manej = new ManejadorCuenta();
+            List<BLCuenta> listaBL = new List<BLCuenta>();
+            listaBL = manej.listaCuentas();
+            if (listaBL.Count != 0)
+            {
+                gridEmpleados.ColumnCount = 5;
+
+                gridEmpleados.Columns[0].Name = "Identificador";
+                gridEmpleados.Columns[0].HeaderText = "Identificador";
+                gridEmpleados.Columns[0].DataPropertyName = "idUsuario";
+
+                gridEmpleados.Columns[1].Name = "Nombre Empleado";
+                gridEmpleados.Columns[1].HeaderText = "Nombre Empleado";
+                gridEmpleados.Columns[1].DataPropertyName = "nombreEmpleado";
+
+                gridEmpleados.Columns[2].Name = "Contraseña";
+                gridEmpleados.Columns[2].HeaderText = "Contraseña";
+                gridEmpleados.Columns[2].DataPropertyName = "contrasenna";
+                gridEmpleados.Columns[2].Visible = false;
+
+                gridEmpleados.Columns[3].Name = "Rol";
+                gridEmpleados.Columns[3].HeaderText = "Rol";
+                gridEmpleados.Columns[3].DataPropertyName = "privilegio";
+
+                gridEmpleados.Columns[4].Name = "Estado";
+                gridEmpleados.Columns[4].HeaderText = "Estado";
+                gridEmpleados.Columns[4].DataPropertyName = "estado";
+                gridEmpleados.Columns[4].Visible = false;
+
+                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                gridEmpleados.Columns.Add(button);
+
+                DataGridViewButtonColumn but = new DataGridViewButtonColumn();
+                gridEmpleados.Columns.Add(but);
+
+                DataGridViewButtonColumn but2 = new DataGridViewButtonColumn();
+                gridEmpleados.Columns.Add(but2);
+
+                gridEmpleados.DataSource = listaBL;
+            }
+        }
+
+        private void gridEmpleados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            gridEmpleados.Rows[e.RowIndex].Cells[5].Value = "Ver";
+            gridEmpleados.Rows[e.RowIndex].Cells[6].Value = "Modificar";
+            gridEmpleados.Rows[e.RowIndex].Cells[7].Value = "Eliminar";
         }
 
         private void llenarComboBox()
@@ -31,17 +84,19 @@ namespace UI
         private void button1_Click(object sender, EventArgs e)
         {
             BLCuenta cuenta = new BLCuenta();
-            MessageBox.Show(comboBoxRol.SelectedItem.ToString());
 
             cuenta.idUsuario = txtId.Text.Trim();
             cuenta.contrasenna = txtContra.Text.Trim();
             cuenta.nombreEmpleado = txtNombre.Text.Trim();
             cuenta.estado = checkEstado.Checked;
-            cuenta.privilegio = comboBoxRol.SelectedText;
+            cuenta.privilegio = comboBoxRol.SelectedItem.ToString();
 
             ManejadorCuenta manej = new ManejadorCuenta();
-            manej.insertarActualizar(cuenta);
+            manej.insertar(cuenta);
             MessageBox.Show("El usuario se ha creado con éxito");
+            txtId.Text = "";
+            txtContra.Text = "";
+            txtNombre.Text = "";
         }
     }
 }
