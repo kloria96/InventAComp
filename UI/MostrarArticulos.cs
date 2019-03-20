@@ -111,13 +111,13 @@ namespace UI
 
         private void dgvArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 8)
+            if (e.ColumnIndex == 8 && e.RowIndex != -1)
             {
                 VerArticulo.idArticulo = dgvArticulos.Rows[e.RowIndex].Cells[7].Value + "";
                 new VerArticulo().Show();
             }
 
-            if (e.ColumnIndex == 9)
+            if (e.ColumnIndex == 9 && e.RowIndex != -1)
             {
                 idArt = dgvArticulos.Rows[e.RowIndex].Cells[7].Value + "";
                 ModificarArticulo.categoriaArticulo = dgvArticulos.Rows[e.RowIndex].Cells[6].Value + "";
@@ -128,7 +128,7 @@ namespace UI
                 modArt.ShowDialog();
             }
 
-            if (e.ColumnIndex == 10)
+            if (e.ColumnIndex == 10 && e.RowIndex != -1)
             {
                 eliminarFila(Convert.ToInt32(dgvArticulos.Rows[e.RowIndex].Cells[7].Value));
                 this.Dispose();

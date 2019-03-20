@@ -25,6 +25,8 @@ namespace UI
         {
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSetArticulo", listaReporte));
+            ReportParameter parameter1 = new ReportParameter("nombreUsuario", "Usuario (capturar)");
+            reportViewer1.LocalReport.SetParameters(parameter1);
             this.reportViewer1.RefreshReport();
         }
     }

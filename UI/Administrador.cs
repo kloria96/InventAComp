@@ -67,27 +67,27 @@ namespace UI
 
         private void gridEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5)
+            if (e.ColumnIndex == 5 && e.RowIndex != -1)
             {
                 //VerCuenta.idArticulo = gridEmpleados.Rows[e.RowIndex].Cells[0].Value + "";
-                VerCuenta.idArticulo = gridEmpleados.Rows[e.RowIndex].Cells[0].Value + "";
-                new VerCuenta().Show();
+                //VerCuenta.idArticulo = gridEmpleados.Rows[e.RowIndex].Cells[0].Value + "";
+                //new VerCuenta().Show();
             }
 
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 6 && e.RowIndex != -1)
             {
-                idArt = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
-                ModificarArticulo.categoriaArticulo = gridArticulos.Rows[e.RowIndex].Cells[7].Value + "";
-                ModificarArticulo.estadoArticulo = gridArticulos.Rows[e.RowIndex].Cells[5].Value + "";
+                //idArt = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
+                //ModificarArticulo.categoriaArticulo = gridArticulos.Rows[e.RowIndex].Cells[7].Value + "";
+                //ModificarArticulo.estadoArticulo = gridArticulos.Rows[e.RowIndex].Cells[5].Value + "";
 
-                ModificarArticulo modArt = new ModificarArticulo();
-                modArt.Owner = this;
-                modArt.ShowDialog();
+                //ModificarArticulo modArt = new ModificarArticulo();
+                //modArt.Owner = this;
+                //modArt.ShowDialog();
             }
 
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 7 && e.RowIndex != -1)
             {
-                eliminarFila(Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value));
+                //eliminarFila(Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value));
             }
         }
 

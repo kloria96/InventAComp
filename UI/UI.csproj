@@ -234,6 +234,9 @@
     <EmbeddedResource Include="VerArticulo.resx">
       <DependentUpon>VerArticulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VerCuenta.resx">
+      <DependentUpon>VerCuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerPrestamo.resx">
       <DependentUpon>VerPrestamo.cs</DependentUpon>
     </EmbeddedResource>

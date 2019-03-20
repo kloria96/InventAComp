@@ -216,3 +216,4 @@ C:\Users\melan\source\repos\InventAcomp\UI\bin\Debug\zh-CHS\Microsoft.ReportView
 C:\Users\melan\source\repos\InventAcomp\UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.InicioSesion.resources
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.ReporteArticulos.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.VerCuenta.resources

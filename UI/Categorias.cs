@@ -81,7 +81,7 @@ namespace UI
 
         private void gridCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex == 2 && e.RowIndex != -1)
             {
                 idCat = gridCategorias.Rows[e.RowIndex].Cells[1].Value + "";
                 nombreCat = gridCategorias.Rows[e.RowIndex].Cells[0].Value + "";
@@ -95,7 +95,7 @@ namespace UI
                 }
             }
 
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == 3 && e.RowIndex != -1)
             {
                 if (Convert.ToString(gridCategorias.Rows[e.RowIndex].Cells[0].Value) == "Préstamo")
                 {
