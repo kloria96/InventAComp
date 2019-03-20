@@ -64,6 +64,7 @@
             this.gridEmpleados.RowTemplate.Height = 24;
             this.gridEmpleados.Size = new System.Drawing.Size(780, 374);
             this.gridEmpleados.TabIndex = 1;
+            this.gridEmpleados.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridEmpleados_CellFormatting);
             // 
             // label1
             // 
