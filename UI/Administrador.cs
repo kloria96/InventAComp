@@ -13,12 +13,13 @@ namespace UI
 {
     public partial class Administrador : Form
     {
+        public static string idCuenta = "";
+
         public Administrador()
         {
             InitializeComponent();
             gridEmpleados.AutoGenerateColumns = false;
             llenarGrid();
-            llenarComboBox();
         }
 
         private void llenarGrid()
@@ -34,8 +35,8 @@ namespace UI
                 gridEmpleados.Columns[0].HeaderText = "Identificador";
                 gridEmpleados.Columns[0].DataPropertyName = "idUsuario";
 
-                gridEmpleados.Columns[1].Name = "Nombre Empleado";
-                gridEmpleados.Columns[1].HeaderText = "Nombre Empleado";
+                gridEmpleados.Columns[1].Name = "Nombre";
+                gridEmpleados.Columns[1].HeaderText = "Nombre";
                 gridEmpleados.Columns[1].DataPropertyName = "nombreEmpleado";
 
                 gridEmpleados.Columns[2].Name = "Contraseña";
@@ -58,8 +59,8 @@ namespace UI
                 DataGridViewButtonColumn but = new DataGridViewButtonColumn();
                 gridEmpleados.Columns.Add(but);
 
-                DataGridViewButtonColumn but2 = new DataGridViewButtonColumn();
-                gridEmpleados.Columns.Add(but2);
+                //DataGridViewButtonColumn but2 = new DataGridViewButtonColumn();
+                //gridEmpleados.Columns.Add(but2);
 
                 gridEmpleados.DataSource = listaBL;
             }
@@ -69,60 +70,49 @@ namespace UI
         {
             if (e.ColumnIndex == 5 && e.RowIndex != -1)
             {
-                //VerCuenta.idArticulo = gridEmpleados.Rows[e.RowIndex].Cells[0].Value + "";
-                //VerCuenta.idArticulo = gridEmpleados.Rows[e.RowIndex].Cells[0].Value + "";
-                //new VerCuenta().Show();
+                VerCuenta.idCuenta = gridEmpleados.Rows[e.RowIndex].Cells[0].Value + "";
+                new VerCuenta().Show();
             }
 
             if (e.ColumnIndex == 6 && e.RowIndex != -1)
             {
-                //idArt = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
-                //ModificarArticulo.categoriaArticulo = gridArticulos.Rows[e.RowIndex].Cells[7].Value + "";
-                //ModificarArticulo.estadoArticulo = gridArticulos.Rows[e.RowIndex].Cells[5].Value + "";
+                ModificarCuenta.idCuenta = gridEmpleados.Rows[e.RowIndex].Cells[0].Value + "";
+                ModificarCuenta.contrasenna = gridEmpleados.Rows[e.RowIndex].Cells[2].Value + "";
 
-                //ModificarArticulo modArt = new ModificarArticulo();
-                //modArt.Owner = this;
-                //modArt.ShowDialog();
+                ModificarCuenta modCuent = new ModificarCuenta();
+                modCuent.Owner = this;
+                modCuent.ShowDialog();
             }
 
-            if (e.ColumnIndex == 7 && e.RowIndex != -1)
-            {
+            //if (e.ColumnIndex == 7 && e.RowIndex != -1)
+            //{
                 //eliminarFila(Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value));
-            }
+            //}
         }
+
+    
 
         private void gridEmpleados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             gridEmpleados.Rows[e.RowIndex].Cells[5].Value = "Ver";
             gridEmpleados.Rows[e.RowIndex].Cells[6].Value = "Modificar";
-            gridEmpleados.Rows[e.RowIndex].Cells[7].Value = "Eliminar";
+            //gridEmpleados.Rows[e.RowIndex].Cells[7].Value = "Eliminar";
         }
 
-        private void llenarComboBox()
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            comboBoxRol.Items.Add("Admin");
-            comboBoxRol.Items.Add("Secretaria");
-            comboBoxRol.Items.Add("Terapia Física");
-            comboBoxRol.Items.Add("Psicologia");
-            comboBoxRol.Items.Add("Nutricion");
+            //Application.Exit();
+            this.Dispose();
+            new InicioSesion().Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            BLCuenta cuenta = new BLCuenta();
-
-            cuenta.idUsuario = txtId.Text.Trim();
-            cuenta.contrasenna = txtContra.Text.Trim();
-            cuenta.nombreEmpleado = txtNombre.Text.Trim();
-            cuenta.estado = checkEstado.Checked;
-            cuenta.privilegio = comboBoxRol.SelectedItem.ToString();
-
-            ManejadorCuenta manej = new ManejadorCuenta();
-            manej.insertar(cuenta);
-            MessageBox.Show("El usuario se ha creado con éxito");
-            txtId.Text = "";
-            txtContra.Text = "";
-            txtNombre.Text = "";
+            NuevaCuenta art = new NuevaCuenta();
+            art.Owner = this;
+            art.MdiParent = this.MdiParent;
+            art.ShowDialog();
         }
     }
 }

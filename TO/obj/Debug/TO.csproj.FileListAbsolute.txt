@@ -14,5 +14,4 @@ C:\Users\melan\Source\Repos\InventAcomp\TO\bin\Debug\TO.pdb
 C:\Users\melan\Source\Repos\InventAcomp\TO\obj\Debug\TO.csproj.CoreCompileInputs.cache
 C:\Users\melan\Source\Repos\InventAcomp\TO\obj\Debug\TO.dll
 C:\Users\melan\Source\Repos\InventAcomp\TO\obj\Debug\TO.pdb
-C:\Users\melan\source\repos\InventAcomp\TO\obj\Debug\TO.csprojAssemblyReference.cache
 C:\Users\Juan\Source\Repos\InventAcomp\TO\obj\Debug\TO.csprojAssemblyReference.cache

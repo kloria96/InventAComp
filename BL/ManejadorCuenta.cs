@@ -16,6 +16,12 @@ namespace BL
             return convert(dao.buscarCuenta(nombre, contra));
         }
 
+        public BLCuenta existeIdentificador(string id)
+        {
+            DAOCuenta dao = new DAOCuenta();
+            return convert(dao.existeId(id));
+        }
+
         public void insertar(BLCuenta cuenta)
         {
             DAOCuenta dao = new DAOCuenta();
@@ -29,12 +35,16 @@ namespace BL
             List<BLCuenta> listBLCuent = new List<BLCuenta>();
             foreach (TOCuenta toCuenta in listTOCuent)
             {
-                //listBLArt.Add(convert2(toArt));
                 listBLCuent.Add(convert(toCuenta));
             }
             return listBLCuent;
         }
 
+        public bool modificarCuenta(BLCuenta cuenta)
+        {
+            DAOCuenta dao = new DAOCuenta();
+            return dao.actualizarCuenta(convert(cuenta));
+        }
 
         private TOCuenta convert(BLCuenta cuenta)
         {

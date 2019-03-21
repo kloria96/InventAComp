@@ -123,11 +123,23 @@
     <Compile Include="ModificarCategoria.Designer.cs">
       <DependentUpon>ModificarCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarCuenta.Designer.cs">
+      <DependentUpon>ModificarCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="MostrarArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MostrarArticulos.Designer.cs">
       <DependentUpon>MostrarArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaCuenta.Designer.cs">
+      <DependentUpon>NuevaCuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevoArticulo.cs">
       <SubType>Form</SubType>
@@ -208,8 +220,14 @@
     <EmbeddedResource Include="ModificarCategoria.resx">
       <DependentUpon>ModificarCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModificarCuenta.resx">
+      <DependentUpon>ModificarCuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MostrarArticulos.resx">
       <DependentUpon>MostrarArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaCuenta.resx">
+      <DependentUpon>NuevaCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoArticulo.resx">
       <DependentUpon>NuevoArticulo.cs</DependentUpon>

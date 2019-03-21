@@ -49,6 +49,8 @@ namespace UI
             }
         }
 
+
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (comboEstados.SelectedItem != null && comboCategoria.SelectedItem != null)

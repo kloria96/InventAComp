@@ -72,7 +72,6 @@ C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\BL.pdb
 C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\DAO.pdb
 C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\DAO.dll.config
 C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\TO.pdb
-C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\MySql.Data.xml
 C:\Users\melan\Source\Repos\InventAcomp\UI\obj\Debug\UI.csprojAssemblyReference.cache
 C:\Users\melan\Source\Repos\InventAcomp\UI\obj\Debug\UI.Articulos.resources
 C:\Users\melan\Source\Repos\InventAcomp\UI\obj\Debug\UI.Categorias.resources
@@ -217,3 +216,6 @@ C:\Users\melan\source\repos\InventAcomp\UI\bin\Debug\zh-CHT\Microsoft.ReportView
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.InicioSesion.resources
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.ReporteArticulos.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.VerCuenta.resources
+C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.NuevaCuenta.resources
+C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.VerCuenta.resources
+C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.ModificarCuenta.resources
