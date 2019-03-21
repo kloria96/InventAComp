@@ -13,8 +13,8 @@ namespace DAO
     public class DAOArticulo
     {
         //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
 
         // connectionStringJ (Juan Diego)
         // connectionStringM (Melany)
@@ -257,6 +257,56 @@ namespace DAO
             cmd.Parameters.AddWithValue("@pro", propiedad_jps);
             cmd.Parameters.AddWithValue("@idArt", idArticulo);
             int result = cmd.ExecuteNonQuery();
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return (result > 0 ? true : false);
+        }
+
+        public TOArticulo buscarArticuloPlaca(string numPlaca)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.descripcion, c.nombre from articulo a join categoria c on a.idCategoria = c.idCategoria where a.numeroPlaca = @num";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@num", numPlaca);
+            TOArticulo articulo = new TOArticulo();
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    articulo.idArticulo = reader.GetInt32(0);
+                    articulo.numeroPlaca = reader.GetString(1);
+                    articulo.nombArticulo = reader.GetString(2);
+                    articulo.descripcArticulo = reader.GetString(3);
+                    articulo.nombreCategoria = reader.GetString(4);
+                }
+            }
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return articulo;
+        }
+
+        public bool existeArticuloPlaca(string numPlaca)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "select count(*) from articulo where numeroPlaca = @num";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@num", numPlaca);
+            int result = Convert.ToInt32(cmd.ExecuteScalar());
 
             if (conex.State != ConnectionState.Closed)
             {

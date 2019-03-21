@@ -92,6 +92,24 @@ namespace BL
             return daoArt.actualizarArticulo(idArticulo, numeroPlaca, nombre, descripcion, estado, ubicacion, propiedad_jps, categoria);
         }
 
+        public BLArticulo buscarArticuloPlaca(string numPlaca)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            TOArticulo art = daoArt.buscarArticuloPlaca(numPlaca);
+            BLArticulo articulo = new BLArticulo();
+            articulo.idArticulo = art.idArticulo;
+            articulo.numeroPlaca = art.numeroPlaca;
+            articulo.nombArticulo = art.nombArticulo;
+            articulo.descripcArticulo = art.descripcArticulo;
+            articulo.nombCategoria = art.nombreCategoria;
+            return articulo;
+        }
+
+        public bool existeArticuloPlaca(string numPlaca)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            return daoArt.existeArticuloPlaca(numPlaca);
+        }
 
 
         private TOArticulo convert(BLArticulo art)

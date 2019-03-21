@@ -48,6 +48,8 @@
             this.picBox = new System.Windows.Forms.PictureBox();
             this.PanelTitulo = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.cbArticulos = new System.Windows.Forms.ComboBox();
+            this.cbPrestamos = new System.Windows.Forms.ComboBox();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.PanelTitulo.SuspendLayout();
@@ -300,12 +302,43 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // cbArticulos
+            // 
+            this.cbArticulos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbArticulos.FormattingEnabled = true;
+            this.cbArticulos.Items.AddRange(new object[] {
+            "Ingresar Artículo"});
+            this.cbArticulos.Location = new System.Drawing.Point(224, 256);
+            this.cbArticulos.Name = "cbArticulos";
+            this.cbArticulos.Size = new System.Drawing.Size(157, 26);
+            this.cbArticulos.TabIndex = 18;
+            this.cbArticulos.SelectedIndexChanged += new System.EventHandler(this.cbArticulos_SelectedIndexChanged);
+            // 
+            // cbPrestamos
+            // 
+            this.cbPrestamos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPrestamos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPrestamos.FormattingEnabled = true;
+            this.cbPrestamos.Items.AddRange(new object[] {
+            "Ingresar Préstamo",
+            "Ver Préstamos Activos",
+            "Ver Préstamos",
+            "Ver Contribuciones"});
+            this.cbPrestamos.Location = new System.Drawing.Point(233, 473);
+            this.cbPrestamos.Name = "cbPrestamos";
+            this.cbPrestamos.Size = new System.Drawing.Size(157, 26);
+            this.cbPrestamos.TabIndex = 19;
+            this.cbPrestamos.SelectedIndexChanged += new System.EventHandler(this.cbPrestamos_SelectedIndexChanged);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(929, 538);
+            this.Controls.Add(this.cbPrestamos);
+            this.Controls.Add(this.cbArticulos);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.PanelTitulo);
             this.Controls.Add(this.MenuVertical);
@@ -357,6 +390,8 @@
         private System.Windows.Forms.PictureBox picBox;
         private System.Windows.Forms.Button btnPrestamo;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ComboBox cbArticulos;
+        private System.Windows.Forms.ComboBox cbPrestamos;
     }
 }
 

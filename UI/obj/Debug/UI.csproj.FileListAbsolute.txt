@@ -219,3 +219,7 @@ C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.VerCuenta.resources
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.NuevaCuenta.resources
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.VerCuenta.resources
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.ModificarCuenta.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.ModificarCuenta.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.NuevaCuenta.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.BusquedaArticulo.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.PrestarArticulo.resources

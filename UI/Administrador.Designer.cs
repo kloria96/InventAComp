@@ -41,21 +41,22 @@
             // LblTitulo
             // 
             this.LblTitulo.AutoSize = true;
-            this.LblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitulo.Location = new System.Drawing.Point(462, 34);
+            this.LblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.Location = new System.Drawing.Point(308, 28);
+            this.LblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(116, 25);
+            this.LblTitulo.Size = new System.Drawing.Size(205, 24);
             this.LblTitulo.TabIndex = 0;
-            this.LblTitulo.Text = "USUARIOS";
+            this.LblTitulo.Text = "Usuarios del Sistema";
             // 
             // gridEmpleados
             // 
             this.gridEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridEmpleados.Location = new System.Drawing.Point(145, 138);
-            this.gridEmpleados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gridEmpleados.Location = new System.Drawing.Point(109, 112);
+            this.gridEmpleados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridEmpleados.Name = "gridEmpleados";
             this.gridEmpleados.RowTemplate.Height = 24;
-            this.gridEmpleados.Size = new System.Drawing.Size(786, 374);
+            this.gridEmpleados.Size = new System.Drawing.Size(590, 304);
             this.gridEmpleados.TabIndex = 1;
             this.gridEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEmpleados_CellClick);
             this.gridEmpleados.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridEmpleados_CellFormatting);
@@ -65,10 +66,10 @@
             this.button2.BackColor = System.Drawing.Color.Teal;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(170, 552);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(128, 448);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 52);
+            this.button2.Size = new System.Drawing.Size(100, 42);
             this.button2.TabIndex = 14;
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = false;
@@ -82,10 +83,10 @@
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(692, 552);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(519, 448);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(239, 58);
+            this.btnAgregar.Size = new System.Drawing.Size(179, 47);
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "Agregar Cuenta";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -97,21 +98,22 @@
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
             this.panel1.Controls.Add(this.LblTitulo);
             this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1090, 100);
+            this.panel1.Size = new System.Drawing.Size(818, 81);
             this.panel1.TabIndex = 16;
             // 
             // Administrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 630);
+            this.ClientSize = new System.Drawing.Size(818, 512);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.gridEmpleados);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Administrador";

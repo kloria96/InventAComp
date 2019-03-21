@@ -177,5 +177,35 @@ namespace UI
         {
             Application.Exit();
         }
+
+        private void cbPrestamos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbPrestamos.SelectedItem.ToString() == "Ingresar Préstamo")
+            {
+                //Ingresar Préstamo
+                new PrestarArticulo().ShowDialog();
+            }
+            if (cbPrestamos.SelectedItem.ToString() == "Ver Préstamos Activos")
+            {
+                //Ver préstamos activos
+                new Prestamos().ShowDialog();
+            }
+            if (cbPrestamos.SelectedItem.ToString() == "Ver Préstamos")
+            {
+                //Ver Préstamos de un Artículo **
+            }
+            if (cbPrestamos.SelectedItem.ToString() == "Ver Contribuciones")
+            {
+                //Ver contribuciones de un préstamo **
+            }
+        }
+
+        private void cbArticulos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NuevoArticulo art = new NuevoArticulo();
+            //art.Owner = this;
+            art.ShowDialog();
+        }
+
     }
 }
