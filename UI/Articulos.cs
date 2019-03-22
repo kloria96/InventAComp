@@ -35,7 +35,7 @@ namespace UI
             ManejadorArticulo manej = new ManejadorArticulo();
             List<BLArticulo> listaBL = new List<BLArticulo>();
             listaBL = manej.consultarArticulos();
-            if(listaBL.Count != 0)
+            if (listaBL.Count != 0)
             {
                 gridArticulos.ColumnCount = 8;
 
@@ -46,7 +46,7 @@ namespace UI
 
                 gridArticulos.Columns[1].Name = "Número placa";
                 gridArticulos.Columns[1].HeaderText = "Número placa";
-                gridArticulos.Columns[1].DataPropertyName = "numeroPlaca"; 
+                gridArticulos.Columns[1].DataPropertyName = "numeroPlaca";
 
                 gridArticulos.Columns[2].Name = "Nombre";
                 gridArticulos.Columns[2].HeaderText = "Nombre";
@@ -83,7 +83,55 @@ namespace UI
                 DataGridViewButtonColumn but2 = new DataGridViewButtonColumn();
                 gridArticulos.Columns.Add(but2);
 
-                gridArticulos.DataSource = listaBL;
+
+                List<BLArticulo> listaCategoria = new List<BLArticulo>();
+
+                if (Manager.getManager().rol.Equals("Secretaria"))
+                {
+                    gridArticulos.DataSource = listaBL;
+                }
+                else
+                {
+                    if (Manager.getManager().rol.Equals("Nutrición"))
+                    {
+                        foreach (BLArticulo art in listaBL)
+                        {
+                            if (art.nombCategoria.Equals("Nutrición"))
+                            {
+                                listaCategoria.Add(art);
+                            }
+                        }
+                        gridArticulos.DataSource = listaCategoria;
+                    }
+                    else
+                    {
+                        if (Manager.getManager().rol.Equals("Psicología"))
+                        {
+                            foreach (BLArticulo art in listaBL)
+                            {
+                                if (art.nombCategoria.Equals("Psicología"))
+                                {
+                                    listaCategoria.Add(art);
+                                }
+                            }
+                            gridArticulos.DataSource = listaCategoria;
+                        }
+                        else
+                        {
+                            if (Manager.getManager().rol.Equals("Terapia Física"))
+                            {
+                                foreach (BLArticulo art in listaBL)
+                                {
+                                    if (art.nombCategoria.Equals("Terapia Física"))
+                                    {
+                                        listaCategoria.Add(art);
+                                    }
+                                }
+                                gridArticulos.DataSource = listaCategoria;
+                            }
+                        }
+                    }
+                }
             }
         }
 

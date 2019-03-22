@@ -71,7 +71,54 @@ namespace UI
                 DataGridViewButtonColumn button = new DataGridViewButtonColumn();
                 gridArticulos.Columns.Add(button);
 
-                gridArticulos.DataSource = listaBL;
+                List<BLArticulo> listaCategoria = new List<BLArticulo>();
+
+                if (Manager.getManager().rol.Equals("Secretaria"))
+                {
+                    gridArticulos.DataSource = listaBL;
+                }
+                else
+                {
+                    if (Manager.getManager().rol.Equals("Nutrición"))
+                    {
+                        foreach (BLArticulo art in listaBL)
+                        {
+                            if (art.nombCategoria.Equals("Nutrición"))
+                            {
+                                listaCategoria.Add(art);
+                            }
+                        }
+                        gridArticulos.DataSource = listaCategoria;
+                    }
+                    else
+                    {
+                        if (Manager.getManager().rol.Equals("Psicología"))
+                        {
+                            foreach (BLArticulo art in listaBL)
+                            {
+                                if (art.nombCategoria.Equals("Psicología"))
+                                {
+                                    listaCategoria.Add(art);
+                                }
+                            }
+                            gridArticulos.DataSource = listaCategoria;
+                        }
+                        else
+                        {
+                            if (Manager.getManager().rol.Equals("Terapia Física"))
+                            {
+                                foreach (BLArticulo art in listaBL)
+                                {
+                                    if (art.nombCategoria.Equals("Terapia Física"))
+                                    {
+                                        listaCategoria.Add(art);
+                                    }
+                                }
+                                gridArticulos.DataSource = listaCategoria;
+                            }
+                        }
+                    }
+                }
             }
         }
 

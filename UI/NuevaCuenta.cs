@@ -29,8 +29,8 @@ namespace UI
             comboBoxRol.Items.Add("Admin");
             comboBoxRol.Items.Add("Secretaria");
             comboBoxRol.Items.Add("Terapia Física");
-            comboBoxRol.Items.Add("Psicologia");
-            comboBoxRol.Items.Add("Nutricion");
+            comboBoxRol.Items.Add("Psicología");
+            comboBoxRol.Items.Add("Nutrición");
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

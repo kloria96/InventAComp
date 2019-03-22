@@ -27,9 +27,9 @@ namespace UI
         {
             string privilegio = Manager.getManager().rol;
 
-            if (privilegio.Equals("Nutricion"))
+            if (!privilegio.Equals("Secretaria"))
             {
-                MessageBox.Show("El usuario tiene privilegio de nutrición");
+                btnCategoria.Enabled = false;
             }
         }
 
