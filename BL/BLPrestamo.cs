@@ -63,5 +63,17 @@ namespace BL
             this.nombreArticulo = nombreArticulo;
         }
 
+        public BLPrestamo(int idPrestamo, string numeroContrato, string paciente, string responsable, DateTime fecha, DateTime fechaEntrega, string numeroPlacaArticulo, string nombreArticulo)
+        {
+            this.idPrestamo = idPrestamo;
+            this.numeroContrato = numeroContrato;
+            this.paciente = paciente;
+            this.responsable = responsable;
+            this.fechaPrestamo = fecha;
+            this.fechaEntrega = fechaEntrega;
+            this.numeroPlacaArticulo = numeroPlacaArticulo;
+            this.nombreArticulo = nombreArticulo;
+        }
+
     }
 }

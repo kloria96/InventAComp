@@ -63,7 +63,7 @@ namespace UI
                 }
                 else
                 {
-                    MessageBox.Show("Digite un identificador y contraseña para la cuenta");
+                    MessageBox.Show("Ingrese un identificador y contraseña para la cuenta");
                 }
             }
             else
@@ -71,5 +71,6 @@ namespace UI
                 MessageBox.Show("Seleccione un rol para el empleado");
             }
         }
+
     }
 }

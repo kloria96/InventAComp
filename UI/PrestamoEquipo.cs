@@ -71,54 +71,70 @@ namespace UI
                 DataGridViewButtonColumn button = new DataGridViewButtonColumn();
                 gridArticulos.Columns.Add(button);
 
-                List<BLArticulo> listaCategoria = new List<BLArticulo>();
-
-                if (Manager.getManager().rol.Equals("Secretaria"))
+                string role = Manager.getManager().rol;
+                if (role == "Secretaria")
                 {
                     gridArticulos.DataSource = listaBL;
                 }
                 else
                 {
-                    if (Manager.getManager().rol.Equals("Nutrición"))
+                    List<BLArticulo> listaCategoria = new List<BLArticulo>();
+                    foreach (BLArticulo art in listaBL)
                     {
-                        foreach (BLArticulo art in listaBL)
+                        if (art.nombCategoria.Equals(role))
                         {
-                            if (art.nombCategoria.Equals("Nutrición"))
-                            {
-                                listaCategoria.Add(art);
-                            }
+                            listaCategoria.Add(art);
                         }
                         gridArticulos.DataSource = listaCategoria;
                     }
-                    else
-                    {
-                        if (Manager.getManager().rol.Equals("Psicología"))
-                        {
-                            foreach (BLArticulo art in listaBL)
-                            {
-                                if (art.nombCategoria.Equals("Psicología"))
-                                {
-                                    listaCategoria.Add(art);
-                                }
-                            }
-                            gridArticulos.DataSource = listaCategoria;
-                        }
-                        else
-                        {
-                            if (Manager.getManager().rol.Equals("Terapia Física"))
-                            {
-                                foreach (BLArticulo art in listaBL)
-                                {
-                                    if (art.nombCategoria.Equals("Terapia Física"))
-                                    {
-                                        listaCategoria.Add(art);
-                                    }
-                                }
-                                gridArticulos.DataSource = listaCategoria;
-                            }
-                        }
-                    }
                 }
+
+                //if (role.Equals("Secretaria"))
+                //{
+                //    gridArticulos.DataSource = listaBL;
+                //}
+                //else
+                //{
+                //    if (role.Equals("Nutrición"))
+                //    {
+                //        foreach (BLArticulo art in listaBL)
+                //        {
+                //            if (art.nombCategoria.Equals("Nutrición"))
+                //            {
+                //                listaCategoria.Add(art);
+                //            }
+                //        }
+                //        gridArticulos.DataSource = listaCategoria;
+                //    }
+                //    else
+                //    {
+                //        if (Manager.getManager().rol.Equals("Psicología"))
+                //        {
+                //            foreach (BLArticulo art in listaBL)
+                //            {
+                //                if (art.nombCategoria.Equals("Psicología"))
+                //                {
+                //                    listaCategoria.Add(art);
+                //                }
+                //            }
+                //            gridArticulos.DataSource = listaCategoria;
+                //        }
+                //        else
+                //        {
+                //            if (Manager.getManager().rol.Equals("Terapia Física"))
+                //            {
+                //                foreach (BLArticulo art in listaBL)
+                //                {
+                //                    if (art.nombCategoria.Equals("Terapia Física"))
+                //                    {
+                //                        listaCategoria.Add(art);
+                //                    }
+                //                }
+                //                gridArticulos.DataSource = listaCategoria;
+                //            }
+                //        }
+                //    }
+                //}
             }
         }
 

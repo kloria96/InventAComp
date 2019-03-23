@@ -21,6 +21,7 @@ namespace UI
         {
             InitializeComponent();
             revisarLogin();
+            cbFiltros.SelectedIndex = 0;
         }
 
         public void revisarLogin()
@@ -29,7 +30,7 @@ namespace UI
 
             if (!privilegio.Equals("Secretaria"))
             {
-                btnCategoria.Enabled = false;
+                btnCategoria.Visible = false;
             }
         }
 
@@ -37,9 +38,6 @@ namespace UI
         {
             Articulos art = new Articulos();
             art.MdiParent = this.MdiParent;
-            //this.Hide(); //para ocultar ventana
-
-            //this.WindowState = FormWindowState.Maximized;  //para mostrar la ventana modo maximizado
             art.Show();
         }
 
@@ -119,7 +117,7 @@ namespace UI
             {
                 cbCategorias.Items.Add(categoria.nombreCategoria);
             }
-
+            
         }
 
         private void cbCategorias_SelectedIndexChanged(object sender, EventArgs e)
@@ -175,7 +173,12 @@ namespace UI
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Cerrar sesión
+            //Application.Exit();
+            Manager.getManager().rol = "";
+            Manager.getManager().nombre = "";
+            this.Dispose();
+            new InicioSesion().Show();
         }
 
         private void cbPrestamos_SelectedIndexChanged(object sender, EventArgs e)

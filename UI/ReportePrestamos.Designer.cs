@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class ReporteArticulos
+    partial class ReportePrestamos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteArticulos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportePrestamos));
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.BLArticuloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.BLArticuloBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSetArticulo";
-            reportDataSource1.Value = this.BLArticuloBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "UI.ReporteArticulosInforme.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "UI.ReportePrestamosInforme.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(675, 468);
             this.reportViewer1.TabIndex = 0;
             // 
-            // BLArticuloBindingSource
-            // 
-            this.BLArticuloBindingSource.DataSource = typeof(BL.BLArticulo);
-            // 
-            // ReporteArticulos
+            // ReportePrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -62,11 +51,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ReporteArticulos";
+            this.Name = "ReportePrestamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reporte de Artículos";
-            this.Load += new System.EventHandler(this.ReporteArticulos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BLArticuloBindingSource)).EndInit();
+            this.Text = "Reporte de Préstamos";
+            this.Load += new System.EventHandler(this.ReportePrestamos_Load);
             this.ResumeLayout(false);
 
         }
@@ -74,6 +62,5 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource BLArticuloBindingSource;
     }
 }

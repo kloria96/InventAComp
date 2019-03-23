@@ -43,6 +43,7 @@ namespace UI
                     else
                     {
                         Manager.getManager().rol = cuenta.privilegio;
+                        Manager.getManager().nombre = cuenta.nombreEmpleado;
                         this.Hide();
                         Principal princ = new Principal();
                         princ.Show();
@@ -51,12 +52,17 @@ namespace UI
                 else
                 {
                     MessageBox.Show("La cuenta se encuentra deshabilitada");
+                    //txtNombre.Clear();
+                    txtContra.Clear();
                 }
             }
             else
             {
                 MessageBox.Show("El nombre de usuario y contraseña no coinciden");
+                //txtNombre.Clear();
+                txtContra.Clear();
             }
         }
+
     }
 }

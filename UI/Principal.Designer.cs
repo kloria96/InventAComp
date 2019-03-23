@@ -44,12 +44,12 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.cbArticulos = new System.Windows.Forms.ComboBox();
+            this.cbPrestamos = new System.Windows.Forms.ComboBox();
             this.btnPrestamo = new System.Windows.Forms.Button();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.PanelTitulo = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.cbArticulos = new System.Windows.Forms.ComboBox();
-            this.cbPrestamos = new System.Windows.Forms.ComboBox();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.PanelTitulo.SuspendLayout();
@@ -75,7 +75,7 @@
             this.btnArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnArticulo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnArticulo.Location = new System.Drawing.Point(44, 227);
+            this.btnArticulo.Location = new System.Drawing.Point(44, 255);
             this.btnArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnArticulo.Name = "btnArticulo";
             this.btnArticulo.Size = new System.Drawing.Size(170, 84);
@@ -90,7 +90,7 @@
             this.btnCategoria.BackColor = System.Drawing.Color.Teal;
             this.btnCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCategoria.Location = new System.Drawing.Point(44, 338);
+            this.btnCategoria.Location = new System.Drawing.Point(44, 399);
             this.btnCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Size = new System.Drawing.Size(170, 84);
@@ -104,7 +104,7 @@
             this.lblFil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFil.AutoSize = true;
             this.lblFil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFil.Location = new System.Drawing.Point(398, 202);
+            this.lblFil.Location = new System.Drawing.Point(398, 254);
             this.lblFil.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFil.Name = "lblFil";
             this.lblFil.Size = new System.Drawing.Size(75, 18);
@@ -121,7 +121,7 @@
             "Nombre",
             "Categoría",
             "Fecha de ingreso"});
-            this.cbFiltros.Location = new System.Drawing.Point(504, 199);
+            this.cbFiltros.Location = new System.Drawing.Point(504, 251);
             this.cbFiltros.Margin = new System.Windows.Forms.Padding(2);
             this.cbFiltros.Name = "cbFiltros";
             this.cbFiltros.Size = new System.Drawing.Size(152, 26);
@@ -135,7 +135,7 @@
             this.btnBuscar.Enabled = false;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscar.Location = new System.Drawing.Point(697, 186);
+            this.btnBuscar.Location = new System.Drawing.Point(697, 238);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(142, 45);
@@ -148,7 +148,7 @@
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(545, 272);
+            this.txtNombre.Location = new System.Drawing.Point(545, 324);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(179, 22);
@@ -161,7 +161,7 @@
             this.cbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategorias.FormattingEnabled = true;
-            this.cbCategorias.Location = new System.Drawing.Point(545, 272);
+            this.cbCategorias.Location = new System.Drawing.Point(545, 324);
             this.cbCategorias.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategorias.Name = "cbCategorias";
             this.cbCategorias.Size = new System.Drawing.Size(179, 24);
@@ -173,7 +173,7 @@
             // 
             this.dtInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtInicio.Location = new System.Drawing.Point(545, 272);
+            this.dtInicio.Location = new System.Drawing.Point(545, 324);
             this.dtInicio.Margin = new System.Windows.Forms.Padding(2);
             this.dtInicio.Name = "dtInicio";
             this.dtInicio.Size = new System.Drawing.Size(245, 21);
@@ -184,7 +184,7 @@
             // 
             this.dtFin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFin.Location = new System.Drawing.Point(545, 314);
+            this.dtFin.Location = new System.Drawing.Point(545, 366);
             this.dtFin.Margin = new System.Windows.Forms.Padding(2);
             this.dtFin.Name = "dtFin";
             this.dtFin.Size = new System.Drawing.Size(245, 21);
@@ -196,7 +196,7 @@
             this.lblFechaIni.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaIni.AutoSize = true;
             this.lblFechaIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaIni.Location = new System.Drawing.Point(445, 275);
+            this.lblFechaIni.Location = new System.Drawing.Point(445, 327);
             this.lblFechaIni.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaIni.Name = "lblFechaIni";
             this.lblFechaIni.Size = new System.Drawing.Size(87, 18);
@@ -209,7 +209,7 @@
             this.lblFechaFin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaFin.AutoSize = true;
             this.lblFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaFin.Location = new System.Drawing.Point(445, 314);
+            this.lblFechaFin.Location = new System.Drawing.Point(445, 366);
             this.lblFechaFin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(73, 18);
@@ -222,7 +222,7 @@
             this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(456, 275);
+            this.lblNombre.Location = new System.Drawing.Point(456, 327);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(62, 18);
             this.lblNombre.TabIndex = 13;
@@ -234,7 +234,7 @@
             this.lblCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(456, 276);
+            this.lblCategoria.Location = new System.Drawing.Point(456, 328);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(72, 18);
             this.lblCategoria.TabIndex = 14;
@@ -244,6 +244,8 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.LightBlue;
+            this.MenuVertical.Controls.Add(this.cbArticulos);
+            this.MenuVertical.Controls.Add(this.cbPrestamos);
             this.MenuVertical.Controls.Add(this.btnPrestamo);
             this.MenuVertical.Controls.Add(this.picBox);
             this.MenuVertical.Controls.Add(this.btnArticulo);
@@ -251,8 +253,39 @@
             this.MenuVertical.Location = new System.Drawing.Point(-5, -1);
             this.MenuVertical.Margin = new System.Windows.Forms.Padding(2);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(248, 543);
+            this.MenuVertical.Size = new System.Drawing.Size(248, 645);
             this.MenuVertical.TabIndex = 15;
+            // 
+            // cbArticulos
+            // 
+            this.cbArticulos.BackColor = System.Drawing.SystemColors.Window;
+            this.cbArticulos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbArticulos.FormattingEnabled = true;
+            this.cbArticulos.Items.AddRange(new object[] {
+            "Ingresar Artículo"});
+            this.cbArticulos.Location = new System.Drawing.Point(44, 344);
+            this.cbArticulos.Name = "cbArticulos";
+            this.cbArticulos.Size = new System.Drawing.Size(170, 26);
+            this.cbArticulos.TabIndex = 18;
+            this.cbArticulos.SelectedIndexChanged += new System.EventHandler(this.cbArticulos_SelectedIndexChanged);
+            // 
+            // cbPrestamos
+            // 
+            this.cbPrestamos.BackColor = System.Drawing.SystemColors.Window;
+            this.cbPrestamos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPrestamos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPrestamos.FormattingEnabled = true;
+            this.cbPrestamos.Items.AddRange(new object[] {
+            "Ingresar Préstamo",
+            "Ver Préstamos Activos",
+            "Ver Préstamos",
+            "Ver Contribuciones"});
+            this.cbPrestamos.Location = new System.Drawing.Point(44, 605);
+            this.cbPrestamos.Name = "cbPrestamos";
+            this.cbPrestamos.Size = new System.Drawing.Size(170, 26);
+            this.cbPrestamos.TabIndex = 19;
+            this.cbPrestamos.SelectedIndexChanged += new System.EventHandler(this.cbPrestamos_SelectedIndexChanged);
             // 
             // btnPrestamo
             // 
@@ -261,7 +294,7 @@
             this.btnPrestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrestamo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPrestamo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnPrestamo.Location = new System.Drawing.Point(44, 444);
+            this.btnPrestamo.Location = new System.Drawing.Point(44, 516);
             this.btnPrestamo.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrestamo.Name = "btnPrestamo";
             this.btnPrestamo.Size = new System.Drawing.Size(170, 84);
@@ -290,56 +323,25 @@
             this.PanelTitulo.Size = new System.Drawing.Size(788, 71);
             this.PanelTitulo.TabIndex = 16;
             // 
-            // btnSalir
+            // btnCerrarSesion
             // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(523, 463);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(122, 28);
-            this.btnSalir.TabIndex = 17;
-            this.btnSalir.Text = "Salir del sistema";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // cbArticulos
-            // 
-            this.cbArticulos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbArticulos.FormattingEnabled = true;
-            this.cbArticulos.Items.AddRange(new object[] {
-            "Ingresar Artículo"});
-            this.cbArticulos.Location = new System.Drawing.Point(224, 256);
-            this.cbArticulos.Name = "cbArticulos";
-            this.cbArticulos.Size = new System.Drawing.Size(157, 26);
-            this.cbArticulos.TabIndex = 18;
-            this.cbArticulos.SelectedIndexChanged += new System.EventHandler(this.cbArticulos_SelectedIndexChanged);
-            // 
-            // cbPrestamos
-            // 
-            this.cbPrestamos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPrestamos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPrestamos.FormattingEnabled = true;
-            this.cbPrestamos.Items.AddRange(new object[] {
-            "Ingresar Préstamo",
-            "Ver Préstamos Activos",
-            "Ver Préstamos",
-            "Ver Contribuciones"});
-            this.cbPrestamos.Location = new System.Drawing.Point(233, 473);
-            this.cbPrestamos.Name = "cbPrestamos";
-            this.cbPrestamos.Size = new System.Drawing.Size(157, 26);
-            this.cbPrestamos.TabIndex = 19;
-            this.cbPrestamos.SelectedIndexChanged += new System.EventHandler(this.cbPrestamos_SelectedIndexChanged);
+            this.btnCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.Location = new System.Drawing.Point(523, 515);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(122, 28);
+            this.btnCerrarSesion.TabIndex = 17;
+            this.btnCerrarSesion.Text = "Cerrar sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(929, 538);
-            this.Controls.Add(this.cbPrestamos);
-            this.Controls.Add(this.cbArticulos);
-            this.Controls.Add(this.btnSalir);
+            this.ClientSize = new System.Drawing.Size(929, 642);
+            this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.PanelTitulo);
             this.Controls.Add(this.MenuVertical);
             this.Controls.Add(this.lblCategoria);
@@ -356,7 +358,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio del sistema";
@@ -389,7 +390,7 @@
         private System.Windows.Forms.Panel PanelTitulo;
         private System.Windows.Forms.PictureBox picBox;
         private System.Windows.Forms.Button btnPrestamo;
-        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.ComboBox cbArticulos;
         private System.Windows.Forms.ComboBox cbPrestamos;
     }

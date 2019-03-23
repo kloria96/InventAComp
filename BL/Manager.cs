@@ -10,6 +10,7 @@ namespace BL
     {
         private static Manager mana;
         public string rol= "";
+        public string nombre = "";
 
         private Manager()
         {

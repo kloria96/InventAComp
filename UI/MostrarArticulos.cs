@@ -176,6 +176,8 @@ namespace UI
             reporte.ShowDialog();
         }
 
+
+        //Ejemplo para mostrar el reporte
         private void mostrarReporteEjemplo()
         {
             ReporteArticulos reporte = new ReporteArticulos();

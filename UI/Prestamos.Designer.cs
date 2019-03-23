@@ -30,21 +30,22 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prestamos));
-            this.gridArticulos = new System.Windows.Forms.DataGridView();
+            this.gridPrestamos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblPrestamo = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.gridArticulos)).BeginInit();
+            this.btnReporte = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPrestamos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gridArticulos
+            // gridPrestamos
             // 
-            this.gridArticulos.AllowUserToAddRows = false;
-            this.gridArticulos.AllowUserToDeleteRows = false;
-            this.gridArticulos.AllowUserToOrderColumns = true;
-            this.gridArticulos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gridArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridPrestamos.AllowUserToAddRows = false;
+            this.gridPrestamos.AllowUserToDeleteRows = false;
+            this.gridPrestamos.AllowUserToOrderColumns = true;
+            this.gridPrestamos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gridPrestamos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -52,17 +53,17 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridArticulos.Location = new System.Drawing.Point(51, 88);
-            this.gridArticulos.Margin = new System.Windows.Forms.Padding(2);
-            this.gridArticulos.Name = "gridArticulos";
-            this.gridArticulos.ReadOnly = true;
-            this.gridArticulos.RowTemplate.Height = 24;
-            this.gridArticulos.Size = new System.Drawing.Size(824, 362);
-            this.gridArticulos.TabIndex = 9;
-            this.gridArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridArticulos_CellClick);
-            this.gridArticulos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridArticulos_CellFormatting);
+            this.gridPrestamos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridPrestamos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridPrestamos.Location = new System.Drawing.Point(51, 88);
+            this.gridPrestamos.Margin = new System.Windows.Forms.Padding(2);
+            this.gridPrestamos.Name = "gridPrestamos";
+            this.gridPrestamos.ReadOnly = true;
+            this.gridPrestamos.RowTemplate.Height = 24;
+            this.gridPrestamos.Size = new System.Drawing.Size(824, 362);
+            this.gridPrestamos.TabIndex = 9;
+            this.gridPrestamos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridArticulos_CellClick);
+            this.gridPrestamos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridArticulos_CellFormatting);
             // 
             // panel1
             // 
@@ -105,13 +106,25 @@
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.Location = new System.Drawing.Point(387, 478);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(132, 33);
+            this.btnReporte.TabIndex = 11;
+            this.btnReporte.Text = "Crear Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // Prestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 538);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnAtras);
-            this.Controls.Add(this.gridArticulos);
+            this.Controls.Add(this.gridPrestamos);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -119,7 +132,7 @@
             this.Name = "Prestamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Préstamos Activos";
-            ((System.ComponentModel.ISupportInitialize)(this.gridArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPrestamos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -128,9 +141,10 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView gridArticulos;
+        private System.Windows.Forms.DataGridView gridPrestamos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblPrestamo;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

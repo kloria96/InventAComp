@@ -12,19 +12,19 @@ using BL;
 
 namespace UI
 {
-    public partial class ReporteArticulos : Form
+    public partial class ReportePrestamos : Form
     {
-        public List<BLArticulo> listaReporte = new List<BLArticulo>();
+        public List<BLPrestamo> listaReporte = new List<BLPrestamo>();
 
-        public ReporteArticulos()
+        public ReportePrestamos()
         {
             InitializeComponent();
         }
 
-        private void ReporteArticulos_Load(object sender, EventArgs e)
+        private void ReportePrestamos_Load(object sender, EventArgs e)
         {
             reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSetArticulo", listaReporte));
+            reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DataSetPrestamo", listaReporte));
             ReportParameter parameter1 = new ReportParameter("nombreUsuario", Manager.getManager().nombre);
             reportViewer1.LocalReport.SetParameters(parameter1);
             this.reportViewer1.RefreshReport();

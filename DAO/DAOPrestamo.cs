@@ -12,8 +12,8 @@ namespace DAO
     public class DAOPrestamo
     {
         //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
 
         // connectionStringJ (Juan Diego)
         // connectionStringM (Melany)
@@ -131,7 +131,7 @@ namespace DAO
             {
                 conex.Open();
             }
-            String qry = "select p.idPrestamo, p.numeroContrato, p.paciente, a.numeroPlaca, a.nombre from prestamo p join articulo a on p.idArticulo = a.idArticulo where p.estado = 1;";
+            String qry = "select p.idPrestamo, p.numeroContrato, p.paciente, p.responsable, p.fechaPrestamo, p.fechaEntrega, a.numeroPlaca, a.nombre from prestamo p join articulo a on p.idArticulo = a.idArticulo where p.estado = 1;";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
 
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -140,7 +140,7 @@ namespace DAO
             {
                 while (reader.Read())
                 {
-                    lista.Add(new TOPrestamo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4)));
+                    lista.Add(new TOPrestamo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetDateTime(4), reader.GetDateTime(5), reader.GetString(6), reader.GetString(7)));
                 }
             }
 
@@ -158,7 +158,7 @@ namespace DAO
                 conex.Open();
             }
 
-            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, a.ubicacion, c.nombre from inventario.articulo as a, inventario.categoria as c where c.idCategoria = a.idCategoria and c.nombre != 'Préstamo';";
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.fechaIngreso, a.descripcion, a.estado, a.ubicacion, c.nombre from articulo a join categoria c on a.idCategoria = c.idCategoria where a.prestado = 0;";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
 
             MySqlDataReader reader = cmd.ExecuteReader();

@@ -45,44 +45,47 @@
             // 
             // checkEstado
             // 
+            this.checkEstado.AutoCheck = false;
             this.checkEstado.AutoSize = true;
-            this.checkEstado.Enabled = false;
             this.checkEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEstado.Location = new System.Drawing.Point(684, 274);
-            this.checkEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkEstado.Location = new System.Drawing.Point(413, 219);
+            this.checkEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkEstado.Name = "checkEstado";
-            this.checkEstado.Size = new System.Drawing.Size(106, 24);
+            this.checkEstado.Size = new System.Drawing.Size(90, 21);
             this.checkEstado.TabIndex = 31;
             this.checkEstado.Text = "Habilitado";
             this.checkEstado.UseVisualStyleBackColor = true;
             // 
             // txtNombre
             // 
-            this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(684, 164);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre.Location = new System.Drawing.Point(413, 129);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(159, 27);
+            this.txtNombre.ReadOnly = true;
+            this.txtNombre.Size = new System.Drawing.Size(164, 23);
             this.txtNombre.TabIndex = 30;
+            this.txtNombre.TabStop = false;
             // 
             // txtId
             // 
-            this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(345, 164);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtId.Location = new System.Drawing.Point(159, 129);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(159, 27);
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(145, 23);
             this.txtId.TabIndex = 28;
+            this.txtId.TabStop = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(584, 274);
+            this.label5.Location = new System.Drawing.Point(338, 219);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 20);
+            this.label5.Size = new System.Drawing.Size(56, 17);
             this.label5.TabIndex = 27;
             this.label5.Text = "Estado:";
             // 
@@ -90,9 +93,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(204, 275);
+            this.label4.Location = new System.Drawing.Point(53, 219);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 20);
+            this.label4.Size = new System.Drawing.Size(33, 17);
             this.label4.TabIndex = 26;
             this.label4.Text = "Rol:";
             // 
@@ -100,9 +104,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(584, 167);
+            this.label3.Location = new System.Drawing.Point(338, 132);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 25;
             this.label3.Text = "Nombre:";
             // 
@@ -110,9 +115,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(204, 167);
+            this.label1.Location = new System.Drawing.Point(53, 132);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.Size = new System.Drawing.Size(89, 17);
             this.label1.TabIndex = 23;
             this.label1.Text = "Identificador:";
             // 
@@ -122,8 +128,9 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.ForeColor = System.Drawing.Color.LightBlue;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1066, 100);
+            this.panel1.Size = new System.Drawing.Size(800, 81);
             this.panel1.TabIndex = 33;
             // 
             // label6
@@ -131,9 +138,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(446, 36);
+            this.label6.Location = new System.Drawing.Point(259, 25);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(150, 29);
+            this.label6.Size = new System.Drawing.Size(120, 24);
             this.label6.TabIndex = 24;
             this.label6.Text = "Ver Usuario";
             // 
@@ -145,10 +153,9 @@
             this.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(417, 379);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAtras.Location = new System.Drawing.Point(263, 294);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(143, 57);
+            this.btnAtras.Size = new System.Drawing.Size(107, 46);
             this.btnAtras.TabIndex = 34;
             this.btnAtras.TabStop = false;
             this.btnAtras.Text = "Atrás";
@@ -158,19 +165,20 @@
             // 
             // txtRol
             // 
-            this.txtRol.Enabled = false;
             this.txtRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRol.Location = new System.Drawing.Point(345, 272);
-            this.txtRol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRol.Location = new System.Drawing.Point(159, 217);
+            this.txtRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtRol.Name = "txtRol";
-            this.txtRol.Size = new System.Drawing.Size(159, 27);
+            this.txtRol.ReadOnly = true;
+            this.txtRol.Size = new System.Drawing.Size(145, 23);
             this.txtRol.TabIndex = 35;
+            this.txtRol.TabStop = false;
             // 
             // VerCuenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(988, 512);
+            this.ClientSize = new System.Drawing.Size(640, 388);
             this.Controls.Add(this.txtRol);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.panel1);
@@ -182,7 +190,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VerCuenta";

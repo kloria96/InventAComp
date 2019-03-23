@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
             this.LblTitulo = new System.Windows.Forms.Label();
             this.gridEmpleados = new System.Windows.Forms.DataGridView();
@@ -51,10 +52,22 @@
             // 
             // gridEmpleados
             // 
+            this.gridEmpleados.AllowUserToAddRows = false;
+            this.gridEmpleados.AllowUserToDeleteRows = false;
+            this.gridEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridEmpleados.Location = new System.Drawing.Point(109, 112);
-            this.gridEmpleados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.gridEmpleados.Name = "gridEmpleados";
+            this.gridEmpleados.ReadOnly = true;
             this.gridEmpleados.RowTemplate.Height = 24;
             this.gridEmpleados.Size = new System.Drawing.Size(590, 304);
             this.gridEmpleados.TabIndex = 1;
@@ -67,7 +80,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(128, 448);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 42);
             this.button2.TabIndex = 14;
@@ -84,7 +97,7 @@
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.Location = new System.Drawing.Point(519, 448);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(179, 47);
             this.btnAgregar.TabIndex = 15;
@@ -98,7 +111,7 @@
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
             this.panel1.Controls.Add(this.LblTitulo);
             this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(818, 81);
             this.panel1.TabIndex = 16;
@@ -113,7 +126,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.gridEmpleados);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Administrador";

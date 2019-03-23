@@ -16,7 +16,7 @@ namespace UI
         public Prestamos()
         {
             InitializeComponent();
-            gridArticulos.AutoGenerateColumns = false;
+            gridPrestamos.AutoGenerateColumns = false;
             cargarGrid();
         }
 
@@ -32,61 +32,76 @@ namespace UI
             listaBL = manej.obtenerArticulosPrestamo();
             if (listaBL.Count != 0)
             {
-                gridArticulos.ColumnCount = 5;
+                gridPrestamos.ColumnCount = 8;
 
-                gridArticulos.Columns[0].Name = "ID";
-                gridArticulos.Columns[0].HeaderText = "ID";
-                gridArticulos.Columns[0].DataPropertyName = "idPrestamo";
-                gridArticulos.Columns[0].Visible = false;
+                gridPrestamos.Columns[0].Name = "ID";
+                gridPrestamos.Columns[0].HeaderText = "ID";
+                gridPrestamos.Columns[0].DataPropertyName = "idPrestamo";
+                gridPrestamos.Columns[0].Visible = false;
 
-                gridArticulos.Columns[1].Name = "Número contrato";
-                gridArticulos.Columns[1].HeaderText = "Número contrato";
-                gridArticulos.Columns[1].DataPropertyName = "numeroContrato";
+                gridPrestamos.Columns[1].Name = "Número contrato";
+                gridPrestamos.Columns[1].HeaderText = "Número contrato";
+                gridPrestamos.Columns[1].DataPropertyName = "numeroContrato";
 
-                gridArticulos.Columns[2].Name = "Paciente";
-                gridArticulos.Columns[2].HeaderText = "Paciente";
-                gridArticulos.Columns[2].DataPropertyName = "paciente";
+                gridPrestamos.Columns[2].Name = "Paciente";
+                gridPrestamos.Columns[2].HeaderText = "Paciente";
+                gridPrestamos.Columns[2].DataPropertyName = "paciente";
 
-                gridArticulos.Columns[3].Name = "Equipo";
-                gridArticulos.Columns[3].HeaderText = "Equipo";
-                gridArticulos.Columns[3].DataPropertyName = "nombreArticulo";
+                gridPrestamos.Columns[3].Name = "Equipo";
+                gridPrestamos.Columns[3].HeaderText = "Equipo";
+                gridPrestamos.Columns[3].DataPropertyName = "nombreArticulo";
 
-                gridArticulos.Columns[4].Name = "Número placa";
-                gridArticulos.Columns[4].HeaderText = "Número placa";
-                gridArticulos.Columns[4].DataPropertyName = "numeroPlacaArticulo";
+                gridPrestamos.Columns[4].Name = "Número placa";
+                gridPrestamos.Columns[4].HeaderText = "Número placa";
+                gridPrestamos.Columns[4].DataPropertyName = "numeroPlacaArticulo";
+
+                gridPrestamos.Columns[5].Name = "Responsable";
+                gridPrestamos.Columns[5].HeaderText = "Responsable";
+                gridPrestamos.Columns[5].DataPropertyName = "responsable";
+                gridPrestamos.Columns[5].Visible = false;
+
+                gridPrestamos.Columns[6].Name = "Fecha préstamo";
+                gridPrestamos.Columns[6].HeaderText = "Fecha";
+                gridPrestamos.Columns[6].DataPropertyName = "fechaPrestamo";
+                gridPrestamos.Columns[6].Visible = false;
+
+                gridPrestamos.Columns[7].Name = "Fecha entrega";
+                gridPrestamos.Columns[7].HeaderText = "Fecha entrega";
+                gridPrestamos.Columns[7].DataPropertyName = "fechaEntrega";
+                gridPrestamos.Columns[7].Visible = false;
 
                 DataGridViewButtonColumn button = new DataGridViewButtonColumn();
-                gridArticulos.Columns.Add(button);
+                gridPrestamos.Columns.Add(button);
 
                 DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
-                gridArticulos.Columns.Add(btn2);
+                gridPrestamos.Columns.Add(btn2);
 
                 DataGridViewButtonColumn btn3 = new DataGridViewButtonColumn();
-                gridArticulos.Columns.Add(btn3);
+                gridPrestamos.Columns.Add(btn3);
 
-                gridArticulos.DataSource = listaBL;
+                gridPrestamos.DataSource = listaBL;
             }
         }
 
         private void gridArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5)
+            if (e.ColumnIndex == 8)
             {
-                VerPrestamo.idPrestamo = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
+                VerPrestamo.idPrestamo = gridPrestamos.Rows[e.RowIndex].Cells[0].Value + "";
                 new VerPrestamo().ShowDialog();
             }
 
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 9)
             {
-                CuotasDonacion.idPrestamo = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
-                CuotasDonacion.contratoPrestamo = gridArticulos.Rows[e.RowIndex].Cells[1].Value + "";
+                CuotasDonacion.idPrestamo = gridPrestamos.Rows[e.RowIndex].Cells[0].Value + "";
+                CuotasDonacion.contratoPrestamo = gridPrestamos.Rows[e.RowIndex].Cells[1].Value + "";
                 CuotasDonacion cuotas = new CuotasDonacion();
                 cuotas.Owner = this;
                 cuotas.Show();
             }
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 10)
             {
-                int idPrest = Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value);
+                int idPrest = Convert.ToInt32(gridPrestamos.Rows[e.RowIndex].Cells[0].Value);
                 ManejadorPrestamo manejPrest = new ManejadorPrestamo();
                 var confirmResult = MessageBox.Show("¿Desea terminar el préstamo?", "Confirmar", MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
@@ -107,10 +122,26 @@ namespace UI
 
         private void gridArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            gridArticulos.Rows[e.RowIndex].Cells[5].Value = "Ver Préstamo";
-            gridArticulos.Rows[e.RowIndex].Cells[6].Value = "Ver Contribuciones";
-            gridArticulos.Rows[e.RowIndex].Cells[7].Value = "Terminar";
+            gridPrestamos.Rows[e.RowIndex].Cells[8].Value = "Ver Préstamo";
+            gridPrestamos.Rows[e.RowIndex].Cells[9].Value = "Ver Contribuciones";
+            gridPrestamos.Rows[e.RowIndex].Cells[10].Value = "Terminar";
         }
 
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            ReportePrestamos reporte = new ReportePrestamos();
+
+            for (int i = 0; i < gridPrestamos.Rows.Count; i++)
+            {
+                BLPrestamo prestamo = new BLPrestamo();
+                prestamo.numeroContrato = (string)gridPrestamos.Rows[i].Cells[1].Value;
+                prestamo.paciente = (string)gridPrestamos.Rows[i].Cells[2].Value;
+                prestamo.responsable = (string)gridPrestamos.Rows[i].Cells[5].Value; //Index pendiente
+                prestamo.fechaPrestamo = (DateTime)gridPrestamos.Rows[i].Cells[6].Value; //Index pendiente
+                prestamo.fechaEntrega = (DateTime)gridPrestamos.Rows[i].Cells[7].Value; //Index pendiente
+                reporte.listaReporte.Add(prestamo);
+            }
+            reporte.ShowDialog();
+        }
     }
 }
