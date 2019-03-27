@@ -102,7 +102,7 @@
             this.txtResponsable.Location = new System.Drawing.Point(629, 250);
             this.txtResponsable.Name = "txtResponsable";
             this.txtResponsable.Size = new System.Drawing.Size(213, 22);
-            this.txtResponsable.TabIndex = 19;
+            this.txtResponsable.TabIndex = 4;
             // 
             // lblPaciente
             // 
@@ -121,7 +121,7 @@
             this.dtEntrega.Location = new System.Drawing.Point(629, 366);
             this.dtEntrega.Name = "dtEntrega";
             this.dtEntrega.Size = new System.Drawing.Size(288, 22);
-            this.dtEntrega.TabIndex = 22;
+            this.dtEntrega.TabIndex = 6;
             // 
             // lblEntrega
             // 
@@ -140,7 +140,7 @@
             this.dtPrestamo.Location = new System.Drawing.Point(629, 309);
             this.dtPrestamo.Name = "dtPrestamo";
             this.dtPrestamo.Size = new System.Drawing.Size(288, 22);
-            this.dtPrestamo.TabIndex = 21;
+            this.dtPrestamo.TabIndex = 5;
             // 
             // txtPaciente
             // 
@@ -148,7 +148,7 @@
             this.txtPaciente.Location = new System.Drawing.Point(629, 195);
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Size = new System.Drawing.Size(213, 22);
-            this.txtPaciente.TabIndex = 18;
+            this.txtPaciente.TabIndex = 3;
             // 
             // lblFecha
             // 
@@ -166,7 +166,7 @@
             this.txtContrato.Location = new System.Drawing.Point(629, 139);
             this.txtContrato.Name = "txtContrato";
             this.txtContrato.Size = new System.Drawing.Size(213, 22);
-            this.txtContrato.TabIndex = 16;
+            this.txtContrato.TabIndex = 2;
             // 
             // lblContrato
             // 
@@ -188,6 +188,7 @@
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(168, 22);
             this.txtNombre.TabIndex = 27;
+            this.txtNombre.TabStop = false;
             // 
             // txtPlaca
             // 
@@ -197,7 +198,7 @@
             this.txtPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(169, 22);
-            this.txtPlaca.TabIndex = 26;
+            this.txtPlaca.TabIndex = 1;
             // 
             // label4
             // 
@@ -234,6 +235,7 @@
             this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(169, 81);
             this.txtDescripcion.TabIndex = 30;
+            this.txtDescripcion.TabStop = false;
             // 
             // label6
             // 
@@ -269,6 +271,7 @@
             this.txtCategoria.ReadOnly = true;
             this.txtCategoria.Size = new System.Drawing.Size(168, 22);
             this.txtCategoria.TabIndex = 33;
+            this.txtCategoria.TabStop = false;
             // 
             // btnGuardar
             // 
@@ -278,6 +281,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(103, 33);
             this.btnGuardar.TabIndex = 34;
+            this.btnGuardar.TabStop = false;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -289,6 +293,7 @@
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(84, 31);
             this.btnAtras.TabIndex = 35;
+            this.btnAtras.TabStop = false;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
@@ -300,6 +305,7 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 36;
+            this.btnBuscar.TabStop = false;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -307,11 +313,12 @@
             // btnBuscarArticulo
             // 
             this.btnBuscarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarArticulo.Location = new System.Drawing.Point(170, 407);
+            this.btnBuscarArticulo.Location = new System.Drawing.Point(161, 407);
             this.btnBuscarArticulo.Name = "btnBuscarArticulo";
-            this.btnBuscarArticulo.Size = new System.Drawing.Size(111, 27);
+            this.btnBuscarArticulo.Size = new System.Drawing.Size(130, 27);
             this.btnBuscarArticulo.TabIndex = 37;
-            this.btnBuscarArticulo.Text = "Buscar Artículo";
+            this.btnBuscarArticulo.TabStop = false;
+            this.btnBuscarArticulo.Text = "Buscar Artículo...";
             this.btnBuscarArticulo.UseVisualStyleBackColor = true;
             this.btnBuscarArticulo.Click += new System.EventHandler(this.btnBuscarArticulo_Click);
             // 

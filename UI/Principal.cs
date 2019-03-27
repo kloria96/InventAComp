@@ -195,7 +195,8 @@ namespace UI
             }
             if (cbPrestamos.SelectedItem.ToString() == "Ver Préstamos")
             {
-                //Ver Préstamos de un Artículo **
+                //Ver Préstamos de un Artículo
+                new VerPrestamosArticulo().Show();
             }
             if (cbPrestamos.SelectedItem.ToString() == "Ver Contribuciones")
             {

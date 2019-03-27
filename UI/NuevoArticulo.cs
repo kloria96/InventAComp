@@ -48,8 +48,7 @@ namespace UI
                 comboEstados.Items.Add(estado);
             }
         }
-
-
+        
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -62,10 +61,17 @@ namespace UI
                 
                 if (manejArt.agregarArticulo(artNuevo))
                 {
-                    this.Owner.Dispose();
-                    this.Dispose();
-                    MessageBox.Show("Se ha agregado el artículo");
-                    new Articulos().Show();
+                    if (this.Owner != null)
+                    {
+                        this.Owner.Dispose();
+                        this.Dispose();
+                        MessageBox.Show("Se ha agregado el artículo");
+                        new Articulos().Show();
+                    } else
+                    {
+                        this.Dispose();
+                        MessageBox.Show("Se ha agregado el artículo");
+                    }
                 } else
                 {
                     MessageBox.Show("No se ha podido ingresar el artículo");

@@ -269,5 +269,41 @@ namespace DAO
             return prestamo;
         }
 
+        public List<TOPrestamo> prestamosArticulo(int idArticulo)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            string qry = "select idPrestamo, numeroContrato, paciente, responsable, fechaPrestamo, fechaEntrega from prestamo where idArticulo = @idArt;";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@idArt", idArticulo);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<TOPrestamo> lista = new List<TOPrestamo>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    TOPrestamo prest = new TOPrestamo();
+                    prest.idPrestamo = reader.GetInt32(0);
+                    prest.numeroContrato = reader.GetString(1);
+                    prest.paciente = reader.GetString(2);
+                    prest.responsable = reader.GetString(3);
+                    prest.fechaPrestamo = reader.GetDateTime(4);
+                    prest.fechaEntrega = reader.GetDateTime(5);
+                    lista.Add(prest);
+                }
+            }
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return lista;
+        }
+
     }
 }

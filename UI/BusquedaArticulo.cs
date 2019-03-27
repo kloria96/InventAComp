@@ -13,13 +13,17 @@ namespace UI
 {
     public partial class BusquedaArticulo : Form
     {
+        public static int opcion = 0;
+
         public BusquedaArticulo()
         {
             InitializeComponent();
             gridArticulos.AutoGenerateColumns = false;
-            cargarGrid();
+            //cargarGrid();
+            cbFiltros.SelectedIndex = 0;
         }
 
+        //No usado
         private void cargarGrid()
         {
             ManejadorArticulo manej = new ManejadorArticulo();
@@ -55,8 +59,47 @@ namespace UI
                 gridArticulos.Columns[5].DataPropertyName = "nombCategoria";
 
                 DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                gridArticulos.Columns.Add(button);
 
                 gridArticulos.DataSource = listaBL;
+            }
+        }
+
+        private void mostrarArticulos(List<BLArticulo> listaArticulos)
+        {
+            if (listaArticulos.Count != 0)
+            {
+                gridArticulos.ColumnCount = 6;
+
+                gridArticulos.Columns[0].Name = "ID";
+                gridArticulos.Columns[0].HeaderText = "ID";
+                gridArticulos.Columns[0].DataPropertyName = "idArticulo";
+                gridArticulos.Columns[0].Visible = false;
+
+                gridArticulos.Columns[1].Name = "Número placa";
+                gridArticulos.Columns[1].HeaderText = "Número placa";
+                gridArticulos.Columns[1].DataPropertyName = "numeroPlaca";
+
+                gridArticulos.Columns[2].Name = "Nombre";
+                gridArticulos.Columns[2].HeaderText = "Nombre";
+                gridArticulos.Columns[2].DataPropertyName = "nombArticulo";
+
+                gridArticulos.Columns[3].Name = "Estado";
+                gridArticulos.Columns[3].HeaderText = "Estado";
+                gridArticulos.Columns[3].DataPropertyName = "estadoArticulo";
+
+                gridArticulos.Columns[4].Name = "Ubicación";
+                gridArticulos.Columns[4].HeaderText = "Ubicación";
+                gridArticulos.Columns[4].DataPropertyName = "ubicacionArticulo";
+
+                gridArticulos.Columns[5].Name = "Categoría";
+                gridArticulos.Columns[5].HeaderText = "Categoría";
+                gridArticulos.Columns[5].DataPropertyName = "nombCategoria";
+
+                DataGridViewButtonColumn button = new DataGridViewButtonColumn();
+                gridArticulos.Columns.Add(button);
+
+                gridArticulos.DataSource = listaArticulos;
             }
         }
 
@@ -64,8 +107,19 @@ namespace UI
         {
             if (e.ColumnIndex == 6 && e.RowIndex != -1)
             {
-                PrestarArticulo.idArticulo = Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value);
-                this.Dispose();
+                if (VerPrestamosArticulo.activo)
+                {
+                    VerPrestamosArticulo.idArticulo = Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value);
+                    VerPrestamosArticulo formPrestamos = (VerPrestamosArticulo)this.Owner;
+                    formPrestamos.modificarCampos();
+                    this.Dispose();
+                } else
+                {
+                    PrestarArticulo.idArticulo = Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value);
+                    PrestarArticulo form = (PrestarArticulo)this.Owner;
+                    form.modificarCampos();
+                    this.Dispose();
+                }
             }
         }
 
@@ -78,29 +132,25 @@ namespace UI
         {
             if (cbFiltros.SelectedItem.ToString() == "")
             {
-                lblNombre.Visible = false;
                 txtNombre.Visible = false;
-                lblCategoria.Visible = false;
                 cbCategorias.Visible = false;
             }
             if (cbFiltros.SelectedItem.ToString() == "Nombre")
             {
-                lblCategoria.Visible = false;
                 cbCategorias.Visible = false;
 
-                lblNombre.Visible = true;
                 txtNombre.Visible = true;
+                opcion = 1;
             }
             if (cbFiltros.SelectedItem.ToString() == "Categoría")
             {
                 cbCategorias.Items.Clear();
-                lblNombre.Visible = false;
                 txtNombre.Visible = false;
 
-                lblCategoria.Visible = true;
                 cbCategorias.Visible = true;
 
                 cargarDepartamentos();
+                opcion = 2;
             }
         }
 
@@ -112,6 +162,37 @@ namespace UI
                 cbCategorias.Items.Add(categoria.nombreCategoria);
             }
 
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ManejadorArticulo manejArt = new ManejadorArticulo();
+            List<BLArticulo> listaBL = new List<BLArticulo>();
+            switch (opcion)
+            {
+                case 0:
+
+                    break;
+                case 1:
+                    listaBL = manejArt.obtenerArticulosNombre(txtNombre.Text);
+                    mostrarArticulos(listaBL);
+                    break;
+                case 2:
+                    if (cbCategorias.SelectedItem == null)
+                    {
+                        MessageBox.Show("Seleccione una categoría");
+                    } else
+                    {
+                        listaBL = manejArt.obtenerArticulosCategoria(cbCategorias.SelectedItem.ToString());
+                        mostrarArticulos(listaBL);
+                    }
+                    break;
+            }
         }
 
     }

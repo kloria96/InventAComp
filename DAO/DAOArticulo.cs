@@ -138,6 +138,73 @@ namespace DAO
             return lista;
         }
 
+        public List<TOArticulo> obtenerArticulosNombrePrestamo(string value)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.descripcion, c.nombre from inventario.articulo a join inventario.categoria c on c.idCategoria = a.idCategoria where a.nombre like @no and a.prestado = 0";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@no", "%" + value + "%");
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<TOArticulo> lista = new List<TOArticulo>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    TOArticulo toArt = new TOArticulo();
+                    toArt.idArticulo = reader.GetInt32(0);
+                    toArt.numeroPlaca = reader.GetString(1);
+                    toArt.nombArticulo = reader.GetString(2);
+                    toArt.descripcArticulo = reader.GetString(3);
+                    toArt.nombreCategoria = reader.GetString(4);
+                    lista.Add(toArt);
+                }
+            }
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return lista;
+        }
+
+        public List<TOArticulo> obtenerArticulosCategoriaPrestamo(string value)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.descripcion, c.nombre from inventario.articulo a, inventario.categoria c on c.idCategoria = a.idCategoria where c.nombre = @no and a.prestado = 0";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@no", value);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<TOArticulo> lista = new List<TOArticulo>();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    TOArticulo toArt = new TOArticulo();
+                    toArt.idArticulo = reader.GetInt32(0);
+                    toArt.numeroPlaca = reader.GetString(1);
+                    toArt.nombArticulo = reader.GetString(2);
+                    toArt.descripcArticulo = reader.GetString(3);
+                    toArt.nombreCategoria = reader.GetString(4);
+                    lista.Add(toArt);
+                }
+            }
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return lista;
+        }
+
+
         public List<TOArticulo> obtenerArticulosFecha(string fechaInicio, string fechaFin)
         {
             if (conex.State != ConnectionState.Open)
@@ -205,6 +272,40 @@ namespace DAO
                 }
             }
             
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return toArticulo;
+        }
+
+        public TOArticulo obtenerArticuloBusqueda(int idArticulo)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "select a.idArticulo, a.numeroPlaca, a.nombre, a.descripcion, a.estado, a.ubicacion, c.nombre from articulo a join categoria c on a.idCategoria = c.idCategoria where a.idArticulo = @idA;";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@idA", idArticulo);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            TOArticulo toArticulo = new TOArticulo();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    toArticulo.idArticulo = reader.GetInt32(0);
+                    toArticulo.numeroPlaca = reader.GetString(1);
+                    toArticulo.nombArticulo = reader.GetString(2);
+                    toArticulo.descripcArticulo = reader.GetString(3);
+                    toArticulo.estadoArticulo = reader.GetString(4);
+                    toArticulo.ubicacionArticulo = reader.GetString(5);
+                    toArticulo.nombreCategoria = reader.GetString(6);
+                }
+            }
+
             if (conex.State != ConnectionState.Closed)
             {
                 conex.Close();
@@ -306,6 +407,25 @@ namespace DAO
             String qry = "select count(*) from articulo where numeroPlaca = @num";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@num", numPlaca);
+            int result = Convert.ToInt32(cmd.ExecuteScalar());
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return (result > 0 ? true : false);
+        }
+
+        public bool articuloEnPrestamo(int idArticulo)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            string qry = "select count(*) from articulo where prestado = 1 and idArticulo = @idArt";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@idArt", idArticulo);
             int result = Convert.ToInt32(cmd.ExecuteScalar());
 
             if (conex.State != ConnectionState.Closed)

@@ -55,6 +55,29 @@ namespace BL
             return lista;
         }
 
+        public List<BLArticulo> obtenerArticulosNombrePrestamo(string value)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            List<BLArticulo> lista = new List<BLArticulo>();
+            foreach (TOArticulo toArt in daoArt.obtenerArticulosNombre(value))
+            {
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.nombreCategoria));
+            }
+            return lista;
+        }
+
+        public List<BLArticulo> obtenerArticulosCategoriaPrestamo(string value)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            List<BLArticulo> lista = new List<BLArticulo>();
+            foreach (TOArticulo toArt in daoArt.obtenerArticulosCategoria(value))
+            {
+                lista.Add(new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.nombreCategoria));
+            }
+            return lista;
+        }
+
+
         public List<BLArticulo> obtenerArticulosFecha(string fechaInicio, string fechaFin)
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -77,6 +100,21 @@ namespace BL
             DAOArticulo daoArt = new DAOArticulo();
             TOArticulo toArt = daoArt.obtenerArticulo(idArticulo);
             return new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.idCategoria);
+        }
+
+        public BLArticulo obtenerArticuloBusqueda(int idArticulo)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            TOArticulo toArt = daoArt.obtenerArticuloBusqueda(idArticulo);
+            BLArticulo articulo = new BLArticulo();
+            articulo.idArticulo = toArt.idArticulo;
+            articulo.numeroPlaca = toArt.numeroPlaca;
+            articulo.nombArticulo = toArt.nombArticulo;
+            articulo.descripcArticulo = toArt.descripcArticulo;
+            articulo.estadoArticulo = toArt.estadoArticulo;
+            articulo.ubicacionArticulo = toArt.ubicacionArticulo;
+            articulo.nombCategoria = toArt.nombreCategoria;
+            return articulo;
         }
 
         public BLArticulo obtenerArticuloCategoria(int idArticulo)
@@ -109,6 +147,12 @@ namespace BL
         {
             DAOArticulo daoArt = new DAOArticulo();
             return daoArt.existeArticuloPlaca(numPlaca);
+        }
+
+        public bool articuloEnPrestamo(int idArticulo)
+        {
+            DAOArticulo daoArt = new DAOArticulo();
+            return daoArt.articuloEnPrestamo(idArticulo);
         }
 
 

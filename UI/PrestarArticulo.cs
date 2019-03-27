@@ -35,7 +35,10 @@ namespace UI
             {
                 MessageBox.Show("No existe el artículo");
                 txtPlaca.Clear();
-                btnBuscarArticulo.Enabled = false;
+                txtNombre.Clear();
+                txtDescripcion.Clear();
+                txtCategoria.Clear();
+                btnGuardar.Enabled = false;
             }
         }
 
@@ -43,6 +46,14 @@ namespace UI
         {
             if (txtContrato.Text != "")
             {
+                ManejadorArticulo manejArt = new ManejadorArticulo();
+                if (manejArt.articuloEnPrestamo(idArticulo))
+                {
+                    MessageBox.Show("El artículo se encuentra actualmente en préstamo");
+                    limpiarCampos();
+                    return;
+                }
+
                 ManejadorPrestamo manejPrest = new ManejadorPrestamo();
                 string contrato = txtContrato.Text;
                 string paciente = txtPaciente.Text;
@@ -65,6 +76,25 @@ namespace UI
             }
         }
 
+        public void modificarCampos()
+        {
+            ManejadorArticulo manejArt = new ManejadorArticulo();
+            BLArticulo articulo = manejArt.obtenerArticuloBusqueda(idArticulo);
+            txtPlaca.Text = articulo.numeroPlaca;
+            txtNombre.Text = articulo.nombArticulo;
+            txtDescripcion.Text = articulo.descripcArticulo;
+            txtCategoria.Text = articulo.nombCategoria;
+            btnGuardar.Enabled = true;
+        }
+
+        private void limpiarCampos()
+        {
+            txtPlaca.Clear();
+            txtNombre.Clear();
+            txtDescripcion.Clear();
+            txtCategoria.Clear();
+        }
+
         private void btnAtras_Click(object sender, EventArgs e)
         {
             Dispose();
@@ -72,9 +102,9 @@ namespace UI
 
         private void btnBuscarArticulo_Click(object sender, EventArgs e)
         {
-            new BusquedaArticulo().ShowDialog();
-            //Después de llamar a este método (después de seleccionar el artículo en BusquedaArticulo, hacer una consulta
-            //a la BD para cargar los datos del artículo con ese ID (se selecciona en BusquedaArticulo)
+            BusquedaArticulo busqueda = new BusquedaArticulo();
+            busqueda.Owner = this;
+            busqueda.ShowDialog();
         }
     }
 }

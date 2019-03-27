@@ -78,6 +78,24 @@ namespace BL
             return daoPrestamo.articuloEnPrestamo(idPrestamo);
         }
 
+        public List<BLPrestamo> prestamosArticulo(int idArticulo)
+        {
+            DAOPrestamo daoPrest = new DAOPrestamo();
+            List<BLPrestamo> listaBL = new List<BLPrestamo>();
+            foreach (TOPrestamo toPrest in daoPrest.prestamosArticulo(idArticulo))
+            {
+                BLPrestamo prest = new BLPrestamo();
+                prest.idPrestamo = toPrest.idPrestamo;
+                prest.numeroContrato = toPrest.numeroContrato;
+                prest.paciente = toPrest.paciente;
+                prest.responsable = toPrest.responsable;
+                prest.fechaPrestamo = toPrest.fechaPrestamo;
+                prest.fechaEntrega = toPrest.fechaEntrega;
+                listaBL.Add(prest);
+            }
+            return listaBL;
+        }
+
         private TOPrestamo convert(BLPrestamo prestamo)
         {
             return new TOPrestamo(prestamo.numeroContrato, prestamo.paciente, prestamo.responsable, prestamo.fechaPrestamo, prestamo.fechaEntrega, prestamo.idArticulo);

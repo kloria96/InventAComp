@@ -199,6 +199,12 @@
     <Compile Include="VerArticulo.Designer.cs">
       <DependentUpon>VerArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerContribucionesPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerContribucionesPrestamo.Designer.cs">
+      <DependentUpon>VerContribucionesPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,12 @@
     </Compile>
     <Compile Include="VerPrestamo.Designer.cs">
       <DependentUpon>VerPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerPrestamosArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerPrestamosArticulo.Designer.cs">
+      <DependentUpon>VerPrestamosArticulo.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
@@ -280,11 +292,17 @@
     <EmbeddedResource Include="VerArticulo.resx">
       <DependentUpon>VerArticulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VerContribucionesPrestamo.resx">
+      <DependentUpon>VerContribucionesPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerCuenta.resx">
       <DependentUpon>VerCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerPrestamo.resx">
       <DependentUpon>VerPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerPrestamosArticulo.resx">
+      <DependentUpon>VerPrestamosArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.BLArticulo.datasource" />
