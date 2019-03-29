@@ -37,7 +37,7 @@ namespace UI
             }
             else
             {
-                MessageBox.Show("No existe el artículo");
+                MessageBox.Show("No existe un artículo bajo ese número de placa");
                 txtPlaca.Clear();
                 txtNombre.Clear();
                 txtDescripcion.Clear();

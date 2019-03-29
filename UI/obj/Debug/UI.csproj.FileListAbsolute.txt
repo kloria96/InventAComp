@@ -227,3 +227,4 @@ C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.BusquedaArticulo.resourc
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.PrestarArticulo.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.ReportePrestamos.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.VerPrestamosArticulo.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.VerContribucionesPrestamo.resources

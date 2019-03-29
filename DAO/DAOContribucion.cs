@@ -71,5 +71,39 @@ namespace DAO
             return lista;
         }
 
+
+        public List<TOContribucion> contribucionesPrestamo(string contrato)
+        {
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            string qry = "select c.numeroRecibo, c.cuota, c.fecha from contribucion c join prestamo p on c.idPrestamo = p.idPrestamo where p.numeroContrato = @numCont";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+            cmd.Parameters.AddWithValue("@numCont", contrato);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+            List<TOContribucion> lista = new List<TOContribucion>();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    TOContribucion cont = new TOContribucion();
+                    cont.numeroRecibo = reader.GetString(0);
+                    cont.cuota = reader.GetString(1);
+                    cont.fecha = reader.GetDateTime(2);
+                    lista.Add(cont);
+                }
+            }
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return lista;
+        }
+
     }
 }

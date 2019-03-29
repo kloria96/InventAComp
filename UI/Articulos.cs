@@ -82,7 +82,10 @@ namespace UI
 
                 DataGridViewButtonColumn but2 = new DataGridViewButtonColumn();
                 gridArticulos.Columns.Add(but2);
-                
+
+                //gridArticulos.DataSource = listaBL;
+                //return;
+
                 string role = Manager.getManager().rol;
                 if (role == "Secretaria")
                 {

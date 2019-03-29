@@ -200,7 +200,8 @@ namespace UI
             }
             if (cbPrestamos.SelectedItem.ToString() == "Ver Contribuciones")
             {
-                //Ver contribuciones de un préstamo **
+                //Ver contribuciones de un préstamo
+                new VerContribucionesPrestamo().Show();
             }
         }
 

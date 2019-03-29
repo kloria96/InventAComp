@@ -42,13 +42,14 @@
             this.lblFechaPrestamo = new System.Windows.Forms.Label();
             this.lblResponsable = new System.Windows.Forms.Label();
             this.txtPaciente = new System.Windows.Forms.TextBox();
-            this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.txtContrato = new System.Windows.Forms.TextBox();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.lblContrato = new System.Windows.Forms.Label();
             this.lblDatosPrestamo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtFechaEntrega = new System.Windows.Forms.TextBox();
             this.lblFechaEntrega = new System.Windows.Forms.Label();
+            this.cbActivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridContribuciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +76,7 @@
             this.btnBuscarContribuciones.TabIndex = 69;
             this.btnBuscarContribuciones.Text = "Buscar Contribuciones";
             this.btnBuscarContribuciones.UseVisualStyleBackColor = true;
+            this.btnBuscarContribuciones.Click += new System.EventHandler(this.btnBuscarContribuciones_Click);
             // 
             // btnAtras
             // 
@@ -124,17 +126,19 @@
             // 
             this.btnBuscarPrestamos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBuscarPrestamos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarPrestamos.Location = new System.Drawing.Point(147, 408);
+            this.btnBuscarPrestamos.Location = new System.Drawing.Point(139, 451);
             this.btnBuscarPrestamos.Name = "btnBuscarPrestamos";
             this.btnBuscarPrestamos.Size = new System.Drawing.Size(138, 27);
             this.btnBuscarPrestamos.TabIndex = 65;
             this.btnBuscarPrestamos.TabStop = false;
             this.btnBuscarPrestamos.Text = "Buscar Préstamo...";
             this.btnBuscarPrestamos.UseVisualStyleBackColor = true;
+            this.btnBuscarPrestamos.Visible = false;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscar.Enabled = false;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(293, 136);
             this.btnBuscar.Name = "btnBuscar";
@@ -143,6 +147,7 @@
             this.btnBuscar.TabStop = false;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtFecha
             // 
@@ -204,15 +209,16 @@
             this.txtPaciente.TabIndex = 57;
             this.txtPaciente.TabStop = false;
             // 
-            // txtPlaca
+            // txtContrato
             // 
-            this.txtPlaca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlaca.Location = new System.Drawing.Point(108, 137);
-            this.txtPlaca.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(169, 22);
-            this.txtPlaca.TabIndex = 55;
+            this.txtContrato.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrato.Location = new System.Drawing.Point(108, 137);
+            this.txtContrato.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContrato.Name = "txtContrato";
+            this.txtContrato.Size = new System.Drawing.Size(169, 22);
+            this.txtContrato.TabIndex = 55;
+            this.txtContrato.TextChanged += new System.EventHandler(this.txtContrato_TextChanged);
             // 
             // lblPaciente
             // 
@@ -283,11 +289,25 @@
             this.lblFechaEntrega.TabIndex = 72;
             this.lblFechaEntrega.Text = "Fecha entrega";
             // 
+            // cbActivo
+            // 
+            this.cbActivo.AutoCheck = false;
+            this.cbActivo.AutoSize = true;
+            this.cbActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbActivo.Location = new System.Drawing.Point(50, 400);
+            this.cbActivo.Name = "cbActivo";
+            this.cbActivo.Size = new System.Drawing.Size(67, 22);
+            this.cbActivo.TabIndex = 73;
+            this.cbActivo.TabStop = false;
+            this.cbActivo.Text = "Activo";
+            this.cbActivo.UseVisualStyleBackColor = true;
+            // 
             // VerContribucionesPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 515);
+            this.Controls.Add(this.cbActivo);
             this.Controls.Add(this.txtFechaEntrega);
             this.Controls.Add(this.lblFechaEntrega);
             this.Controls.Add(this.lblAdvertencia);
@@ -302,7 +322,7 @@
             this.Controls.Add(this.lblFechaPrestamo);
             this.Controls.Add(this.lblResponsable);
             this.Controls.Add(this.txtPaciente);
-            this.Controls.Add(this.txtPlaca);
+            this.Controls.Add(this.txtContrato);
             this.Controls.Add(this.lblPaciente);
             this.Controls.Add(this.lblContrato);
             this.Controls.Add(this.lblDatosPrestamo);
@@ -333,12 +353,13 @@
         private System.Windows.Forms.Label lblFechaPrestamo;
         private System.Windows.Forms.Label lblResponsable;
         private System.Windows.Forms.TextBox txtPaciente;
-        private System.Windows.Forms.TextBox txtPlaca;
+        private System.Windows.Forms.TextBox txtContrato;
         private System.Windows.Forms.Label lblPaciente;
         private System.Windows.Forms.Label lblContrato;
         private System.Windows.Forms.Label lblDatosPrestamo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtFechaEntrega;
         private System.Windows.Forms.Label lblFechaEntrega;
+        private System.Windows.Forms.CheckBox cbActivo;
     }
 }

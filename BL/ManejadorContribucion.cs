@@ -28,6 +28,21 @@ namespace BL
             return lista;
         }
 
+        public List<BLContribucion> contribucionesPrestamo(string contrato)
+        {
+            List<BLContribucion> listaBL = new List<BLContribucion>();
+            foreach (TOContribucion toCont in daoContribucion.contribucionesPrestamo(contrato))
+            {
+                BLContribucion cont = new BLContribucion();
+                cont.numeroRecibo = toCont.numeroRecibo;
+                cont.cuota = toCont.cuota;
+                cont.fecha = toCont.fecha;
+                listaBL.Add(cont);
+            }
+            return listaBL;
+        }
+
+
         private TOContribucion convert(BLContribucion blCont)
         {
             return new TOContribucion(blCont.numeroRecibo, blCont.cuota, blCont.fecha, blCont.idPrestamo);

@@ -96,6 +96,25 @@ namespace BL
             return listaBL;
         }
 
+        public bool existePrestamo(string contrato)
+        {
+            DAOPrestamo daoPrest = new DAOPrestamo();
+            return daoPrest.existePrestamo(contrato);
+        }
+
+        public BLPrestamo obtenerPrestamoContrato(string contrato)
+        {
+            TOPrestamo toPrest = daoPrestamo.obtenerPrestamoContrato(contrato);
+            BLPrestamo prestamo = new BLPrestamo();
+            prestamo.paciente = toPrest.paciente;
+            prestamo.responsable = toPrest.responsable;
+            prestamo.fechaPrestamo = toPrest.fechaPrestamo;
+            prestamo.fechaEntrega = toPrest.fechaEntrega;
+            prestamo.estado = toPrest.estado;
+            return prestamo;
+        }
+
+
         private TOPrestamo convert(BLPrestamo prestamo)
         {
             return new TOPrestamo(prestamo.numeroContrato, prestamo.paciente, prestamo.responsable, prestamo.fechaPrestamo, prestamo.fechaEntrega, prestamo.idArticulo);
