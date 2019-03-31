@@ -71,7 +71,7 @@ namespace UI
             {
                 MessageBox.Show("Ingrese el nombre de la nueva categoría");
             }
-         }
+        }
 
         private void gridCategorias_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -97,13 +97,7 @@ namespace UI
 
             if (e.ColumnIndex == 3 && e.RowIndex != -1)
             {
-                if (Convert.ToString(gridCategorias.Rows[e.RowIndex].Cells[0].Value) == "Préstamo")
-                {
-                    MessageBox.Show("No se puede eliminar esta categoría");
-                } else
-                {
-                    eliminarFila(Convert.ToInt32(gridCategorias.Rows[e.RowIndex].Cells[1].Value));
-                }
+                eliminarFila(Convert.ToInt32(gridCategorias.Rows[e.RowIndex].Cells[1].Value));
             }
         }
 

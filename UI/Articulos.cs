@@ -83,9 +83,6 @@ namespace UI
                 DataGridViewButtonColumn but2 = new DataGridViewButtonColumn();
                 gridArticulos.Columns.Add(but2);
 
-                //gridArticulos.DataSource = listaBL;
-                //return;
-
                 string role = Manager.getManager().rol;
                 if (role == "Secretaria")
                 {
@@ -95,12 +92,12 @@ namespace UI
                     List<BLArticulo> listaCategoria = new List<BLArticulo>();
                     foreach (BLArticulo art in listaBL)
                     {
-                        if (art.nombCategoria.Equals(role))
+                        if (art.nombCategoria == role)
                         {
                             listaCategoria.Add(art);
                         }
-                        gridArticulos.DataSource = listaCategoria;
                     }
+                    gridArticulos.DataSource = listaCategoria;
                 }
 
                 //Console.WriteLine("Su rol: " + role);
