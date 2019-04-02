@@ -85,8 +85,8 @@ namespace UI
                         {
                             listaCategoria.Add(art);
                         }
-                        gridArticulos.DataSource = listaCategoria;
                     }
+                    gridArticulos.DataSource = listaCategoria;
                 }
 
                 //if (role.Equals("Secretaria"))
@@ -140,7 +140,7 @@ namespace UI
 
         private void gridArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 8)
+            if (e.ColumnIndex == 8 && e.RowIndex != -1)
             {
                 FormularioPrestamo.idArticulo = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
                 FormularioPrestamo.nombreArticulo = gridArticulos.Rows[e.RowIndex].Cells[2].Value + "";

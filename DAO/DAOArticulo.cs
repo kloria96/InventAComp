@@ -64,7 +64,7 @@ namespace DAO
                 conex.Open();
             }
 
-            String qry = "insert into articulo (numeroPlaca, nombre, fechaIngreso, descripcion, estado, ubicacion, propiedad_jps, idCategoria) values (@numPlac, @nomb, @fechIng, @descripc, @est, @ubic, @pro, @idCateg)";
+            String qry = "insert into articulo (numeroPlaca, nombre, fechaIngreso, descripcion, estado, ubicacion, propiedad_jps, prestado, idCategoria) values (@numPlac, @nomb, @fechIng, @descripc, @est, @ubic, @pro, 0, @idCateg)";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             
             cmd.Parameters.AddWithValue("@numPlac", nuevoArt.numeroPlaca);
