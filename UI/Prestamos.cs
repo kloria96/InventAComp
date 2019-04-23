@@ -85,13 +85,13 @@ namespace UI
 
         private void gridArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 8)
+            if (e.ColumnIndex == 8 && e.RowIndex != -1)
             {
                 VerPrestamo.idPrestamo = gridPrestamos.Rows[e.RowIndex].Cells[0].Value + "";
                 new VerPrestamo().ShowDialog();
             }
 
-            if (e.ColumnIndex == 9)
+            if (e.ColumnIndex == 9 && e.RowIndex != -1)
             {
                 CuotasDonacion.idPrestamo = gridPrestamos.Rows[e.RowIndex].Cells[0].Value + "";
                 CuotasDonacion.contratoPrestamo = gridPrestamos.Rows[e.RowIndex].Cells[1].Value + "";
@@ -99,7 +99,7 @@ namespace UI
                 cuotas.Owner = this;
                 cuotas.Show();
             }
-            if (e.ColumnIndex == 10)
+            if (e.ColumnIndex == 10 && e.RowIndex != -1)
             {
                 int idPrest = Convert.ToInt32(gridPrestamos.Rows[e.RowIndex].Cells[0].Value);
                 ManejadorPrestamo manejPrest = new ManejadorPrestamo();

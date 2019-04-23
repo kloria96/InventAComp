@@ -67,6 +67,13 @@ namespace UI
 
         private void mostrarArticulos(List<BLArticulo> listaArticulos)
         {
+            ManejadorArticulo manejArt = new ManejadorArticulo();
+            if (gridArticulos.DataSource != null)
+            {
+                gridArticulos.DataSource = null;
+                gridArticulos.Rows.Clear();
+            }
+
             if (listaArticulos.Count != 0)
             {
                 gridArticulos.ColumnCount = 6;
