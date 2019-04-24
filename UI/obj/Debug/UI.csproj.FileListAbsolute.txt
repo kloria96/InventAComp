@@ -230,3 +230,8 @@ C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.VerPrestamosArticulo.reso
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.VerContribucionesPrestamo.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\RdlCompile.cache
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\RdlCompile.compiled
+C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.ReportePrestamos.resources
+C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.VerContribucionesPrestamo.resources
+C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.VerPrestamosArticulo.resources
+C:\Users\melan\source\repos\InventAcomp\UI\bin\Debug\MySql.Data.xml
+C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.ConfigCuenta.resources

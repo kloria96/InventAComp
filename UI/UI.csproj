@@ -93,6 +93,12 @@
     <Compile Include="Categorias.Designer.cs">
       <DependentUpon>Categorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfigCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigCuenta.Designer.cs">
+      <DependentUpon>ConfigCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="CuotasDonacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Categorias.resx">
       <DependentUpon>Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigCuenta.resx">
+      <DependentUpon>ConfigCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CuotasDonacion.resx">
       <DependentUpon>CuotasDonacion.cs</DependentUpon>

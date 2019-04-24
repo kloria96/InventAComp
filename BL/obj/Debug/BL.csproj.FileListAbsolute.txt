@@ -42,3 +42,4 @@ C:\Users\melan\Source\Repos\InventAcomp\BL\obj\Debug\BL.csproj.CoreCompileInputs
 C:\Users\melan\Source\Repos\InventAcomp\BL\obj\Debug\BL.csproj.CopyComplete
 C:\Users\melan\Source\Repos\InventAcomp\BL\obj\Debug\BL.dll
 C:\Users\melan\Source\Repos\InventAcomp\BL\obj\Debug\BL.pdb
+C:\Users\melan\source\repos\InventAcomp\BL\bin\Debug\MySql.Data.xml

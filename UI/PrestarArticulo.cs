@@ -30,7 +30,7 @@ namespace UI
                 txtNombre.Text = articulo.nombArticulo;
                 txtDescripcion.Text = articulo.descripcArticulo;
                 txtCategoria.Text = articulo.nombCategoria;
-                btnGuardar.Enabled = true;
+                button2.Enabled = true;
             } else
             {
                 MessageBox.Show("No existe el artículo");
@@ -38,7 +38,7 @@ namespace UI
                 txtNombre.Clear();
                 txtDescripcion.Clear();
                 txtCategoria.Clear();
-                btnGuardar.Enabled = false;
+                button2.Enabled = false;
             }
         }
 
@@ -84,7 +84,7 @@ namespace UI
             txtNombre.Text = articulo.nombArticulo;
             txtDescripcion.Text = articulo.descripcArticulo;
             txtCategoria.Text = articulo.nombCategoria;
-            btnGuardar.Enabled = true;
+            button2.Enabled = true;
         }
 
         private void limpiarCampos()
@@ -105,6 +105,51 @@ namespace UI
             BusquedaArticulo busqueda = new BusquedaArticulo();
             busqueda.Owner = this;
             busqueda.ShowDialog();
+        }
+
+        private void PrestarArticulo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txtContrato.Text != "")
+            {
+                ManejadorArticulo manejArt = new ManejadorArticulo();
+                if (manejArt.articuloEnPrestamo(idArticulo))
+                {
+                    MessageBox.Show("El artículo se encuentra actualmente en préstamo");
+                    limpiarCampos();
+                    return;
+                }
+
+                ManejadorPrestamo manejPrest = new ManejadorPrestamo();
+                string contrato = txtContrato.Text;
+                string paciente = txtPaciente.Text;
+                string responsable = txtResponsable.Text;
+                DateTime fechaPrestamo = Convert.ToDateTime(dtPrestamo.Text);
+                DateTime fechaEntrega = Convert.ToDateTime(dtEntrega.Text);
+                BLPrestamo nuevoPrest = new BLPrestamo(contrato, paciente, responsable, fechaPrestamo, fechaEntrega, idArticulo);
+                if (manejPrest.agregarPrestamo(nuevoPrest))
+                {
+                    this.Dispose();
+                    MessageBox.Show("Se ha guardado el préstamo");
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido guardar el préstamo. Intente de nuevo");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Complete todos los datos");
+            }
         }
     }
 }

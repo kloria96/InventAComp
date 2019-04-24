@@ -37,7 +37,7 @@ namespace UI
         {
             if (comboBoxRol.SelectedItem != null)
             {
-                if (!string.IsNullOrEmpty(txtId.Text) && !string.IsNullOrEmpty(txtContra.Text))
+                if (!string.IsNullOrEmpty(txtId.Text) && !string.IsNullOrEmpty(txtContra.Text) && !string.IsNullOrEmpty(txtNombre.Text))
                 {
                     BLCuenta cuenta = new BLCuenta();
 
@@ -63,7 +63,7 @@ namespace UI
                 }
                 else
                 {
-                    MessageBox.Show("Ingrese un identificador y contraseña para la cuenta");
+                    MessageBox.Show("Debe de ingresar todos los datos");
                 }
             }
             else

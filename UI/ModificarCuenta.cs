@@ -66,5 +66,10 @@ namespace UI
         {
             this.Dispose();
         }
+
+        private void ModificarCuenta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

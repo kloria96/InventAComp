@@ -35,3 +35,4 @@ C:\Users\melan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.csproj.CoreCompileInpu
 C:\Users\melan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\melan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.dll
 C:\Users\melan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.pdb
+C:\Users\melan\source\repos\InventAcomp\DAO\bin\Debug\MySql.Data.xml

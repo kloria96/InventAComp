@@ -212,5 +212,11 @@ namespace UI
             art.ShowDialog();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ConfigCuenta cat = new ConfigCuenta();
+            cat.MdiParent = this.MdiParent;
+            cat.Show();
+        }
     }
 }

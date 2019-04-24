@@ -44,6 +44,7 @@ namespace UI
                     {
                         Manager.getManager().rol = cuenta.privilegio;
                         Manager.getManager().nombre = cuenta.nombreEmpleado;
+                        Manager.getManager().id = cuenta.idUsuario;
                         this.Hide();
                         Principal princ = new Principal();
                         princ.Show();

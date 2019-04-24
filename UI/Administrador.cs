@@ -116,5 +116,10 @@ namespace UI
             art.MdiParent = this.MdiParent;
             art.ShowDialog();
         }
+
+        private void Administrador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

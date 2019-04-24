@@ -178,6 +178,37 @@ namespace UI
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            //    ManejadorArticulo manejArt = new ManejadorArticulo();
+            //    List<BLArticulo> listaBL = new List<BLArticulo>();
+            //    switch (opcion)
+            //    {
+            //        case 0:
+
+            //            break;
+            //        case 1:
+            //            listaBL = manejArt.obtenerArticulosNombre(txtNombre.Text);
+            //            mostrarArticulos(listaBL);
+            //            break;
+            //        case 2:
+            //            if (cbCategorias.SelectedItem == null)
+            //            {
+            //                MessageBox.Show("Seleccione una categoría");
+            //            } else
+            //            {
+            //                listaBL = manejArt.obtenerArticulosCategoria(cbCategorias.SelectedItem.ToString());
+            //                mostrarArticulos(listaBL);
+            //            }
+            //            break;
+        //}
+}
+
+    private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             ManejadorArticulo manejArt = new ManejadorArticulo();
             List<BLArticulo> listaBL = new List<BLArticulo>();
             switch (opcion)
@@ -193,7 +224,8 @@ namespace UI
                     if (cbCategorias.SelectedItem == null)
                     {
                         MessageBox.Show("Seleccione una categoría");
-                    } else
+                    }
+                    else
                     {
                         listaBL = manejArt.obtenerArticulosCategoria(cbCategorias.SelectedItem.ToString());
                         mostrarArticulos(listaBL);
@@ -201,6 +233,5 @@ namespace UI
                     break;
             }
         }
-
     }
 }
