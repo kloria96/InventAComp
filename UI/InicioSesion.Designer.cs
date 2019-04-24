@@ -77,7 +77,7 @@
             this.btnSalir.BackColor = System.Drawing.Color.Teal;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalir.Location = new System.Drawing.Point(318, 381);
+            this.btnSalir.Location = new System.Drawing.Point(325, 381);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(117, 54);
             this.btnSalir.TabIndex = 4;
@@ -122,7 +122,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(167, 38);
+            this.lblTitulo.Location = new System.Drawing.Point(177, 37);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(205, 31);
             this.lblTitulo.TabIndex = 0;

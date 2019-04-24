@@ -56,11 +56,10 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridArticulos.Location = new System.Drawing.Point(35, 229);
-            this.gridArticulos.Margin = new System.Windows.Forms.Padding(4);
+            this.gridArticulos.Location = new System.Drawing.Point(26, 186);
             this.gridArticulos.Name = "gridArticulos";
             this.gridArticulos.ReadOnly = true;
-            this.gridArticulos.Size = new System.Drawing.Size(796, 354);
+            this.gridArticulos.Size = new System.Drawing.Size(597, 288);
             this.gridArticulos.TabIndex = 0;
             this.gridArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridArticulos_CellClick);
             this.gridArticulos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gridArticulos_CellFormatting);
@@ -70,20 +69,18 @@
             this.cbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategorias.FormattingEnabled = true;
-            this.cbCategorias.Location = new System.Drawing.Point(373, 175);
-            this.cbCategorias.Margin = new System.Windows.Forms.Padding(4);
+            this.cbCategorias.Location = new System.Drawing.Point(280, 142);
             this.cbCategorias.Name = "cbCategorias";
-            this.cbCategorias.Size = new System.Drawing.Size(208, 28);
+            this.cbCategorias.Size = new System.Drawing.Size(157, 24);
             this.cbCategorias.TabIndex = 3;
             this.cbCategorias.Visible = false;
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(373, 173);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Location = new System.Drawing.Point(280, 141);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(208, 26);
+            this.txtNombre.Size = new System.Drawing.Size(157, 22);
             this.txtNombre.TabIndex = 5;
             // 
             // cbFiltros
@@ -94,10 +91,9 @@
             this.cbFiltros.Items.AddRange(new object[] {
             "Nombre",
             "Categoría"});
-            this.cbFiltros.Location = new System.Drawing.Point(154, 171);
-            this.cbFiltros.Margin = new System.Windows.Forms.Padding(4);
+            this.cbFiltros.Location = new System.Drawing.Point(116, 139);
             this.cbFiltros.Name = "cbFiltros";
-            this.cbFiltros.Size = new System.Drawing.Size(176, 32);
+            this.cbFiltros.Size = new System.Drawing.Size(133, 26);
             this.cbFiltros.TabIndex = 8;
             this.cbFiltros.SelectedIndexChanged += new System.EventHandler(this.cbFiltros_SelectedIndexChanged);
             // 
@@ -106,8 +102,9 @@
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
             this.panel1.Controls.Add(this.lblArticulo);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(862, 100);
+            this.panel1.Size = new System.Drawing.Size(646, 81);
             this.panel1.TabIndex = 9;
             // 
             // lblArticulo
@@ -115,11 +112,12 @@
             this.lblArticulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblArticulo.AutoSize = true;
             this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArticulo.Location = new System.Drawing.Point(319, 37);
+            this.lblArticulo.Location = new System.Drawing.Point(239, 30);
+            this.lblArticulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArticulo.Name = "lblArticulo";
-            this.lblArticulo.Size = new System.Drawing.Size(210, 29);
+            this.lblArticulo.Size = new System.Drawing.Size(169, 25);
             this.lblArticulo.TabIndex = 1;
-            this.lblArticulo.Text = "Buscar artículos";
+            this.lblArticulo.Text = "Buscar Artículos";
             // 
             // button1
             // 
@@ -130,10 +128,10 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(373, 605);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(280, 492);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 57);
+            this.button1.Size = new System.Drawing.Size(107, 46);
             this.button1.TabIndex = 10;
             this.button1.Text = "Atrás";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -144,13 +142,12 @@
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.Teal;
-            this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(626, 159);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(470, 129);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 55);
+            this.button2.Size = new System.Drawing.Size(142, 45);
             this.button2.TabIndex = 11;
             this.button2.Text = "Buscar Artículos";
             this.button2.UseVisualStyleBackColor = false;
@@ -158,9 +155,9 @@
             // 
             // BusquedaArticulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 673);
+            this.ClientSize = new System.Drawing.Size(645, 547);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
@@ -169,7 +166,6 @@
             this.Controls.Add(this.cbCategorias);
             this.Controls.Add(this.gridArticulos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "BusquedaArticulo";

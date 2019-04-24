@@ -125,5 +125,10 @@ namespace UI
         {
             this.Dispose();
         }
+
+        private void txtPlaca_TextChanged(object sender, EventArgs e)
+        {
+            btnBuscar.Enabled = !string.IsNullOrEmpty(txtPlaca.Text);
+        }
     }
 }

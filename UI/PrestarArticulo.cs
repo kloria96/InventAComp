@@ -151,5 +151,10 @@ namespace UI
                 MessageBox.Show("Complete todos los datos");
             }
         }
+
+        private void txtPlaca_TextChanged(object sender, EventArgs e)
+        {
+            btnBuscar.Enabled = !string.IsNullOrEmpty(txtPlaca.Text);
+        }
     }
 }

@@ -131,7 +131,6 @@ namespace UI
             if (e.ColumnIndex == 10 && e.RowIndex != -1)
             {
                 eliminarFila(Convert.ToInt32(dgvArticulos.Rows[e.RowIndex].Cells[7].Value));
-                this.Dispose();
             }
         }
 

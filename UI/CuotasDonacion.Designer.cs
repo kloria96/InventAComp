@@ -44,20 +44,18 @@
             // 
             this.lblContrato.AutoSize = true;
             this.lblContrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContrato.Location = new System.Drawing.Point(367, 70);
-            this.lblContrato.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContrato.Location = new System.Drawing.Point(270, 35);
             this.lblContrato.Name = "lblContrato";
-            this.lblContrato.Size = new System.Drawing.Size(0, 25);
+            this.lblContrato.Size = new System.Drawing.Size(0, 20);
             this.lblContrato.TabIndex = 3;
             // 
             // lblPrestar
             // 
             this.lblPrestar.AutoSize = true;
             this.lblPrestar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrestar.Location = new System.Drawing.Point(48, 43);
-            this.lblPrestar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrestar.Location = new System.Drawing.Point(36, 35);
             this.lblPrestar.Name = "lblPrestar";
-            this.lblPrestar.Size = new System.Drawing.Size(261, 25);
+            this.lblPrestar.Size = new System.Drawing.Size(215, 20);
             this.lblPrestar.TabIndex = 2;
             this.lblPrestar.Text = "Contribuciones Préstamo:";
             // 
@@ -76,12 +74,12 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridCuotas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridCuotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridCuotas.Location = new System.Drawing.Point(77, 139);
-            this.gridCuotas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gridCuotas.Location = new System.Drawing.Point(58, 113);
+            this.gridCuotas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridCuotas.Name = "gridCuotas";
             this.gridCuotas.ReadOnly = true;
             this.gridCuotas.RowTemplate.Height = 24;
-            this.gridCuotas.Size = new System.Drawing.Size(516, 386);
+            this.gridCuotas.Size = new System.Drawing.Size(387, 314);
             this.gridCuotas.TabIndex = 8;
             // 
             // btnAgregar
@@ -91,10 +89,10 @@
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(77, 565);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(58, 459);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(281, 53);
+            this.btnAgregar.Size = new System.Drawing.Size(211, 43);
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "Agregar Contribución";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -109,10 +107,10 @@
             this.btnAtras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(453, 568);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAtras.Location = new System.Drawing.Point(340, 462);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(136, 49);
+            this.btnAtras.Size = new System.Drawing.Size(102, 40);
             this.btnAtras.TabIndex = 14;
             this.btnAtras.Text = "Atrás";
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -123,23 +121,23 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
             this.panel1.Controls.Add(this.lblPrestar);
+            this.panel1.Controls.Add(this.lblContrato);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(681, 96);
+            this.panel1.Size = new System.Drawing.Size(511, 78);
             this.panel1.TabIndex = 16;
             // 
             // CuotasDonacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 657);
+            this.ClientSize = new System.Drawing.Size(508, 534);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.gridCuotas);
-            this.Controls.Add(this.lblContrato);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CuotasDonacion";
@@ -149,7 +147,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

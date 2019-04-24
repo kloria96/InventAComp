@@ -266,5 +266,22 @@ namespace UI
             //}
         }
 
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            ReporteArticulos reporte = new ReporteArticulos();
+
+            for (int i = 0; i < gridArticulos.Rows.Count; i++)
+            {
+                BLArticulo articulo = new BLArticulo();
+                articulo.numeroPlaca = (string)gridArticulos.Rows[i].Cells[1].Value;
+                articulo.nombArticulo = (string)gridArticulos.Rows[i].Cells[2].Value;
+                articulo.estadoArticulo = (string)gridArticulos.Rows[i].Cells[5].Value;
+                articulo.ubicacionArticulo = (string)gridArticulos.Rows[i].Cells[6].Value;
+                articulo.nombCategoria = (string)gridArticulos.Rows[i].Cells[7].Value;
+                reporte.listaReporte.Add(articulo);
+            }
+            reporte.ShowDialog();
+        }
+
     }
 }

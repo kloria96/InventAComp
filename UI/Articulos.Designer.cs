@@ -35,6 +35,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridArticulos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -124,11 +125,25 @@
             this.panel1.Size = new System.Drawing.Size(931, 71);
             this.panel1.TabIndex = 5;
             // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.Color.Teal;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReporte.Location = new System.Drawing.Point(396, 478);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(165, 46);
+            this.btnReporte.TabIndex = 6;
+            this.btnReporte.Text = "Crear Reporte";
+            this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // Articulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 538);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.gridArticulos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAtras);
@@ -154,5 +169,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

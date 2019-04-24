@@ -98,3 +98,9 @@ C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.NuevaCuenta.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.PrestarArticulo.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.ReporteArticulos.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.VerCuenta.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.ConfigCuenta.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.ReportePrestamos.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.VerContribucionesPrestamo.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\UI.VerPrestamosArticulo.resources
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\RdlCompile.cache
+C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Release\RdlCompile.compiled
