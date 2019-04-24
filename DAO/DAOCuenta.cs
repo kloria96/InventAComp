@@ -152,12 +152,13 @@ namespace DAO
                 conex.Open();
             }
 
-            String qry = "update cuenta set nombreEmpleado = @nombre, privilegio = @priv, estado = @est, estado = @est where idUsuario = @idCuenta";
+            String qry = "update cuenta set nombreEmpleado = @nombre, contrasenna = @contra, privilegio = @priv, estado = @est, estado = @est where idUsuario = @idCuenta";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@idCuenta", cuenta.idUsuario);
             cmd.Parameters.AddWithValue("@nombre", cuenta.nombreEmpleado);
             cmd.Parameters.AddWithValue("@priv", cuenta.privilegio);
             cmd.Parameters.AddWithValue("@est", cuenta.estado);
+            cmd.Parameters.AddWithValue("@contra", cuenta.contrasenna);
             int result = cmd.ExecuteNonQuery();
 
             if (conex.State != ConnectionState.Closed)

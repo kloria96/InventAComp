@@ -60,5 +60,10 @@ namespace UI
             //comboBoxRol.SelectedItem = cuenta.privilegio;
             //txtContra.Text = cuenta.contrasenna;
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
