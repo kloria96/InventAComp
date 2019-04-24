@@ -39,10 +39,10 @@ namespace UI
 
             if (manejCuenta.modificarCuenta(new BLCuenta(txtId.Text.Trim(), txtNombre.Text.Trim(), txtContra.Text.Trim(), txtRol.Text.Trim(), true)))
             {
-                this.Owner.Dispose();
+                //this.Owner.Dispose();
                 this.Dispose();
                 MessageBox.Show("Se han actualizado los datos de la cuenta");
-                new Administrador().Show();
+                //new Principal().Show();
             }
             else
             {
