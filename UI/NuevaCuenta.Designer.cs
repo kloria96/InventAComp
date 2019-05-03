@@ -63,7 +63,7 @@
             this.comboBoxRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxRol.FormattingEnabled = true;
             this.comboBoxRol.Location = new System.Drawing.Point(268, 292);
-            this.comboBoxRol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxRol.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxRol.Name = "comboBoxRol";
             this.comboBoxRol.Size = new System.Drawing.Size(120, 25);
             this.comboBoxRol.TabIndex = 22;
@@ -71,9 +71,11 @@
             // checkEstado
             // 
             this.checkEstado.AutoSize = true;
+            this.checkEstado.Checked = true;
+            this.checkEstado.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkEstado.Location = new System.Drawing.Point(450, 219);
-            this.checkEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkEstado.Margin = new System.Windows.Forms.Padding(2);
             this.checkEstado.Name = "checkEstado";
             this.checkEstado.Size = new System.Drawing.Size(90, 21);
             this.checkEstado.TabIndex = 21;
@@ -84,7 +86,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(176, 217);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(120, 23);
             this.txtNombre.TabIndex = 20;
@@ -93,7 +95,7 @@
             // 
             this.txtContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContra.Location = new System.Drawing.Point(450, 130);
-            this.txtContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(2);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(120, 23);
             this.txtContra.TabIndex = 19;
@@ -102,7 +104,7 @@
             // 
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(176, 130);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(120, 23);
             this.txtId.TabIndex = 18;
@@ -172,7 +174,7 @@
             this.btnAtras.Image = ((System.Drawing.Image)(resources.GetObject("btnAtras.Image")));
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtras.Location = new System.Drawing.Point(79, 360);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(107, 46);
             this.btnAtras.TabIndex = 25;
@@ -186,7 +188,7 @@
             this.panel3.BackColor = System.Drawing.Color.LightBlue;
             this.panel3.Controls.Add(this.label6);
             this.panel3.Location = new System.Drawing.Point(-1, 1);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(631, 81);
             this.panel3.TabIndex = 27;
@@ -200,7 +202,7 @@
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.Location = new System.Drawing.Point(416, 356);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(121, 50);
             this.btnGuardar.TabIndex = 24;
@@ -228,7 +230,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "NuevaCuenta";

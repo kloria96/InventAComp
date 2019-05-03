@@ -58,6 +58,7 @@ namespace UI
                         new Administrador().Show();
                     } else
                     {
+                        txtId.Clear();
                         MessageBox.Show("El nombre de usuario ya existe");
                     }
                 }
