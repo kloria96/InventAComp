@@ -19,6 +19,13 @@ namespace DAO
         // connectionStringM (Melany)
         // connectionString (Asoc. Acompañame)
 
+
+        /**
+         * Ingresa un nuevo préstamo en la base de datos
+         * 
+         * @param nuevoPrest Préstamo a ingresar. Objeto Préstamo que contiene los datos del préstamo a ingresar
+         * @return True en caso de que el préstamo se haya ingresado correctamente, false de la contrario
+         **/
         public bool agregarPrestamo(TOPrestamo nuevoPrest)
         {
             if (conex.State != ConnectionState.Open)
@@ -53,6 +60,13 @@ namespace DAO
             }
         }
 
+        /**
+         * Establece el estado del artículo como 'prestado' (prestado = 1). Utilizado al realizar un nuevo préstamo. Método
+         * usado localmente
+         * 
+         * @param idArticulo Identificador numérico del artículo
+         * @return True en caso de que el artículo se haya modificado correctamente, false de la contrario
+         **/
         private bool articuloPrestado(int idArticulo)
         {
             String qry = "update articulo set prestado = 1 where idArticulo = @idArt";
@@ -64,6 +78,12 @@ namespace DAO
             return (res > 0 ? true : false);
         }
 
+        /**
+         * Modifica la categoría de un nuevo artículo a 'Préstamo'. Método obsoleto, no utilizado actualmente
+         * 
+         * @param idArticulo Identificador numérico del artículo a modificar
+         * @return True en caso de que el artículo se haya modificado correctamente, false de la contrario
+         **/
         private bool modificarCategoriaPrestamo(int idArticulo)
         {
             String qry = "update articulo set idCategoria = (select idCategoria from categoria where nombre = 'Préstamo') where idArticulo = @idArt";
@@ -75,6 +95,12 @@ namespace DAO
             return (res > 0 ? true : false);
         }
 
+        /**
+         * Retorna una lista con todos los préstamos asociados al artículo especificado
+         * 
+         * @param idArticulo Identificador numérico del artículo
+         * @return Lista de préstamos asociados al artículo
+         **/
         public List<TOPrestamo> obtenerPrestamosArticulo(int idArticulo)
         {
             if (conex.State != ConnectionState.Open)
@@ -104,7 +130,12 @@ namespace DAO
             return lista;
         }
 
-        //Retorna true cuando se eliminó correctamente, false cuando no se pudo eliminar
+        /**
+         * Elimina un préstamo de la base de datos
+         * 
+         * @param idPrestamo Identificador del préstamo a eliminar
+         * @return True en caso de que el artículo se haya eliminado correctamente, false de la contrario
+         **/
         public bool eliminarPrestamo(int idPrestamo)
         {
             if (conex.State != ConnectionState.Open)
@@ -125,6 +156,11 @@ namespace DAO
             return (result > 0 ? true : false);
         }
 
+        /**
+         * Retorna una lista con datos del préstamo, y su artículo correspondiente, que actualmente se encuentren bajo préstamo
+         * 
+         * @return Lista de préstamos actualmente en condición de préstamo
+         **/
         public List<TOPrestamo> obtenerArticulosPrestamo()
         {
             if (conex.State != ConnectionState.Open)
@@ -151,6 +187,12 @@ namespace DAO
             return lista;
         }
 
+        /**
+         * Retorna una lista con los artículos que actualmente se encuentren disponibles para prestar (que no estén
+         * bajo préstamo)
+         * 
+         * @return Lista con los artículos disponibles para prestar
+         **/
         public List<TOArticulo> consultarArticulosDisponibles()
         {
             if (conex.State != ConnectionState.Open)
@@ -188,7 +230,13 @@ namespace DAO
             return lista;
         }
 
-        //Desactiva el préstamo (estado = 0), no lo elimina de la BD. Ademas, establece el estado del artículo como 0
+        /**
+         * Desactiva el préstamo de la base de datos (no lo elimina). Además, establece el estado de 'prestado' del
+         * artículo como 0
+         * 
+         * @param idPrestamo Identificador numérico del préstamo
+         * @return True si el préstamo fue desactivado correctamente, false de lo contrario
+         **/
         public bool terminarPrestamo(int idPrestamo)
         {
             if (conex.State != ConnectionState.Open)
@@ -215,7 +263,13 @@ namespace DAO
             return (result > 0 ? true : false);
         }
 
-        //Retorna el id del artículo en préstamo. Para ver los datos del artículo desde VerPrestamo
+        /**
+         * Retorna el identificador numérico del artículo asociado al préstamo especificado. No necesariamente el artículo
+         * debe encontrarse en condición de préstamo
+         * 
+         * @param idPrestamo Identificador numérico del préstamo
+         * @return Identificador del artículo
+         **/
         public Int32 articuloEnPrestamo(int idPrestamo)
         {
             if (conex.State != ConnectionState.Open)
@@ -235,6 +289,12 @@ namespace DAO
             return idArticuloPrestamo;
         }
 
+        /**
+         * Retorna los datos del préstamo según su identificador
+         * 
+         * @param idPrestamo Identificador numérico del préstamo
+         * @return Demás datos del préstamo
+         **/
         public TOPrestamo obtenerPrestamo(int idPrestamo)
         {
             if (conex.State != ConnectionState.Open)
@@ -269,6 +329,12 @@ namespace DAO
             return prestamo;
         }
 
+        /**
+         * Retorna una lista con el histórico de préstamos asociados con el artículo especificado
+         * 
+         * @param idArticulo Identificador numérico del artículo
+         * @return Lista con los préstamos asociados al artículo
+         **/
         public List<TOPrestamo> prestamosArticulo(int idArticulo)
         {
             if (conex.State != ConnectionState.Open)
@@ -305,6 +371,12 @@ namespace DAO
             return lista;
         }
 
+        /**
+         * Indica si existe un préstamo en la base de datos bajo el número de contrato especificado
+         * 
+         * @param contrato Número de contrato del préstamo
+         * @return True si existe el préstamo, false de lo contrario
+         **/
         public bool existePrestamo(string contrato)
         {
             if (conex.State != ConnectionState.Open)
@@ -324,6 +396,12 @@ namespace DAO
             return (result > 0 ? true : false);
         }
 
+        /**
+         * Retorna los datos del préstamo según su número de contrato
+         * 
+         * @param contrato Número de contrato del préstamo
+         * @return Demás datos del préstamo
+         **/
         public TOPrestamo obtenerPrestamoContrato(string contrato)
         {
             if (conex.State != ConnectionState.Open)

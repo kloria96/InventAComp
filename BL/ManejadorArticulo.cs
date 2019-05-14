@@ -10,6 +10,7 @@ using System.Data;
 namespace BL
 {
     //Clase intermedia entre la Interfaz Gráfica (UI) y el acceso a base de datos (DAO) para gestionar los artículos del sistema
+    //Los métodos de esta clase hacen referencia a aquellos en DAOArticulo, y tienen la misma funcionalidad
     public class ManejadorArticulo
     {
 
@@ -17,7 +18,7 @@ namespace BL
          * Inserta un nuevo artículo en la base de datos
          * 
          * @param articulo Artículo a ingresar
-         * @return True en caso de que el artículo se haya ingresado correctamente, falso de la contrario
+         * @return True en caso de que el artículo se haya ingresado correctamente, false de la contrario
          **/
         public bool agregarArticulo(BLArticulo articulo)
         {

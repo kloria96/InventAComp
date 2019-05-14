@@ -19,6 +19,12 @@ namespace DAO
         // connectionStringM (Melany)
         // connectionString (Asoc. Acompañame)
 
+
+        /**
+         * Retorna la lista de categorías existentes en la base de datos, ordenadas por su nombre
+         * 
+         * @return Lista de categorías en base de datos
+         **/
         public List<TOCategoria> consultarCategorias()
         {
             if (conex.State != ConnectionState.Open)
@@ -39,6 +45,12 @@ namespace DAO
             return listaCategorias;
         }
 
+        /**
+         * Verifica si la categoría especificada existe en la base de datos
+         * 
+         * @param nombre Nombre de la categoría a verificar
+         * @return True en caso de que la categoría no exista, false de lo contrario
+         **/
         public bool verificarCategoria(string nombre)
         {
             if (conex.State != ConnectionState.Open)
@@ -56,6 +68,11 @@ namespace DAO
             return (result == 0 ? true : false);
         }
 
+        /**
+         * Inserta una nueva categoría en la base de datos
+         * 
+         * @param nombre Nombre de la nueva categoría a ingresar
+         **/
         public void insertarCategoria(String nombre)
         {
             if (conex.State != ConnectionState.Open)
@@ -72,6 +89,11 @@ namespace DAO
             }
         }
 
+        /**
+         * Retorna una tabla con el nombre de todas las categorías en la base de datos, ordenadas según su identificador
+         * 
+         * @return Tabla que contiene todas las categorías en la base de datos
+         **/
         public DataTable consultarCategoriasOrdenId()
         {
             if (conex.State != ConnectionState.Open)
@@ -91,6 +113,11 @@ namespace DAO
             return tableDa;
         }
 
+        /**
+         * Retorna el nombre de la categoría, si existe, según el identificador de la categoría especificado
+         * 
+         * @return Nombre de la categoría
+         **/
         public string obtenerNombreCategoria(int idCategoria)
         {
             if (conex.State != ConnectionState.Open)
@@ -110,6 +137,12 @@ namespace DAO
             return result;
         }
 
+        /**
+         * Retorna la lista de categorías del sistema, a excepción de la categoría especificada
+         * 
+         * @param categoriaArticulo Nombre de la categoría a excluir de la lista
+         * @return Lista de categorías del sistema
+         **/
         public List<TOCategoria> consultarCategorias(string categoriaArticulo)
         {
             if (conex.State != ConnectionState.Open)
@@ -138,6 +171,12 @@ namespace DAO
             return listaCategorias;
         }
 
+        /**
+         * Elimina una categoría de la base de datos
+         * 
+         * @param idCategoria Identificador numérico de la categoría a eliminar
+         * @return True si la categoría fue eliminada correctamente, false de la contrario
+         **/
         public bool eliminarCategoria(int idCategoria)
         {
             if (conex.State != ConnectionState.Open)
@@ -157,6 +196,13 @@ namespace DAO
             return (result > 0 ? true : false);
         }
 
+        /**
+         * Modifica el nombre de una categoría existente
+         * 
+         * @param idCategoria Identificador de la categoría a modificar
+         * @param nombre Nuevo nombre de la categoría
+         * @return True en caso de que la categoría haya sido modificada correctamente, false de la contrario
+         **/
         public bool actualizarCategoria(int idCategoria, string nombre)
         {
             if (conex.State != ConnectionState.Open)
@@ -177,6 +223,12 @@ namespace DAO
             return (result > 0 ? true : false);
         }
 
+        /**
+         * Retorna el identificador de la categoría especificada
+         * 
+         * @param nombre Nombre de la categoría
+         * @return Identificador de la categoría
+         **/
         public int obtenerIDCategoria(string nombre)
         {
             if (conex.State != ConnectionState.Open)

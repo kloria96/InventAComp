@@ -9,15 +9,29 @@ using System.Data;
 
 namespace BL
 {
+    //Clase intermedia entre la Interfaz Gráfica (UI) y el acceso a base de datos (DAO) para gestionar los préstamos del sistema
+    //Los métodos de esta clase hacen referencia a aquellos en DAOPrestamo, y tienen la misma funcionalidad
     public class ManejadorPrestamo
     {
         private DAOPrestamo daoPrestamo = new DAOPrestamo();
 
+        /**
+         * Ingresa un nuevo préstamo en la base de datos
+         * 
+         * @param nuevoPrest Préstamo a ingresar. Objeto Préstamo que contiene los datos del préstamo a ingresar
+         * @return True en caso de que el préstamo se haya ingresado correctamente, false de la contrario
+         **/
         public bool agregarPrestamo(BLPrestamo nuevoPrest)
         {
             return daoPrestamo.agregarPrestamo(convert(nuevoPrest));
         }
 
+        /**
+         * Retorna una lista con todos los préstamos asociados al artículo especificado
+         * 
+         * @param idArticulo Identificador numérico del artículo
+         * @return Lista de préstamos asociados al artículo
+         **/
         public List<BLPrestamo> obtenerPrestamosArticulo(int idArticulo)
         {
             List<BLPrestamo> lista = new List<BLPrestamo>();
@@ -28,11 +42,22 @@ namespace BL
             return lista;
         }
 
+        /**
+         * Elimina un préstamo de la base de datos
+         * 
+         * @param idPrestamo Identificador del préstamo a eliminar
+         * @return True en caso de que el artículo se haya eliminado correctamente, false de la contrario
+         **/
         public bool eliminarPrestamo(int idPrestamo)
         {
             return daoPrestamo.eliminarPrestamo(idPrestamo);
         }
 
+        /**
+         * Retorna una lista con datos del préstamo, y su artículo correspondiente, que actualmente se encuentren bajo préstamo
+         * 
+         * @return Lista de préstamos actualmente en condición de préstamo
+         **/
         public List<BLPrestamo> obtenerArticulosPrestamo()
         {
             List<BLPrestamo> lista = new List<BLPrestamo>();
@@ -43,6 +68,12 @@ namespace BL
             return lista;
         }
 
+        /**
+         * Retorna una lista con los artículos que actualmente se encuentren disponibles para prestar (que no estén
+         * bajo préstamo)
+         * 
+         * @return Lista con los artículos disponibles para prestar
+         **/
         public List<BLArticulo> consultarArticulosDisponibles()
         {
             List<BLArticulo> lista = new List<BLArticulo>();
@@ -53,6 +84,12 @@ namespace BL
             return lista;
         }
 
+        /**
+         * Retorna los datos del préstamo según su identificador
+         * 
+         * @param idPrestamo Identificador numérico del préstamo
+         * @return Demás datos del préstamo
+         **/
         public BLPrestamo obtenerPrestamo(int idPrestamo)
         {
             TOPrestamo toPrest = daoPrestamo.obtenerPrestamo(idPrestamo);
@@ -66,18 +103,36 @@ namespace BL
             return prest;
         }
 
-        //Desactiva el préstamo (estado = 0), no lo elimina de la BD. Ademas, establece el estado del artículo como 0
+        /**
+         * Desactiva el préstamo de la base de datos (no lo elimina). Además, establece el estado de 'prestado' del
+         * artículo como 0
+         * 
+         * @param idPrestamo Identificador numérico del préstamo
+         * @return True si el préstamo fue desactivado correctamente, false de lo contrario
+         **/
         public bool terminarPrestamo(int idPrestamo)
         {
             return daoPrestamo.terminarPrestamo(idPrestamo);
         }
 
-        //Retorna el id del artículo en préstamo. Para ver los datos del artículo desde VerPrestamo
+        /**
+         * Retorna el identificador numérico del artículo asociado al préstamo especificado. No necesariamente el artículo
+         * debe encontrarse en condición de préstamo
+         * 
+         * @param idPrestamo Identificador numérico del préstamo
+         * @return Identificador del artículo
+         **/
         public Int32 articuloEnPrestamo(int idPrestamo)
         {
             return daoPrestamo.articuloEnPrestamo(idPrestamo);
         }
 
+        /**
+         * Retorna una lista con el histórico de préstamos asociados con el artículo especificado
+         * 
+         * @param idArticulo Identificador numérico del artículo
+         * @return Lista con los préstamos asociados al artículo
+         **/
         public List<BLPrestamo> prestamosArticulo(int idArticulo)
         {
             DAOPrestamo daoPrest = new DAOPrestamo();
@@ -96,12 +151,24 @@ namespace BL
             return listaBL;
         }
 
+        /**
+         * Indica si existe un préstamo en la base de datos bajo el número de contrato especificado
+         * 
+         * @param contrato Número de contrato del préstamo
+         * @return True si existe el préstamo, false de lo contrario
+         **/
         public bool existePrestamo(string contrato)
         {
             DAOPrestamo daoPrest = new DAOPrestamo();
             return daoPrest.existePrestamo(contrato);
         }
 
+        /**
+         * Retorna los datos del préstamo según su número de contrato
+         * 
+         * @param contrato Número de contrato del préstamo
+         * @return Demás datos del préstamo
+         **/
         public BLPrestamo obtenerPrestamoContrato(string contrato)
         {
             TOPrestamo toPrest = daoPrestamo.obtenerPrestamoContrato(contrato);
@@ -115,6 +182,13 @@ namespace BL
         }
 
 
+        /**
+         * Convierte un préstamo de la capa de Lógica de Negocios (BL) a la capa Objetos de Transferencia (TO). Método usado
+         * localmente
+         * 
+         * @param prestamo Préstamo de Lógica de Negocios a convertir
+         * @return Préstamo de Objetos de Transferencia convertido
+         **/
         private TOPrestamo convert(BLPrestamo prestamo)
         {
             return new TOPrestamo(prestamo.numeroContrato, prestamo.paciente, prestamo.responsable, prestamo.fechaPrestamo, prestamo.fechaEntrega, prestamo.idArticulo);

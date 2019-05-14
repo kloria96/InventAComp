@@ -19,6 +19,14 @@ namespace DAO
         // connectionStringM (Melany)
         // connectionString (Asoc. Acompañame)
 
+
+        /**
+         * Retorna los datos de la cuenta asociada al nombre de usuario y la contraseña
+         * 
+         * @param id Nombre de usuario de la cuenta
+         * @param contra Contraseña asociada al nombre de usuario
+         * @return Demás datos de la cuenta
+         **/
         public TOCuenta buscarCuenta(string id, string contra)
         {
             TOCuenta cuenta = new TOCuenta();
@@ -52,7 +60,11 @@ namespace DAO
 
         }
 
-
+        /**
+         * Ingresa una nueva cuenta de usuario al sistema
+         * 
+         * @param cuenta Cuenta a ingresar. Objeto que contiene los datos de la cuenta
+         **/
         public void insertarCuenta(TOCuenta cuenta)
         {
             //String query = "begin tran if exists(select * from cuenta with (updlock, serializable) where idUsuario = @id) " +
@@ -79,6 +91,11 @@ namespace DAO
 
         }
 
+        /**
+         * Retorna una lista con todas las cuentas existentes en el sistema
+         * 
+         * @return Lista de cuentas en el sistema
+         **/
         public List<TOCuenta> listaCuentas()
         {
             if (conex.State != ConnectionState.Open)
@@ -114,6 +131,13 @@ namespace DAO
             return lista;
         }
 
+        /**
+         * Verifica si existe una cuenta de usuario bajo el identificador (nombre de usuario) especificado. Retorna los datos
+         * de la cuenta
+         * 
+         * @param identificador Nombre de usuario
+         * @return Datos de la cuenta asociada al nombre de usuario
+         **/
         public TOCuenta existeId(string identificador)
         {
             TOCuenta cuenta = new TOCuenta();
@@ -145,6 +169,12 @@ namespace DAO
             return cuenta;
         }
 
+        /**
+         * Modifica los datos de una cuenta del sistema
+         * 
+         * @param cuenta Cuenta a modificar y datos de la nueva cuenta
+         * @return True en caso de que la cuenta se haya modificado correctamente, false de lo contrario
+         **/
         public bool actualizarCuenta(TOCuenta cuenta)
         {
             if (conex.State != ConnectionState.Open)
