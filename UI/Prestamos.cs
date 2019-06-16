@@ -143,5 +143,6 @@ namespace UI
             }
             reporte.ShowDialog();
         }
+
     }
 }

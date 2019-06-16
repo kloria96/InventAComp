@@ -71,7 +71,7 @@ namespace UI
             if (e.ColumnIndex == 5 && e.RowIndex != -1)
             {
                 VerCuenta.idCuenta = gridEmpleados.Rows[e.RowIndex].Cells[0].Value + "";
-                new VerCuenta().Show();
+                new VerCuenta().ShowDialog();
             }
 
             if (e.ColumnIndex == 6 && e.RowIndex != -1)
@@ -117,9 +117,5 @@ namespace UI
             art.ShowDialog();
         }
 
-        private void Administrador_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

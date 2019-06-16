@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevaCuenta));
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
@@ -43,6 +44,7 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.msjIdentificador = new System.Windows.Forms.ToolTip(this.components);
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,6 +110,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(120, 23);
             this.txtId.TabIndex = 18;
+            this.msjIdentificador.SetToolTip(this.txtId, "Este campo no podrá modificarse más adelante");
             // 
             // label5
             // 
@@ -259,5 +262,6 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.ToolTip msjIdentificador;
     }
 }

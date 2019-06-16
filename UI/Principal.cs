@@ -216,7 +216,7 @@ namespace UI
         {
             ConfigCuenta cat = new ConfigCuenta();
             cat.MdiParent = this.MdiParent;
-            cat.Show();
+            cat.ShowDialog();
         }
     }
 }
