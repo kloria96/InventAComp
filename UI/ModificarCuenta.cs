@@ -33,6 +33,12 @@ namespace UI
             txtNombre.Text = cuenta.nombreEmpleado;
             comboBoxRol.SelectedItem = cuenta.privilegio;
             checkEstado.Checked = cuenta.estado;
+
+            if (cuenta.privilegio == "Admin")
+            {
+                comboBoxRol.Enabled = false;
+                checkEstado.Enabled = false;
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -67,9 +73,5 @@ namespace UI
             this.Dispose();
         }
 
-        private void ModificarCuenta_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

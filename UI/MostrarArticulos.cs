@@ -105,8 +105,27 @@ namespace UI
                 DataGridViewButtonColumn but2 = new DataGridViewButtonColumn();
                 dgvArticulos.Columns.Add(but2);
 
-                dgvArticulos.DataSource = listaArticulos;
+                dgvArticulos.DataSource = convertirListaCategoria(listaArticulos);
             }
+        }
+
+        private List<BLArticulo> convertirListaCategoria(List<BLArticulo> lista)
+        {
+            string rol = Manager.getManager().rol;
+            if (rol == "Secretaria" ||  opcion == "2")
+            {
+                return lista;
+            }
+
+            List<BLArticulo> nuevaLista = new List<BLArticulo>();
+            foreach (BLArticulo art in lista)
+            {
+                if (art.nombCategoria == rol)
+                {
+                    nuevaLista.Add(art);
+                }
+            }
+            return nuevaLista;
         }
 
         private void dgvArticulos_CellClick(object sender, DataGridViewCellEventArgs e)

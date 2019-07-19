@@ -22,14 +22,23 @@ namespace UI
 
         private void llenarComboBox()
         {
-            ManejadorCategoria manejCat = new ManejadorCategoria();
-            DataTable tabla = manejCat.consultarCategoriasOrdenId();
-
-            string comboBoxNombre;
-            foreach (DataRow fila in tabla.Rows)
+            string rol = Manager.getManager().rol;
+            if (rol == "Secretaria")
             {
-                comboBoxNombre = fila["nombre"].ToString();
-                comboCategoria.Items.Add(comboBoxNombre);
+                ManejadorCategoria manejCat = new ManejadorCategoria();
+                DataTable tabla = manejCat.consultarCategoriasOrdenId();
+
+                string comboBoxNombre;
+                foreach (DataRow fila in tabla.Rows)
+                {
+                    comboBoxNombre = fila["nombre"].ToString();
+                    comboCategoria.Items.Add(comboBoxNombre);
+                }
+            } else
+            {
+                comboCategoria.Items.Add(rol);
+                comboCategoria.SelectedIndex = 0;
+                comboCategoria.Enabled = false;
             }
         }
 
