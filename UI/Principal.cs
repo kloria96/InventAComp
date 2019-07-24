@@ -147,6 +147,7 @@ namespace UI
                     if (cbCategorias.SelectedItem != null)
                     {
                         value = cbCategorias.SelectedItem.ToString();
+                        MostrarArticulos.opcion2 = true;
                         MostrarArticulos mostrarAr = new MostrarArticulos();
                         mostrarAr.MdiParent = this.MdiParent;
                         mostrarAr.Show();

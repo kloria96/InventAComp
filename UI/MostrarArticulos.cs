@@ -17,6 +17,7 @@ namespace UI
         private string fechaFin = "";
         private string opcion = ""; //1: Nombre, 2: Departamento, 3: Fecha de ingreso
         public static string idArt = "";
+        public static bool opcion2 = false;
         private ManejadorArticulo manejArt = new ManejadorArticulo();
 
         public MostrarArticulos()
@@ -27,6 +28,7 @@ namespace UI
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
+            MostrarArticulos.opcion2 = false;
             this.Dispose();
         }
 
@@ -99,11 +101,14 @@ namespace UI
                 DataGridViewButtonColumn button = new DataGridViewButtonColumn();
                 dgvArticulos.Columns.Add(button);
 
-                DataGridViewButtonColumn but = new DataGridViewButtonColumn();
-                dgvArticulos.Columns.Add(but);
+                if (!opcion2)
+                {
+                    DataGridViewButtonColumn but = new DataGridViewButtonColumn();
+                    dgvArticulos.Columns.Add(but);
 
-                DataGridViewButtonColumn but2 = new DataGridViewButtonColumn();
-                dgvArticulos.Columns.Add(but2);
+                    DataGridViewButtonColumn but2 = new DataGridViewButtonColumn();
+                    dgvArticulos.Columns.Add(but2);
+                }
 
                 dgvArticulos.DataSource = convertirListaCategoria(listaArticulos);
             }
@@ -156,8 +161,13 @@ namespace UI
         private void dgvArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             dgvArticulos.Rows[e.RowIndex].Cells[8].Value = "Ver";
-            dgvArticulos.Rows[e.RowIndex].Cells[9].Value = "Modificar";
-            dgvArticulos.Rows[e.RowIndex].Cells[10].Value = "Eliminar";
+
+            if (!opcion2)
+            {
+                dgvArticulos.Rows[e.RowIndex].Cells[9].Value = "Modificar";
+                dgvArticulos.Rows[e.RowIndex].Cells[10].Value = "Eliminar";
+            }
+
         }
 
         private void eliminarFila(int idArticulo)
