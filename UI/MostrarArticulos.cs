@@ -101,7 +101,7 @@ namespace UI
                 DataGridViewButtonColumn button = new DataGridViewButtonColumn();
                 dgvArticulos.Columns.Add(button);
 
-                if (!opcion2)
+                if (!opcion2 || Manager.getManager().rol == "Secretaria")
                 {
                     DataGridViewButtonColumn but = new DataGridViewButtonColumn();
                     dgvArticulos.Columns.Add(but);
@@ -162,7 +162,7 @@ namespace UI
         {
             dgvArticulos.Rows[e.RowIndex].Cells[8].Value = "Ver";
 
-            if (!opcion2)
+            if (!opcion2 || Manager.getManager().rol == "Secretaria")
             {
                 dgvArticulos.Rows[e.RowIndex].Cells[9].Value = "Modificar";
                 dgvArticulos.Rows[e.RowIndex].Cells[10].Value = "Eliminar";
