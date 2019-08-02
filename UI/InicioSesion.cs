@@ -13,16 +13,29 @@ namespace UI
 {
     public partial class InicioSesion : Form
     {
+        /// <summary>
+        /// Método para inicializar los componentes de la página actual
+        /// </summary>
         public InicioSesion()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Evento del botón "Salir" para salir de la aplicación
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Evento del botón "Ingresar" en la que se verifican las credenciales y se inicia sesión en la aplicación
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text.Trim();

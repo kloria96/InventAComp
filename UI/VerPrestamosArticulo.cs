@@ -16,6 +16,9 @@ namespace UI
         public static int idArticulo;
         public static bool activo = false;
 
+        /// <summary>
+        /// Método para inicializar los componentes de la página actual
+        /// </summary>
         public VerPrestamosArticulo()
         {
             InitializeComponent();
@@ -23,6 +26,11 @@ namespace UI
             activo = true;
         }
 
+        /// <summary>
+        /// Evento para buscar un artículo de acuerdo a su placa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             ManejadorArticulo manejArt = new ManejadorArticulo();
@@ -45,6 +53,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para buscar un artículo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBuscarArticulo_Click(object sender, EventArgs e)
         {
             BusquedaArticulo busqueda = new BusquedaArticulo();
@@ -52,6 +65,9 @@ namespace UI
             busqueda.ShowDialog();
         }
 
+        /// <summary>
+        /// Método para completar los datos del formulario de acuerdo a la búsqueda realizada
+        /// </summary>
         public void modificarCampos()
         {
             ManejadorArticulo manejArt = new ManejadorArticulo();
@@ -63,6 +79,10 @@ namespace UI
             btnBuscarPrestamos.Enabled = true;
         }
 
+        /// <summary>
+        /// Método para completar el grid con la lista de préstamos de un artículo
+        /// </summary>
+        /// <param name="listaPrestamos">Lista del histórico de préstamos de un artículo</param>
         private void mostrarPrestamos(List<BLPrestamo> listaPrestamos)
         {
             ManejadorPrestamo manej = new ManejadorPrestamo();
@@ -109,6 +129,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para mostrar el histórico de préstamos de un artículo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBuscarPrestamos_Click(object sender, EventArgs e)
         {
             ManejadorPrestamo manejPrest = new ManejadorPrestamo();
@@ -116,16 +141,31 @@ namespace UI
             mostrarPrestamos(listaPrestamos);
         }
 
+        /// <summary>
+        /// Evento para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        /// <summary>
+        /// Evento para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        /// <summary>
+        /// Evento para activar o desactivar el botón de buscar de acuerdo a un campo de texto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtPlaca_TextChanged(object sender, EventArgs e)
         {
             btnBuscar.Enabled = !string.IsNullOrEmpty(txtPlaca.Text);

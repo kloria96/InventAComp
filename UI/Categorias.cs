@@ -17,6 +17,9 @@ namespace UI
         public static string idCat = "";
         private string nombreCat = "";
 
+        /// <summary>
+        /// Muestra las categorías almacenadas en la base de datos, muestra los componentes de la página actual
+        /// </summary>
         public Categorias()
         {
             InitializeComponent();
@@ -24,6 +27,9 @@ namespace UI
             cargarGrid();
         }
 
+        /// <summary>
+        /// Carga el grid con las categorías que se encuentren en la base de datos
+        /// </summary>
         public void cargarGrid()
         {
             ManejadorCategoria manej = new ManejadorCategoria();
@@ -52,6 +58,11 @@ namespace UI
             gridCategorias.DataSource = listaCategorias;
         }
 
+        /// <summary>
+        /// Evento utilizado para almacenar una nueva categoría
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (txtNuevaCategoria.Text != "")
@@ -73,12 +84,22 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para nombrar los botones de las filas del grid "Modificar" y "Eliminar"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridCategorias_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             gridCategorias.Rows[e.RowIndex].Cells[2].Value = "Modificar";
             gridCategorias.Rows[e.RowIndex].Cells[3].Value = "Eliminar";
         }
 
+        /// <summary>
+        /// Método utilizado para modificar o eliminar una categoría seleccionada del grid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 2 && e.RowIndex != -1)
@@ -101,6 +122,10 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Método llamado para eliminar una categoría que se seleccionó del grid
+        /// </summary>
+        /// <param name="idCategoria">Identificador de la categoría que se desea eliminar</param>
         private void eliminarFila(int idCategoria)
         {
             ManejadorCategoria manejCat = new ManejadorCategoria();
@@ -119,6 +144,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Método utilizado para actualizar una categoría
+        /// </summary>
+        /// <param name="idCat">Identificador de la categoría que se actualiza</param>
+        /// <returns>Retorna True si se realizó la actualización de la categoría correctamente</returns>
         public bool actualizarFila(int idCat)
         {
             ModificarCategoria testDialog = new ModificarCategoria();
@@ -139,6 +169,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();

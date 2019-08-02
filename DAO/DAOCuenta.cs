@@ -9,6 +9,9 @@ using System.Data;
 
 namespace DAO
 {
+    /// <summary>
+    /// Clase que se comunica con la base de datos para realizar las diferentes transacciones sobre las cuentas del sistema
+    /// </summary>
     public class DAOCuenta
     {
         //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
@@ -19,14 +22,12 @@ namespace DAO
         // connectionStringM (Melany)
         // connectionString (Asoc. Acompañame)
 
-
-        /**
-         * Retorna los datos de la cuenta asociada al nombre de usuario y la contraseña
-         * 
-         * @param id Nombre de usuario de la cuenta
-         * @param contra Contraseña asociada al nombre de usuario
-         * @return Demás datos de la cuenta
-         **/
+        /// <summary>
+        /// Retorna los datos de la cuenta asociada al nombre de usuario y la contraseña
+        /// </summary>
+        /// <param name="id">Nombre de usuario de la cuenta</param>
+        /// <param name="contra">Contraseña asociada al nombre de usuario</param>
+        /// <returns>Demás datos de la cuenta</returns>
         public TOCuenta buscarCuenta(string id, string contra)
         {
             TOCuenta cuenta = new TOCuenta();
@@ -60,11 +61,10 @@ namespace DAO
 
         }
 
-        /**
-         * Ingresa una nueva cuenta de usuario al sistema
-         * 
-         * @param cuenta Cuenta a ingresar. Objeto que contiene los datos de la cuenta
-         **/
+        /// <summary>
+        /// Ingresa una nueva cuenta de usuario al sistema
+        /// </summary>
+        /// <param name="cuenta">Cuenta a ingresar. Objeto que contiene los datos de la cuenta</param>
         public void insertarCuenta(TOCuenta cuenta)
         {
             //String query = "begin tran if exists(select * from cuenta with (updlock, serializable) where idUsuario = @id) " +
@@ -90,12 +90,11 @@ namespace DAO
             }
 
         }
-
-        /**
-         * Retorna una lista con todas las cuentas existentes en el sistema
-         * 
-         * @return Lista de cuentas en el sistema
-         **/
+        
+        /// <summary>
+        /// Retorna una lista con todas las cuentas existentes en el sistema
+        /// </summary>
+        /// <returns>Lista de cuentas en el sistema</returns>
         public List<TOCuenta> listaCuentas()
         {
             if (conex.State != ConnectionState.Open)
@@ -131,13 +130,12 @@ namespace DAO
             return lista;
         }
 
-        /**
-         * Verifica si existe una cuenta de usuario bajo el identificador (nombre de usuario) especificado. Retorna los datos
-         * de la cuenta
-         * 
-         * @param identificador Nombre de usuario
-         * @return Datos de la cuenta asociada al nombre de usuario
-         **/
+        /// <summary>
+        /// Verifica si existe una cuenta de usuario bajo el identificador (nombre de usuario) especificado. Retorna los datos
+        /// de la cuenta
+        /// </summary>
+        /// <param name="identificador">Nombre de usuario</param>
+        /// <returns>Datos de la cuenta asociada al nombre de usuario</returns>
         public TOCuenta existeId(string identificador)
         {
             TOCuenta cuenta = new TOCuenta();
@@ -169,12 +167,11 @@ namespace DAO
             return cuenta;
         }
 
-        /**
-         * Modifica los datos de una cuenta del sistema
-         * 
-         * @param cuenta Cuenta a modificar y datos de la nueva cuenta
-         * @return True en caso de que la cuenta se haya modificado correctamente, false de lo contrario
-         **/
+        /// <summary>
+        /// Modifica los datos de una cuenta del sistema
+        /// </summary>
+        /// <param name="cuenta">Cuenta a modificar y datos de la nueva cuenta</param>
+        /// <returns>True en caso de que la cuenta se haya modificado correctamente, false de lo contrario</returns>
         public bool actualizarCuenta(TOCuenta cuenta)
         {
             if (conex.State != ConnectionState.Open)
@@ -198,5 +195,4 @@ namespace DAO
             return (result > 0 ? true : false);
         }
     }
-
 }

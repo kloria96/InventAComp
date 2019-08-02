@@ -15,16 +15,29 @@ namespace UI
     {
         public static string idPrestamo = "";
 
+        /// <summary>
+        /// Método para inicializar los componentes de la página actual
+        /// </summary>
         public VerPrestamo()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Evento para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        /// <summary>
+        /// Evento para completar los datos del formulario según los datos del préstamo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void VerPrestamo_Load(object sender, EventArgs e)
         {
             ManejadorPrestamo manejPrest = new ManejadorPrestamo();
@@ -36,6 +49,11 @@ namespace UI
             txtFechaEntrega.Text = prestamo.fechaEntrega.ToString("dd/MM/yyyy");
         }
 
+        /// <summary>
+        /// Evento que abre la ventana de "Ver Artículo" para ver detalladamente los datos del artículo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnVerArticulo_Click(object sender, EventArgs e)
         {
             ManejadorPrestamo manejPrest = new ManejadorPrestamo();

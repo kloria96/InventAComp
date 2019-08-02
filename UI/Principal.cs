@@ -17,6 +17,9 @@ namespace UI
         public static string fechaFin = "";
         public static string opcion = ""; //1: Por nombre, 2: Por departamento, 3: Por fecha (inicio/fin)
 
+        /// <summary>
+        /// Métood para inicializar los componentes de la página actual
+        /// </summary>
         public Principal()
         {
             InitializeComponent();
@@ -24,6 +27,9 @@ namespace UI
             cbFiltros.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Método para revisar el rol del usuario y mostrar datos dependiendo de ello
+        /// </summary>
         public void revisarLogin()
         {
             string privilegio = Manager.getManager().rol;
@@ -34,6 +40,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para ir a la página de Artículo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnArticulo_Click(object sender, EventArgs e)
         {
             Articulos art = new Articulos();
@@ -41,6 +52,11 @@ namespace UI
             art.Show();
         }
 
+        /// <summary>
+        /// Evento para ir a la página de Categoría
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCategoria_Click(object sender, EventArgs e)
         {
             Categorias cat = new Categorias();
@@ -48,6 +64,11 @@ namespace UI
             cat.Show();
         }
 
+        /// <summary>
+        /// Evento para mostrar componentes diferentes dependiendo del filtro elegido
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbFiltros_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbFiltros.SelectedItem.ToString() == "")
@@ -110,6 +131,9 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para cargar el nombre de los departamentos almacenados en la base de datos
+        /// </summary>
         private void cargarDepartamentos()
         {
             ManejadorCategoria manejCat = new ManejadorCategoria();
@@ -120,6 +144,11 @@ namespace UI
             
         }
 
+        /// <summary>
+        /// Evento para guardar la categoría seleccionada
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbCategorias_SelectedIndexChanged(object sender, EventArgs e)
         {
             value = cbCategorias.SelectedItem.ToString();
@@ -167,11 +196,21 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para mostrar los préstamos de equipo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPrestamo_Click(object sender, EventArgs e)
         {
             new PrestamoEquipo().Show();
         }
 
+        /// <summary>
+        /// Evento para salir de la aplicación
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
             //Cerrar sesión
@@ -182,6 +221,11 @@ namespace UI
             new InicioSesion().Show();
         }
 
+        /// <summary>
+        /// Evento para abrir diferentes ventanas dependiendo de la opción elegida 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbPrestamos_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbPrestamos.SelectedItem.ToString() == "Ingresar Préstamo")
@@ -206,6 +250,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para mostrar la ventana para la creación de un nuevo artículo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
             NuevoArticulo art = new NuevoArticulo();
@@ -213,6 +262,11 @@ namespace UI
             art.ShowDialog();
         }
 
+        /// <summary>
+        /// Evento para mostrar la configuración del cuenta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             ConfigCuenta cat = new ConfigCuenta();

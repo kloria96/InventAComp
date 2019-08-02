@@ -13,17 +13,28 @@ namespace UI
 {
     public partial class NuevaCuenta : Form
     {
+        /// <summary>
+        /// Método para inicializar los componentes y asignar los datos a la página actual
+        /// </summary>
         public NuevaCuenta()
         {
             InitializeComponent();
             llenarComboBox();
         }
 
+        /// <summary>
+        /// Evento del botón "Atrás" para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        /// <summary>
+        /// Método para llenar el comboBox con los roles que existen
+        /// </summary>
         private void llenarComboBox()
         {
             comboBoxRol.Items.Add("Admin");
@@ -33,6 +44,11 @@ namespace UI
             comboBoxRol.Items.Add("Nutrición");
         }
 
+        /// <summary>
+        /// Evento del botón "Guardar" para la creación de una nueva cuenta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (comboBoxRol.SelectedItem != null)

@@ -15,17 +15,31 @@ namespace UI
     {
         public static int idPrestamo;
 
+        /// <summary>
+        /// Método para inicializar los componentes de la página actula
+        /// </summary>
         public VerContribucionesPrestamo()
         {
             InitializeComponent();
             gridContribuciones.AutoGenerateColumns = false;
         }
 
+        /// <summary>
+        /// Evento para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        /// <summary>
+        /// Evento para buscar un préstamo de acuerdo a su número de contrato, llenando varios campos en el formulario con
+        /// los datos del préstamo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             ManejadorPrestamo manejPrest = new ManejadorPrestamo();
@@ -50,6 +64,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para buscar las contribuciones de un préstamo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBuscarContribuciones_Click(object sender, EventArgs e)
         {
             ManejadorContribucion manejCont = new ManejadorContribucion();
@@ -57,11 +76,20 @@ namespace UI
             mostrarContribuciones(listaContribuciones);
         }
 
+        /// <summary>
+        /// Evento para asignar activar o desactivar el botón de buscar de acuerdo al resultado de un campo de texto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtContrato_TextChanged(object sender, EventArgs e)
         {
             btnBuscar.Enabled = !string.IsNullOrEmpty(txtContrato.Text);
         }
 
+        /// <summary>
+        /// Método para mostrar en el grid las contribuciones del préstamo
+        /// </summary>
+        /// <param name="listaContribuciones">Lista de las contribuciones del préstamo</param>
         private void mostrarContribuciones(List<BLContribucion> listaContribuciones)
         {
             ManejadorContribucion manejCont = new ManejadorContribucion();
@@ -95,6 +123,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();

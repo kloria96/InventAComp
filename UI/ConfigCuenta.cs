@@ -16,12 +16,19 @@ namespace UI
         //public static string contrasenna = "";
         //public static string idCuenta = "";
 
+        /// <summary>
+        /// Método para mostrar los componentes de la página, así como llenar el formulario con los datos de la cuenta
+        /// correspondiente
+        /// </summary>
         public ConfigCuenta()
         {
             InitializeComponent();
             llenar();
         }
 
+        /// <summary>
+        /// Completar el formulario con los datos de la cuenta actual
+        /// </summary>
         private void llenar()
         {
             ManejadorCuenta manejCuenta = new ManejadorCuenta();
@@ -33,6 +40,11 @@ namespace UI
             txtRol.Text = cuenta.privilegio;
         }
 
+        /// <summary>
+        /// Evento del botón "Guardar" para modificar los datos de la cuenta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ManejadorCuenta manejCuenta = new ManejadorCuenta();
@@ -61,6 +73,11 @@ namespace UI
             //txtContra.Text = cuenta.contrasenna;
         }
 
+        /// <summary>
+        /// Evento del botón "Atrás" para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();

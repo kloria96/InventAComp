@@ -15,6 +15,9 @@ namespace UI
     {
         public static int opcion = 0;
 
+        /// <summary>
+        /// Método para mostrar los componentes de la página actual
+        /// </summary>
         public BusquedaArticulo()
         {
             InitializeComponent();
@@ -65,6 +68,10 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Método para mostrar la lista de los artículos en el grid
+        /// </summary>
+        /// <param name="listaArticulos">Lista de artículos para mostrar en el grid</param>
         private void mostrarArticulos(List<BLArticulo> listaArticulos)
         {
             ManejadorArticulo manejArt = new ManejadorArticulo();
@@ -110,6 +117,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para ver los préstamos activos o para prestar un artículo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 6 && e.RowIndex != -1)
@@ -120,7 +132,8 @@ namespace UI
                     VerPrestamosArticulo formPrestamos = (VerPrestamosArticulo)this.Owner;
                     formPrestamos.modificarCampos();
                     this.Dispose();
-                } else
+                }
+                else
                 {
                     PrestarArticulo.idArticulo = Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value);
                     PrestarArticulo form = (PrestarArticulo)this.Owner;
@@ -130,11 +143,21 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para asignar el nombre "Seleccionar" a las filas del grid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             gridArticulos.Rows[e.RowIndex].Cells[6].Value = "Seleccionar";
         }
 
+        /// <summary>
+        /// Evento que coloca el nombre de los filtros que se pueden realizar, además de guardar la opción que se selecciona
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbFiltros_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbFiltros.SelectedItem.ToString() == "")
@@ -161,6 +184,9 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Método para recargar en la página las diferentes categorías que se encuentran en la base de datos
+        /// </summary>
         private void cargarDepartamentos()
         {
             ManejadorCategoria manejCat = new ManejadorCategoria();
@@ -171,6 +197,11 @@ namespace UI
 
         }
 
+        /// <summary>
+        /// Evento para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -199,14 +230,24 @@ namespace UI
             //                mostrarArticulos(listaBL);
             //            }
             //            break;
-        //}
-}
+            //}
+        }
 
-    private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Evento para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        /// <summary>
+        /// Evento del botón "Buscar Artículo"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             ManejadorArticulo manejArt = new ManejadorArticulo();

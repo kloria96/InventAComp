@@ -16,11 +16,19 @@ namespace UI
     {
         public List<BLPrestamo> listaReporte = new List<BLPrestamo>();
 
+        /// <summary>
+        /// Método para inicializar los componentes de la página actual
+        /// </summary>
         public ReportePrestamos()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Evento para cargar los datos del reporte de préstamo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ReportePrestamos_Load(object sender, EventArgs e)
         {
             reportViewer1.LocalReport.DataSources.Clear();

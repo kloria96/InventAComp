@@ -10,6 +10,9 @@ using MySql.Data.MySqlClient;
 
 namespace DAO
 {
+    /// <summary>
+    /// Clase que se comunica con la base de datos para realizar las diferentes transacciones sobre artículos del sistema
+    /// </summary>
     public class DAOArticulo
     {
         //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
@@ -20,12 +23,10 @@ namespace DAO
         // connectionStringM (Melany)
         // connectionString (Asoc. Acompañame)
 
-
-        /**
-         * Obtiene los datos de todos los artículos en el sistema
-         * 
-         * @return Lista de artículos en la base de datos
-         **/
+        /// <summary>
+        /// Obtiene los datos de todos los artículos en el sistema
+        /// </summary>
+        /// <returns>Lista de artículos en la base de datos</returns>
         public List<TOArticulo> consultar_Articulos()
         {
             if (conex.State != ConnectionState.Open)
@@ -63,12 +64,11 @@ namespace DAO
             return lista;
         }
 
-        /**
-         * Inserta un nuevo artículo en la base de datos
-         * 
-         * @param nuevoArt Artículo a ingresar
-         * @return True en caso de que el artículo se haya ingresado correctamente, false de la contrario
-         **/
+        /// <summary>
+        /// Inserta un nuevo artículo en la base de datos
+        /// </summary>
+        /// <param name="nuevoArt">Artículo a ingresar</param>
+        /// <returns>True en caso de que el artículo se haya ingresado correctamente, false de la contrario</returns>
         public bool agregarArticulo(TOArticulo nuevoArt)
         {
             if (conex.State != ConnectionState.Open)
@@ -96,12 +96,11 @@ namespace DAO
             return (result > 0 ? true : false);
         }
 
-        /**
-         * Recupera todos los artículos en la base de datos cuyo nombre coincida con el texto
-         * 
-         * @param value Texto de filtrado según nombre
-         * @return Lista de artículos en la base de datos que coincidan con el texto
-         **/
+        /// <summary>
+        /// Recupera todos los artículos en la base de datos cuyo nombre coincida con el texto
+        /// </summary>
+        /// <param name="value">Texto de filtrado según nombre</param>
+        /// <returns>Lista de artículos en la base de datos que coincidan con el texto</returns>
         public List<TOArticulo> obtenerArticulosNombre(string value)
         {
             if (conex.State != ConnectionState.Open)
@@ -129,12 +128,11 @@ namespace DAO
             return lista;
         }
 
-        /**
-         * Recupera todos los artículos en la base de datos cuya categoría coincida con la categoría especificada
-         * 
-         * @param value Categoría de filtrado de los artículos
-         * @return Lista de artículos en la base de datos que pertenezcan a la categoría
-         **/
+        /// <summary>
+        /// Recupera todos los artículos en la base de datos cuya categoría coincida con la categoría especificada
+        /// </summary>
+        /// <param name="value">Categoría de filtrado de los artículos</param>
+        /// <returns>Lista de artículos en la base de datos que pertenezcan a la categoría</returns>
         public List<TOArticulo> obtenerArticulosCategoria(string value)
         {
             if (conex.State != ConnectionState.Open)
@@ -162,13 +160,12 @@ namespace DAO
             return lista;
         }
 
-        /**
-         * Recupera todos los artículos en la base de datos cuyo nombre coincida con el texto y que se encuentren disponibles
-         * para prestar
-         * 
-         * @param value Texto de filtrado según nombre
-         * @return Lista de artículos en la base de datos que coincidan con el texto y que no se encuentren bajo préstamo
-         **/
+        /// <summary>
+        /// Recupera todos los artículos en la base de datos cuyo nombre coincida con el texto y que se encuentren disponibles
+        /// para prestar
+        /// </summary>
+        /// <param name="value">Texto de filtrado según nombre</param>
+        /// <returns>Lista de artículos en la base de datos que coincidan con el texto y que no se encuentren bajo préstamo</returns>
         public List<TOArticulo> obtenerArticulosNombrePrestamo(string value)
         {
             if (conex.State != ConnectionState.Open)
@@ -202,13 +199,12 @@ namespace DAO
             return lista;
         }
 
-        /**
-         * Recupera todos los artículos en la base de datos cuya categoría coincida con la categoría especificada y que se
-         * encuentren disponibles para prestar
-         * 
-         * @param value Categoría de filtrado de los artículos
-         * @return Lista de artículos en la base de datos que pertenezcan a la categoría y que no se encuentren bajo préstamo
-         **/
+        /// <summary>
+        /// Recupera todos los artículos en la base de datos cuya categoría coincida con la categoría especificada y que se
+        /// encuentren disponibles para prestar
+        /// </summary>
+        /// <param name="value">Categoría de filtrado de los artículos</param>
+        /// <returns>Lista de artículos en la base de datos que pertenezcan a la categoría y que no se encuentren bajo préstamo</returns>
         public List<TOArticulo> obtenerArticulosCategoriaPrestamo(string value)
         {
             if (conex.State != ConnectionState.Open)
@@ -242,13 +238,12 @@ namespace DAO
             return lista;
         }
 
-        /**
-         * Recupera todos los artículos en la base de datos cuya fecha de ingreso se encuentra entre 'fechaInicio' y 'fechaFin'
-         * 
-         * @param fechaInicio Fecha de inicio de la búsqueda
-         * @param fechaFin Fecha de fin de la búsqueda
-         * @return Lista de artículos en la base de datos que se encuentren bajo las fechas especificadas
-         **/
+        /// <summary>
+        /// Recupera todos los artículos en la base de datos cuya fecha de ingreso se encuentra entre 'fechaInicio' y 'fechaFin'
+        /// </summary>
+        /// <param name="fechaInicio">Fecha de inicio de la búsqueda</param>
+        /// <param name="fechaFin">Fecha de fin de la búsqueda</param>
+        /// <returns>Lista de artículos en la base de datos que se encuentren bajo las fechas especificadas</returns>
         public List<TOArticulo> obtenerArticulosFecha(string fechaInicio, string fechaFin)
         {
             if (conex.State != ConnectionState.Open)
@@ -276,12 +271,11 @@ namespace DAO
             return lista;
         }
 
-        /**
-         * Elimina un artículo de la base de datos
-         * 
-         * @param idArticulo Identificador numérico del artículo a eliminar
-         * @return True en caso de que el artículo se haya eliminado correctamente, false de lo contrario
-         **/
+        /// <summary>
+        /// Elimina un artículo de la base de datos
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo a eliminar</param>
+        /// <returns>True en caso de que el artículo se haya eliminado correctamente, false de lo contrario</returns>
         public bool eliminarArticulo(int idArticulo)
         {
             if (conex.State != ConnectionState.Open)
@@ -301,12 +295,11 @@ namespace DAO
             return (result > 0 ? true : false);
         }
 
-        /**
-         * Recupera los datos del artículo según su identificador
-         * 
-         * @param idArticulo Identificador numérico del artículo
-         * @return Artículo
-         **/
+        /// <summary>
+        /// Recupera los datos del artículo según su identificador
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo</param>
+        /// <returns>Artículo</returns>
         public TOArticulo obtenerArticulo(int idArticulo)
         {
             if (conex.State != ConnectionState.Open)
@@ -335,12 +328,11 @@ namespace DAO
             return toArticulo;
         }
 
-        /**
-         * Recupera los datos de un artículo según su identificador
-         * 
-         * @param idArticulo Identificador numérico del artículo
-         * @return Artículo
-         **/
+        /// <summary>
+        /// Recupera los datos de un artículo según su identificador
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo</param>
+        /// <returns>Artículo</returns>
         public TOArticulo obtenerArticuloBusqueda(int idArticulo)
         {
             if (conex.State != ConnectionState.Open)
@@ -375,12 +367,11 @@ namespace DAO
             return toArticulo;
         }
 
-        /**
-         * Recupera los datos de un artículo y su categoría, según su identificador
-         * 
-         * @param idArticulo Identificador numérico del artículo
-         * @return Artículo
-         **/
+        /// <summary>
+        /// Recupera los datos de un artículo y su categoría, según su identificador
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo</param>
+        /// <returns>Artículo</returns>
         public TOArticulo obtenerArticuloCategoria(int idArticulo)
         {
             if (conex.State != ConnectionState.Open)
@@ -408,19 +399,18 @@ namespace DAO
             return toArticulo;
         }
 
-        /**
-         * Modifica los datos de un artículo según su identificador y los valores ingresados
-         * 
-         * @param idArticulo Identificador numérico del artículo
-         * @param numeroPlaca Número de placa del artículo
-         * @param nombre Nombre del artículo
-         * @param descripcion Descripción del artículo
-         * @param estado Estado de conservación del artículo
-         * @param ubicacion Ubicación del artículo
-         * @param propiedad_jps Indica si este pertenece a la JPS o no
-         * @param categoria Categoría del artículo
-         * @return True si el artículo fue modificado correctamente, false de lo contrario
-         **/
+        /// <summary>
+        /// Modifica los datos de un artículo según su identificador y los valores ingresados
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo</param>
+        /// <param name="numeroPlaca">Número de placa del artículo</param>
+        /// <param name="nombre">Nombre del artículo</param>
+        /// <param name="descripcion">Descripción del artículo</param>
+        /// <param name="estado">Estado de conservación del artículo</param>
+        /// <param name="ubicacion">Ubicación del artículo</param>
+        /// <param name="propiedad_jps">Indica si este pertenece a la JPS o no</param>
+        /// <param name="categoria">Categoría del artículo</param>
+        /// <returns>True si el artículo fue modificado correctamente, false de lo contrario</returns>
         public bool actualizarArticulo(int idArticulo, string numeroPlaca, string nombre, string descripcion, string estado, string ubicacion, bool propiedad_jps, string categoria)
         {
             if (conex.State != ConnectionState.Open)
@@ -447,12 +437,11 @@ namespace DAO
             return (result > 0 ? true : false);
         }
 
-        /**
-         * Recupera los datos de un artículo según su número de placa
-         * 
-         * @param numPlaca Número de placa del artículo
-         * @return Artículo
-         **/
+        /// <summary>
+        /// Recupera los datos de un artículo según su número de placa
+        /// </summary>
+        /// <param name="numPlaca">Número de placa del artículo</param>
+        /// <returns>Artículo</returns>
         public TOArticulo buscarArticuloPlaca(string numPlaca)
         {
             if (conex.State != ConnectionState.Open)
@@ -483,13 +472,12 @@ namespace DAO
             }
             return articulo;
         }
-
-        /**
-         * Indica si existe un artículo en base de datos bajo el número de placa especificado
-         * 
-         * @param numPlaca Número de placa del artículo a buscar
-         * @return True si el artículo existe, false de lo contrario
-         **/
+        
+        /// <summary>
+        /// Indica si existe un artículo en base de datos bajo el número de placa especificado
+        /// </summary>
+        /// <param name="numPlaca">Número de placa del artículo a buscar</param>
+        /// <returns>True si el artículo existe, false de lo contrario</returns>
         public bool existeArticuloPlaca(string numPlaca)
         {
             if (conex.State != ConnectionState.Open)
@@ -508,13 +496,12 @@ namespace DAO
             }
             return (result > 0 ? true : false);
         }
-
-        /**
-         * Indica si el artículo especificado según su identificador se encuentra actualmente bajo préstamo
-         * 
-         * @param idArticulo Identificador numérico del artículo
-         * @return True si el artículo se encuentra bajo préstamo, false de lo contrario
-         **/
+        
+        /// <summary>
+        /// Indica si el artículo especificado según su identificador se encuentra actualmente bajo préstamo
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo</param>
+        /// <returns>True si el artículo se encuentra bajo préstamo, false de lo contrario</returns>
         public bool articuloEnPrestamo(int idArticulo)
         {
             if (conex.State != ConnectionState.Open)
@@ -533,6 +520,5 @@ namespace DAO
             }
             return (result > 0 ? true : false);
         }
-
     }
 }

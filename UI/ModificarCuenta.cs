@@ -17,7 +17,9 @@ namespace UI
         public static string contrasenna = "";
         public static string idCuenta = "";
 
-
+        /// <summary>
+        /// Método para mostrar los datos y componentes de la página actual
+        /// </summary>
         public ModificarCuenta()
         {
             InitializeComponent();
@@ -25,6 +27,9 @@ namespace UI
             llenarCampos();
         }
 
+        /// <summary>
+        /// Método que completa los datos del formulario de la cuenta que se va a modificar
+        /// </summary>
         private void llenarCampos()
         {
             ManejadorCuenta manej = new ManejadorCuenta();
@@ -41,6 +46,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento del botón "Guardar" para actualizar los datos de la cuenta en la base de datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ManejadorCuenta manejCuenta = new ManejadorCuenta();
@@ -59,6 +69,9 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Método para añadir al comboBox los roles existentes
+        /// </summary>
         private void llenarComboBox()
         {
             comboBoxRol.Items.Add("Admin");
@@ -68,6 +81,11 @@ namespace UI
             comboBoxRol.Items.Add("Nutrición");
         }
 
+        /// <summary>
+        /// Evento del botón "Atrás" para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();

@@ -15,6 +15,10 @@ namespace UI
     {
         public static string idArt = "";
 
+        /// <summary>
+        /// Método que llama al método para mostrar el grid con los artículos actuales y muestra el resto de componentes
+        /// de la página actual
+        /// </summary>
         public Articulos()
         {
             InitializeComponent();
@@ -22,6 +26,11 @@ namespace UI
             cargarGrid();
         }
 
+        /// <summary>
+        /// Evento que muestra la ventana de agregar un nuevo artículo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             NuevoArticulo art = new NuevoArticulo();
@@ -30,6 +39,9 @@ namespace UI
             art.ShowDialog();
         }
 
+        /// <summary>
+        /// Método para agregar los artículos y sus características en el grid de la página actual
+        /// </summary>
         private void cargarGrid()
         {
             ManejadorArticulo manej = new ManejadorArticulo();
@@ -193,6 +205,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para abrir la página de "Ver" o "Modificar" un artículo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 8 && e.RowIndex != -1)
@@ -218,6 +235,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Método para cambiar el nombre de los botones del grid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             gridArticulos.Rows[e.RowIndex].Cells[8].Value = "Ver";
@@ -225,6 +247,10 @@ namespace UI
             gridArticulos.Rows[e.RowIndex].Cells[10].Value = "Eliminar";
         }
 
+        /// <summary>
+        /// Método para eliminar un artículo
+        /// </summary>
+        /// <param name="idArticulo">Identificador del artículo que se desea eliminar</param>
         private void eliminarFila(int idArticulo)
         {
             ManejadorArticulo manejArt = new ManejadorArticulo();
@@ -251,6 +277,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -266,6 +297,11 @@ namespace UI
             //}
         }
 
+        /// <summary>
+        /// Método para mostrar el reporte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReporte_Click(object sender, EventArgs e)
         {
             ReporteArticulos reporte = new ReporteArticulos();

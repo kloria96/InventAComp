@@ -15,11 +15,19 @@ namespace UI
     {
         public static string idArticulo = "";
 
+        /// <summary>
+        /// Método para inicializar los componentes de la página actual
+        /// </summary>
         public VerArticulo()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Evento para cargar los datos del artículo en el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void VerArticulo_Load(object sender, EventArgs e)
         {
             ManejadorArticulo manejArt = new ManejadorArticulo();
@@ -36,6 +44,11 @@ namespace UI
             cbPrestamo.Checked = articulo.prestado;
         }
 
+        /// <summary>
+        /// Evento del botón "Atrás" para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();

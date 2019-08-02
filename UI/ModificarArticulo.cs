@@ -17,6 +17,9 @@ namespace UI
         public static string categoriaArticulo = "";
         public static string estadoArticulo = "";
 
+        /// <summary>
+        /// Método para cargar los datos y componentes de la página actual
+        /// </summary>
         public ModificarArticulo()
         {
             InitializeComponent();
@@ -25,6 +28,11 @@ namespace UI
             cargarEstados();
         }
 
+        /// <summary>
+        /// Evento del botón "Guardar" para guardar la información modificada de un artículo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             ManejadorArticulo manejArt = new ManejadorArticulo();
@@ -49,6 +57,9 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Método que completa los datos del formulario del artículo que se quiere modificar
+        /// </summary>
         private void cargarDatosArticulo()
         {
             if (MostrarArticulos.idArt != "")
@@ -73,6 +84,9 @@ namespace UI
             
         }
 
+        /// <summary>
+        /// Método que carga en el comboBox las categorías almacenadas en la base de datos
+        /// </summary>
         private void cargarCategorias()
         {
             ManejadorCategoria manejCart = new ManejadorCategoria();
@@ -85,6 +99,9 @@ namespace UI
             comboCategoria.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Método para agregar al comboBox los estados
+        /// </summary>
         private void cargarEstados()
         {
             List<String> listaEstados = new List<String>();
@@ -105,6 +122,11 @@ namespace UI
             comboEstados.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Evento del botón "Atrás" para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();

@@ -13,7 +13,9 @@ namespace UI
 {
     public partial class PrestamoEquipo : Form
     {
-        
+        /// <summary>
+        /// Método para inicializar los componentes de la página actual, así como cargar el grid
+        /// </summary>
         public PrestamoEquipo()
         {
             InitializeComponent();
@@ -21,11 +23,19 @@ namespace UI
             cargarGrid();
         }
 
+        /// <summary>
+        /// Evento del botón "Atrás" para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        /// <summary>
+        /// Método utilizado para cargar el grid con los artículos disponibles para prestar
+        /// </summary>
         private void cargarGrid()
         {
             ManejadorPrestamo manej = new ManejadorPrestamo();
@@ -138,6 +148,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para crear un nuevo préstamo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 8 && e.RowIndex != -1)
@@ -150,11 +165,21 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para asignar el nombre "Prestar" al botón de las filas del grid 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             gridArticulos.Rows[e.RowIndex].Cells[8].Value = "Prestar";
         }
 
+        /// <summary>
+        /// Evento para mostrar los préstamos que se encuentran activos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
             new Prestamos().Show();

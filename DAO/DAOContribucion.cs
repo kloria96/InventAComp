@@ -9,6 +9,9 @@ using MySql.Data.MySqlClient;
 
 namespace DAO
 {
+    /// <summary>
+    /// Clase que se comunica con la base de datos para realizar las diferentes transacciones sobre contribuciones del sistema
+    /// </summary>
     public class DAOContribucion
     {
         //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
@@ -19,13 +22,11 @@ namespace DAO
         // connectionStringM (Melany)
         // connectionString (Asoc. Acompañame)
 
-
-        /**
-         * Inserta una nueva contribución en la base de datos
-         * 
-         * @param nuevaCont Contribución a ingresar. Objeto que contiene los datos de la nueva contribución a ingresar
-         * @return True en caso de que la contribución se haya ingresado correctamente, false de la contrario
-         **/
+        /// <summary>
+        /// Inserta una nueva contribución en la base de datos
+        /// </summary>
+        /// <param name="nuevaCont">Contribución a ingresar. Objeto que contiene los datos de la nueva contribución a ingresar</param>
+        /// <returns>True en caso de que la contribución se haya ingresado correctamente, false de la contrario</returns>
         public bool agregarContribucion(TOContribucion nuevaCont)
         {
             if (conex.State != ConnectionState.Open)
@@ -49,12 +50,11 @@ namespace DAO
             return (result > 0 ? true : false);
         }
 
-        /**
-         * Retorna una lista de las contribuciones realizadas al préstamo especificado
-         * 
-         * @param idPrestamo Identificador numérico del préstamo
-         * @return Lista de contribuciones realizadas a dicho préstamo
-         **/
+        /// <summary>
+        /// Retorna una lista de las contribuciones realizadas al préstamo especificado
+        /// </summary>
+        /// <param name="idPrestamo">Identificador numérico del préstamo</param>
+        /// <returns>Lista de contribuciones realizadas a dicho préstamo</returns>
         public List<TOContribucion> obtenerContribucionesPrestamo(int idPrestamo)
         {
             if (conex.State != ConnectionState.Open)
@@ -84,12 +84,11 @@ namespace DAO
             return lista;
         }
 
-        /**
-         * Retorna una lista de las contribuciones realizadas al préstamo asociado al número de contrato
-         * 
-         * @param contrato Número de contrato del préstamo
-         * @return Lista de contribuciones realizadas a dicho préstamo
-         **/
+        /// <summary>
+        /// Retorna una lista de las contribuciones realizadas al préstamo asociado al número de contrato
+        /// </summary>
+        /// <param name="contrato">Número de contrato del préstamo</param>
+        /// <returns>Lista de contribuciones realizadas a dicho préstamo</returns>
         public List<TOContribucion> contribucionesPrestamo(string contrato)
         {
             if (conex.State != ConnectionState.Open)
@@ -122,6 +121,5 @@ namespace DAO
             }
             return lista;
         }
-
     }
 }

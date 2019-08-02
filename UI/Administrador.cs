@@ -15,6 +15,10 @@ namespace UI
     {
         public static string idCuenta = "";
 
+        /// <summary>
+        /// Método que llama al método para mostrar el grid con las cuentas guardadas y muestra el resto de componentes
+        /// de la página actual
+        /// </summary>
         public Administrador()
         {
             InitializeComponent();
@@ -22,6 +26,9 @@ namespace UI
             llenarGrid();
         }
 
+        /// <summary>
+        /// Método que muestra en el grid la lista de las cuentas que se encuentran almacenadas en la base de datos
+        /// </summary>
         private void llenarGrid()
         {
             ManejadorCuenta manej = new ManejadorCuenta();
@@ -66,6 +73,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para abrir la ventana de modificar una cuenta 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 5 && e.RowIndex != -1)
@@ -91,7 +103,11 @@ namespace UI
         }
 
     
-
+        /// <summary>
+        /// Evento para aasignar el nombre de los botones del grid "Ver" y "Modificar"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gridEmpleados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             gridEmpleados.Rows[e.RowIndex].Cells[5].Value = "Ver";
@@ -99,7 +115,11 @@ namespace UI
             //gridEmpleados.Rows[e.RowIndex].Cells[7].Value = "Eliminar";
         }
 
-
+        /// <summary>
+        /// Evento para salir de la página actual y mostrar la página de Inicio de Sesión
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             Manager.getManager().rol = "";
@@ -108,6 +128,11 @@ namespace UI
             new InicioSesion().Show();
         }
 
+        /// <summary>
+        /// Evento para agregar una nueva cuenta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             NuevaCuenta art = new NuevaCuenta();

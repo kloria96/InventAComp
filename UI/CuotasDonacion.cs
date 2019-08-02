@@ -16,6 +16,9 @@ namespace UI
         public static string idPrestamo = "";
         public static string contratoPrestamo = "";
 
+        /// <summary>
+        /// Método para mostrar los componentes de la página actual, así como cargar el grid
+        /// </summary>
         public CuotasDonacion()
         {
             InitializeComponent();
@@ -24,11 +27,19 @@ namespace UI
             cargarGrid();
         }
 
+        /// <summary>
+        /// Evento del botón "Atrás" para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             Dispose();
         }
 
+        /// <summary>
+        /// Método para cargar el grid con las contribuciones y sus características de un préstamo específico
+        /// </summary>
         private void cargarGrid()
         {
             ManejadorContribucion manejCont = new ManejadorContribucion();
@@ -64,6 +75,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento que muestra un formulario para crear una nueva contribución al préstamo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FormularioContribucion.idPrestamo = idPrestamo;

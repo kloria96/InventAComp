@@ -16,11 +16,19 @@ namespace UI
     {
         public List<BLArticulo> listaReporte = new List<BLArticulo>();
 
+        /// <summary>
+        /// Método para inicializar los componentes de la página actual
+        /// </summary>
         public ReporteArticulos()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Evento para cargar el reporte de artículos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ReporteArticulos_Load(object sender, EventArgs e)
         {
             reportViewer1.LocalReport.DataSources.Clear();

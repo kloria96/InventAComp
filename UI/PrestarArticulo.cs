@@ -15,11 +15,19 @@ namespace UI
     {
         public static int idArticulo;
 
+        /// <summary>
+        /// Método para inicializar los componentes de la página actual
+        /// </summary>
         public PrestarArticulo()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Evento para buscar un artículo y completar los campos del formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             ManejadorArticulo manejArt = new ManejadorArticulo();
@@ -42,6 +50,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento para la creación de un préstamo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtContrato.Text != "")
@@ -76,6 +89,9 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Método para completar los datos del formulario de acuerdo al resultado de la búsqueda
+        /// </summary>
         public void modificarCampos()
         {
             ManejadorArticulo manejArt = new ManejadorArticulo();
@@ -87,6 +103,9 @@ namespace UI
             button2.Enabled = true;
         }
 
+        /// <summary>
+        /// Método para eliminar los campos del formulario
+        /// </summary>
         private void limpiarCampos()
         {
             txtPlaca.Clear();
@@ -95,11 +114,21 @@ namespace UI
             txtCategoria.Clear();
         }
 
+        /// <summary>
+        /// Evento del botón "Atrás" para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             Dispose();
         }
 
+        /// <summary>
+        /// Evento para buscar un artículo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBuscarArticulo_Click(object sender, EventArgs e)
         {
             BusquedaArticulo busqueda = new BusquedaArticulo();
@@ -112,11 +141,21 @@ namespace UI
 
         }
 
+        /// <summary>
+        /// Evento para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             Dispose();
         }
 
+        /// <summary>
+        /// Evento del botón "Guardar" para el almacenamiento de un nuevo préstamo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             if (txtContrato.Text != "")

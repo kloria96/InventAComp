@@ -15,11 +15,19 @@ namespace UI
     {
         public static string idCuenta = "";
 
+        /// <summary>
+        /// Método para inicializar los componentes de la página actual
+        /// </summary>
         public VerCuenta()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Evento para completar los datos del formulario de acuerdo al identificador de la cuenta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void VerCuenta_Load(object sender, EventArgs e)
         {
             ManejadorCuenta manejCuenta = new ManejadorCuenta();
@@ -31,6 +39,11 @@ namespace UI
             txtRol.Text = cuenta.privilegio;
         }
 
+        /// <summary>
+        /// Evento para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();

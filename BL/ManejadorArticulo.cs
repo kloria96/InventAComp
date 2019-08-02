@@ -9,28 +9,28 @@ using System.Data;
 
 namespace BL
 {
-    //Clase intermedia entre la Interfaz Gráfica (UI) y el acceso a base de datos (DAO) para gestionar los artículos del sistema
-    //Los métodos de esta clase hacen referencia a aquellos en DAOArticulo, y tienen la misma funcionalidad
+
+    /// <summary>
+    /// Clase intermedia entre la Interfaz Gráfica (UI) y el acceso a base de datos (DAO) para gestionar los artículos del sistema
+    /// Los métodos de esta clase hacen referencia a aquellos en DAOArticulo, y tienen la misma funcionalidad
+    /// </summary>
     public class ManejadorArticulo
     {
-
-        /**
-         * Inserta un nuevo artículo en la base de datos
-         * 
-         * @param articulo Artículo a ingresar
-         * @return True en caso de que el artículo se haya ingresado correctamente, false de la contrario
-         **/
+        /// <summary>
+        /// Inserta un nuevo artículo en la base de datos
+        /// </summary>
+        /// <param name="articulo">Artículo a ingresar</param>
+        /// <returns>True en caso de que el artículo se haya ingresado correctamente, false de la contrario</returns>
         public bool agregarArticulo(BLArticulo articulo)
         {
             DAOArticulo daoArt = new DAOArticulo();
             return daoArt.agregarArticulo(convert(articulo));
         }
 
-        /**
-         * Obtiene los datos de todos los artículos en el sistema
-         * 
-         * @return Lista de artículos en la base de datos
-         **/
+        /// <summary>
+        /// Obtiene los datos de todos los artículos en el sistema
+        /// </summary>
+        /// <returns>Lista de artículos en la base de datos</returns>
         public List<BLArticulo> consultarArticulos()
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -44,13 +44,11 @@ namespace BL
             return listBLArt;
         }
 
-
-        /**
-         * Recupera todos los artículos en la base de datos cuyo nombre coincida con el texto
-         * 
-         * @param value Texto de filtrado según nombre
-         * @return Lista de artículos en la base de datos que coincidan con el texto
-         **/
+        /// <summary>
+        /// Recupera todos los artículos en la base de datos cuyo nombre coincida con el texto
+        /// </summary>
+        /// <param name="value">Texto de filtrado según nombre</param>
+        /// <returns>Lista de artículos en la base de datos que coincidan con el texto</returns>
         public List<BLArticulo> obtenerArticulosNombre(string value)
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -62,12 +60,11 @@ namespace BL
             return lista;
         }
 
-        /**
-         * Recupera todos los artículos en la base de datos cuya categoría coincida con la categoría especificada
-         * 
-         * @param value Categoría de filtrado de los artículos
-         * @return Lista de artículos en la base de datos que pertenezcan a la categoría
-         **/
+        /// <summary>
+        /// Recupera todos los artículos en la base de datos cuya categoría coincida con la categoría especificada
+        /// </summary>
+        /// <param name="value">Categoría de filtrado de los artículos</param>
+        /// <returns>Lista de artículos en la base de datos que pertenezcan a la categoría</returns>
         public List<BLArticulo> obtenerArticulosCategoria(string value)
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -79,13 +76,12 @@ namespace BL
             return lista;
         }
 
-        /**
-         * Recupera todos los artículos en la base de datos cuyo nombre coincida con el texto y que se encuentren disponibles
-         * para prestar
-         * 
-         * @param value Texto de filtrado según nombre
-         * @return Lista de artículos en la base de datos que coincidan con el texto y que no se encuentren bajo préstamo
-         **/
+        /// <summary>
+        /// Recupera todos los artículos en la base de datos cuyo nombre coincida con el texto y que se encuentren disponibles
+        /// para prestar
+        /// </summary>
+        /// <param name="value">Texto de filtrado según nombre</param>
+        /// <returns>Lista de artículos en la base de datos que coincidan con el texto y que no se encuentren bajo préstamo</returns>
         public List<BLArticulo> obtenerArticulosNombrePrestamo(string value)
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -97,13 +93,12 @@ namespace BL
             return lista;
         }
 
-        /**
-         * Recupera todos los artículos en la base de datos cuya categoría coincida con la categoría especificada y que se
-         * encuentren disponibles para prestar
-         * 
-         * @param value Categoría de filtrado de los artículos
-         * @return Lista de artículos en la base de datos que pertenezcan a la categoría y que no se encuentren bajo préstamo
-         **/
+        /// <summary>
+        /// Recupera todos los artículos en la base de datos cuya categoría coincida con la categoría especificada y que se
+        ///  encuentren disponibles para prestar
+        /// </summary>
+        /// <param name="value">Categoría de filtrado de los artículos</param>
+        /// <returns>Lista de artículos en la base de datos que pertenezcan a la categoría y que no se encuentren bajo préstamo</returns>
         public List<BLArticulo> obtenerArticulosCategoriaPrestamo(string value)
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -115,13 +110,12 @@ namespace BL
             return lista;
         }
 
-        /**
-         * Recupera todos los artículos en la base de datos cuya fecha de ingreso se encuentra entre 'fechaInicio' y 'fechaFin'
-         * 
-         * @param fechaInicio Fecha de inicio de la búsqueda
-         * @param fechaFin Fecha de fin de la búsqueda
-         * @return Lista de artículos en la base de datos que se encuentren bajo las fechas especificadas
-         **/
+        /// <summary>
+        /// Recupera todos los artículos en la base de datos cuya fecha de ingreso se encuentra entre 'fechaInicio' y 'fechaFin'
+        /// </summary>
+        /// <param name="fechaInicio">Fecha de inicio de la búsqueda</param>
+        /// <param name="fechaFin">Fecha de fin de la búsqueda</param>
+        /// <returns>Lista de artículos en la base de datos que se encuentren bajo las fechas especificadas</returns>
         public List<BLArticulo> obtenerArticulosFecha(string fechaInicio, string fechaFin)
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -133,24 +127,22 @@ namespace BL
             return lista;
         }
 
-        /**
-         * Elimina un artículo de la base de datos
-         * 
-         * @param idArticulo Identificador numérico del artículo a eliminar
-         * @return True en caso de que el artículo se haya eliminado correctamente, false de lo contrario
-         **/
+        /// <summary>
+        /// Elimina un artículo de la base de datos
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo a eliminar</param>
+        /// <returns>True en caso de que el artículo se haya eliminado correctamente, false de lo contrario</returns>
         public bool eliminarArticulo(int idArticulo)
         {
             DAOArticulo daoArt = new DAOArticulo();
             return daoArt.eliminarArticulo(idArticulo);
         }
 
-        /**
-         * Recupera los datos del artículo según su identificador
-         * 
-         * @param idArticulo Identificador numérico del artículo
-         * @return Artículo
-         **/
+        /// <summary>
+        /// Recupera los datos del artículo según su identificador
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo</param>
+        /// <returns>Artículo</returns>
         public BLArticulo obtenerArticulo(int idArticulo)
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -158,12 +150,11 @@ namespace BL
             return new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.idCategoria);
         }
 
-        /**
-         * Recupera los datos de un artículo según su identificador
-         * 
-         * @param idArticulo Identificador numérico del artículo
-         * @return Artículo
-         **/
+        /// <summary>
+        /// Recupera los datos de un artículo según su identificador
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo</param>
+        /// <returns>Artículo</returns>
         public BLArticulo obtenerArticuloBusqueda(int idArticulo)
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -179,12 +170,11 @@ namespace BL
             return articulo;
         }
 
-        /**
-         * Recupera los datos de un artículo y su categoría, según su identificador
-         * 
-         * @param idArticulo Identificador numérico del artículo
-         * @return Artículo
-         **/
+        /// <summary>
+        /// Recupera los datos de un artículo y su categoría, según su identificador
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo</param>
+        /// <returns>Artículo</returns>
         public BLArticulo obtenerArticuloCategoria(int idArticulo)
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -192,31 +182,29 @@ namespace BL
             return new BLArticulo(toArt.idArticulo, toArt.numeroPlaca, toArt.nombArticulo, toArt.fechaIngreso, toArt.descripcArticulo, toArt.estadoArticulo, toArt.ubicacionArticulo, toArt.propiedad_JPS, toArt.prestado, toArt.nombreCategoria);
         }
 
-        /**
-         * Modifica los datos de un artículo según su identificador y los valores ingresados
-         * 
-         * @param idArticulo Identificador numérico del artículo
-         * @param numeroPlaca Número de placa del artículo
-         * @param nombre Nombre del artículo
-         * @param descripcion Descripción del artículo
-         * @param estado Estado de conservación del artículo
-         * @param ubicacion Ubicación del artículo
-         * @param propiedad_jps Indica si este pertenece a la JPS o no
-         * @param categoria Categoría del artículo
-         * @return True si el artículo fue modificado correctamente, false de lo contrario
-         **/
+        /// <summary>
+        /// Modifica los datos de un artículo según su identificador y los valores ingresados
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo</param>
+        /// <param name="numeroPlaca">Número de placa del artículo</param>
+        /// <param name="nombre">Nombre del artículo</param>
+        /// <param name="descripcion">Descripción del artículo</param>
+        /// <param name="estado">Estado de conservación del artículo</param>
+        /// <param name="ubicacion">Ubicación del artículo</param>
+        /// <param name="propiedad_jps">Indica si este pertenece a la JPS o no</param>
+        /// <param name="categoria">Categoría del artículo</param>
+        /// <returns>True si el artículo fue modificado correctamente, false de lo contrario</returns>
         public bool actualizarArticulo(int idArticulo, string numeroPlaca, string nombre, string descripcion, string estado, string ubicacion, bool propiedad_jps, string categoria)
         {
             DAOArticulo daoArt = new DAOArticulo();
             return daoArt.actualizarArticulo(idArticulo, numeroPlaca, nombre, descripcion, estado, ubicacion, propiedad_jps, categoria);
         }
 
-        /**
-         * Recupera los datos de un artículo según su número de placa
-         * 
-         * @param numPlaca Número de placa del artículo
-         * @return Artículo
-         **/
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="numPlaca">Número de placa del artículo</param>
+        /// <returns>Recupera los datos de un artículo según su número de placa</returns>
         public BLArticulo buscarArticuloPlaca(string numPlaca)
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -230,24 +218,22 @@ namespace BL
             return articulo;
         }
 
-        /**
-         * Indica si existe un artículo en base de datos bajo el número de placa especificado
-         * 
-         * @param numPlaca Número de placa del artículo a buscar
-         * @return True si el artículo existe, false de lo contrario
-         **/
+        /// <summary>
+        /// Indica si existe un artículo en base de datos bajo el número de placa especificado
+        /// </summary>
+        /// <param name="numPlaca">Número de placa del artículo a buscar</param>
+        /// <returns>True si el artículo existe, false de lo contrario</returns>
         public bool existeArticuloPlaca(string numPlaca)
         {
             DAOArticulo daoArt = new DAOArticulo();
             return daoArt.existeArticuloPlaca(numPlaca);
         }
 
-        /**
-         * Indica si el artículo especificado según su identificador se encuentra actualmente bajo préstamo
-         * 
-         * @param idArticulo Identificador numérico del artículo
-         * @return True si el artículo se encuentra bajo préstamo, false de lo contrario
-         **/
+        /// <summary>
+        /// Indica si el artículo especificado según su identificador se encuentra actualmente bajo préstamo
+        /// </summary>
+        /// <param name="idArticulo">Identificador numérico del artículo</param>
+        /// <returns>True si el artículo se encuentra bajo préstamo, false de lo contrario</returns>
         public bool articuloEnPrestamo(int idArticulo)
         {
             DAOArticulo daoArt = new DAOArticulo();
@@ -255,30 +241,26 @@ namespace BL
         }
 
 
-        /**
-         * Convierte un artículo de la capa de Lógica de Negocios (BL) a la capa Objetos de Transferencia (TO). Método usado
-         * localmente
-         * 
-         * @param art Artículo de Lógica de Negocios a convertir
-         * @return Artículo de Objetos de Transferencia convertido
-         **/
+        /// <summary>
+        /// Convierte un artículo de la capa de Lógica de Negocios (BL) a la capa Objetos de Transferencia (TO). Método usado
+        /// localmente
+        /// </summary>
+        /// <param name="art">Artículo de Lógica de Negocios a convertir</param>
+        /// <returns>Artículo de Objetos de Transferencia convertido</returns>
         private TOArticulo convert(BLArticulo art)
         {
             return new TOArticulo(art.idArticulo, art.numeroPlaca, art.nombArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.ubicacionArticulo, art.propiedad_JPS, art.idCategoria);
         }
 
-        /**
-         * Convierte un artículo de la capa de Objetos de Transferencia (TO) a la capa Lógica de Negocios. Método usado
-         * localmente
-         * 
-         * @param art Artículo de Objetos de Transferencia a convertir
-         * @return Artículo de Lógica de Negocios convertido
-         **/
+        /// <summary>
+        /// Convierte un artículo de la capa de Objetos de Transferencia (TO) a la capa Lógica de Negocios. Método usado
+        /// localmente
+        /// </summary>
+        /// <param name="art">Artículo de Objetos de Transferencia a convertir</param>
+        /// <returns>Artículo de Lógica de Negocios convertido</returns>
         private BLArticulo convert(TOArticulo art)
         {
             return new BLArticulo(art.idArticulo, art.numeroPlaca, art.nombArticulo, art.fechaIngreso, art.descripcArticulo, art.estadoArticulo, art.ubicacionArticulo, art.idCategoria);
         }
-
-
     }
 }

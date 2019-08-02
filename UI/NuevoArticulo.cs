@@ -13,6 +13,9 @@ namespace UI
 {
     public partial class NuevoArticulo : Form
     {
+        /// <summary>
+        /// Método para inicializar los componentes de la página actual, además de cargar datos por defecto
+        /// </summary>
         public NuevoArticulo()
         {
             InitializeComponent();
@@ -20,6 +23,9 @@ namespace UI
             cargarEstados();
         }
 
+        /// <summary>
+        /// Método para llenar el comboBox de las categorías
+        /// </summary>
         private void llenarComboBox()
         {
             string rol = Manager.getManager().rol;
@@ -42,6 +48,9 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Método para cargar el comboBox de los estados posibles de los artículos
+        /// </summary>
         private void cargarEstados()
         {
             List<String> listaEstados = new List<String>();
@@ -58,7 +67,11 @@ namespace UI
             }
         }
         
-
+        /// <summary>
+        /// Evento para guardar un nuevo artículo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (comboEstados.SelectedItem != null && comboCategoria.SelectedItem != null)
@@ -98,6 +111,11 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Evento del botón "Atrás" para cerrar la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();

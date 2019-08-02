@@ -16,17 +16,30 @@ namespace UI
         public static string idPrestamo = "";
         public static string contratoPrestamo = "";
 
+        /// <summary>
+        /// Método que carga los componentes de la página actual
+        /// </summary>
         public FormularioContribucion()
         {
             InitializeComponent();
             lblContrato.Text = contratoPrestamo;
         }
 
+        /// <summary>
+        /// Evento del botón "Atrás" que cierra la página actual
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtras_Click(object sender, EventArgs e)
         {
             Dispose();
         }
 
+        /// <summary>
+        /// Evento del botón "Guardar" para crear una contribución nueva a un préstamo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string recibo = txtRecibo.Text;
