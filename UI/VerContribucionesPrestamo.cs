@@ -50,6 +50,7 @@ namespace UI
                 txtResponsable.Text = prestamo.responsable;
                 txtFecha.Text = prestamo.fechaPrestamo.ToString("dd/MM/yyyy");
                 txtFechaEntrega.Text = prestamo.fechaEntrega.ToString("dd/MM/yyyy");
+                txtTel.Text = prestamo.telefono;
                 cbActivo.Checked = prestamo.estado;
                 btnBuscarContribuciones.Enabled = true;
             } else
@@ -61,6 +62,7 @@ namespace UI
                 txtFecha.Clear();
                 txtFechaEntrega.Clear();
                 cbActivo.Checked = false;
+                txtTel.Clear();
             }
         }
 
@@ -131,6 +133,11 @@ namespace UI
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void cbActivo_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

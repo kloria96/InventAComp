@@ -47,6 +47,7 @@ namespace UI
             txtResponsable.Text = prestamo.responsable;
             txtFecha.Text = prestamo.fechaPrestamo.ToString("dd/MM/yyyy");
             txtFechaEntrega.Text = prestamo.fechaEntrega.ToString("dd/MM/yyyy");
+            txtTel.Text = prestamo.telefono;
         }
 
         /// <summary>

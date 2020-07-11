@@ -18,6 +18,15 @@ namespace BL
     {
         private DAOPrestamo daoPrestamo = new DAOPrestamo();
 
+
+
+
+        public int ultimoPrestamoCodigo()
+        {
+            return new DAOPrestamo().ultimoPrestamoCodigo();
+        }
+
+
         /// <summary>
         /// Ingresa un nuevo préstamo en la base de datos
         /// </summary>
@@ -38,7 +47,7 @@ namespace BL
             List<BLPrestamo> lista = new List<BLPrestamo>();
             foreach (TOPrestamo toPrestamo in daoPrestamo.obtenerPrestamosArticulo(idArticulo))
             {
-                lista.Add(new BLPrestamo(toPrestamo.numeroContrato, toPrestamo.paciente, toPrestamo.responsable, toPrestamo.fechaPrestamo, toPrestamo.fechaEntrega, toPrestamo.idArticulo));
+                lista.Add(new BLPrestamo(toPrestamo.numeroContrato, toPrestamo.paciente, toPrestamo.responsable, toPrestamo.fechaPrestamo, toPrestamo.fechaEntrega, toPrestamo.idArticulo, toPrestamo.telefono));
             }
             return lista;
         }
@@ -62,7 +71,7 @@ namespace BL
             List<BLPrestamo> lista = new List<BLPrestamo>();
             foreach (TOPrestamo toPrest in daoPrestamo.obtenerArticulosPrestamo())
             {
-                lista.Add(new BLPrestamo(toPrest.idPrestamo, toPrest.numeroContrato, toPrest.paciente, toPrest.responsable, toPrest.fechaPrestamo, toPrest.fechaEntrega, toPrest.numeroPlacaArticulo, toPrest.nombreArticulo));
+                lista.Add(new BLPrestamo(toPrest.idPrestamo, toPrest.numeroContrato, toPrest.paciente, toPrest.responsable, toPrest.fechaPrestamo, toPrest.fechaEntrega, toPrest.numeroPlacaArticulo, toPrest.nombreArticulo, toPrest.telefono));
             }
             return lista;
         }
@@ -97,6 +106,7 @@ namespace BL
             prest.fechaPrestamo = toPrest.fechaPrestamo;
             prest.fechaEntrega = toPrest.fechaEntrega;
             prest.idArticulo = toPrest.idArticulo;
+            prest.telefono = toPrest.telefono;
             return prest;
         }
 
@@ -181,7 +191,7 @@ namespace BL
         /// <returns>Préstamo de Objetos de Transferencia convertido</returns>
         private TOPrestamo convert(BLPrestamo prestamo)
         {
-            return new TOPrestamo(prestamo.numeroContrato, prestamo.paciente, prestamo.responsable, prestamo.fechaPrestamo, prestamo.fechaEntrega, prestamo.idArticulo);
+            return new TOPrestamo(prestamo.numeroContrato, prestamo.paciente, prestamo.responsable, prestamo.fechaPrestamo, prestamo.fechaEntrega, prestamo.idArticulo, prestamo.telefono);
         }
     }
 }

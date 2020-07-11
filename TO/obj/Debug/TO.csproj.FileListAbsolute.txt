@@ -15,3 +15,14 @@ C:\Users\melan\Source\Repos\InventAcomp\TO\obj\Debug\TO.csproj.CoreCompileInputs
 C:\Users\melan\Source\Repos\InventAcomp\TO\obj\Debug\TO.dll
 C:\Users\melan\Source\Repos\InventAcomp\TO\obj\Debug\TO.pdb
 C:\Users\Juan\Source\Repos\InventAcomp\TO\obj\Debug\TO.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\TO\bin\Debug\TO.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\TO\bin\Debug\TO.pdb
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\TO\obj\Debug\TO.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\TO\obj\Debug\TO.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\TO\obj\Debug\TO.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\TO\obj\Debug\TO.pdb
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\TO\bin\Debug\TO.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\TO\bin\Debug\TO.pdb
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\TO\obj\Debug\TO.csproj.CoreCompileInputs.cache
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\TO\obj\Debug\TO.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\TO\obj\Debug\TO.pdb

@@ -16,13 +16,14 @@ namespace TO
         public DateTime fechaEntrega { get; set; }
         public Boolean estado { get; set; }
         public int idArticulo { get; set; }
+        public string telefono { get; set; }
 
         public string nombreArticulo { get; set; }
         public string numeroPlacaArticulo { get; set; }
 
         public TOPrestamo() { }
 
-        public TOPrestamo(int idPrestamo, string numeroContrato, string paciente, string responsable, DateTime fechaPrestamo, DateTime fechaEntrega, int idArticulo)
+        public TOPrestamo(int idPrestamo, string numeroContrato, string paciente, string responsable, DateTime fechaPrestamo, DateTime fechaEntrega, int idArticulo, string telefono)
         {
             this.idPrestamo = idPrestamo;
             this.numeroContrato = numeroContrato;
@@ -31,9 +32,10 @@ namespace TO
             this.fechaPrestamo = fechaPrestamo;
             this.fechaEntrega = fechaEntrega;
             this.idArticulo = idArticulo;
+            this.telefono = telefono;
         }
 
-        public TOPrestamo(string numeroContrato, string paciente, string responsable, DateTime fechaPrestamo, DateTime fechaEntrega, int idArticulo)
+        public TOPrestamo(string numeroContrato, string paciente, string responsable, DateTime fechaPrestamo, DateTime fechaEntrega, int idArticulo, string telefono)
         {
             this.numeroContrato = numeroContrato;
             this.paciente = paciente;
@@ -41,9 +43,10 @@ namespace TO
             this.fechaPrestamo = fechaPrestamo;
             this.fechaEntrega = fechaEntrega;
             this.idArticulo = idArticulo;
+            this.telefono = telefono;
         }
 
-        public TOPrestamo(string numeroContrato, string paciente, string responsable, DateTime fechaPrestamo, DateTime fechaEntrega, Boolean estado, int idArticulo)
+        public TOPrestamo(string numeroContrato, string paciente, string responsable, DateTime fechaPrestamo, DateTime fechaEntrega, Boolean estado, int idArticulo, string telefono)
         {
             this.numeroContrato = numeroContrato;
             this.paciente = paciente;
@@ -52,18 +55,20 @@ namespace TO
             this.fechaEntrega = fechaEntrega;
             this.estado = estado;
             this.idArticulo = idArticulo;
+            this.telefono = telefono;
         }
 
-        public TOPrestamo(int idPrestamo, string numeroContrato, string paciente, string numeroPlacaArticulo, string nombreArticulo)
+        public TOPrestamo(int idPrestamo, string numeroContrato, string paciente, string numeroPlacaArticulo, string nombreArticulo, string telefono)
         {
             this.idPrestamo = idPrestamo;
             this.numeroContrato = numeroContrato;
             this.paciente = paciente;
             this.numeroPlacaArticulo = numeroPlacaArticulo;
             this.nombreArticulo = nombreArticulo;
+            this.telefono = telefono;
         }
 
-        public TOPrestamo(int idPrestamo, string numeroContrato, string paciente, string responsable, DateTime fecha, DateTime fechaEntrega, string numeroPlacaArticulo, string nombreArticulo)
+        public TOPrestamo(int idPrestamo, string numeroContrato, string paciente, string responsable, DateTime fecha, DateTime fechaEntrega, string numeroPlacaArticulo, string nombreArticulo, string telefono)
         {
             this.idPrestamo = idPrestamo;
             this.numeroContrato = numeroContrato;
@@ -73,6 +78,7 @@ namespace TO
             this.fechaEntrega = fechaEntrega;
             this.numeroPlacaArticulo = numeroPlacaArticulo;
             this.nombreArticulo = nombreArticulo;
+            this.telefono = telefono;
         }
 
     }

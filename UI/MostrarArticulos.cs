@@ -38,6 +38,7 @@ namespace UI
         {
             MostrarArticulos.opcion2 = false;
             this.Dispose();
+            new Principal().Show();
         }
 
         /// <summary>

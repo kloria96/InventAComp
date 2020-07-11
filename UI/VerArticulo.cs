@@ -52,6 +52,7 @@ namespace UI
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            new Articulos().Show();
         }
 
     }

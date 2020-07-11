@@ -54,12 +54,13 @@ namespace UI
                 //this.Owner.Dispose();
                 this.Dispose();
                 MessageBox.Show("Se han actualizado los datos de la cuenta");
-                //new Principal().Show();
+                new Principal().Show();
             }
             else
             {
                 MessageBox.Show("No se ha podido actualizar la cuenta");
                 this.Dispose();
+                new Principal().Show();
             }
         }
 
@@ -81,6 +82,7 @@ namespace UI
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            new Principal().Show();
         }
     }
 }

@@ -37,6 +37,7 @@ namespace UI
             art.Owner = this;
             art.MdiParent = this.MdiParent;
             art.ShowDialog();
+            this.Dispose();
         }
 
         /// <summary>
@@ -111,97 +112,6 @@ namespace UI
                     }
                     gridArticulos.DataSource = listaCategoria;
                 }
-
-                //Console.WriteLine("Su rol: " + role);
-                //Console.WriteLine("Cantidad de artículos: " + listaBL.Count);
-                //switch (role)
-                //{
-                //    case "Secretaria":
-                //        gridArticulos.DataSource = listaBL;
-                //        break;
-                //    case "Nutrición":
-                //        foreach (BLArticulo art in listaBL)
-                //        {
-                //            if (art.nombCategoria.Equals("Nutrición"))
-                //            {
-                //                listaCategoria.Add(art);
-                //            }
-                //        }
-                //        gridArticulos.DataSource = listaCategoria;
-                //        break;
-                //    case "Psicología":
-                //        foreach (BLArticulo art in listaBL)
-                //        {
-                //            if (art.nombCategoria.Equals("Psicología"))
-                //            {
-                //                listaCategoria.Add(art);
-                //            }
-                //        }
-                //        gridArticulos.DataSource = listaCategoria;
-                //        break;
-                //    case "Terapia Física":
-                //        Console.WriteLine("Entra rol Terapia Fisica");
-                //        foreach (BLArticulo art in listaBL)
-                //        {
-                //            if (art.nombCategoria == "Terapia Física")
-                //            {
-                //                Console.WriteLine("Entra agregar articulo");
-                //                listaCategoria.Add(art);
-                //            }
-                //        }
-                //        gridArticulos.DataSource = listaCategoria;
-                //        break;
-                //    default:
-
-                //        break;
-                //}
-
-                //if (Manager.getManager().rol.Equals("Secretaria"))
-                //{
-                //    gridArticulos.DataSource = listaBL;
-                //}
-                //else
-                //{
-                //    if (Manager.getManager().rol.Equals("Nutrición"))
-                //    {
-                //        foreach (BLArticulo art in listaBL)
-                //        {
-                //            if (art.nombCategoria.Equals("Nutrición"))
-                //            {
-                //                listaCategoria.Add(art);
-                //            }
-                //        }
-                //        gridArticulos.DataSource = listaCategoria;
-                //    }
-                //    else
-                //    {
-                //        if (Manager.getManager().rol.Equals("Psicología"))
-                //        {
-                //            foreach (BLArticulo art in listaBL)
-                //            {
-                //                if (art.nombCategoria.Equals("Psicología"))
-                //                {
-                //                    listaCategoria.Add(art);
-                //                }
-                //            }
-                //            gridArticulos.DataSource = listaCategoria;
-                //        }
-                //        else
-                //        {
-                //            if (Manager.getManager().rol.Equals("Terapia Física"))
-                //            {
-                //                foreach (BLArticulo art in listaBL)
-                //                {
-                //                    if (art.nombCategoria.Equals("Terapia Física"))
-                //                    {
-                //                        listaCategoria.Add(art);
-                //                    }
-                //                }
-                //                gridArticulos.DataSource = listaCategoria;
-                //            }
-                //        }
-                //    }
-                //}
             }
         }
 
@@ -216,6 +126,7 @@ namespace UI
             {
                 VerArticulo.idArticulo = gridArticulos.Rows[e.RowIndex].Cells[0].Value + "";
                 new VerArticulo().Show();
+                this.Dispose();
             }
 
             if (e.ColumnIndex == 9 && e.RowIndex != -1)
@@ -224,9 +135,13 @@ namespace UI
                 ModificarArticulo.categoriaArticulo = gridArticulos.Rows[e.RowIndex].Cells[7].Value + "";
                 ModificarArticulo.estadoArticulo = gridArticulos.Rows[e.RowIndex].Cells[5].Value + "";
 
-                ModificarArticulo modArt = new ModificarArticulo();
-                modArt.Owner = this;
-                modArt.ShowDialog();
+                //ModificarArticulo modArt = new ModificarArticulo();
+                //modArt.Owner = this;
+
+                //modArt.ShowDialog();
+                new ModificarArticulo().Show();
+                this.Dispose();
+
             }
 
             if (e.ColumnIndex == 10 && e.RowIndex != -1)
@@ -285,16 +200,7 @@ namespace UI
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            //new Principal().Show();
-
-            //Principal art = new Principal();
-            //art.MdiParent = this.MdiParent;
-            //art.Show();
-            //Principal frm2 = (Principal)this.ActiveMdiChild;
-            //if (frm2 != null)
-            //{
-            //    this.Close();
-            //}
+            new Principal().Show();
         }
 
         /// <summary>

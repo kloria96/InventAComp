@@ -49,6 +49,7 @@ namespace UI
         {
             Articulos art = new Articulos();
             art.MdiParent = this.MdiParent;
+            this.Dispose();
             art.Show();
         }
 
@@ -61,6 +62,7 @@ namespace UI
         {
             Categorias cat = new Categorias();
             cat.MdiParent = this.MdiParent;
+            this.Dispose();
             cat.Show();
         }
 
@@ -165,6 +167,7 @@ namespace UI
                         MostrarArticulos mostrarA = new MostrarArticulos();
                         mostrarA.MdiParent = this.MdiParent;
                         mostrarA.Show();
+                        this.Dispose();
                         txtNombre.Clear();
                     }
                     else
@@ -179,6 +182,7 @@ namespace UI
                         MostrarArticulos.opcion2 = true;
                         MostrarArticulos mostrarAr = new MostrarArticulos();
                         mostrarAr.MdiParent = this.MdiParent;
+                        this.Dispose();
                         mostrarAr.Show();
                     }
                     else
@@ -191,6 +195,7 @@ namespace UI
                     fechaFin = dtFin.Value.ToString("yyyy-MM-dd");
                     MostrarArticulos mostrarArt = new MostrarArticulos();
                     mostrarArt.MdiParent = this.MdiParent;
+                    this.Dispose();
                     mostrarArt.Show();
                     break;
             }
@@ -203,6 +208,7 @@ namespace UI
         /// <param name="e"></param>
         private void btnPrestamo_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             new PrestamoEquipo().Show();
         }
 
@@ -237,6 +243,7 @@ namespace UI
             {
                 //Ver préstamos activos
                 new Prestamos().ShowDialog();
+                this.Dispose();
             }
             if (cbPrestamos.SelectedItem.ToString() == "Ver Préstamos")
             {
@@ -271,6 +278,7 @@ namespace UI
         {
             ConfigCuenta cat = new ConfigCuenta();
             cat.MdiParent = this.MdiParent;
+            this.Dispose();
             cat.ShowDialog();
         }
     }

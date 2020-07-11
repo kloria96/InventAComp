@@ -31,6 +31,7 @@ namespace UI
         private void btnAtras_Click(object sender, EventArgs e)
         {
             Dispose();
+            new PrestamoEquipo().Show();
         }
 
         /// <summary>
@@ -43,7 +44,7 @@ namespace UI
             listaBL = manej.obtenerArticulosPrestamo();
             if (listaBL.Count != 0)
             {
-                gridPrestamos.ColumnCount = 8;
+                gridPrestamos.ColumnCount = 9;
 
                 gridPrestamos.Columns[0].Name = "ID";
                 gridPrestamos.Columns[0].HeaderText = "ID";
@@ -57,6 +58,7 @@ namespace UI
                 gridPrestamos.Columns[2].Name = "Paciente";
                 gridPrestamos.Columns[2].HeaderText = "Paciente";
                 gridPrestamos.Columns[2].DataPropertyName = "paciente";
+                gridPrestamos.Columns[2].Visible = false;
 
                 gridPrestamos.Columns[3].Name = "Equipo";
                 gridPrestamos.Columns[3].HeaderText = "Equipo";
@@ -69,8 +71,7 @@ namespace UI
                 gridPrestamos.Columns[5].Name = "Responsable";
                 gridPrestamos.Columns[5].HeaderText = "Responsable";
                 gridPrestamos.Columns[5].DataPropertyName = "responsable";
-                gridPrestamos.Columns[5].Visible = false;
-
+                
                 gridPrestamos.Columns[6].Name = "Fecha préstamo";
                 gridPrestamos.Columns[6].HeaderText = "Fecha";
                 gridPrestamos.Columns[6].DataPropertyName = "fechaPrestamo";
@@ -80,6 +81,11 @@ namespace UI
                 gridPrestamos.Columns[7].HeaderText = "Fecha entrega";
                 gridPrestamos.Columns[7].DataPropertyName = "fechaEntrega";
                 gridPrestamos.Columns[7].Visible = false;
+
+                gridPrestamos.Columns[8].Name = "Teléfono";
+                gridPrestamos.Columns[8].HeaderText = "Teléfono";
+                gridPrestamos.Columns[8].DataPropertyName = "telefono";
+                //gridPrestamos.Columns[8].Visible = false;
 
                 DataGridViewButtonColumn button = new DataGridViewButtonColumn();
                 gridPrestamos.Columns.Add(button);
@@ -101,13 +107,13 @@ namespace UI
         /// <param name="e"></param>
         private void gridArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 8 && e.RowIndex != -1)
+            if (e.ColumnIndex == 9 && e.RowIndex != -1)
             {
                 VerPrestamo.idPrestamo = gridPrestamos.Rows[e.RowIndex].Cells[0].Value + "";
                 new VerPrestamo().ShowDialog();
             }
 
-            if (e.ColumnIndex == 9 && e.RowIndex != -1)
+            if (e.ColumnIndex == 10 && e.RowIndex != -1)
             {
                 CuotasDonacion.idPrestamo = gridPrestamos.Rows[e.RowIndex].Cells[0].Value + "";
                 CuotasDonacion.contratoPrestamo = gridPrestamos.Rows[e.RowIndex].Cells[1].Value + "";
@@ -115,7 +121,7 @@ namespace UI
                 cuotas.Owner = this;
                 cuotas.Show();
             }
-            if (e.ColumnIndex == 10 && e.RowIndex != -1)
+            if (e.ColumnIndex == 11 && e.RowIndex != -1)
             {
                 int idPrest = Convert.ToInt32(gridPrestamos.Rows[e.RowIndex].Cells[0].Value);
                 ManejadorPrestamo manejPrest = new ManejadorPrestamo();
@@ -143,9 +149,9 @@ namespace UI
         /// <param name="e"></param>
         private void gridArticulos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            gridPrestamos.Rows[e.RowIndex].Cells[8].Value = "Ver Préstamo";
-            gridPrestamos.Rows[e.RowIndex].Cells[9].Value = "Ver Contribuciones";
-            gridPrestamos.Rows[e.RowIndex].Cells[10].Value = "Terminar";
+            gridPrestamos.Rows[e.RowIndex].Cells[9].Value = "Ver Préstamo";
+            gridPrestamos.Rows[e.RowIndex].Cells[10].Value = "Ver Contribuciones";
+            gridPrestamos.Rows[e.RowIndex].Cells[11].Value = "Terminar";
         }
 
         /// <summary>
@@ -162,13 +168,19 @@ namespace UI
                 BLPrestamo prestamo = new BLPrestamo();
                 prestamo.numeroContrato = (string)gridPrestamos.Rows[i].Cells[1].Value;
                 prestamo.paciente = (string)gridPrestamos.Rows[i].Cells[2].Value;
+                prestamo.numeroPlacaArticulo = (string)gridPrestamos.Rows[i].Cells[4].Value;
                 prestamo.responsable = (string)gridPrestamos.Rows[i].Cells[5].Value; //Index pendiente
                 prestamo.fechaPrestamo = (DateTime)gridPrestamos.Rows[i].Cells[6].Value; //Index pendiente
                 prestamo.fechaEntrega = (DateTime)gridPrestamos.Rows[i].Cells[7].Value; //Index pendiente
+                prestamo.telefono = (string)gridPrestamos.Rows[i].Cells[8].Value;
                 reporte.listaReporte.Add(prestamo);
             }
             reporte.ShowDialog();
         }
 
+        private void gridPrestamos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

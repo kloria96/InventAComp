@@ -9,14 +9,14 @@ using MySql.Data.MySqlClient;
 
 namespace DAO
 {
-    /// <summary>
+    /// <summary>XX
     /// Clase que se comunica con la base de datos para realizar las diferentes transacciones sobre categorías del sistema
     /// </summary>
     public class DAOCategoria
     {
         //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
-        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
 
         // connectionStringJ (Juan Diego)
         // connectionStringM (Melany)

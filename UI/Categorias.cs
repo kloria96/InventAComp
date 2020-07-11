@@ -74,6 +74,8 @@ namespace UI
                     txtNuevaCategoria.Clear();
                     MessageBox.Show("Se ha agregado la categoría");
                     gridCategorias.DataSource = manej.consultarCategorias();
+                    this.Dispose();
+                    new Categorias().Show();
                 } else
                 {
                     MessageBox.Show("Ya existe la categoría", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -177,7 +179,7 @@ namespace UI
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            //new Principal().Show();
+            new Principal().Show();
         }
 
     }

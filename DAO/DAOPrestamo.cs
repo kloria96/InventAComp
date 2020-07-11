@@ -15,13 +15,43 @@ namespace DAO
     public class DAOPrestamo
     {
         //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
-        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
 
         // connectionStringJ (Juan Diego)
         // connectionStringM (Melany)
         // connectionString (Asoc. Acompañame)
 
+
+
+        public int ultimoPrestamoCodigo()
+        {
+
+            int ultimo = 1;
+            if (conex.State != ConnectionState.Open)
+            {
+                conex.Open();
+            }
+
+            String qry = "select max() from Prestamo;";
+            MySqlCommand cmd = new MySqlCommand(qry, conex);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                  //  lista.Add(new TOPrestamo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetDateTime(4), reader.GetDateTime(5), reader.GetInt32(6), reader.GetString(7)));
+                }
+            }
+
+            if (conex.State != ConnectionState.Closed)
+            {
+                conex.Close();
+            }
+            return ultimo;
+        }
 
         /// <summary>
         /// Ingresa un nuevo préstamo en la base de datos
@@ -35,7 +65,7 @@ namespace DAO
                 conex.Open();
             }
 
-            String qry = "insert into prestamo (numeroContrato, paciente, responsable, fechaPrestamo, fechaEntrega, estado, idArticulo) values (@con, @pac, @res, @fecPr, @fecEn, 1, @idArt);";
+            String qry = "insert into prestamo (numeroContrato, paciente, responsable, fechaPrestamo, fechaEntrega, estado, idArticulo, telefono) values (@con, @pac, @res, @fecPr, @fecEn, 1, @idArt, @tel);";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
 
             cmd.Parameters.AddWithValue("@con", nuevoPrest.numeroContrato);
@@ -44,6 +74,7 @@ namespace DAO
             cmd.Parameters.AddWithValue("@fecPr", nuevoPrest.fechaPrestamo);
             cmd.Parameters.AddWithValue("@fecEn", nuevoPrest.fechaEntrega);
             cmd.Parameters.AddWithValue("@idArt", nuevoPrest.idArticulo);
+            cmd.Parameters.AddWithValue("@tel", nuevoPrest.telefono);
             int result = cmd.ExecuteNonQuery();
 
             bool prestado = articuloPrestado(nuevoPrest.idArticulo);
@@ -118,7 +149,7 @@ namespace DAO
             {
                 while (reader.Read())
                 {
-                    lista.Add(new TOPrestamo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetDateTime(4), reader.GetDateTime(5), reader.GetInt32(6)));
+                    lista.Add(new TOPrestamo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetDateTime(4), reader.GetDateTime(5), reader.GetInt32(6), reader.GetString(7)));
                 }
             }
 
@@ -164,7 +195,7 @@ namespace DAO
             {
                 conex.Open();
             }
-            String qry = "select p.idPrestamo, p.numeroContrato, p.paciente, p.responsable, p.fechaPrestamo, p.fechaEntrega, a.numeroPlaca, a.nombre from prestamo p join articulo a on p.idArticulo = a.idArticulo where p.estado = 1;";
+            String qry = "select p.idPrestamo, p.numeroContrato, p.paciente, p.responsable, p.fechaPrestamo, p.fechaEntrega, a.numeroPlaca, a.nombre, p.telefono from prestamo p join articulo a on p.idArticulo = a.idArticulo where p.estado = 1;";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
 
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -173,7 +204,7 @@ namespace DAO
             {
                 while (reader.Read())
                 {
-                    lista.Add(new TOPrestamo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetDateTime(4), reader.GetDateTime(5), reader.GetString(6), reader.GetString(7)));
+                    lista.Add(new TOPrestamo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetDateTime(4), reader.GetDateTime(5), reader.GetString(6), reader.GetString(7), reader.GetString(8)));
                 }
             }
 
@@ -244,8 +275,8 @@ namespace DAO
             cmd1.Parameters.AddWithValue("@idPr", idPrestamo);
             int idArticuloPrestamo = Convert.ToInt32(cmd1.ExecuteScalar());
 
-            string query2 = "update prestamo set estado = 0 where idPrestamo = @idPre;" +
-                "update articulo set prestado = 0 where idArticulo = @idArt";
+            string query2 = "update articulo set prestado = 0 where idArticulo in ( select idArticulo from (select idArticulo from prestamo where NumeroContrato in ( select NumeroContrato from(SELECT NumeroContrato FROM prestamo WHERE idPrestamo =  @idPre) AS nueva)) AS nuevaTab);" +
+                "update prestamo set estado =  0  WHERE NumeroContrato IN ( select NumeroContrato from(SELECT NumeroContrato FROM prestamo WHERE idPrestamo = @idPre) AS nuevaTab);";
             MySqlCommand cmd2 = new MySqlCommand(query2, conex);
             cmd2.Parameters.AddWithValue("@idPre", idPrestamo);
             cmd2.Parameters.AddWithValue("@idArt", idArticuloPrestamo);
@@ -295,7 +326,7 @@ namespace DAO
                 conex.Open();
             }
 
-            String qry = "select numeroContrato, paciente, responsable, fechaPrestamo, fechaEntrega, idArticulo from prestamo where idPrestamo = @idPrest;";
+            String qry = "select numeroContrato, paciente, responsable, fechaPrestamo, fechaEntrega, idArticulo, telefono from prestamo where idPrestamo = @idPrest;";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@idPrest", idPrestamo);
 
@@ -312,6 +343,7 @@ namespace DAO
                     prestamo.fechaPrestamo = reader.GetDateTime(3);
                     prestamo.fechaEntrega = reader.GetDateTime(4);
                     prestamo.idArticulo = reader.GetInt32(5);
+                    prestamo.telefono = reader.GetString(6);
                 }
             }
 
@@ -334,7 +366,7 @@ namespace DAO
                 conex.Open();
             }
 
-            string qry = "select idPrestamo, numeroContrato, paciente, responsable, fechaPrestamo, fechaEntrega from prestamo where idArticulo = @idArt;";
+            string qry = "select idPrestamo, numeroContrato, paciente, responsable, fechaPrestamo, fechaEntrega, telefono from prestamo where idArticulo = @idArt;";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@idArt", idArticulo);
 
@@ -352,6 +384,7 @@ namespace DAO
                     prest.responsable = reader.GetString(3);
                     prest.fechaPrestamo = reader.GetDateTime(4);
                     prest.fechaEntrega = reader.GetDateTime(5);
+                    prest.telefono = reader.GetString(6);
                     lista.Add(prest);
                 }
             }
@@ -399,7 +432,7 @@ namespace DAO
                 conex.Open();
             }
 
-            string qry = "select paciente, responsable, FechaPrestamo, FechaEntrega, estado from prestamo where NumeroContrato = @numCont;";
+            string qry = "select paciente, responsable, FechaPrestamo, FechaEntrega, estado, telefono from prestamo where NumeroContrato = @numCont;";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@numCont", contrato);
 
@@ -414,6 +447,7 @@ namespace DAO
                     prest.fechaPrestamo = reader.GetDateTime(2);
                     prest.fechaEntrega = reader.GetDateTime(3);
                     prest.estado = reader.GetBoolean(4);
+                    prest.telefono = reader.GetString(5);
                 }
             }
 

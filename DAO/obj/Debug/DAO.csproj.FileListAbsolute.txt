@@ -28,11 +28,29 @@ C:\Users\melan\Source\Repos\InventAcomp\DAO\bin\Debug\DAO.dll.config
 C:\Users\melan\Source\Repos\InventAcomp\DAO\bin\Debug\DAO.dll
 C:\Users\melan\Source\Repos\InventAcomp\DAO\bin\Debug\DAO.pdb
 C:\Users\melan\Source\Repos\InventAcomp\DAO\bin\Debug\TO.dll
-C:\Users\melan\Source\Repos\InventAcomp\DAO\bin\Debug\Google.Protobuf.dll
 C:\Users\melan\Source\Repos\InventAcomp\DAO\bin\Debug\TO.pdb
 C:\Users\melan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
 C:\Users\melan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Users\melan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\melan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.dll
 C:\Users\melan\Source\Repos\InventAcomp\DAO\obj\Debug\DAO.pdb
-C:\Users\melan\source\repos\InventAcomp\DAO\bin\Debug\MySql.Data.xml
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\DAO\bin\Debug\DAO.dll.config
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\DAO\bin\Debug\DAO.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\DAO\bin\Debug\DAO.pdb
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\DAO\bin\Debug\TO.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\DAO\bin\Debug\TO.pdb
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\DAO\obj\Debug\DAO.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\DAO\obj\Debug\DAO.pdb
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\DAO\bin\Debug\DAO.dll.config
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\DAO\bin\Debug\DAO.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\DAO\bin\Debug\DAO.pdb
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\DAO\bin\Debug\TO.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\DAO\bin\Debug\TO.pdb
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\DAO\obj\Debug\DAO.csprojAssemblyReference.cache
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\DAO\obj\Debug\DAO.csproj.CopyComplete
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\DAO\obj\Debug\DAO.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\DAO\obj\Debug\DAO.pdb

@@ -48,7 +48,8 @@ namespace UI
             string responsable = txtResponsable.Text;
             DateTime fechaPrestamo = Convert.ToDateTime(dtPrestamo.Text);
             DateTime fechaEntrega = Convert.ToDateTime(dtEntrega.Text);
-            BLPrestamo nuevoPrest = new BLPrestamo(contrato, paciente, responsable, fechaPrestamo, fechaEntrega, Convert.ToInt32(idArticulo));
+            string telefono = txtTel.Text;
+            BLPrestamo nuevoPrest = new BLPrestamo(contrato, paciente, responsable, fechaPrestamo, fechaEntrega, Convert.ToInt32(idArticulo), telefono);
             if (manejPrest.agregarPrestamo(nuevoPrest))
             {
                 this.Owner.Dispose();
@@ -59,6 +60,16 @@ namespace UI
             {
                 MessageBox.Show("No se ha podido guardar el préstamo. Intente de nuevo");
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormularioPrestamo_Load(object sender, EventArgs e)
+        {
+            label1.Text = "Bzx456";
         }
     }
 }

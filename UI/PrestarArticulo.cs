@@ -73,7 +73,8 @@ namespace UI
                 string responsable = txtResponsable.Text;
                 DateTime fechaPrestamo = Convert.ToDateTime(dtPrestamo.Text);
                 DateTime fechaEntrega = Convert.ToDateTime(dtEntrega.Text);
-                BLPrestamo nuevoPrest = new BLPrestamo(contrato, paciente, responsable, fechaPrestamo, fechaEntrega, idArticulo);
+                string telefono = txtTel.Text;
+                BLPrestamo nuevoPrest = new BLPrestamo(contrato, paciente, responsable, fechaPrestamo, fechaEntrega, idArticulo, telefono);
                 if (manejPrest.agregarPrestamo(nuevoPrest))
                 {
                     this.Dispose();
@@ -174,7 +175,8 @@ namespace UI
                 string responsable = txtResponsable.Text;
                 DateTime fechaPrestamo = Convert.ToDateTime(dtPrestamo.Text);
                 DateTime fechaEntrega = Convert.ToDateTime(dtEntrega.Text);
-                BLPrestamo nuevoPrest = new BLPrestamo(contrato, paciente, responsable, fechaPrestamo, fechaEntrega, idArticulo);
+                string telefono = txtTel.Text;
+                BLPrestamo nuevoPrest = new BLPrestamo(contrato, paciente, responsable, fechaPrestamo, fechaEntrega, idArticulo, telefono);
                 if (manejPrest.agregarPrestamo(nuevoPrest))
                 {
                     this.Dispose();

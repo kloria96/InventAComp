@@ -67,7 +67,6 @@ C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\BL.dll
 C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\DAO.dll
 C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\TO.dll
 C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\MySql.Data.dll
-C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\Google.Protobuf.dll
 C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\BL.pdb
 C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\DAO.pdb
 C:\Users\melan\Source\Repos\InventAcomp\UI\bin\Debug\DAO.dll.config
@@ -233,6 +232,215 @@ C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\RdlCompile.compiled
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.ReportePrestamos.resources
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.VerContribucionesPrestamo.resources
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.VerPrestamosArticulo.resources
-C:\Users\melan\source\repos\InventAcomp\UI\bin\Debug\MySql.Data.xml
 C:\Users\melan\source\repos\InventAcomp\UI\obj\Debug\UI.ConfigCuenta.resources
 C:\Users\Juan\Source\Repos\InventAcomp\UI\obj\Debug\UI.ConfigCuenta.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\UI.exe.config
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\UI.exe
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\UI.pdb
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\BL.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\DAO.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\TO.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\EnvDTE.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\MySql.Data.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\stdole.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.MSXML.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\BL.pdb
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\DAO.pdb
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\DAO.dll.config
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\TO.pdb
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Administrador.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Articulos.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.BusquedaArticulo.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Categorias.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ConfigCuenta.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.CuotasDonacion.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.FormularioContribucion.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.FormularioPrestamo.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.InicioSesion.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ModificarArticulo.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ModificarCategoria.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ModificarCuenta.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.MostrarArticulos.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.NuevaCuenta.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.NuevoArticulo.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.PrestamoEquipo.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Prestamos.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.PrestarArticulo.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Principal.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ReporteArticulos.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ReportePrestamos.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.VerArticulo.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.VerContribucionesPrestamo.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.VerCuenta.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.VerPrestamo.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.VerPrestamosArticulo.resources
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.exe
+C:\Users\Admin\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.pdb
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\UI.exe.config
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\UI.exe
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\UI.pdb
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\BL.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\DAO.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\TO.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\EnvDTE.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\MySql.Data.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\stdole.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\Microsoft.MSXML.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\BL.pdb
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\DAO.pdb
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\DAO.dll.config
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\TO.pdb
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Administrador.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Articulos.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.BusquedaArticulo.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Categorias.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ConfigCuenta.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.CuotasDonacion.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.FormularioContribucion.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.FormularioPrestamo.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.InicioSesion.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ModificarArticulo.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ModificarCategoria.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ModificarCuenta.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.MostrarArticulos.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.NuevaCuenta.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.NuevoArticulo.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.PrestamoEquipo.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Prestamos.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.PrestarArticulo.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Principal.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ReporteArticulos.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.ReportePrestamos.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.VerArticulo.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.VerContribucionesPrestamo.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.VerCuenta.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.VerPrestamo.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.VerPrestamosArticulo.resources
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.exe
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.pdb
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\RdlCompile.cache
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\RdlCompile.compiled
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\UI.exe.manifest
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\bin\Debug\UI.application
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.exe.manifest
+C:\Users\melan\OneDrive\Escritorio\II SEMESTRE-2019\TCU\Downloads\InventAcomp\InventAcomp\UI\obj\Debug\UI.application

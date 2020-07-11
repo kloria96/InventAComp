@@ -124,22 +124,28 @@ namespace UI
         /// <param name="e"></param>
         private void gridArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 6 && e.RowIndex != -1)
+            try
             {
-                if (VerPrestamosArticulo.activo)
+                if (e.ColumnIndex == 6 && e.RowIndex != -1)
                 {
-                    VerPrestamosArticulo.idArticulo = Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value);
-                    VerPrestamosArticulo formPrestamos = (VerPrestamosArticulo)this.Owner;
-                    formPrestamos.modificarCampos();
-                    this.Dispose();
+                    if (VerPrestamosArticulo.activo)
+                    {
+                        VerPrestamosArticulo.idArticulo = Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value);
+                        VerPrestamosArticulo formPrestamos = (VerPrestamosArticulo)this.Owner;
+                        formPrestamos.modificarCampos();
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        PrestarArticulo.idArticulo = Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value);
+                        PrestarArticulo form = (PrestarArticulo)this.Owner;
+                        form.modificarCampos();
+                        this.Dispose();
+                    }
                 }
-                else
-                {
-                    PrestarArticulo.idArticulo = Convert.ToInt32(gridArticulos.Rows[e.RowIndex].Cells[0].Value);
-                    PrestarArticulo form = (PrestarArticulo)this.Owner;
-                    form.modificarCampos();
-                    this.Dispose();
-                }
+            } catch (Exception exe)
+            {
+                MessageBox.Show("Hubo un error. Por favor regrese a la página principal e inténtelo de nuevo");
             }
         }
 

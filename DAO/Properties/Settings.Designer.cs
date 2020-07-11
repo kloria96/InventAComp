@@ -36,10 +36,10 @@ namespace DAO.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user=root;password=1234;database=inventario")]
-        public string connectionStringM {
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user=root;password=acompaname1234;database=inventario")]
+        public string connectionString {
             get {
-                return ((string)(this["connectionStringM"]));
+                return ((string)(this["connectionString"]));
             }
         }
         
@@ -47,9 +47,19 @@ namespace DAO.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user=root;password=acompaname1234;database=inventario")]
-        public string connectionString {
+        public string josue {
             get {
-                return ((string)(this["connectionString"]));
+                return ((string)(this["josue"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user=root;password=1234;database=inventario")]
+        public string connectionStringM {
+            get {
+                return ((string)(this["connectionStringM"]));
             }
         }
     }

@@ -54,6 +54,7 @@ namespace UI
             {
                 MessageBox.Show("No se ha podido actualizar el artículo");
                 this.Dispose();
+                new Articulos().Show();
             }
         }
 
@@ -130,6 +131,7 @@ namespace UI
         private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            new Articulos().Show();
         }
 
     }

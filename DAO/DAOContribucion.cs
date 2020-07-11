@@ -15,8 +15,8 @@ namespace DAO
     public class DAOContribucion
     {
         //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionString);
-        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
-        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
+        MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringM);
+        //MySqlConnection conex = new MySqlConnection(Properties.Settings.Default.connectionStringJ);
 
         // connectionStringJ (Juan Diego)
         // connectionStringM (Melany)
@@ -34,7 +34,7 @@ namespace DAO
                 conex.Open();
             }
 
-            String qry = "insert into contribucion (numeroRecibo, cuota, fecha, idPrestamo) values (@num, @cu, @fe, @idPr);";
+            String qry = "insert into contribucion (numeroRecibo, cuota, fecha, idPrestamo) select @num,@cu,@fe,idPrestamo from prestamo where NumeroContrato IN ( select NumeroContrato from(SELECT NumeroContrato FROM prestamo WHERE idPrestamo =  @idPr) AS nuevaTab);";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
 
             cmd.Parameters.AddWithValue("@num", nuevaCont.numeroRecibo);
@@ -73,7 +73,8 @@ namespace DAO
             {
                 while (reader.Read())
                 {
-                    lista.Add(new TOContribucion(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetInt32(4)));
+                    lista.Add(new TOContribucion(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), 
+                        reader.GetDateTime(3), reader.GetInt32(4)));
                 }
             }
 
@@ -96,7 +97,7 @@ namespace DAO
                 conex.Open();
             }
 
-            string qry = "select c.numeroRecibo, c.cuota, c.fecha from contribucion c join prestamo p on c.idPrestamo = p.idPrestamo where p.numeroContrato = @numCont";
+            string qry = "select distinct c.numeroRecibo, c.cuota, c.fecha from contribucion c join prestamo p on c.idPrestamo = p.idPrestamo where p.numeroContrato = @numCont";
             MySqlCommand cmd = new MySqlCommand(qry, conex);
             cmd.Parameters.AddWithValue("@numCont", contrato);
 
